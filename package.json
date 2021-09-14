@@ -6,7 +6,7 @@
   "author": {
     "name": "Shawn Banasick",
     "email": "ken.q.tools@gmail.com",
-    "url": "https://github.com/shawnbanasick/eq_configurator"
+    "url": "https://github.com/shawnbanasick/eq_configurator_v3"
   },
   "build": {
     "afterSign": "scripts/notarize.js",
@@ -133,7 +133,7 @@
     "babel-eslint": "10.1.0",
     "concurrently": "^5.3.0",
     "electron": "^11.1.1",
-    "electron-builder": "^22.9.1",
+    "electron-builder": "^22.14.2",
     "electron-notarize": "^1.0.0",
     "eslint": "^7.17.0",
     "eslint-config-babel": "^9.0.0",
