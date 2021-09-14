@@ -225,11 +225,15 @@ const IntroText = styled.span`
 `;
 
 const FindServerButton = styled(GeneralButton)`
-  height: 50px;
+  height: auto;
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 22px;
+  width: 300px;
+  align-self: center;
+  background-color: orange;
+  border: 1px solid black;
 `;
 
 const ProjectLinkDiv = styled.div`
@@ -254,6 +258,7 @@ const LinkCopyButton = styled(GeneralButton)`
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 22px;
+  background-color: orange;
 `;
 
 const StyledToastContainer = styled(ToastContainer).attrs({
@@ -270,11 +275,13 @@ const DisplayModeText = styled.div`
   align-self: left;
   margin-left: 10px;
   margin-top: 40px;
-  width: 78vw;
-  max-width: 1200px;
+  width: 75vw;
+  max-width: 1000px;
   font-size: 20px;
-  padding: 0 10px 0 10px;
+  padding: 10px;
   border: 2px solid black;
+  background: whitesmoke;
+  border-radius: 5px;
 `;
 
 const SpacerDiv = styled.div`

@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
     height: 28px;
     border-radius: 8px;
     border: 3px solid #fff;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(0, 0, 0, 0.5);
     cursor: pointer;
   }
   

@@ -281,7 +281,7 @@ const Survey = () => {
 export default view(Survey);
 
 const Title = styled.h1`
-  font-size: 35px;
+  font-size: 25px;
   width: 70vw;
   margin-left: 10px;
 `;

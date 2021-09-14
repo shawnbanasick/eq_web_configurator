@@ -23,6 +23,13 @@ const appState = store({
   configshuffleCards: true,
   configAccessanonymousActive: true,
   configAccess: "anonymous",
+  configLogoHtml: "EQ-logo.svg",
+  configCondOfInstFontSize: 20,
+  configAllowUnforcedSorts: false,
+  configAllowUnforcedSortsfalseActive: true,
+  configDisplayOverloadedColWarn: true,
+  configDisplayOverloadedColWarntrueActive: true,
+
   configUseLogInScriptfalseActive: true,
   configUseLogInScript: false,
   configShowStep3trueActive: true,
