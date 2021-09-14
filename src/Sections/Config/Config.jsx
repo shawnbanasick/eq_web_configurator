@@ -11,6 +11,7 @@ import generateConfigXml from "../Config/generateConfigXml";
 import appState from "../../GlobalState/appState";
 import FadeIn from "./FadeIn";
 import UserNumberInput from "../../Utils/UserNumberInput";
+import ConfigPresort from "./ConfigPresort";
 
 const handleClick = () => {
   const data = generateConfigXml();
@@ -27,8 +28,6 @@ const convertToFalse = (value) => {
 };
 
 const Config = () => {
-  let configUseLogInScript = convertToFalse(appState.configUseLogInScript);
-  let configLogInRequired = convertToFalse(appState.configLogInRequired);
   let configShowStep5 = convertToFalse(appState.configShowStep5);
 
   let displayMode = appState.displayMode;
@@ -36,6 +35,14 @@ const Config = () => {
     displayMode = true;
   } else {
     displayMode = false;
+  }
+
+  let configAccess = appState.configAccess;
+  let showAccessCodeInput;
+  if (configAccess === "ID only" || configAccess === "anonymous") {
+    showAccessCodeInput = false;
+  } else {
+    showAccessCodeInput = true;
   }
 
   return (
@@ -54,7 +61,8 @@ const Config = () => {
       </DisplayModeText>
 
       <QuestionContainer>
-        <Title2>Project Options</Title2>
+        <br />
+        <SubTitle>General Options</SubTitle>
         <UserTextInput
           label="1. Project title:"
           stateId="configTitle"
@@ -62,67 +70,97 @@ const Config = () => {
           width={30}
           left={0}
         />
-        <UserTextInput
+
+        {/* <UserTextInput
           label="2. Project version:"
           stateId="configVersion"
           sectionName="config"
           width={5}
           left={0}
-        />
+        /> */}
+
         <RadioButtons
-          label="3. Text align property:"
-          buttonIdArray={["left", "right"]}
-          stateId="configTextAlign"
+          label="2. Setup target:"
+          buttonIdArray={["online", "local data collection"]}
+          stateId="configSetupTarget"
           sectionName="config"
         />
 
         <RadioButtons
-          label="4. Shuffle cards:"
+          label="3. Shuffle statement cards:"
           buttonIdArray={["true", "false"]}
           stateId="configshuffleCards"
           sectionName="config"
         />
 
+        <RadioButtons
+          label="4. Include individual card comments screen (step 3):"
+          buttonIdArray={["true", "false"]}
+          stateId="configShowStep4"
+          sectionName="config"
+        />
+
+        <RadioButtons
+          label="5. Include questionnaire (Step 4):"
+          buttonIdArray={["true", "false"]}
+          stateId="configShowStep5"
+          sectionName="config"
+        />
+
         {displayMode && (
           <DisplayModeText>
-            5a. The project access code is the same for all participants. The
-            code can be a phrase instead of just a single word, and is
-            case-sensitive.
+            <strong>Project Access</strong>
+            <br /> There are four access options available:
+            <br />
+            <br />* anonymous (no sign-in screen shown)
+            <br />* Name or Participant ID
+            <br />* Name or Participant ID and Access Code
+            <br />* Access Code only
+            <br />
+            <br />
+            Currently, any text is accepted for the Name or Participant ID. The
+            project access code will be the same for all participants. The code
+            can be a phrase or a single word, and is case-sensitive.
           </DisplayModeText>
         )}
 
         <RadioButtons
-          label="5a. Project Access Code Required:"
-          buttonIdArray={["true", "false"]}
-          stateId="configLogInRequired"
+          label="6a. Project Access:"
+          buttonIdArray={[
+            "anonymous",
+            "ID only",
+            "ID + access code",
+            "access code only",
+          ]}
+          stateId="configAccess"
           sectionName="config"
         />
-        {configLogInRequired && (
-          <LeftSpacer>
+
+        {showAccessCodeInput && (
+          <FadeIn delay={150} duration={1050}>
             <UserTextInput
-              label="5b. Project Access Code:"
+              label="6b. Project Access Code:"
               stateId="configLogInPassword"
               sectionName="config"
               width={30}
               left={0}
             />
-            <RadioButtons
-              label="5c. Require participant name or id number:"
-              buttonIdArray={["true", "false"]}
-              stateId="configPartNameRequired"
-              sectionName="config"
-            />
-          </LeftSpacer>
+          </FadeIn>
         )}
-        {displayMode && (
+
+        <SubTitle>Presort Options</SubTitle>
+
+        <ConfigPresort />
+
+        {/* {displayMode && (
           <DisplayModeText>
             6a. The Log In Script is a legacy option from FlashQ. It allows the
             use of a custom software to log participants into the project from
             outside the Easy HTMLQ software.
           </DisplayModeText>
-        )}
+        )} */}
 
-        <RadioButtons
+        {/* <RadioButtons
           label="6a. Use Log In Script:"
           buttonIdArray={["true", "false"]}
           stateId="configUseLogInScript"
@@ -144,32 +182,15 @@ const Config = () => {
               sectionName="config"
             />
           </LeftSpacer>
-        )}
+        )} */}
 
-        <RadioButtons
+        {/* <RadioButtons
           label="7. Show Step 3 (card swapping grid):"
           buttonIdArray={["true", "false"]}
           stateId="configShowStep3"
           sectionName="config"
-        />
-        <RadioButtons
-          label="8. Show Step 4 (individual card comments screen):"
-          buttonIdArray={["true", "false"]}
-          stateId="configShowStep4"
-          sectionName="config"
-        />
-        <RadioButtons
-          label="9. Show Step 5 (questionnaire):"
-          buttonIdArray={["true", "false"]}
-          stateId="configShowStep5"
-          sectionName="config"
-        />
-        <RadioButtons
-          label="10. Disable Back Button:"
-          buttonIdArray={["true", "false"]}
-          stateId="configDisableBackButton"
-          sectionName="config"
-        />
+        /> */}
+
         {displayMode && (
           <DisplayModeText>
             11a. By default, Easy HTMLQ has responsive Q-sort card and text font
@@ -273,6 +294,12 @@ const Title = styled.h1`
   align-self: center;
   font-size: 50px;
 `;
+const SubTitle = styled.h1`
+  font-size: 30px;
+  width: 70vw;
+  margin-left: 10px;
+  margin-top: 50px;
+`;
 
 const QuestionContainer = styled.div`
   align-self: center;
@@ -306,6 +333,8 @@ const DisplayModeText = styled.div`
   width: 75vw;
   max-width: 1000px;
   font-size: 20px;
-  padding: 0 10px 0 10px;
+  padding: 10px;
   border: 2px solid black;
+  background: whitesmoke;
+  border-radius: 5px;
 `;
