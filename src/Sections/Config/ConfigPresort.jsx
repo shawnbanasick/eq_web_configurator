@@ -12,11 +12,17 @@ import appState from "../../GlobalState/appState";
 import FadeIn from "./FadeIn";
 import UserNumberInput from "../../Utils/UserNumberInput";
 import { HexColorPicker, HexColorInput } from "react-colorful";
-import { PopoverPicker } from "./PopoverPicker";
+import PopoverPicker from "./PopoverPicker";
 
-const ConfigPresort = () => {
-  const [color, setColor] = useState("#83cafe");
-  return <PopoverPicker color={color} onChange={setColor} />;
+const ConfigPresort = (props) => {
+  const [color, setColor] = useState(props.default);
+
+  const handleOnChange = (e) => {
+    appState[props.card] = e;
+    setColor(e);
+  };
+
+  return <PopoverPicker color={color} onChange={handleOnChange} />;
 };
 
-export default ConfigPresort;
+export default view(ConfigPresort);

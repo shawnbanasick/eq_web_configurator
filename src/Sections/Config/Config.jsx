@@ -150,7 +150,20 @@ const Config = () => {
 
         <SubTitle>Presort Options</SubTitle>
 
-        <ConfigPresort />
+        <ColorLabel>
+          <div>7a. Positive Card Color:</div>
+          <ConfigPresort card="greenCardColor" default="#ccffcc" />
+        </ColorLabel>
+
+        <ColorLabel>
+          <div>7b. Neutral Card Color:</div>
+          <ConfigPresort card="yellowCardColor" default="#e0e0e0" />
+        </ColorLabel>
+
+        <ColorLabel>
+          <div>7c. Negative Card Color:</div>
+          <ConfigPresort card="pinkCardColor" default="#ffe0f0" />
+        </ColorLabel>
 
         {/* {displayMode && (
           <DisplayModeText>
@@ -323,7 +336,7 @@ const DownloadConfigButton = styled(GeneralButton)`
 `;
 
 const LeftSpacer = styled.div`
-  margin-left: 30px;
+  margin-left: 70px;
 `;
 
 const DisplayModeText = styled.div`
@@ -337,4 +350,13 @@ const DisplayModeText = styled.div`
   border: 2px solid black;
   background: whitesmoke;
   border-radius: 5px;
+`;
+
+const ColorLabel = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-left: 70px;
+  margin-top: 20px;
+  align-items: center;
+  gap: 20px;
 `;

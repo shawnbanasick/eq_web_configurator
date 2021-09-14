@@ -1,9 +1,10 @@
 import React, { useCallback, useRef, useState } from "react";
 import { HexColorPicker, HexColorInput } from "react-colorful";
+import { view } from "@risingstack/react-easy-state";
 
 import useClickOutside from "./useClickOutside";
 
-export const PopoverPicker = ({ color, onChange }) => {
+const PopoverPicker = ({ color, onChange, card }) => {
   const popover = useRef();
   const [isOpen, toggle] = useState(false);
 
@@ -27,3 +28,5 @@ export const PopoverPicker = ({ color, onChange }) => {
     </div>
   );
 };
+
+export default view(PopoverPicker);
