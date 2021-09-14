@@ -1,0 +1,79 @@
+All (33)   (-4:2, -3:3, -2:4, -1:5, 0:5, 1:5, 2:4, 3:3, 4:2)
+       I think the iPads helped to make a good learning environment for this class
+       I learned concepts more easily in this class because we used the iPad 
+       I learned more from my classmates in this class than in my other classes because of the iPads
+       The iPad helped me to learn things in this class that I would not have learned otherwise
+       Using the iPad made it easier for me to make connections between the concepts used in the class 
+       Using iPads matches well with my preferred method of learning
+       I feel using the iPads motivated me to work harder in this class
+       I think that the iPad skills that I learned in this class will help me in other classes
+       Using the iPad helped me to focus on the class concepts
+       Using the iPad helped me to remember concepts from previous class sessions
+       I participated more in this class than my other classes because of the iPads
+       Using the iPads with Socrative made it easier for me to express my opinions on the course concepts
+       It was interesting to use the iPads and Socrative to see the opinions of other students
+       Using the iPads to give feedback on student presentations made them more interesting
+       The Kahoot quizzes using iPads helped me to learn the course concepts
+       Using the iPads in class made it more difficult for me to speak in English during class
+       I wanted to use the iPad to access social media applications (LINE or Facebook) during class 
+       Using the iPads in this class wasted valuable class time
+       It was difficult for me to understand how to use the iPad apps for this class
+       Using the iPad in this class made the course concepts more confusing
+       It was difficult to communicate my ideas using the iPad
+       The iPad-related material was not well integrated with the other class material
+       Having my opinions displayed in the screen in front of the class made me more reluctant to express my opinions
+       I became bored while using the iPad during class
+       I felt awkward when using the iPad because I am not as skilled with technology as other students seem to be
+       The iPad made it more difficult for me to concentrate on the course concepts
+       Using the iPad made it more difficult to speak in English with the Professor
+       Using the iPad made it more difficult to speak in English with other students
+       I lost some confidence in my ability to speak English during class because of the use of iPads
+       Using iPads during class was inconvenient
+       Use of the iPads didn’t improve the learning environment
+       I feel more comfortable using technology after taking this classmates
+       I wish more of my classes would use iPads
+
+
+
+
+Positive (15)
+       I think the iPads helped to make a good learning environment for this class
+       I learned concepts more easily in this class because we used the iPad 
+       I learned more from my classmates in this class than in my other classes because of the iPads
+       The iPad helped me to learn things in this class that I would not have learned otherwise
+       Using the iPad made it easier for me to make connections between the concepts used in the class 
+       Using iPads matches well with my preferred method of learning
+       I feel using the iPads motivated me to work harder in this class
+       I think that the iPad skills that I learned in this class will help me in other classes
+       Using the iPad helped me to focus on the class concepts
+       Using the iPad helped me to remember concepts from previous class sessions
+       I participated more in this class than my other classes because of the iPads
+       Using the iPads with Socrative made it easier for me to express my opinions on the course concepts
+       It was interesting to use the iPads and Socrative to see the opinions of other students
+       Using the iPads to give feedback on student presentations made them more interesting
+       The Kahoot quizzes using iPads helped me to learn the course concepts
+
+negative
+       Using the iPads in class made it more difficult for me to speak in English during class
+       I wanted to use the iPad to access social media applications (LINE or Facebook) during class 
+       Using the iPads in this class wasted valuable class time
+       It was difficult for me to understand how to use the iPad apps for this class
+       Using the iPad in this class made the course concepts more confusing
+       It was difficult to communicate my ideas using the iPad
+       The iPad-related material was not well integrated with the other class material
+       Having my opinions displayed in the screen in front of the class made me more reluctant to express my opinions
+       I became bored while using the iPad during class
+       I felt awkward when using the iPad because I am not as skilled with technology as other students seem to be
+       The iPad made it more difficult for me to concentrate on the course concepts
+       Using the iPad made it more difficult to speak in English with the Professor
+       Using the iPad made it more difficult to speak in English with other students
+       I lost some confidence in my ability to speak English during class because of the use of iPads
+       Using iPads during class was inconvenient
+
+Neutral
+Use of the iPads didn’t improve the learning environment
+I feel more comfortable using technology after taking this classmates
+I wish more of my classes would use iPads
+
+
+

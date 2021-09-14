@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+   <map version="1.0" htmlParse="false">
+     <column id="-4" colour="FFD5D5">2</column>
+     <column id="-3" colour="FFD5D5">3</column>
+     <column id="-2" colour="FFD5D5">4</column>
+     <column id="-1" colour="FFD5D5">5</column>
+     <column id="0" colour="E9E9E9">5</column>
+     <column id="1" colour="9FDFBF">5</column>
+     <column id="2" colour="9FDFBF">4</column>
+     <column id="3" colour="9FDFBF">3</column>
+     <column id="4" colour="9FDFBF">2</column>
+   </map>

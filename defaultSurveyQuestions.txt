@@ -1,0 +1,161 @@
+ <item id="form">
+        <note bg="true">All fields marked with an * are mandatory</note>
+
+        <label>Age*</label>
+        <note>Please enter your year of birth (YYYY, eg. 1980).</note>
+        <input type="text" required="true" maxlength="4" restricted="0-9"></input>
+
+        <label>Describe your experience using the iPads in this class*</label>
+        <input type="textarea" required="true"></input>
+
+        <label>Year*</label>
+        <note>Please select your year</note>
+        <input type="radio" required="true">Freshman;Sophomore;Junior;Senior</input>
+
+        <label>What is your program focus?</label>
+        <input type="select" required="false">Global Studies;Linguistics;English Literature</input>
+
+        <label>What kind of class do you prefer?</label>
+        <input type="checkbox" required="false">Lecture;Group Discussion;Active Learning</input>
+
+        <label>Please respond to the following statements</label>
+        <input type="rating2" required="false" scale="Yes;No">I have used an iPad in class before.; I have used a notebook computer in class before.</input>
+
+        <label>Please answer the following questions</label>
+        <input type="rating5" required="false" scale="1;2;3;4;5">How would you rate the use of iPads in this class?;How would you rate this class overall?</input>
+
+        <label>Please answer the following questions</label>
+        <input type="rating10" required="false" scale="1;2;3;4;5;6;7;8;9;10">How would you rate the use of the Socrative website in this class?;How would you rate the use of the Quizlet website in this class?</input>
+
+     </item>
+
+
+from appState:
+----------------------------------------
+
+surveyQuestionsArray: [
+    {
+      id: "item-0",
+      content: [
+        "item type: information",
+        "background visible (true/false): true",
+        "options: All fields marked with an * are mandatory",
+      ],
+      surveyQuestionType: "information",
+      bg: true,
+      options: "All fields marked with an * are mandatory",
+    },
+    {
+      id: "item-1",
+      content: [
+        "item type: text",
+        "required (true/false): true",
+        "label text: Age",
+        "note: Please enter your year of birth (YYYY, eg. 1980).",
+        "maxlength: 4",
+        `restricted: "0-9": true`,
+      ],
+      surveyQuestionType: "text",
+      required: true,
+      label: "Age",
+      note: "Please enter your year of birth (YYYY, eg. 1980).",
+      maxlength: 4,
+      restricted: true,
+    },
+    {
+      id: "item-2",
+      content: [
+        "item type: textarea",
+        "required (true/false): true",
+        "label text: Describe your experience using the iPads in this class",
+      ],
+      surveyQuestionType: "textarea",
+      required: true,
+      label: "Describe your experience using the iPads in this class",
+    },
+    {
+      id: "item-3",
+      content: [
+        "item type: radio",
+        "required (true/false): true",
+        "label text: Year",
+        "note: Please select your year",
+        "options: Freshman, Sophomore, Junior, Senior; ",
+      ],
+      surveyQuestionType: "radio",
+      required: true,
+      label: "Year",
+      note: "Please select your year",
+      options: "Freshman;Sophomore;Junior;Senior",
+    },
+    {
+      id: "item-4",
+      content: [
+        "item type: select",
+        "required (true/false): false",
+        "label text: What is your program focus?",
+        "options: Global Studies;Linguistics;English Literature",
+      ],
+      surveyQuestionType: "select",
+      required: false,
+      label: "What is your program focus?",
+      options: "Global Studies;Linguistics;English Literature",
+    },
+    {
+      id: "item-5",
+      content: [
+        "item type: checkbox",
+        "required (true/false): false",
+        "label text: What kind of class do you prefer?",
+        "options: Lecture;Group Discussion;Active Learning",
+      ],
+      surveyQuestionType: "checkbox",
+      required: false,
+      label: "What kind of class do you prefer?",
+      options: "Lecture;Group Discussion;Active Learning",
+    },
+    {
+      id: "item-6",
+      content: [
+        "item type: rating2",
+        "required (true/false): false",
+        "label text: Please respond to the following statements",
+        "scale: Yes;No;",
+        "options: I have used an iPad in class before.; I have used a notebook computer in class before.",
+      ],
+      surveyQuestionType: "rating2",
+      required: false,
+      label: "Please respond to the following statements",
+      scale: "Yes;No",
+      options:
+        "I have used an iPad in class before.; I have used a notebook computer in class before.",
+    },
+    {
+      id: "item-7",
+      content: [
+        "item type: rating5",
+        "required (true/false): false",
+        "label text: Please answer the following questions",
+        "options: How would you rate the use of iPads in this class?;How would you rate this class overall?",
+      ],
+      surveyQuestionType: "rating5",
+      required: false,
+      label: "Please answer the following questions",
+      options:
+        "How would you rate the use of iPads in this class?;How would you rate this class overall?",
+    },
+    {
+      id: "item-8",
+      content: [
+        "item type: rating10",
+        "required (true/false): false",
+        "label text: Please answer the following questions",
+        "options: How would you rate the use of the Socrative website in this class?;How would you rate the use of the Quizlet website in this class?",
+      ],
+      surveyQuestionType: "rating10",
+      required: false,
+      label: "Please answer the following questions",
+      options:
+        "How would you rate the use of the Socrative website in this class?;How would you rate the use of the Quizlet website in this class?",
+    },
+  ],

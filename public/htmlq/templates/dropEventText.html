@@ -1,0 +1,14 @@
+<div
+  ng-class="{neutral: initialStatement.category === 'neutral', agree: initialStatement.category === 'agree', disagree: initialStatement.category === 'disagree'}"
+  data-placement="bottom"
+  data-toggle="tooltip"
+  data-trigger="hover click"
+  title="{{ initialStatement.__text }} ({{ initialStatement._id }})"
+  class="dropCards"
+>
+  <span class="idNum">({{ initialStatement._id }})</span>
+  <span ng-bind-html="initialStatement.__text"></span>
+  <div class="swap-image">
+    <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+  </div>
+</div>

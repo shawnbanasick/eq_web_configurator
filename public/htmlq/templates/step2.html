@@ -1,0 +1,136 @@
+<div track-duration="duration[1]">
+  <div id="step2" droppable-background="" on-drop="removeStatement($statement)">
+    <div class="row">
+      <div class="grid" ng-style="{width: viewWidth}">
+        <table class="tableClass" ng-style="{width: viewWidth}">
+          <!-- Agree - Conditions of Instruction Disagree Row -->
+          <tr>
+            <td
+              ng-style="{width: viewWidth}"
+              class="grid-heading"
+              colspan="{{ map.column.length }}"
+            >
+              <span
+                style="float: left"
+                class="tableLabelText"
+                ng-bind-html="language.btnDisagreement"
+              ></span>
+              <div class="tableLableCenterTextDiv">
+                <span class="tableLableCenterText"
+                ng-bind-html="language.step2CondOfInstruc"  
+                ></span
+                >
+              </div>
+              <span
+                style="float: right; text-align: right"
+                class="tableLabelText"
+                ng-bind-html="language.btnAgreement"
+              ></span>
+            </td>
+          </tr>
+          <tr>
+          <!-- Column Id Numbers Row -->
+            
+            <td
+              class="col-xs-1 rating idNumRow"
+              ng-repeat="col in map.column"
+              ng-style="{'background-color': '#' + col._colour, width: viewWidth/map.column.length}"
+            >
+              <b>{{ col._id }}</b>
+            </td>
+          </tr>
+          <tr>
+          <!-- Cards in Column Row -->
+            <td
+              class="col-xs-1 cardsInCol"
+              ng-repeat="col in sortedStatements.grid"
+              ng-style="{width: viewWidth/map.column.length}"
+            >
+              <div
+                small-font="config.smallFont"
+                swappable-droppable="cell"
+                on-received-statement-from-categories="removeStatement($statement)"
+                dynamically-create-initial-statement="true"
+                ng-repeat="cell in col"
+                class="cell fontAdjust"
+                style="line-height: 1.1;"
+                helper-width="{{ viewWidth/map.column.length }}"
+                ng-style="{height: cellHeight}"
+                ng-class="{'small-font': (config.smallFont === 'true')}"
+              ></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="row sorted-statements">
+          <!-- Sort Feeders Row -->
+      <div ng-show="!done()">
+        <div class="col-xs-4 step2col">
+          <p class="heading" ng-bind-html="language.btnDisagreement"></p>
+          <ul class="sortable disagree">
+            <li
+              class="draggable"
+              clone-on-drag="true"
+              draggable-statement="statement"
+              ng-repeat="statement in sortedStatements.disagree"
+              helper-width="{{ viewWidth/map.column.length }}"
+              small-font="config.smallFont"
+              ng-class="{neutral: statement.category === 'neutral', agree: statement.category === 'agree', disagree: statement.category === 'disagree', textright: textAlignRight}"
+            >
+              <span class="idNum">({{ statement._id }})</span>
+              <span ng-bind-html="statement.__text"></span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-4 step2col">
+          <p class="heading" ng-bind-html="language.btnNeutral"></p>
+          <ul class="sortable neutral">
+            <li
+              class="draggable"
+              clone-on-drag="true"
+              draggable-statement="statement"
+              ng-repeat="statement in sortedStatements.neutral"
+              helper-width="{{ viewWidth/map.column.length }}"
+              small-font="config.smallFont"
+              ng-class="{neutral: statement.category === 'neutral', agree: statement.category === 'agree', disagree: statement.category === 'disagree', textright: textAlignRight}"
+            >
+              <span class="idNum">({{ statement._id }})</span>
+              <span ng-bind-html="statement.__text"></span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-4 step2col">
+          <p class="heading" ng-bind-html="language.btnAgreement"></p>
+          <ul class="sortable agree">
+            <li
+              class="draggable"
+              clone-on-drag="true"
+              draggable-statement="statement"
+              ng-repeat="statement in sortedStatements.agree"
+              helper-width="{{ viewWidth/map.column.length }}"
+              small-font="config.smallFont"
+              ng-class="{neutral: statement.category === 'neutral', agree: statement.category === 'agree', disagree: statement.category === 'disagree', textright: textAlignRight}"
+            >
+              <span class="idNum">({{ statement._id }})</span>
+              <span ng-bind-html="statement.__text"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div ng-show="done()">
+        <div class="col-xs-4 col-xs-offset-4 next-button">
+          <a
+            href=""
+            ng-click="next()"
+            class="btn btn-default btn-lg btn-block"
+            ng-bind-html="language.btnContinue"
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <div ng-if="debug" class="row">{{ sortedStatements.grid }}</div>
+  </div>
+</div>

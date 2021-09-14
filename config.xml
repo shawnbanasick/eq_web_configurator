@@ -1,0 +1,49 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+   <config version="1.0" htmlParse="false">
+
+     <!-- title of the study -->
+     <item id="studyTitle">title</item>
+
+     <!-- text-align property(left|right) -->
+     <item id="textAlign">left</item>
+
+     <!-- shuffle cards (true|false)  -->
+     <item id="shuffleCards">true</item>
+
+     <!-- login required (true|false) -->
+     <item id="loginrequired">true</item>
+     <!-- login with common password (leave blank if not required) -->
+     <item id="loginPassword">password</item>
+      <!-- URL to individual login script(leave blank if not required) -->
+     <item id="loginUrl">url</item>
+     <!-- request mode (post|get) -->
+     <item id="loginUrlMethod">post</item>
+
+     <!-- activate/deactivate optional steps (true|false) -->
+     <item id="showStep3">true</item>
+     <item id="showStep4">true</item>
+     <item id="showStep5">true</item>
+
+     <!-- HtmlQ only: disable the in-window back button -->
+     <item id="disableBackButton">true</item>
+
+     <!-- define form elements for step5; only displayed if showStep5 is true (delete tags if not required) -->
+     <!-- add label: <label>[STRING]</label> -->
+     <!-- add note: <note>[STRING]</note> -->
+     <!-- add input-field: <input type="[text|textarea|radio|select|checkbox|rating2|rating5|rating10]">[VALUE]</input> -->
+     <!-- optional attributes: bg, id, maxlength, restricted, required, scale  -->
+     <item id="form">
+        <label>Age*</label>
+        <note>Please enter your year of birth (YYYY, eg. 1980).</note>
+        <input type="text" required="true" maxlength="4" restricted="0-9"></input>
+
+        <label>Write Comments Here***</label>
+        <input type="textarea" required="true"></input>
+
+        <label>Gender***</label>
+        <note>Please enter your gender</note>
+        <input type="radio" required="true">male;female;</input>
+
+undefinedundefinedundefinedundefinedundefinedundefined
