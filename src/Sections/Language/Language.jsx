@@ -361,7 +361,8 @@ const Language = () => {
         <TenPxSpacer></TenPxSpacer>
       </SectionContainer>
       <DownloadMapButton onClick={() => handleClick()}>
-        Save to the <b>SETTINGS</b> folder and replace the "language.xml" file
+        Click here to save to the <b>SETTINGS</b> folder and replace the
+        "language.xml" file
       </DownloadMapButton>
     </MainContent>
   );
@@ -416,9 +417,11 @@ const ColorContainer = styled.div`
 
 const DownloadMapButton = styled(GeneralButton)`
   width: 70%;
-  max-width: 500px;
+  max-width: 300px;
   align-self: center;
   margin-top: 50px;
+  background-color: orange;
+  border: 1px solid black;
 `;
 
 // const SubTitles = styled.p`

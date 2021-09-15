@@ -53,6 +53,9 @@ const appState = store({
   configStep2ConstantWidthfalseActive: true,
   configStep2CardWidth: 200,
 
+  mapColColors: "headers only",
+  mapColColorsheadersActive: true,
+
   stylesStatementNumberDisplayfalseActive: true,
   stylesStatementNumberDisplay: false,
   stylesStatementNumberSizesmallActive: true,

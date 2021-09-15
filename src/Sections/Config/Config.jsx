@@ -55,8 +55,8 @@ const Config = () => {
           **Required Last Step** &nbsp;&nbsp;&nbsp;&nbsp; Save Options to File
         </SubTitle>
         <DownloadConfigButton onClick={() => handleClick()}>
-          Save these options as the "config.xml" file in the <b>SETTINGS</b>{" "}
-          folder and replace the default "config.xml" file
+          Click here to save these options as the "config.xml" file in the{" "}
+          <b>SETTINGS</b> folder and replace the default "config.xml" file
         </DownloadConfigButton>
       </QuestionContainer>
     </MainContent>

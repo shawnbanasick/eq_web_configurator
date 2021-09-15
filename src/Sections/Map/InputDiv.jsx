@@ -1,6 +1,7 @@
 import { view } from "@risingstack/react-easy-state";
 import styled from "styled-components";
 import React from "react";
+import ConfigColorPicker from "../Config/ConfigColorPicker";
 
 const InputDiv = (props) => {
   const saveInputValueToState = (event) => {
@@ -16,6 +17,10 @@ const InputDiv = (props) => {
         onChange={saveInputValueToState}
         value={props.value}
       />
+      <ConfigColorPicker
+        stateDesig={props.stateDesig}
+        default={props.default}
+      />
     </InputColumn>
   );
 };
@@ -26,18 +31,21 @@ const InputColumn = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 18px;
-  width: 35px;
-  height: 50px;
+  width: 40px;
+  height: 85px;
   border: 1px solid darkgray;
   background-color: #d6dbe0;
   padding-right: 2px;
+  justify-content: center;
+  align-items: center;
   /* border: 2px solid red; */
 `;
 
 const StyledInput = styled.input`
   width: 26px;
-  text-align: right;
+  text-align: center;
   margin-left: 3px;
+  margin-bottom: 5px;
 `;
 
 const StyledLabel = styled.label`

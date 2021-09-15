@@ -7,6 +7,7 @@ import exportToXml from "../../Utils/exportToXml";
 import generateMapXml from "./generateMapXml";
 import GeneralButton from "../../Utils/GeneralButton";
 import appState from "../../GlobalState/appState";
+import RadioButtons from "../../Utils/RadioButtons";
 
 const handleClick = () => {
   // const userSelectedFilePath = `${appState.userSelectedFilePath}/settings/map.xml`;
@@ -42,8 +43,17 @@ const Map = () => {
         </DisplayModeText>
       )}
       <MapInputElement />
+
+      <RadioButtons
+        label="1. Color application:"
+        buttonIdArray={["headers", "headers and columns", "no colors"]}
+        stateId="mapColColors"
+        sectionName="map"
+      />
+
       <DownloadMapButton onClick={() => handleClick()}>
-        Save file to <b>SETTINGS</b> folder and replace the "map.xml" file
+        Click here to save file to <b>SETTINGS</b> folder and replace the
+        "map.xml" file
       </DownloadMapButton>
     </MainContent>
   );
@@ -95,16 +105,20 @@ const Title = styled.h1`
 `;
 
 const DownloadMapButton = styled(GeneralButton)`
-  width: 600px;
+  width: 300px;
+  margin-top: 50px;
+  background-color: orange;
+  border: 1px solid black;
 `;
 
 const DisplayModeText = styled.div`
-  align-self: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  width: 94%;
-  max-width: 1200px;
+  align-self: left;
+  margin-left: 10px;
+  width: 75vw;
+  max-width: 1000px;
   font-size: 20px;
-  padding: 0 10px 0 10px;
+  padding: 10px;
   border: 2px solid black;
+  background: whitesmoke;
+  border-radius: 5px;
 `;

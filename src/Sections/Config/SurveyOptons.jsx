@@ -38,6 +38,9 @@ const SurveyOptions = (props) => {
           Eight types of survey questions are available. If a question is
           required and the participant fails to answer, navigation to the next
           step is blocked and the question is outlined in pink.
+          <br />
+          <br />
+          Html tags can be used to style the questions. Wrapping text with
         </DisplayModeText>
         <RadioButtons
           label="14. Include survey (Step 4):"

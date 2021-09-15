@@ -25,6 +25,8 @@ const columnsArray = [
 ];
 
 const generateConfigXml = () => {
+  console.log(JSON.stringify(appState, null, 2));
+
   let data = `<?xml version="1.0" encoding="UTF-8"?>
 
    <map version="1.0" htmlParse="false">\n`;

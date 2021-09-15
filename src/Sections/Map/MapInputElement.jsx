@@ -146,120 +146,160 @@ const QsortDesignInputElement = () => {
             name={"M6"}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValueM6}
+            stateDesig={"col-6"}
+            default={"#FF9898"}
           />
           <InputDiv
             label={"-5"}
             name={"M5"}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValueM5}
+            stateDesig={"col-5"}
+            default={"#ffb2b2"}
           />
           <InputDiv
             label={"-4"}
             name={"M4"}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValueM4}
+            stateDesig={"col-4"}
+            default={"#ffbfbf"}
           />
           <InputDiv
             label={"-3"}
             name={"M3"}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValueM3}
+            stateDesig={"col-3"}
+            default={"#ffcbcb"}
           />
           <InputDiv
             label={"-2"}
             name={"M2"}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValueM2}
+            stateDesig={"col-2"}
+            default={"#ffd8d8"}
           />
           <InputDiv
             label={"-1"}
             name={"M1"}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValueM1}
+            stateDesig={"col-1"}
+            default={"#ffe5e5"}
           />
           <InputDiv
             label={"0"}
             name={0}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue0}
+            stateDesig={"col0"}
+            default={"#e0e0e0"}
           />
           <InputDiv
             label={"1"}
             name={1}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue1}
+            stateDesig={"col+1"}
+            default={"#d6f5d6"}
           />
           <InputDiv
             label={"2"}
             name={2}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue2}
+            stateDesig={"col+2"}
+            default={"#c1f0c1"}
           />
           <InputDiv
             label={"3"}
             name={3}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue3}
+            stateDesig={"col+3"}
+            default={"#adebad"}
           />
           <InputDiv
             label={"4"}
             name={4}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue4}
+            stateDesig={"col+4"}
+            default={"#98E698"}
           />
           <InputDiv
             label={"5"}
             name={5}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue5}
+            stateDesig={"col+5"}
+            default={"#84e184"}
           />
           <InputDiv
             label={"6"}
             name={6}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue6}
+            stateDesig={"col+6"}
+            default={"#57E157"}
           />
           <InputDiv
             label={"7"}
             name={7}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue7}
+            stateDesig={"col+7"}
+            default={"#e0e0e0"}
           />
           <InputDiv
             label={"8"}
             name={8}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue8}
+            stateDesig={"col+8"}
+            default={"#e0e0e0"}
           />
           <InputDiv
             label={"9"}
             name={9}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue9}
+            stateDesig={"col+9"}
+            default={"#e0e0e0"}
           />
           <InputDiv
             label={"10"}
             name={10}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue10}
+            stateDesig={"col+10"}
+            default={"#e0e0e0"}
           />
           <InputDiv
             label={"11"}
             name={11}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue11}
+            stateDesig={"col+11"}
+            default={"#e0e0e0"}
           />
           <InputDiv
             label={"12"}
             name={12}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue12}
+            stateDesig={"col+12"}
+            default={"#e0e0e0"}
           />
           <InputDiv
             label={"13"}
             name={13}
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue13}
+            stateDesig={"col+13"}
+            default={"#e0e0e0"}
           />
         </InputRow>
       </DesignDiv>
