@@ -29,6 +29,10 @@ const appState = store({
   configAllowUnforcedSortsfalseActive: true,
   configDisplayOverloadedColWarn: true,
   configDisplayOverloadedColWarntrueActive: true,
+  configShowSecondPosColumn: false,
+  configShowSecondPosColumnfalseActive: true,
+  configShowSecondNegColumn: false,
+  configShowSecondNegColumnfalseActive: true,
 
   configUseLogInScriptfalseActive: true,
   configUseLogInScript: false,

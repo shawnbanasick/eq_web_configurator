@@ -50,6 +50,21 @@ const GlobalStyle = createGlobalStyle`
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
   
+  .fadeOut{
+     opacity:0;
+     width:0;
+     height:0;
+     transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+
+}
+  .fadeIn{
+      opacity:1;
+      width:100%;
+      height:100%;
+      transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+
+  }
+
 
 `;
 

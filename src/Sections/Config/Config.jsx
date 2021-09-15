@@ -4,33 +4,22 @@ import styled, { keyframes } from "styled-components";
 import GlobalStyle from "../../Utils/GlobalStyle";
 import GeneralButton from "../../Utils/GeneralButton";
 import exportToXml from "../../Utils/exportToXml";
-import Survey from "../Survey/Survey";
 import generateConfigXml from "../Config/generateConfigXml";
 import appState from "../../GlobalState/appState";
-import FadeIn from "./FadeIn";
-import UserTextInput from "../../Utils/UserTextInput";
 import PresortOptions from "./PresortOptions";
 import SortOptions from "./SortOptions";
 import GeneralOptions from "./GeneralOptions";
 import ProjectAccessOptions from "./ProjectAccessOptions";
 import CustomLogo from "./CustomLogo";
-
-const handleClick = () => {
-  const data = generateConfigXml();
-
-  exportToXml("config.xml", data, "xml");
-};
-
-const convertToFalse = (value) => {
-  if (value === false || value === "false") {
-    return false;
-  } else {
-    return true;
-  }
-};
+import PostsortOptions from "./PostsortOptions";
+import SurveyOptons from "./SurveyOptons";
 
 const Config = () => {
-  let configShowStep5 = convertToFalse(appState.configShowStep5);
+  const handleClick = () => {
+    const data = generateConfigXml();
+
+    exportToXml("config.xml", data, "xml");
+  };
 
   let displayMode = appState.displayMode;
   if (displayMode === "beginner") {
@@ -38,15 +27,6 @@ const Config = () => {
   } else {
     displayMode = false;
   }
-
-  let configAccess = appState.configAccess;
-  let showAccessCodeInput;
-  if (configAccess === "ID only" || configAccess === "anonymous") {
-    showAccessCodeInput = false;
-  } else {
-    showAccessCodeInput = true;
-  }
-
   return (
     <MainContent>
       <GlobalStyle />
@@ -68,18 +48,9 @@ const Config = () => {
         <CustomLogo />
         <PresortOptions />
         <SortOptions />
-      </QuestionContainer>
+        <PostsortOptions />
+        <SurveyOptons />
 
-      {configShowStep5 && (
-        <FadeIn delay={150} duration={1050}>
-          <QuestionContainer>
-            <SubTitle>Survey Options</SubTitle>
-          </QuestionContainer>
-          <Survey />
-        </FadeIn>
-      )}
-
-      <QuestionContainer>
         <SubTitle>
           **Required Last Step** &nbsp;&nbsp;&nbsp;&nbsp; Save Options to File
         </SubTitle>

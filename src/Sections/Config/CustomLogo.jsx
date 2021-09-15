@@ -32,7 +32,7 @@ const CustomLogo = () => {
       </ImageContainer>
 
       <UserTextInput
-        label="7. Custom Logo Image Name:"
+        label="8. Custom Logo Image Name:"
         stateId="configLogoHtml"
         sectionName="config"
         width={30}

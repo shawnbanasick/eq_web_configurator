@@ -14,7 +14,7 @@ const PresortOptions = (props) => {
 
   return (
     <React.Fragment>
-      <SubTitle>Presort Options</SubTitle>
+      <SubTitle>Presort Options (Step 1)</SubTitle>
 
       {displayMode && (
         <DisplayModeText>

@@ -3,10 +3,10 @@ import { view } from "@risingstack/react-easy-state";
 import styled from "styled-components";
 import appState from "../../GlobalState/appState";
 import UserTextInput from "../../Utils/UserTextInput";
+import UserNumberInput from "../../Utils/UserNumberInput";
 import RadioButtons from "../../Utils/RadioButtons";
-import ConfigColorPicker from "./ConfigColorPicker";
 
-const GeneralOptions = () => {
+const PostsortOptions = () => {
   let displayMode = appState.displayMode;
   if (displayMode === "beginner") {
     displayMode = true;
@@ -16,38 +16,43 @@ const GeneralOptions = () => {
 
   return (
     <React.Fragment>
-      <SubTitle>General Options</SubTitle>
-      <UserTextInput
-        label="1. Project title:"
-        stateId="configTitle"
-        sectionName="config"
-        width={30}
-        left={0}
-      />
+      <SubTitle>Postsort Options (Optional Step 3)</SubTitle>
+
+      {displayMode && (
+        <DisplayModeText>
+          Optional step 3 gives the participant an opportunity to add additional
+          comments to the card(s) that were placed in the extreme columns. In
+          some research designs there might only be one statement in the extreme
+          columns, so in that case you may want to include the second most
+          extreme columns as well.
+        </DisplayModeText>
+      )}
 
       <RadioButtons
-        label="2. Setup target:"
-        buttonIdArray={["online", "local data collection"]}
-        stateId="configSetupTarget"
-        sectionName="config"
-      />
-
-      <RadioButtons
-        label="3. Shuffle statement cards:"
+        label="4. Include individual card comments screen (Step 3):"
         buttonIdArray={["true", "false"]}
-        stateId="configshuffleCards"
+        stateId="configShowStep4"
         sectionName="config"
       />
 
-      <ColorLabel>
-        <div>6. Title bar color (for all pages):</div>
-        <ConfigColorPicker stateDesig="headerBarColor" default="#337ab7" />
-      </ColorLabel>
+      <RadioButtons
+        label="10. Display positive column 2:"
+        buttonIdArray={["true", "false"]}
+        stateId="configShowSecondPosColumn"
+        sectionName="config"
+      />
+
+      <RadioButtons
+        label="10. Display negative column 2:"
+        buttonIdArray={["true", "false"]}
+        stateId="configShowSecondNegColumn"
+        sectionName="config"
+      />
     </React.Fragment>
   );
 };
 
-export default view(GeneralOptions);
+export default view(PostsortOptions);
 
 const SubTitle = styled.h1`
   font-size: 30px;
@@ -57,16 +62,6 @@ const SubTitle = styled.h1`
   margin-bottom: 10px;
 `;
 
-const ColorLabel = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin-left: 70px;
-  margin-top: 20px;
-  align-items: center;
-  gap: 20px;
-`;
-
-/* 
 const DisplayModeText = styled.div`
   align-self: left;
   margin-left: 10px;
@@ -78,4 +73,4 @@ const DisplayModeText = styled.div`
   border: 2px solid black;
   background: whitesmoke;
   border-radius: 5px;
-`; */
+`;

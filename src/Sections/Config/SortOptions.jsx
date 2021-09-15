@@ -16,10 +16,16 @@ const SortOptions = () => {
 
   return (
     <React.Fragment>
-      <SubTitle>Sort Grid Options</SubTitle>
+      <SubTitle>Sort Options (Step 2)</SubTitle>
 
       {displayMode && (
-        <DisplayModeText>You can adjust the size of the </DisplayModeText>
+        <DisplayModeText>
+          The default is to have forced sorts, so when the participant puts too
+          many cards into a column the software will indicate an overload by
+          changing the column background color to orange and the column border
+          to a dashed line. Also, navigation to the next step is disabled if
+          there is an overloaded column.
+        </DisplayModeText>
       )}
 
       <UserNumberInput
