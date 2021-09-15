@@ -18,7 +18,9 @@ const SortOptions = () => {
     <React.Fragment>
       <SubTitle>Sort Grid Options</SubTitle>
 
-      {displayMode && <DisplayModeText>You can set the color</DisplayModeText>}
+      {displayMode && (
+        <DisplayModeText>You can adjust the size of the </DisplayModeText>
+      )}
 
       <UserNumberInput
         label="9. Conditions of Instruction Font Size:"

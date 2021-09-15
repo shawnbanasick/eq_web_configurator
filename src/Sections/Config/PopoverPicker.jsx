@@ -4,7 +4,7 @@ import { view } from "@risingstack/react-easy-state";
 
 import useClickOutside from "./useClickOutside";
 
-const PopoverPicker = ({ color, onChange, card }) => {
+const PopoverPicker = ({ color, onChange, stateDesig }) => {
   const popover = useRef();
   const [isOpen, toggle] = useState(false);
 

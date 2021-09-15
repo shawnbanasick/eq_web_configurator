@@ -9,7 +9,7 @@ const ConfigColorPicker = (props) => {
 
   const handleOnChange = useDebouncyFn((e) => {
     console.log(e);
-    appState[props.card] = e;
+    appState[props.stateDesig] = e;
     setColor(e);
   }, 200);
 

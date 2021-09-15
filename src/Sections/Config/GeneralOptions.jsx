@@ -4,6 +4,7 @@ import styled from "styled-components";
 import appState from "../../GlobalState/appState";
 import UserTextInput from "../../Utils/UserTextInput";
 import RadioButtons from "../../Utils/RadioButtons";
+import ConfigColorPicker from "./ConfigColorPicker";
 
 const GeneralOptions = () => {
   let displayMode = appState.displayMode;
@@ -51,6 +52,10 @@ const GeneralOptions = () => {
         stateId="configShowStep5"
         sectionName="config"
       />
+      <ColorLabel>
+        <div>6. Title bar color (for all pages):</div>
+        <ConfigColorPicker stateDesig="headerBarColor" default="#337ab7" />
+      </ColorLabel>
     </React.Fragment>
   );
 };
@@ -64,6 +69,16 @@ const SubTitle = styled.h1`
   margin-top: 50px;
   margin-bottom: 10px;
 `;
+
+const ColorLabel = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-left: 70px;
+  margin-top: 20px;
+  align-items: center;
+  gap: 20px;
+`;
+
 /* 
 const DisplayModeText = styled.div`
   align-self: left;

@@ -46,8 +46,8 @@ const ProjectAccessOptions = () => {
         label="6a. Project Access:"
         buttonIdArray={[
           "anonymous",
-          "ID only",
-          "ID + access code",
+          "Name only",
+          "Name + access code",
           "access code only",
         ]}
         stateId="configAccess"
