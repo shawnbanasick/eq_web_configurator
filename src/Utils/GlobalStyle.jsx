@@ -45,9 +45,10 @@ const GlobalStyle = createGlobalStyle`
   .popover {
     position: absolute;
     top: calc(100% + 2px);
-    left: 50px;
+    left: 0px;
     border-radius: 9px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    z-index: 999;
   }
   
   .fadeOut{

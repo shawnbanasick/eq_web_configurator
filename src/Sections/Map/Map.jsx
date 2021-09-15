@@ -107,13 +107,14 @@ const Title = styled.h1`
 const DownloadMapButton = styled(GeneralButton)`
   width: 300px;
   margin-top: 50px;
-  background-color: orange;
+  background-color: #eb8100;
   border: 1px solid black;
 `;
 
 const DisplayModeText = styled.div`
   align-self: left;
   margin-left: 10px;
+  margin-bottom: 50px;
   width: 75vw;
   max-width: 1000px;
   font-size: 20px;

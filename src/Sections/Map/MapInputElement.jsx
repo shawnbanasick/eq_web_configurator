@@ -34,6 +34,7 @@ const localStore = store({
 const calcQsortDesign = (event) => {
   let columnName = event.target.name;
 
+  // set column in local state to new value
   localStore[`activeValue${event.target.name}`] = event.target.value;
 
   // to get local state of all current values
@@ -43,7 +44,7 @@ const calcQsortDesign = (event) => {
     columnName = +columnName.replace("M", "-");
   }
 
-  // set new key - value
+  // set new key - value in qSortPatternObject
   qSortPatternObject[columnName] = event.target.value;
   // send all current values back to local state
   localStore.qSortPatternObject = qSortPatternObject;
