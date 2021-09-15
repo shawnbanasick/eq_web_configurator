@@ -16,7 +16,7 @@ const ProjectAccessOptions = () => {
 
   let configAccess = appState.configAccess;
   let showAccessCodeInput;
-  if (configAccess === "ID only" || configAccess === "anonymous") {
+  if (configAccess === "Name only" || configAccess === "anonymous") {
     showAccessCodeInput = false;
   } else {
     showAccessCodeInput = true;
@@ -43,7 +43,7 @@ const ProjectAccessOptions = () => {
       )}
 
       <RadioButtons
-        label="7a. Project Access:"
+        label="5a. Project Access:"
         buttonIdArray={[
           "anonymous",
           "Name only",
@@ -57,7 +57,7 @@ const ProjectAccessOptions = () => {
       {showAccessCodeInput && (
         <FadeIn delay={150} duration={1050}>
           <UserTextInput
-            label="7b. Project Access Code:"
+            label="5b. Project Access Code:"
             stateId="configLogInPassword"
             sectionName="config"
             width={30}

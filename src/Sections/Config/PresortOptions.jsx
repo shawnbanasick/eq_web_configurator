@@ -27,17 +27,17 @@ const PresortOptions = (props) => {
         </DisplayModeText>
       )}
       <ColorLabel>
-        <div>8a. Positive Card Color:</div>
+        <div>7a. Positive Card Color:</div>
         <ConfigColorPicker stateDesig="greenCardColor" default="#ccffcc" />
       </ColorLabel>
 
       <ColorLabel>
-        <div>8b. Neutral Card Color:</div>
+        <div>7b. Neutral Card Color:</div>
         <ConfigColorPicker stateDesig="yellowCardColor" default="#e0e0e0" />
       </ColorLabel>
 
       <ColorLabel>
-        <div>8c. Negative Card Color:</div>
+        <div>7c. Negative Card Color:</div>
         <ConfigColorPicker stateDesig="pinkCardColor" default="#ffe0f0" />
       </ColorLabel>
     </React.Fragment>

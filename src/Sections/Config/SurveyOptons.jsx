@@ -40,7 +40,7 @@ const SurveyOptions = (props) => {
           step is blocked and the question is outlined in pink.
         </DisplayModeText>
         <RadioButtons
-          label="5. Include survey (Step 4):"
+          label="14. Include survey (Step 4):"
           buttonIdArray={["true", "false"]}
           stateId="configShowStep5"
           sectionName="config"
