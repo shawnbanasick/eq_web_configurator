@@ -42,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
   
-  .popover {
+  /* .popover {
     position: absolute;
     top: calc(100% + 2px);
     left: 0px;
@@ -50,7 +50,7 @@ const GlobalStyle = createGlobalStyle`
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     z-index: 999;
   }
-  
+   */
   .fadeOut{
      opacity:0;
      width:0;

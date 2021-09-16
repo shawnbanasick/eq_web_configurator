@@ -13,7 +13,9 @@ const ConfigColorPicker = (props) => {
     setColor(e);
   }, 200);
 
-  return <PopoverPicker color={color} onChange={handleOnChange} />;
+  return (
+    <PopoverPicker color={color} onChange={handleOnChange} left={props.left} />
+  );
 };
 
 export default view(ConfigColorPicker);
