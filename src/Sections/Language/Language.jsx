@@ -28,33 +28,72 @@ const Language = () => {
       <Title>Language Settings</Title>
       {displayMode && (
         <DisplayModeText>
-          {`Language formatting is available here by using tags before and after the text to be modified. Options include bold {b} {/b}, italics {i} {/i}, and underline {u} {/u}.`}{" "}
+          {`Language formatting is available here by using tags before and after the text to be modified. Options include bold <b> </b>, italics <i> </i>, and underline <u> </u>.`}{" "}
           <br />
           <br />
-          {`A new line can be inserted using a single break tag {br}, and an open line between text can be created by using two break tags {br}{br}.`}
+          {`A new line can be inserted using a single break tag <br/>, and an open line between text can be created by using two break tags <br/> <br/>.`}
           <br />
           <br />
           {`A web link can be inserted by using this pattern:`}
           <br />
-          {`{a href="https://qmethod.org/" target="_blank"}{u}qmethod.org{/u}{/a}.`}
+          {`<a href="https://qmethod.org/" target="_blank"> <u>qmethod.org</u> </a>.`}
           <br />
           <br />
-          {`See the default text below for examples.`}
+          {`See the default text below for more examples.`}
         </DisplayModeText>
       )}
 
       <SectionContainer>
-        <h3>Button Labels</h3>
+        {/* +++++++++++++  MISC ++++++++++ */}
+        <h3>Misc</h3>
         <UserTextInput
-          label="Continue..."
-          stateId="langBtnContinue"
+          label="Close"
+          stateId="langBtnClose"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+
+        <UserTextInput
+          label="Exit"
+          stateId="langBtnExit"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+        {/* +++++++++++++  MULTI-PURPOSE MODALS ++++++++++ */}
+
+        <h3>Multi-Purpose Modals</h3>
+        <UserTextAreaInput
+          label="Step Completed Message"
+          stateId="langStepCompleted"
+          sectionName="lang"
+          width={35}
+          height={100}
+          left={0}
+        />
+
+        <UserTextInput
+          label="Log in first"
+          stateId="langLoginFirst"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+
+        {/* +++++++++++++  FOOTER INFO ++++++++++ */}
+
+        <h3>Footer Text</h3>
+        <UserTextInput
+          label="Text Size"
+          stateId="langFooterTextSize"
           sectionName="lang"
           width={25}
           left={0}
         />
         <UserTextInput
-          label="Close"
-          stateId="langBtnClose"
+          label="Card Height"
+          stateId="langFooterCardHeight"
           sectionName="lang"
           width={25}
           left={0}
@@ -66,6 +105,37 @@ const Language = () => {
           width={25}
           left={0}
         />
+        <UserTextInput
+          label="Continue"
+          stateId="langBtnNext"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+
+        {/* +++++++++++++  LANDING SCREEN ++++++++++ */}
+        <h3>Landing Screen</h3>
+
+        <UserTextInput
+          label="Landing Page Title Bar"
+          stateId="langLandingHead"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+
+        <UserTextAreaInput
+          label="Welcome Message"
+          stateId="la"
+          sectionName="lang"
+          width={35}
+          height={300}
+          left={0}
+        />
+
+        {/* +++++++++++++  OLD STUFF ++++++++++ */}
+        <h3>Old Stuff</h3>
+
         <UserTextInput
           label="Agree"
           stateId="langBtnAgree"
@@ -95,13 +165,6 @@ const Language = () => {
           left={0}
         />
         <UserTextInput
-          label="Exit"
-          stateId="langBtnExit"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextInput
           label="Please select..."
           stateId="langBtnSelect"
           sectionName="lang"
@@ -109,6 +172,7 @@ const Language = () => {
           left={0}
         />
         <ColorContainer>
+          {/* +++++++++++++  MISC ++++++++++ */}
           <h3>Navigation and Error Language</h3>
           <UserTextInput
             label="Your answers will be lost."
@@ -432,14 +496,16 @@ const DownloadMapButton = styled(GeneralButton)`
 // `;
 
 const DisplayModeText = styled.div`
-  align-self: center;
-  margin-top: 40px;
+  align-self: left;
+  margin-left: 10px;
   margin-bottom: 50px;
-  width: 92%;
-  max-width: 1200px;
+  width: 75vw;
+  max-width: 1000px;
   font-size: 20px;
-  padding: 0 10px 0 10px;
-  border: 3px solid black;
+  padding: 10px;
+  border: 2px solid black;
+  background: whitesmoke;
+  border-radius: 5px;
 `;
 
 const SectionContainer = styled.div`
