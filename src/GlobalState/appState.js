@@ -150,9 +150,59 @@ const appState = store({
 
   /*
   language.xml settings */
-  langBtnContinue: "Continue...",
-  langBtnClose: "Close",
+  langStepCompleted: `You have completed this step. Please click on the <strong> blue "Continue" button </strong> at the bottom right-side of your screen to go to the next step.`,
+  langLoginFirst: `Please complete the log-in process first.`,
+  langFooterTextSize: `Text Size`,
+  langFooterCardHeight: `Card Height`,
   langBtnHelp: "Help me!",
+  langBtnNext: "Continue",
+  langLandingHead: `University Research Project`,
+  langWelcomeMessage: `<center><h2>Easy HtmlQ V3 Demo Project - iPad Use in the Classroom.</h2> </center><br/><br>
+        
+  <div style="display: flex; flex-direction: column; align-items: center;">
+        <div><h2>Features</h2>
+        <ul style="margin-left: 20px;">
+             <li></li>Smooth drag and drop actions for desktop and mobile (touch) devices </li> 
+             <li>Custom Image and video embedding capability (on the page and in help messages) </li> 
+             <li>Participant-adjustable text and card sizes </li>  
+             <li>Simple localization into the research language </li> 
+             <li>HTML formatting for statements and User Interface text (including bold font, italics, underlines, line breaks) </li> 
+             <li>Custom logo in page footers </li> 
+             <li>Ability to do offline data collection when used on a notebook computer with EQ-Configurator</li> 
+        </ul>
+        </div> 
+    </div>
+  
+   <br><br>
+
+  <div style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-around; width: 100%">
+ 
+ <div style="display:flex; flex-direction:column">
+ Images
+ <img src="/images/sortScreen3.png" width="640" /> 
+ </div>
+
+
+    <div style="display:flex; flex-direction:column">
+    Video (enable subtitles / closed captions)
+    <iframe width="640" height="360"
+   src="https://www.youtube.com/embed/aHpeu5M7Rlo">
+   </iframe>
+    </div>
+
+   </div>`,
+
+  langAccessCodeText: `Access Code`,
+  langAccessInputText: "Please enter the access code for this survey.",
+  loginSubmitButtonText: `Submit`,
+  langLoginPartIdText: `Please enter your name or participant ID`,
+  langAccessCodeWarning: `Access code invalid`,
+  langPartIdWarning: `Invalid name or ID`,
+  langLoginHeaderText: `Sign In &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  (use ID="demo" and Access Code= "demo")`,
+  langLoginWelcomeText: `<center></center><h3>Welcome!</h3></center><br> Thank you for participating in this Q methodology research project. <br>Please <strong>sign in</strong> using the form below to begin the process. `,
+  /*
+  OLD language.xml settings */
+  langBtnClose: "Close",
   langBtnAgree: "Agree",
   langBtnNeutral: "Neutral",
   langBtnDisagree: "Disagree",
@@ -168,7 +218,6 @@ const appState = store({
   langWelcomeText:
     'This is a demo project on iPad use in the classroom.{br}{br}{b}** Important Information **{/b}{br}For this survey you will need as much screen space as possible!{br}{br}If necessary, please {b}MAXIMIZE{/b} the size of your browser window, {b}{i}reload{/i}{/b} this web page, and click on the "Continue" button to start the survey.',
   langUserCode: "Access Code",
-  langLogInText: "Please enter the access code for this survey.",
   langFormHeader: "Access Code",
   langPartIdText: "Your name or survey id number",
   langNoInput: "Please insert the access code.",

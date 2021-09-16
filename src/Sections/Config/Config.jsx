@@ -119,22 +119,12 @@ const QuestionContainer = styled.div`
   width: 78vw;
 `;
 
-/* const Title2 = styled.h1`
-  margin-left: 10px;
-  font-size: 35px;
-  width: 70vw;
-`;
- */
 const DownloadConfigButton = styled(GeneralButton)`
   width: 300px;
   align-self: center;
   margin-bottom: 100px;
-  background-color: orange;
+  background-color: #eb8100;
   border: 1px solid black;
-`;
-
-const LeftSpacer = styled.div`
-  margin-left: 70px;
 `;
 
 const DisplayModeText = styled.div`

@@ -3,7 +3,6 @@ import { view, store } from "@risingstack/react-easy-state";
 import styled, { keyframes } from "styled-components";
 import appState from "../../GlobalState/appState";
 import Survey from "../Survey/Survey";
-import FadeIn from "./FadeIn";
 import RadioButtons from "../../Utils/RadioButtons";
 
 const SurveyOptions = (props) => {
@@ -20,9 +19,6 @@ const SurveyOptions = (props) => {
   };
 
   let configShowStep5 = convertToFalse(appState.configShowStep5);
-  console.log(configShowStep5);
-  console.log(localState);
-
   let displayMode = appState.displayMode;
   if (displayMode === "beginner") {
     displayMode = true;
@@ -49,7 +45,7 @@ const SurveyOptions = (props) => {
           sectionName="config"
         />
       </QuestionContainer>
-      <SurveyContainer display={configShowStep5}>
+      <SurveyContainer displayVar={configShowStep5}>
         <Survey />
       </SurveyContainer>
     </React.Fragment>
@@ -89,15 +85,6 @@ const SubTitle = styled.h1`
   margin-top: 50px;
 `;
 
-const ColorLabel = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin-left: 70px;
-  margin-top: 20px;
-  align-items: center;
-  gap: 20px;
-`;
-
 const DisplayModeText = styled.div`
   align-self: left;
   margin-left: 10px;
@@ -120,6 +107,6 @@ const QuestionContainer = styled.div`
 `;
 
 const SurveyContainer = styled.div`
-  display: ${({ display }) => (display ? "inline-block" : "none")};
-  animation: ${(display) => (display ? fadeIn : fadeOut)} 1s ease-in-out;
+  display: ${({ displayVar }) => (displayVar ? "inline-block" : "none")};
+  animation: ${(displayVar) => (displayVar ? fadeIn : fadeOut)} 1s ease-in-out;
 `;

@@ -232,7 +232,7 @@ const FindServerButton = styled(GeneralButton)`
   font-size: 22px;
   width: 300px;
   align-self: center;
-  background-color: orange;
+  background-color: #eb8100;
   border: 1px solid black;
 `;
 
@@ -258,7 +258,7 @@ const LinkCopyButton = styled(GeneralButton)`
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 22px;
-  background-color: orange;
+  background-color: #eb8100;
 `;
 
 const StyledToastContainer = styled(ToastContainer).attrs({

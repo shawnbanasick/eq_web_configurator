@@ -80,6 +80,6 @@ const Title = styled.h1`
 
 const DownloadButton = styled(GeneralButton)`
   width: 300px;
-  background-color: orange;
+  background-color: #eb8100;
   border: 1px solid black;
 `;

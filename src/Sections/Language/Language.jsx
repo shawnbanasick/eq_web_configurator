@@ -44,23 +44,6 @@ const Language = () => {
       )}
 
       <SectionContainer>
-        {/* +++++++++++++  MISC ++++++++++ */}
-        <h3>Misc</h3>
-        <UserTextInput
-          label="Close"
-          stateId="langBtnClose"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-
-        <UserTextInput
-          label="Exit"
-          stateId="langBtnExit"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
         {/* +++++++++++++  MULTI-PURPOSE MODALS ++++++++++ */}
 
         <h3>Multi-Purpose Modals</h3>
@@ -82,36 +65,37 @@ const Language = () => {
         />
 
         {/* +++++++++++++  FOOTER INFO ++++++++++ */}
-
-        <h3>Footer Text</h3>
-        <UserTextInput
-          label="Text Size"
-          stateId="langFooterTextSize"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextInput
-          label="Card Height"
-          stateId="langFooterCardHeight"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextInput
-          label="Help me!"
-          stateId="langBtnHelp"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextInput
-          label="Continue"
-          stateId="langBtnNext"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
+        <ColorContainer>
+          <h3>Footer Text</h3>
+          <UserTextInput
+            label="Text Size"
+            stateId="langFooterTextSize"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+          <UserTextInput
+            label="Card Height"
+            stateId="langFooterCardHeight"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+          <UserTextInput
+            label="Help me!"
+            stateId="langBtnHelp"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+          <UserTextInput
+            label="Continue"
+            stateId="langBtnNext"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+        </ColorContainer>
 
         {/* +++++++++++++  LANDING SCREEN ++++++++++ */}
         <h3>Landing Screen</h3>
@@ -126,12 +110,69 @@ const Language = () => {
 
         <UserTextAreaInput
           label="Welcome Message"
-          stateId="la"
+          stateId="langWelcomeMessage"
           sectionName="lang"
           width={35}
           height={300}
           left={0}
         />
+        {/* +++++++++++++  ACCESS CONTROL ++++++++++ */}
+        <ColorContainer>
+          <h3>Access Control</h3>
+          <UserTextInput
+            label="Access Code"
+            stateId="langAccessCodeText"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+          <UserTextAreaInput
+            label="Access Input Text"
+            stateId="langAccessInputText"
+            sectionName="lang"
+            width={40}
+            height={50}
+            left={0}
+          />
+
+          <UserTextInput
+            label="Participant name or Id number"
+            stateId="langPartIdText"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+
+          <UserTextInput
+            label="Access code invalid"
+            stateId="langAccessCodeWarning"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+          <UserTextInput
+            label="Invalid name or ID"
+            stateId="langPartIdWarning"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+          <UserTextInput
+            label="Log-in modal header text"
+            stateId="langLoginHeaderText"
+            sectionName="lang"
+            width={38}
+            left={0}
+          />
+          <UserTextAreaInput
+            label="Log-in modal main text"
+            stateId="langLoginWelcomeText"
+            sectionName="lang"
+            width={40}
+            height={100}
+            left={0}
+          />
+        </ColorContainer>
 
         {/* +++++++++++++  OLD STUFF ++++++++++ */}
         <h3>Old Stuff</h3>
@@ -221,50 +262,7 @@ const Language = () => {
         />
         <ColorContainer>
           <h3>User Login Screen</h3>
-          <UserTextInput
-            label="Access code"
-            stateId="langUserCode"
-            sectionName="lang"
-            width={25}
-            left={0}
-          />
-          <UserTextAreaInput
-            label="Log in Text"
-            stateId="langLogInText"
-            sectionName="lang"
-            width={56}
-            height={100}
-            left={0}
-          />
-          <UserTextInput
-            label="Access code"
-            stateId="langFormHeader"
-            sectionName="lang"
-            width={25}
-            left={0}
-          />
-          <UserTextInput
-            label="Participant name or Id number"
-            stateId="langPartIdText"
-            sectionName="lang"
-            width={25}
-            left={0}
-          />
 
-          <UserTextInput
-            label="Please insert your access code."
-            stateId="langNoInput"
-            sectionName="lang"
-            width={25}
-            left={0}
-          />
-          <UserTextInput
-            label="Access code invalid"
-            stateId="langUserCodeInvalid"
-            sectionName="lang"
-            width={25}
-            left={0}
-          />
           <UserTextInput
             label="Connection to server failed. Please try again."
             stateId="langServerConnectFail"
@@ -484,7 +482,7 @@ const DownloadMapButton = styled(GeneralButton)`
   max-width: 300px;
   align-self: center;
   margin-top: 50px;
-  background-color: orange;
+  background-color: #eb8100;
   border: 1px solid black;
 `;
 

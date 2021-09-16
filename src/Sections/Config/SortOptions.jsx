@@ -2,7 +2,6 @@ import React from "react";
 import { view } from "@risingstack/react-easy-state";
 import styled from "styled-components";
 import appState from "../../GlobalState/appState";
-import UserTextInput from "../../Utils/UserTextInput";
 import UserNumberInput from "../../Utils/UserNumberInput";
 import RadioButtons from "../../Utils/RadioButtons";
 
