@@ -24,6 +24,29 @@ const columnsArray = [
   "13",
 ];
 
+const headersLookupArray = [
+  "N6",
+  "N5",
+  "N4",
+  "N3",
+  "N2",
+  "N1",
+  "0",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "11",
+  "12",
+  "13",
+];
+
 const generateConfigXml = () => {
   console.log(JSON.stringify(appState, null, 2));
 
@@ -61,13 +84,18 @@ const generateConfigXml = () => {
         columnHeadersColorsArray.push("whitesmoke");
         columnColorsArray.push("whitesmoke");
       }
+
+      let colorIndex = `colCol${headersLookupArray[i]}`;
+      let color = appState[colorIndex];
+      console.log(color);
+
       if (mapColColors === "headers") {
-        columnHeadersColorsArray.push("whitesmoke");
+        columnHeadersColorsArray.push(color);
         columnColorsArray.push("whitesmoke");
       }
       if (mapColColors === "headers and columns") {
-        columnHeadersColorsArray.push("whitesmoke");
-        columnColorsArray.push("whitesmoke");
+        columnHeadersColorsArray.push(color);
+        columnColorsArray.push(color);
       }
     }
 
