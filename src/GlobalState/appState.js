@@ -217,6 +217,17 @@ const appState = store({
   langPresortPreventNavModalText: `Please finish the preliminary sorting before going to the next step.`,
   langPresortFinishedModalHead: `Preliminary Sorting Complete`,
   langPresortFinishedModalText: `You have completed this step. Please click the "Continue" button in the bottom right side of the page to go to the next step.`,
+  langSortHelpModalHead: `Step 2 of 4`,
+  langSortHelpModalText: `In this step, please sort the statements in a grid pattern. Statements you most agree with should be placed on the far right side of the grid, and statements which you most disagree with should be placed on the far left side. Please watch the video for more information on how to sort the cards in this step.`,
+  langSortAgreement: `Agree`,
+  langSortDisagreement: `Disagree`,
+  langCondOfInst: `Sort the cards according to your experience with the iPads this semester`,
+  langSortingCompleteModalHead: `Sorting Complete`,
+  langSortingCompleteModalText: `You have completed the initial sorting. Please take a moment to confirm your placement of the cards.<br><br>When you are satisfied with their placement, please click on the <b>blue "Continue" button</b> at the bottom right-side of your screen to go to the next step.`,
+  langSortPreventNavModalHead: `Navigation Disabled`,
+  langSortPreventNavModalText: `Please finish the grid sorting before going to the next step.`,
+  langSortOverloadedColumnModalHead: `Navigation Disabled`,
+  langSortOverloadedColumnModalText: `One of the columns has too many cards (it will be outlined in orange and have a dashed border). Please adjust the placement of the cards so that all columns have the correct number.`,
 
   /*
   OLD language.xml settings */

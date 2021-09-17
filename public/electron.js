@@ -88,7 +88,11 @@ function createWindow() {
     y: mainWindowStateKeeper.y,
     width: mainWindowStateKeeper.width,
     height: mainWindowStateKeeper.height,
-    webPreferences: { nodeIntegration: true, enableRemoteModule: true },
+    webPreferences: {
+      nodeIntegration: true,
+      enableRemoteModule: true,
+      contextIsolation: true,
+    },
   };
 
   // let currentLanguage;

@@ -246,14 +246,14 @@ const Language = () => {
         />
 
         <UserTextInput
-          label="Prevent Navigation Modal Head"
+          label="Prevent navigation modal head"
           stateId="langPresortPreventNavModalHead"
           sectionName="lang"
           width={25}
           left={0}
         />
         <UserTextAreaInput
-          label="Prevent Navigation Modal Main Text"
+          label="Prevent navigation modal main text"
           stateId="langPresortPreventNavModalText"
           sectionName="lang"
           width={20}
@@ -262,14 +262,14 @@ const Language = () => {
         />
 
         <UserTextInput
-          label="Presort Complete Modal Head"
+          label="Presort complete modal head"
           stateId="langPresortFinishedModalHead"
           sectionName="lang"
           width={25}
           left={0}
         />
         <UserTextAreaInput
-          label="Presort Complete Modal Main Text"
+          label="Presort complete modal main text"
           stateId="langPresortFinishedModalText"
           sectionName="lang"
           width={20}
@@ -277,44 +277,106 @@ const Language = () => {
           left={0}
         />
 
+        <ColorContainer>
+          <h3>Sort Grid</h3>
+
+          <UserTextInput
+            label="Sort help modal head"
+            stateId="langSortHelpModalHead"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+
+          <UserTextAreaInput
+            label="Sort help modal main text"
+            stateId="langSortHelpModalText"
+            sectionName="lang"
+            width={30}
+            height={100}
+            left={0}
+          />
+
+          <UserTextInput
+            label="Agree"
+            stateId="langSortAgreement"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+
+          <UserTextInput
+            label="Disagree"
+            stateId="langSortDisagreement"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+
+          <UserTextAreaInput
+            label="Sort conditions of instruction"
+            stateId="langCondOfInst"
+            sectionName="lang"
+            width={30}
+            height={80}
+            left={0}
+          />
+
+          <UserTextInput
+            label="Sorting complete modal head"
+            stateId="langSortingCompleteModalHead"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+
+          <UserTextAreaInput
+            label="Sorting complete modal text"
+            stateId="langSortingCompleteModalText"
+            sectionName="lang"
+            width={30}
+            height={100}
+            left={0}
+          />
+
+          <UserTextInput
+            label="Prevent Navigation modal head"
+            stateId="langSortPreventNavModalHead"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+
+          <UserTextAreaInput
+            label="Prevent Navigation modal text"
+            stateId="langSortPreventNavModalText"
+            sectionName="lang"
+            width={30}
+            height={50}
+            left={0}
+          />
+
+          <UserTextInput
+            label="Overloaded column modal head"
+            stateId="langSortOverloadedColumnModalHead"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+
+          <UserTextAreaInput
+            label="Overloaded modal text"
+            stateId="langSortOverloadedColumnModalText"
+            sectionName="lang"
+            width={30}
+            height={100}
+            left={0}
+          />
+        </ColorContainer>
+
         {/* +++++++++++++  OLD STUFF ++++++++++ */}
         <h3>Old Stuff</h3>
 
-        <UserTextInput
-          label="Agree"
-          stateId="langBtnAgree"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextInput
-          label="Neutral"
-          stateId="langBtnNeutral"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextInput
-          label="Disagree"
-          stateId="langBtnDisagree"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextInput
-          label="Submit data"
-          stateId="langBtnSubmit"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextInput
-          label="Please select..."
-          stateId="langBtnSelect"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
         <ColorContainer>
           {/* +++++++++++++  MISC ++++++++++ */}
           <h3>Navigation and Error Language</h3>
