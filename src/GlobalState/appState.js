@@ -200,6 +200,24 @@ const appState = store({
   langPartIdWarning: `Invalid name or ID`,
   langLoginHeaderText: `Sign In &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  (use ID="demo" and Access Code= "demo")`,
   langLoginWelcomeText: `<center></center><h3>Welcome!</h3></center><br> Thank you for participating in this Q methodology research project. <br>Please <strong>sign in</strong> using the form below to begin the process. `,
+  langLandingHelpModalHead: `Welcome!`,
+  langLandingHelpModalText: `Thank you for participating in this University Research Project. Please sign in to begin the process. After you submit your participant ID and/or the project access code, the instructions for the survey will appear. Please read them carefully, then click the "<strong></strong>Continue</strong>" button at the bottom right side of the screen to go to the next step.<br><br> <center><iframe width="640" height="360"
+  src="https://www.youtube.com/embed/tgbNymZ7vqY">
+  </iframe></center>`,
+  /*
+   ******** PRESORT  ****************** */
+  langtitleBarText: `Preliminary Sorting`,
+  langPresortAgreement: `Agree`,
+  langPresortStatements: `Statements`,
+  langPresortNeutral: `No Strong Feelings`,
+  langPresortDisagreement: `Disagree`,
+  langPresortModalHead: `Step 1 of 4`,
+  langPresortModalText: `Read the folowing statements carefully and split them up into three piles: a pile for statements you tend to disagree with, a pile for cards you tend to agree with, and a pile for the rest. Changes can be made later.<br><br>If you want to read this instruction a second time, click the help-button at the bottom left corner.`,
+  langPresortPreventNavModalHead: `Navigation Disabled`,
+  langPresortPreventNavModalText: `Please finish the preliminary sorting before going to the next step.`,
+  langPresortFinishedModalHead: `Preliminary Sorting Complete`,
+  langPresortFinishedModalText: `You have completed this step. Please click the "Continue" button in the bottom right side of the page to go to the next step.`,
+
   /*
   OLD language.xml settings */
   langBtnClose: "Close",

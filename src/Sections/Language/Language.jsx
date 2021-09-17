@@ -172,7 +172,110 @@ const Language = () => {
             height={100}
             left={0}
           />
+          <UserTextInput
+            label="Help modal header text"
+            stateId="langLandingHelpModalHead"
+            sectionName="lang"
+            width={38}
+            left={0}
+          />
+          <UserTextAreaInput
+            label="Help modal main text"
+            stateId="langLandingHelpModalText"
+            sectionName="lang"
+            width={40}
+            height={140}
+            left={0}
+          />
         </ColorContainer>
+
+        <h3>Presort Screen</h3>
+        <UserTextInput
+          label="Title bar text"
+          stateId="langtitleBarText"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+
+        <UserTextInput
+          label="Agree"
+          stateId="langPresortAgreement"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+        <UserTextInput
+          label="Statements"
+          stateId="langPresortStatements"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+
+        <UserTextInput
+          label="Neutral"
+          stateId="langPresortNeutral"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+
+        <UserTextInput
+          label="Disagree"
+          stateId="langPresortDisagreement"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+
+        <UserTextInput
+          label="Presort modal header text"
+          stateId="langPresortModalHead"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+        <UserTextAreaInput
+          label="Presort modal main text"
+          stateId="langPresortModalText"
+          sectionName="lang"
+          width={25}
+          height={140}
+          left={0}
+        />
+
+        <UserTextInput
+          label="Prevent Navigation Modal Head"
+          stateId="langPresortPreventNavModalHead"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+        <UserTextAreaInput
+          label="Prevent Navigation Modal Main Text"
+          stateId="langPresortPreventNavModalText"
+          sectionName="lang"
+          width={20}
+          height={140}
+          left={0}
+        />
+
+        <UserTextInput
+          label="Presort Complete Modal Head"
+          stateId="langPresortFinishedModalHead"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+        <UserTextAreaInput
+          label="Presort Complete Modal Main Text"
+          stateId="langPresortFinishedModalText"
+          sectionName="lang"
+          width={20}
+          height={140}
+          left={0}
+        />
 
         {/* +++++++++++++  OLD STUFF ++++++++++ */}
         <h3>Old Stuff</h3>
