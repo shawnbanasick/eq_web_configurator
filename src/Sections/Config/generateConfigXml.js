@@ -1,90 +1,79 @@
 // import { app } from "electron";
 import appState from "../../GlobalState/appState";
+// import encodeHTML from "../../Utils/encodeHTML";
+
+//    ${encodeHTML(appState.langBtnHelp)}
+// ${appState.}
 
 const generateConfigXml = () => {
+  let loginTypeText;
+  const loginType = appState.configAccess;
+  if (loginType === "Name only") {
+    loginTypeText = "partId";
+  }
+  if (loginType === "anonymous") {
+    loginTypeText = "anonymous";
+  }
+  if (loginType === "Name + access code") {
+    loginTypeText = "partId-access";
+  }
+  if (loginType === "access") {
+    loginTypeText = "access";
+  }
+
   const data1 = `<?xml version="1.0" encoding="UTF-8"?>
 
-   <config version="${appState.configVersion}" htmlParse="false">
+   <config version="${appState.configVersion}" htmlParse="false">\n`;
 
-     <!-- title of the study -->\n`;
+  const data2 = `
+   <!-- GENERAL SETTINGS -->
+   <item id="studyTitle">${appState.configTitle}</item> 
+   <item id="setupTaget">${appState.configSetupTarget}</item>
+   <item id="firebaseOrLocal">firebase</item>
+   <item id="shuffleCards">${appState.configshuffleCards}</item>
+   <item id="headerBarColor">${appState.headerBarColor}</item>
+   <item id="devMode">false</item>
+   
+   <!-- ACCESS -->
+   <!-- options: anonymous, partId-access, partId, access -->
+   <item id="initialScreen">${loginTypeText}</item>
+   <item id="accessCode">${appState.configLogInPassword}</item>
 
-  const titleString = `     <item id="studyTitle">${appState.configTitle}</item>\n\n`;
+   <!-- FOOTER -->
+   <item id="footerLogo">{{{center}}}{{{img src="/images/${appState.configLogoHtml}" height="40" width="250" /}}}{{{/center}}}</item>
 
-  const alignString1 = `     <!-- text-align property(left|right) -->\n`;
-  const alignString2 = `     <item id="textAlign">${appState.configTextAlign}</item>\n\n`;
+   <!-- PRESORT -->
+   <!-- default colors #ccffcc, #e0e0e0, #ffe0f0 -->
+   <item id="greenCardColor">${appState.greenCardColor}</item>
+   <item id="yellowCardColor">${appState.yellowCardColor}</item>
+   <item id="pinkCardColor">${appState.pinkCardColor}</item>
+ 
 
-  const shuffleString1 = `     <!-- shuffle cards (true|false)  -->\n`;
-  const shuffleString2 = `     <item id="shuffleCards">${appState.configshuffleCards}</item>\n\n`;
 
-  const loginString1 = `     <!-- login required (true|false) -->\n`;
-  const loginString2 = `     <item id="loginrequired">${appState.configLogInRequired}</item>\n`;
+   <!-- SORT -->
+   <item id="condOfInstFontSize">${appState.configCondOfInstFontSize}</item>
+   <item id="allowUnforcedSorts">${appState.configAllowUnforcedSorts}</item>
+   <item id="warnOverloadedColumn">${appState.configDisplayOverloadedColWarn}</item>
 
-  const loginPassString1 = `     <!-- login with common password (leave blank if not required) -->\n`;
-  const loginPassString2 = `     <item id="loginPassword">${
-    appState.configLogInPassword || ""
-  }</item>\n`;
-  const loginPassString3 = `    <item id="partNameRequired">${
-    appState.configPartNameRequired || "false"
-  }</item>\n`;
 
-  const loginUrlString1 = `      <!-- URL to individual login script(leave blank if not required) -->\n`;
-  const loginUrlString2 = `     <item id="loginUrl">${
-    appState.configLogInScriptURL || ""
-  }</item>\n`;
+   <!-- POSTSORT -->
+   <item id="showPostsort">${appState.configShowStep3}</item>
+   <item id="showSecondPosColumn">${appState.configShowSecondPosColumn}</item>
+   <item id="showSecondNegColumn">${appState.configShowSecondNegColumn}</item>
+   <item id="postsortAgreeColDisp1">column4</item>
+   <item id="postsortAgreeColDisp2">column3</item>
+   <item id="postsortDisagreeColDisp1">columnN4</item>
+   <item id="postsortDisagreeColDisp2">columnN3</item>
+   
+   <item id="displayNeutralObjects">false</item>
 
-  const loginMethodString1 = `     <!-- request mode (post|get) -->\n`;
-  const loginMethodString2 = `     <item id="loginUrlMethod">${
-    appState.configRequestMode || ""
-  }</item>\n\n`;
 
-  const showStep3String1 = `     <!-- activate/deactivate optional steps (true|false) -->\n`;
-  const showStep3String2 = `     <item id="showStep3">${appState.configShowStep3}</item>\n`;
-  const showStep4String2 = `     <item id="showStep4">${appState.configShowStep4}</item>\n`;
-  const showStep5String2 = `     <item id="showStep5">${appState.configShowStep5}</item>\n\n`;
+   <!-- SURVEY - Survey Questions -->
+   <item id="showSurvey">${appState.configShowStep4}</item>
 
-  const disableBackString1 = `     <!-- HtmlQ only: disable the in-window back button -->\n`;
-  const disableBackString2 = `     <item id="disableBackButton">${appState.configDisableBackButton}</item>\n`;
+   `;
 
-  const setConstantCardHeight = `     <item id="setConstantCardHeight">${appState.configStep2ConstantHeight}</item>\n`;
-  const constantCardHeight = `     <item id="constantCardHeight">${appState.configStep2CardHeight}</item>\n`;
-  const setConstantCardWidth = `     <item id="setConstantCardWidth">${appState.configStep2ConstantWidth}</item>\n`;
-  const constantCardWidth = `     <item id="constantCardWidth">${appState.configStep2CardWidth}</item>\n`;
-
-  const surveyDescription = `
-     <!-- define form elements for step5; only displayed if showStep5 is true (delete tags if not required) -->
-     <!-- add label: <label>[STRING]</label> -->
-     <!-- add note: <note>[STRING]</note> -->
-     <!-- add input-field: <input type="[text|textarea|radio|select|checkbox|rating2|rating5|rating10]">[VALUE]</input> -->
-     <!-- optional attributes: bg, id, maxlength, restricted, required, scale  -->
-     <item id="form">\n`;
-
-  let data = data1.concat(
-    titleString,
-    alignString1,
-    alignString2,
-    shuffleString1,
-    shuffleString2,
-    loginString1,
-    loginString2,
-    loginPassString1,
-    loginPassString2,
-    loginPassString3,
-    loginUrlString1,
-    loginUrlString2,
-    loginMethodString1,
-    loginMethodString2,
-    setConstantCardHeight,
-    constantCardHeight,
-    setConstantCardWidth,
-    constantCardWidth,
-    showStep3String1,
-    showStep3String2,
-    showStep4String2,
-    showStep5String2,
-    disableBackString1,
-    disableBackString2,
-    surveyDescription
-  );
+  let data = data1.concat(data2);
 
   const surveyQuestionsArray = appState.surveyQuestionsArray;
 
@@ -202,14 +191,6 @@ const generateConfigXml = () => {
 
   const finalText = `     </item>
 
-     <!-- URL for data transmission via POST/GET (leave blank if not required) -->
-     <item id="submitUrl">exe.php?do=save</item>
-  
-     <!-- request mode (post|get|firebase) -->
-     <item id="submitUrlMethod">firebase</item>
-  
-     <!-- data transmission via email, user must have an e-mail programm like Outlook (leave blank if not required) -->
-     <item id="submitMail">yourdomain.com</item>
    </config>`;
 
   data = data.concat(finalText);

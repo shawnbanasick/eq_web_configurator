@@ -11,43 +11,47 @@ const appState = store({
   // viewConfig: true,
   viewStart: true,
 
-  /*
-  config.xml default settings */
   showSurveytextImage: true,
 
+  /*
+  config.xml GENERAL settings */
   configTitle: "My_Q_project_v1",
-  configVersion: "1.0",
   configSetupTargetonlineActive: true,
-  configSetupTarget: "online survey",
+  configSetupTarget: "online",
   configshuffleCardstrueActive: true,
   configshuffleCards: true,
   configAccessanonymousActive: true,
+
+  /*
+  config.xml ACCESS settings */
   configAccess: "anonymous",
+
+  /*
+  config.xml LOGO settings */
   configLogoHtml: "EQ-logo.svg",
+
+  /*
+  config.xml SORT settings */
   configCondOfInstFontSize: 20,
   configAllowUnforcedSorts: false,
   configAllowUnforcedSortsfalseActive: true,
   configDisplayOverloadedColWarn: true,
   configDisplayOverloadedColWarntrueActive: true,
+
+  /*
+  config.xml POSTSORT settings */
   configShowSecondPosColumn: false,
   configShowSecondPosColumnfalseActive: true,
   configShowSecondNegColumn: false,
   configShowSecondNegColumnfalseActive: true,
-
-  configUseLogInScriptfalseActive: true,
-  configUseLogInScript: false,
   configShowStep3trueActive: true,
   configShowStep3: "true",
+
+  /*
+  config.xml SURVEY settings */
   configShowStep4trueActive: true,
   configShowStep4: "true",
-  configShowStep5trueActive: true,
-  configShowStep5: "true",
-  configDisableBackButton: true,
-  configDisableBackButtontrueActive: true,
-  configPartNameRequired: true,
-  configPartNameRequiredtrueActive: true,
-  configStep2ConstantHeight: false,
-  configStep2ConstantHeightfalseActive: true,
+
   configStep2CardHeight: 150,
   configStep2ConstantWidth: false,
   configStep2ConstantWidthfalseActive: true,
