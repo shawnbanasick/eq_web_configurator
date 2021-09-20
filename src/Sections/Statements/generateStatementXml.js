@@ -1,4 +1,5 @@
 import appState from "../../GlobalState/appState";
+import encodeHTML from "../../Utils/encodeHTML";
 
 const generateStatementXml = () => {
   let statementsArray = appState.statements;
@@ -8,9 +9,9 @@ const generateStatementXml = () => {
    <statements version="1.0" htmlParse="false">\n`;
 
   for (let i = 0; i < statementsArray.length; i += 1) {
-    let string = `     <statement id="${i + 1}">${
+    let string = `     <statement id="${i + 1}">{{{div}}}${encodeHTML(
       statementsArray[i]
-    }</statement>\n`;
+    )}{{{/div}}}</statement>\n`;
 
     data = data.concat(string);
     // }
