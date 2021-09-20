@@ -545,6 +545,7 @@ const Language = () => {
       </SectionContainer>
       <DownloadMapButton onClick={() => handleClick()}>
         Click here to save to the <b>SETTINGS</b> folder and replace the
+        <br />
         "language.xml" file
       </DownloadMapButton>
     </MainContent>
