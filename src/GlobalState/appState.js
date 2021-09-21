@@ -21,14 +21,22 @@ const appState = store({
   configshuffleCardstrueActive: true,
   configshuffleCards: true,
   configAccessanonymousActive: true,
+  configHeaderBarColor: "#337ab7",
 
   /*
   config.xml ACCESS settings */
   configAccess: "anonymous",
+  configLogInPassword: "demo",
 
   /*
   config.xml LOGO settings */
   configLogoHtml: "EQ-logo.svg",
+
+  /*
+  config.xml PRESORT settings */
+  greenCardColor: "#ccffcc",
+  yellowCardColor: "#e0e0e0",
+  pinkCardColor: "#ffe0e0",
 
   /*
   config.xml SORT settings */

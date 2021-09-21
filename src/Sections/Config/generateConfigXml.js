@@ -8,6 +8,7 @@ import appState from "../../GlobalState/appState";
 const generateConfigXml = () => {
   let loginTypeText;
   const loginType = appState.configAccess;
+  console.log(loginType);
   if (loginType === "Name only") {
     loginTypeText = "partId";
   }
@@ -17,13 +18,13 @@ const generateConfigXml = () => {
   if (loginType === "Name + access code") {
     loginTypeText = "partId-access";
   }
-  if (loginType === "access") {
+  if (loginType === "access code only") {
     loginTypeText = "access";
   }
 
   const data1 = `<?xml version="1.0" encoding="UTF-8"?>
 
-   <config version="${appState.configVersion}" htmlParse="false">\n`;
+   <config version="1.0" htmlParse="false">\n`;
 
   const data2 = `
    <!-- GENERAL SETTINGS -->
@@ -31,7 +32,7 @@ const generateConfigXml = () => {
    <item id="setupTaget">${appState.configSetupTarget}</item>
    <item id="firebaseOrLocal">firebase</item>
    <item id="shuffleCards">${appState.configshuffleCards}</item>
-   <item id="headerBarColor">${appState.headerBarColor}</item>
+   <item id="headerBarColor">${appState.configHeaderBarColor}</item>
    <item id="devMode">false</item>
    
    <!-- ACCESS -->
@@ -189,10 +190,16 @@ const generateConfigXml = () => {
     data = data.concat(item);
   }
 
-  const finalText = `     </item>
-
-   </config>`;
-
+  let finalText;
+  if (surveyQuestionsArray.length > 0) {
+    finalText = `     </item>
+  
+    </config>`;
+  } else {
+    finalText = `   
+    
+    </config>`;
+  }
   data = data.concat(finalText);
 
   return data;

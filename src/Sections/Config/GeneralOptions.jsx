@@ -41,7 +41,10 @@ const GeneralOptions = () => {
 
       <ColorLabel>
         <div>4. Title bar color (for all pages):</div>
-        <ConfigColorPicker stateDesig="headerBarColor" default="#337ab7" />
+        <ConfigColorPicker
+          stateDesig="configHeaderBarColor"
+          default="#337ab7"
+        />
       </ColorLabel>
     </React.Fragment>
   );
