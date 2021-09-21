@@ -77,6 +77,8 @@ const generateConfigXml = () => {
   let data = data1.concat(data2);
 
   const surveyQuestionsArray = appState.surveyQuestionsArray;
+  const open = `     <item id="survey">`;
+  const close = `     </item>`;
 
   for (let i = 0; i < surveyQuestionsArray.length; i += 1) {
     let item;
@@ -100,7 +102,26 @@ const generateConfigXml = () => {
       const note = `        <note>${itemObject.note}</note>\n`;
       const input = `        <input type="text" required="${itemObject.required}" maxlength="${itemObject.maxlength}" ${restrictedString}></input>\n\n`;
 
-      item = accumulatorString.concat(label, note, input);
+      item = accumulatorString.concat(open, label, note, input, close);
+    }
+
+    // for TEXT-RESTRICTED items
+    if (itemObject.surveyQuestionType === "textRestricted") {
+      let restrictedString;
+      if (itemObject.restricted === true) {
+        restrictedString = `restricted="0-9"`;
+      } else {
+        restrictedString = ``;
+      }
+      if (itemObject.required === true) {
+        label = `        <label>${itemObject.label}*</label>\n`;
+      } else {
+        label = `        <label>${itemObject.label}</label>\n`;
+      }
+      const note = `        <note>${itemObject.note}</note>\n`;
+      const input = `        <input type="text" required="${itemObject.required}" maxlength="${itemObject.maxlength}" ${restrictedString}></input>\n\n`;
+
+      item = accumulatorString.concat(open, label, note, input, close);
     }
 
     // for TEXTAREA items
@@ -111,7 +132,7 @@ const generateConfigXml = () => {
         label = `        <label>${itemObject.label}</label>\n`;
       }
       const input = `        <input type="textarea" required="${itemObject.required}"></input>\n\n`;
-      item = accumulatorString.concat(label, input);
+      item = accumulatorString.concat(open, label, input, close);
     }
 
     // for RADIO items
@@ -123,7 +144,7 @@ const generateConfigXml = () => {
       }
       const note = `        <note>${itemObject.note}</note>\n`;
       const input = `        <input type="radio" required="${itemObject.required}">${itemObject.options}</input>\n\n`;
-      item = accumulatorString.concat(label, note, input);
+      item = accumulatorString.concat(open, label, note, input, close);
     }
 
     // for SELECT items
@@ -134,7 +155,7 @@ const generateConfigXml = () => {
         label = `        <label>${itemObject.label}</label>\n`;
       }
       const input = `        <input type="select" required="${itemObject.required}">${itemObject.options}</input>\n\n`;
-      item = accumulatorString.concat(label, input);
+      item = accumulatorString.concat(open, label, input, close);
     }
 
     // for CHECKBOX items
@@ -145,7 +166,7 @@ const generateConfigXml = () => {
         label = `        <label>${itemObject.label}</label>\n`;
       }
       const input = `        <input type="checkbox" required="${itemObject.required}">${itemObject.options}</input>\n\n`;
-      item = accumulatorString.concat(label, input);
+      item = accumulatorString.concat(open, label, input, close);
     }
 
     // for RATING2 items
@@ -156,7 +177,7 @@ const generateConfigXml = () => {
         label = `        <label>${itemObject.label}</label>\n`;
       }
       const input = `        <input type="rating2" required="${itemObject.required}" scale="${itemObject.scale}">${itemObject.options}</input>\n\n`;
-      item = accumulatorString.concat(label, input);
+      item = accumulatorString.concat(open, label, input, close);
     }
 
     // for RATING5 items
@@ -167,7 +188,7 @@ const generateConfigXml = () => {
         label = `        <label>${itemObject.label}</label>\n`;
       }
       const input = `        <input type="rating5" required="${itemObject.required}">${itemObject.options}</input>\n\n`;
-      item = accumulatorString.concat(label, input);
+      item = accumulatorString.concat(open, label, input, close);
     }
 
     // for RATING10 items
@@ -178,13 +199,14 @@ const generateConfigXml = () => {
         label = `        <label>${itemObject.label}</label>\n`;
       }
       const input = `        <input type="rating10" required="${itemObject.required}">${itemObject.options}</input>\n\n`;
-      item = accumulatorString.concat(label, input);
+      item = accumulatorString.concat(open, label, input, close);
     }
 
     // for INFORMATION items
     if (itemObject.surveyQuestionType === "information") {
+      const infoText = `        <input type="information"></input>`;
       const note = `        <note bg="${itemObject.bg}">${itemObject.options}</note>\n\n`;
-      item = accumulatorString.concat(note);
+      item = accumulatorString.concat(open, infoText, note, close);
     }
 
     data = data.concat(item);
