@@ -22,6 +22,7 @@ import FadeIn from "./FadeIn";
 import { toast } from "react-toastify";
 import { ToastContainer, Slide } from "react-toastify";
 import clearAddItemForm from "./clearAddItemForm";
+import ConfigColorPicker from "../Config/ConfigColorPicker";
 
 const clone = require("rfdc/default");
 
@@ -104,8 +105,8 @@ const Survey = () => {
         newItemArray.push(`options: ${appState.surveyQuestionOptions}`);
       }
       if (displayBoolean.bg === true) {
-        newItemObj.bg = appState.surveyBackgroundDisplay;
-        newItemArray.push(`background: ${appState.surveyBackgroundDisplay}`);
+        newItemObj.bg = appState.configSurveyInfoBarColor;
+        newItemArray.push(`background: ${appState.configSurveyInfoBarColor}`);
       }
       const val = Math.floor(1000 + Math.random() * 9000);
       newItemObj.id = `item-${val}`;
@@ -253,12 +254,13 @@ const Survey = () => {
             />
           )}
           {displayBoolean.bg && (
-            <RadioButtons
-              label="Use yellow background:"
-              buttonIdArray={["true", "false"]}
-              stateId="surveyBackgroundDisplay"
-              sectionName="survey"
-            />
+            <ColorLabel>
+              <div> Information bar background color:</div>
+              <ConfigColorPicker
+                stateDesig="configSurveyInfoBarColor"
+                default="goldenrod"
+              />
+            </ColorLabel>
           )}
           {displayBoolean.options && (
             <UserTextInput
@@ -340,4 +342,13 @@ const StyledToastContainer = styled(ToastContainer).attrs({
     background-color: var(--main-theme-color);
     width: 200px;
   }
+`;
+
+const ColorLabel = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-left: 70px;
+  margin-top: 20px;
+  align-items: center;
+  gap: 20px;
 `;

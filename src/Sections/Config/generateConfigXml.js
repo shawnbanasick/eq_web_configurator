@@ -1,6 +1,5 @@
-// import { app } from "electron";
 import appState from "../../GlobalState/appState";
-// import encodeHTML from "../../Utils/encodeHTML";
+import encodeHTML from "../../Utils/encodeHTML";
 
 //    ${encodeHTML(appState.langBtnHelp)}
 // ${appState.}
@@ -77,8 +76,8 @@ const generateConfigXml = () => {
   let data = data1.concat(data2);
 
   const surveyQuestionsArray = appState.surveyQuestionsArray;
-  const open = `     <item id="survey">`;
-  const close = `     </item>`;
+  const open = `<item id="survey">\n`;
+  const close = `   </item>`;
 
   for (let i = 0; i < surveyQuestionsArray.length; i += 1) {
     let item;
@@ -194,9 +193,9 @@ const generateConfigXml = () => {
     // for RATING10 items
     if (itemObject.surveyQuestionType === "rating10") {
       if (itemObject.required === true) {
-        label = `        <label>${itemObject.label}*</label>\n`;
+        label = `     <label>${itemObject.label}*</label>\n`;
       } else {
-        label = `        <label>${itemObject.label}</label>\n`;
+        label = `     <label>${itemObject.label}</label>\n`;
       }
       const input = `        <input type="rating10" required="${itemObject.required}">${itemObject.options}</input>\n\n`;
       item = accumulatorString.concat(open, label, input, close);
@@ -204,24 +203,18 @@ const generateConfigXml = () => {
 
     // for INFORMATION items
     if (itemObject.surveyQuestionType === "information") {
-      const infoText = `        <input type="information"></input>`;
-      const note = `        <note bg="${itemObject.bg}">${itemObject.options}</note>\n\n`;
+      const infoNoteHtml = encodeHTML(itemObject.options);
+      const infoText = `       <input type="information"></input>\n`;
+      const note = `       <note bg="${itemObject.bg}">${infoNoteHtml}</note>\n`;
       item = accumulatorString.concat(open, infoText, note, close);
     }
 
     data = data.concat(item);
   }
 
-  let finalText;
-  if (surveyQuestionsArray.length > 0) {
-    finalText = `     </item>
-  
-    </config>`;
-  } else {
-    finalText = `   
-    
-    </config>`;
-  }
+  let finalText = `\n       
+  </config>`;
+
   data = data.concat(finalText);
 
   return data;
