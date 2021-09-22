@@ -2,7 +2,6 @@ import React from "react";
 import { view } from "@risingstack/react-easy-state";
 import styled from "styled-components";
 import appState from "../../GlobalState/appState";
-// import { useTranslation } from "react-i18next";
 import exportSurveyObject from "./exportSurveyObject";
 
 const optionsArray = [

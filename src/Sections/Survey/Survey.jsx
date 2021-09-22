@@ -23,6 +23,8 @@ import { toast } from "react-toastify";
 import { ToastContainer, Slide } from "react-toastify";
 import clearAddItemForm from "./clearAddItemForm";
 import ConfigColorPicker from "../Config/ConfigColorPicker";
+import ReactHtmlParser from "react-html-parser";
+import decodeHTML from "../../Utils/decodeHtml";
 
 const clone = require("rfdc/default");
 
@@ -65,9 +67,22 @@ const Survey = () => {
   const surveyQuestionType = appState.surveyQuestionType;
   const displayBoolean2 = shouldDisplayObject();
   const displayBoolean = displayBoolean2[surveyQuestionType];
+  let displayOptionsSemiWarn = false;
+
+  if (
+    showSurveyrating5Image === true ||
+    showSurveyrating10Image === true ||
+    showSurveyrating2Image === true ||
+    showSurveyradioImage === true ||
+    showSurveyselectImage === true ||
+    showSurveycheckboxImage === true
+  ) {
+    displayOptionsSemiWarn = true;
+  }
 
   const addItem = () => {
     try {
+      displayOptionsSemiWarn = false;
       const newItemObj = {};
       newItemObj.surveyQuestionType = surveyQuestionType;
       const newItemArray = [`item type: ${surveyQuestionType}`];
@@ -80,11 +95,19 @@ const Survey = () => {
       }
       if (displayBoolean.label === true) {
         newItemObj.label = appState.surveyQuestionLabel;
-        newItemArray.push(`label text: ${appState.surveyQuestionLabel}`);
+        newItemArray.push(
+          ReactHtmlParser(
+            `label text: ${decodeHTML(appState.surveyQuestionLabel)}`
+          )
+        );
       }
       if (displayBoolean.note === true) {
         newItemObj.note = appState.surveyQuestionNote;
-        newItemArray.push(`question note: ${appState.surveyQuestionNote}`);
+        newItemArray.push(
+          ReactHtmlParser(
+            `question note: ${decodeHTML(appState.surveyQuestionNote)}`
+          )
+        );
       }
       if (displayBoolean.maxlength === true) {
         newItemObj.maxlength = appState.surveyAnswerLenMax;
@@ -101,8 +124,14 @@ const Survey = () => {
         newItemArray.push(`scale: ${appState.surveyQuestionScale}`);
       }
       if (displayBoolean.options === true) {
+        displayOptionsSemiWarn = true;
+        console.log(appState.surveyQuestionOptions);
         newItemObj.options = appState.surveyQuestionOptions;
-        newItemArray.push(`options: ${appState.surveyQuestionOptions}`);
+        newItemArray.push(
+          ReactHtmlParser(
+            `options: ${decodeHTML(appState.surveyQuestionOptions)}`
+          )
+        );
       }
       if (displayBoolean.bg === true) {
         newItemObj.bg = appState.configSurveyInfoBarColor;
@@ -111,9 +140,20 @@ const Survey = () => {
       const val = Math.floor(1000 + Math.random() * 9000);
       newItemObj.id = `item-${val}`;
       newItemObj.content = newItemArray;
-      let surveyQuestionsArray = clone(appState.surveyQuestionsArray);
+      let surveyQuestionsArray = clone(
+        JSON.parse(localStorage.getItem("surveyQuestionArray"))
+      );
+
+      if (surveyQuestionsArray === null || surveyQuestionsArray === undefined) {
+        surveyQuestionsArray = [];
+      }
+
       surveyQuestionsArray.push(newItemObj);
       appState.surveyQuestionsArray = surveyQuestionsArray;
+      localStorage.setItem(
+        "surveyQuestionsArray",
+        JSON.stringify(surveyQuestionsArray)
+      );
       notifySuccess();
       clearAddItemForm();
       // console.log(JSON.stringify(appState, null, 2));
@@ -179,16 +219,22 @@ const Survey = () => {
               </FadeIn>
             )}
           </ImageContainer>
-          <p>
+          <SettingsTextContainer>
             <strong>Settings:</strong>
-          </p>
-          {detailsArray && (
-            <ul>
-              {detailsArray.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          )}
+            {detailsArray && (
+              <ul>
+                {detailsArray.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            )}
+            {displayOptionsSemiWarn && (
+              <SeparatorWarning>
+                Separate scale or options with three semicolons
+                &nbsp;&nbsp;&nbsp; ;;;
+              </SeparatorWarning>
+            )}
+          </SettingsTextContainer>
         </ExampleContainer>
         <SettingsContainer>
           <h3 style={{ marginBottom: 5, marginTop: 5 }}>New Item Settings:</h3>
@@ -351,4 +397,23 @@ const ColorLabel = styled.div`
   margin-top: 20px;
   align-items: center;
   gap: 20px;
+`;
+
+const SettingsTextContainer = styled.div`
+  margin-top: 30px;
+  margin-bottom: 0px;
+
+  ul {
+    margin-top: 3px;
+  }
+`;
+
+const SeparatorWarning = styled.div`
+  background-color: goldenrod;
+  font-weight: bold;
+  padding: 10px;
+  width: 465px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  border-radius: 5px;
 `;
