@@ -9,14 +9,14 @@ const clone = require("rfdc/default");
 
 const SurveyItemDndList = () => {
   const grid = 5;
-  // let testItems = clone(appState.surveyQuestionsArray);
-  let testItems = clone(
+  let testItems = clone(appState.surveyQuestionsArray);
+  /* let testItems = clone(
     JSON.parse(localStorage.getItem("surveyQuestionArray"))
   );
   if (testItems === null || testItems === undefined) {
     testItems = [];
   }
-
+ */
   const getItemStyle = (isDragging, draggableStyle) => ({
     // drag container style
     userSelect: "none",
