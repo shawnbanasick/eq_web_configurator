@@ -22,7 +22,6 @@ const SurveyItemDndList = () => {
   useEffect(() => {
     if (testItems.length === 0) {
       console.log("branch");
-      // testItems = [...testItems2];
       appState.surveyQuestionsArray = testItems2;
     }
   }, [testItems, testItems2]);
