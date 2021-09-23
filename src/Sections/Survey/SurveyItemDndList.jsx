@@ -9,6 +9,8 @@ const clone = require("rfdc/default");
 
 const SurveyItemDndList = () => {
   const grid = 5;
+
+  // get survey questions from STATE
   let testItems = clone(appState.surveyQuestionsArray);
   /* let testItems = clone(
     JSON.parse(localStorage.getItem("surveyQuestionArray"))

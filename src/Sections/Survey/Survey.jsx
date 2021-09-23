@@ -140,20 +140,27 @@ const Survey = () => {
       const val = Math.floor(1000 + Math.random() * 9000);
       newItemObj.id = `item-${val}`;
       newItemObj.content = newItemArray;
-      let surveyQuestionsArray = clone(
+
+      let surveyQuestionsArray = clone(appState.surveyQuestionsArray);
+
+      /*       let surveyQuestionsArray = clone(
         JSON.parse(localStorage.getItem("surveyQuestionArray"))
       );
 
       if (surveyQuestionsArray === null || surveyQuestionsArray === undefined) {
         surveyQuestionsArray = [];
       }
+ */
 
       surveyQuestionsArray.push(newItemObj);
       appState.surveyQuestionsArray = surveyQuestionsArray;
-      localStorage.setItem(
+
+      /*   localStorage.setItem(
         "surveyQuestionsArray",
         JSON.stringify(surveyQuestionsArray)
       );
+       */
+
       notifySuccess();
       clearAddItemForm();
       // console.log(JSON.stringify(appState, null, 2));
