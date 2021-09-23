@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { view } from "@risingstack/react-easy-state";
 import styled from "styled-components";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
@@ -19,11 +19,13 @@ const SurveyItemDndList = () => {
     testItems2 = [];
   }
 
-  if (testItems.length === 0) {
-    console.log("branch");
-    // testItems = [...testItems2];
-    appState.surveyQuestionsArray = testItems2;
-  }
+  useEffect(() => {
+    if (testItems.length === 0) {
+      console.log("branch");
+      // testItems = [...testItems2];
+      appState.surveyQuestionsArray = testItems2;
+    }
+  }, [testItems, testItems2]);
 
   const getItemStyle = (isDragging, draggableStyle) => ({
     // drag container style
