@@ -5,6 +5,8 @@ import encodeHTML from "../../Utils/encodeHTML";
 // ${appState.}
 
 const generateConfigXml = () => {
+  console.log(JSON.stringify(appState.surveyQuestionsArray));
+
   let loginTypeText;
   const loginType = appState.configAccess;
   console.log(loginType);
@@ -81,7 +83,7 @@ const generateConfigXml = () => {
  */
   const surveyQuestionsArray = appState.surveyQuestionsArray;
   const open = `<item id="survey">\n`;
-  const close = `   </item>`;
+  const close = `   </item>\n\n`;
 
   for (let i = 0; i < surveyQuestionsArray.length; i += 1) {
     let item;

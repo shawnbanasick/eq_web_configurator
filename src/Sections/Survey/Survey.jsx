@@ -141,6 +141,7 @@ const Survey = () => {
       newItemObj.id = `item-${val}`;
       newItemObj.content = newItemArray;
 
+      // get survey questions from STATE
       let surveyQuestionsArray = clone(appState.surveyQuestionsArray);
 
       /*       let surveyQuestionsArray = clone(
@@ -152,14 +153,13 @@ const Survey = () => {
       }
  */
 
+      // ADD new question to ARRAY and save to STATE
       surveyQuestionsArray.push(newItemObj);
       appState.surveyQuestionsArray = surveyQuestionsArray;
 
-      /*   localStorage.setItem(
-        "surveyQuestionsArray",
-        JSON.stringify(surveyQuestionsArray)
-      );
-       */
+      const newArray = [...surveyQuestionsArray];
+
+      localStorage.setItem("surveyQuestionsArray", JSON.stringify(newArray));
 
       notifySuccess();
       clearAddItemForm();

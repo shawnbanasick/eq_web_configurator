@@ -12,13 +12,19 @@ const SurveyItemDndList = () => {
 
   // get survey questions from STATE
   let testItems = clone(appState.surveyQuestionsArray);
-  /* let testItems = clone(
-    JSON.parse(localStorage.getItem("surveyQuestionArray"))
+  let testItems2 = clone(
+    JSON.parse(localStorage.getItem("surveyQuestionsArray"))
   );
-  if (testItems === null || testItems === undefined) {
-    testItems = [];
+  if (testItems2 === null || testItems2 === undefined) {
+    testItems2 = [];
   }
- */
+
+  if (testItems.length === 0) {
+    console.log("branch");
+    // testItems = [...testItems2];
+    appState.surveyQuestionsArray = testItems2;
+  }
+
   const getItemStyle = (isDragging, draggableStyle) => ({
     // drag container style
     userSelect: "none",
@@ -66,12 +72,14 @@ const SurveyItemDndList = () => {
 
     testItems = [...items];
     appState.surveyQuestionsArray = testItems;
-  };
+    localStorage.setItem("surveyQuestionsArray", JSON.stringify(testItems));
+  }; // end DragEnd
 
   const callDelete = (e) => {
     const item = e.target.value;
     testItems.splice(item, 1);
     appState.surveyQuestionsArray = testItems;
+    localStorage.setItem("surveyQuestionsArray", JSON.stringify(testItems));
   };
 
   return (
