@@ -9,22 +9,24 @@ const clone = require("rfdc/default");
 
 const SurveyItemDndList = () => {
   const grid = 5;
+  let testItems = clone(appState.surveyQuestionsArray);
 
   // get survey questions from STATE
-  let testItems = clone(appState.surveyQuestionsArray);
-  let testItems2 = clone(
-    JSON.parse(localStorage.getItem("surveyQuestionsArray"))
-  );
-  if (testItems2 === null || testItems2 === undefined) {
-    testItems2 = [];
-  }
+  // let testItems2 = clone(
+  //   JSON.parse(localStorage.getItem("surveyQuestionsArray"))
+  // );
 
   useEffect(() => {
-    if (testItems.length === 0) {
+    let testItems = clone(appState.surveyQuestionsArray);
+    if (testItems.length < 1) {
       console.log("branch");
+      let testItems2 = JSON.parse(localStorage.getItem("surveyQuestionsArray"));
+      if (testItems2 === null || testItems2 === undefined) {
+        testItems2 = [];
+      }
       appState.surveyQuestionsArray = testItems2;
     }
-  }, [testItems, testItems2]);
+  }, []);
 
   const getItemStyle = (isDragging, draggableStyle) => ({
     // drag container style
