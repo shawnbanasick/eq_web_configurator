@@ -22,6 +22,12 @@ const clearAddItemForm = () => {
   appState.surveyBackgroundDisplay = true;
   appState.surveyBackgroundDisplaytrueActive = true;
   appState.surveyBackgroundDisplayfalseActive = false;
+
+  localStorage.setItem("surveyQuestionLabel", "");
+  localStorage.setItem("surveyQuestionNote", "");
+  localStorage.setItem("surveyQuestionScale", "");
+  localStorage.setItem("surveyQuestionOptions", "");
+
   return null;
 };
 
