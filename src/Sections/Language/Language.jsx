@@ -8,13 +8,32 @@ import UserTextInput from "../../Utils/UserTextInput";
 import UserTextAreaInput from "../../Utils/UserTextAreaInput";
 import appState from "../../GlobalState/appState";
 import generateLanguageXml from "../Language/generateLanguageXml";
-
-const handleClick = () => {
-  const data = generateLanguageXml();
-  exportToXml("language.xml", data, "xml");
-};
+import showSectionDefaults from "./showSectionDefaults";
+import clearSection from "./clearSection";
+import ImageModal from "./ImageModal";
+import showRefImage from "./showRefImage";
 
 const Language = () => {
+  const handleClick = () => {
+    const data = generateLanguageXml();
+    exportToXml("language.xml", data, "xml");
+  };
+
+  const handleShowDefaults = (e) => {
+    console.log(e.target.id);
+    showSectionDefaults(e.target.id);
+  };
+
+  const handleClearAll = (e) => {
+    console.log(e.target.id);
+    clearSection(e.target.id);
+  };
+
+  const handleRefImage = (e) => {
+    console.log(e.target.id);
+    showRefImage(e.target.id);
+  };
+
   let displayMode = appState.displayMode;
   if (displayMode === "beginner") {
     displayMode = true;
@@ -25,6 +44,7 @@ const Language = () => {
   return (
     <MainContent>
       <GlobalStyle />
+      <ImageModal />
       <Title>Language Settings</Title>
       {displayMode && (
         <DisplayModeText>
@@ -45,7 +65,20 @@ const Language = () => {
 
       <SectionContainer>
         {/* +++++++++++++  MULTI-PURPOSE MODALS ++++++++++ */}
-        <h3>Multi-Purpose Modals</h3>
+        <HeaderButtonBar>
+          <SectionTitle>Multi-Purpose Modals</SectionTitle>
+          <div>
+            <DefaultsButton id="multiModalsDef" onClick={handleShowDefaults}>
+              Show Defaults
+            </DefaultsButton>
+            <ClearAllButton id="multiModalsClear" onClick={handleClearAll}>
+              Clear Section
+            </ClearAllButton>
+            <RefImageButton id="multiModalsImage" onClick={handleRefImage}>
+              View Reference Image
+            </RefImageButton>
+          </div>
+        </HeaderButtonBar>
         <UserTextAreaInput
           label="Step Completed Message"
           stateId="langStepCompleted"
@@ -63,7 +96,20 @@ const Language = () => {
         />
         {/* +++++++++++++  FOOTER INFO ++++++++++ */}
         <ColorContainer>
-          <h3>Footer Text</h3>
+          <HeaderButtonBar>
+            <SectionTitle>Footer Text</SectionTitle>
+            <div>
+              <DefaultsButton id="footerDef" onClick={handleShowDefaults}>
+                Show Defaults
+              </DefaultsButton>
+              <ClearAllButton id="footerClear" onClick={handleClearAll}>
+                Clear Section
+              </ClearAllButton>
+              <RefImageButton id="footerImage" onClick={handleRefImage}>
+                View Reference Image
+              </RefImageButton>
+            </div>
+          </HeaderButtonBar>
           <UserTextInput
             label="Text Size"
             stateId="langFooterTextSize"
@@ -640,4 +686,76 @@ const SectionContainer = styled.div`
 
 const TenPxSpacer = styled.div`
   height: 10px;
+`;
+
+const HeaderButtonBar = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+`;
+
+const DefaultsButton = styled.button`
+  box-sizing: border-box;
+  align-self: flex-end;
+  margin-bottom: 10px;
+  color: black;
+  transition: 0.3s ease all;
+  user-select: none;
+
+  &:hover {
+    opacity: 1;
+    box-shadow: inset 0 0 0 1px #666, 0 0 1px transparent;
+  }
+
+  &:active {
+    transform: translateY(1px);
+    filter: brightness(80%);
+  }
+`;
+
+const ClearAllButton = styled.button`
+  box-sizing: border-box;
+  align-self: flex-end;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  color: black;
+  transition: 0.3s ease all;
+  user-select: none;
+
+  &:hover {
+    opacity: 1;
+    box-shadow: inset 0 0 0 1px #666, 0 0 1px transparent;
+  }
+
+  &:active {
+    transform: translateY(1px);
+    filter: brightness(80%);
+  }
+`;
+
+const RefImageButton = styled.button`
+  box-sizing: border-box;
+  align-self: flex-end;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 35px;
+  justify-self: flex-end;
+  color: black;
+  user-select: none;
+
+  &:hover {
+    opacity: 1;
+    box-shadow: inset 0 0 0 1px #666, 0 0 1px transparent;
+  }
+
+  &:active {
+    transform: translateY(1px);
+    filter: brightness(80%);
+  }
+`;
+
+const SectionTitle = styled.h3`
+  margin-top: 20px;
 `;

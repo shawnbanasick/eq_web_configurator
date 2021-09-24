@@ -168,7 +168,7 @@ const Survey = () => {
       notifyError();
       console.log(error);
     }
-  };
+  }; // end add item
 
   return (
     <>
