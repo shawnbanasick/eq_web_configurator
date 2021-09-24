@@ -175,7 +175,7 @@ const appState = store({
   <div style="display: flex; flex-direction: column; align-items: center;">
         <div><h2>Features</h2>
         <ul style="margin-left: 20px;">
-             <li></li>Smooth drag and drop actions for desktop and mobile (touch) devices </li> 
+             <li>Smooth drag and drop actions for desktop and mobile (touch) devices </li> 
              <li>Custom Image and video embedding capability (on the page and in help messages) </li> 
              <li>Participant-adjustable text and card sizes </li>  
              <li>Simple localization into the research language </li> 

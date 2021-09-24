@@ -16,7 +16,11 @@ const UserTextInput = (props) => {
     event.preventDefault();
     const value = event.target.value;
     appState[key] = value;
+    localStorage.setItem(key, value);
+    // console.log(value);
   };
+
+  appState[key] = localStorage.getItem(key);
 
   return (
     <InputContainerDiv>

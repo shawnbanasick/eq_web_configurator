@@ -191,7 +191,7 @@ const Language = () => {
           left={0}
         />
         <UserTextInput
-          label="Agree"
+          label={`"Agree"`}
           stateId="langPresortAgreement"
           sectionName="lang"
           width={25}

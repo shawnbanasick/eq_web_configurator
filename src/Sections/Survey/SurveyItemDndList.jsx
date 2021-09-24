@@ -11,11 +11,6 @@ const SurveyItemDndList = () => {
   const grid = 5;
   let testItems = clone(appState.surveyQuestionsArray);
 
-  // get survey questions from STATE
-  // let testItems2 = clone(
-  //   JSON.parse(localStorage.getItem("surveyQuestionsArray"))
-  // );
-
   useEffect(() => {
     let testItems = clone(appState.surveyQuestionsArray);
     if (testItems.length < 1) {
