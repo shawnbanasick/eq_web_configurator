@@ -113,27 +113,27 @@ const App = (props) => {
           >
             <p className="title">{`5. ${t("Language")}`}</p>
           </FileButton>
-          <FileButton
+          {/*  <FileButton
             buttonColor={loadingsButtonColor}
             active={viewStyles}
             onClick={() => handleClick("viewStyles")}
           >
             <p className="title">{`6. ${t("Styles")}`}</p>
-          </FileButton>
+          </FileButton> */}
 
           <FileButton
             buttonColor={rotationButtonColor}
             active={viewFirebase}
             onClick={() => handleClick("viewFirebase")}
           >
-            <p className="title">{`7. ${t("Firebase")}`}</p>
+            <p className="title">{`6. ${t("Firebase")}`}</p>
           </FileButton>
           <FileButton
             buttonColor={rotationButtonColor}
             active={viewGithub}
             onClick={() => handleClick("viewGithub")}
           >
-            <p className="title">{`8. ${t("Upload")}`}</p>
+            <p className="title">{`7. ${t("Upload")}`}</p>
           </FileButton>
           <Spacer />
           <FileButton

@@ -18,7 +18,7 @@ const SurveyOptions = (props) => {
     }
   };
 
-  let configShowStep5 = convertToFalse(appState.configShowStep5);
+  let configShowStep4 = convertToFalse(appState.configShowStep4);
   let displayMode = appState.displayMode;
   if (displayMode === "beginner") {
     displayMode = true;
@@ -41,11 +41,11 @@ const SurveyOptions = (props) => {
         <RadioButtons
           label="14. Include survey (Step 4):"
           buttonIdArray={["true", "false"]}
-          stateId="configShowStep5"
+          stateId="configShowStep4"
           sectionName="config"
         />
       </QuestionContainer>
-      <SurveyContainer displayVar={configShowStep5}>
+      <SurveyContainer displayVar={configShowStep4}>
         <Survey />
       </SurveyContainer>
     </React.Fragment>

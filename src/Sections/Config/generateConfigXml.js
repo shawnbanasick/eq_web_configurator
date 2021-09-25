@@ -20,6 +20,11 @@ const generateConfigXml = () => {
     loginTypeText = "access";
   }
 
+  let defaultLogo = appState.configLogoHtml;
+  if (defaultLogo === null || defaultLogo === undefined) {
+    appState.configLogoHtml = "EQ-logo.svg";
+  }
+
   const data1 = `<?xml version="1.0" encoding="UTF-8"?>
 
    <config version="1.0" htmlParse="false">\n`;
