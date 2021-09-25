@@ -318,7 +318,7 @@ const Language = () => {
             left={0}
           />
           <UserTextInput
-            label="3-1. Prevent navigation modal head"
+            label="3-1. Prevent navigation modal header"
             stateId="langPresortPreventNavModalHead"
             sectionName="lang"
             width={25}
@@ -333,7 +333,7 @@ const Language = () => {
             left={0}
           />
           <UserTextInput
-            label="4-1. Presort complete modal head"
+            label="4-1. Presort complete modal header"
             stateId="langPresortFinishedModalHead"
             sectionName="lang"
             width={25}
@@ -380,7 +380,7 @@ const Language = () => {
           </div>
         </HeaderButtonBar>
         <UserTextInput
-          label="1. Sort help modal head"
+          label="1. Sort help modal header"
           stateId="langSortHelpModalHead"
           sectionName="lang"
           width={25}
@@ -421,7 +421,7 @@ const Language = () => {
         />
 
         <UserTextInput
-          label="3-1. Sorting complete modal head"
+          label="3-1. Sorting complete modal header"
           stateId="langSortingCompleteModalHead"
           sectionName="lang"
           width={25}
@@ -438,7 +438,7 @@ const Language = () => {
         />
 
         <UserTextInput
-          label="4-1. Prevent Navigation modal head"
+          label="4-1. Prevent Navigation modal header"
           stateId="langSortPreventNavModalHead"
           sectionName="lang"
           width={25}
@@ -455,7 +455,7 @@ const Language = () => {
         />
 
         <UserTextInput
-          label="5-1. Overloaded column modal head"
+          label="5-1. Overloaded column modal header"
           stateId="langSortOverloadedColumnModalHead"
           sectionName="lang"
           width={25}
@@ -471,20 +471,40 @@ const Language = () => {
           left={0}
         />
         <ColorContainer>
-          <h3>
-            Postsort
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Optional
-            section)
-          </h3>
+          <HeaderButtonBar>
+            <SectionTitle>
+              Postsort Screen
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Optional
+              section)
+            </SectionTitle>
+            <div>
+              <DefaultsButton id="postsortDef" onClick={handleShowDefaults}>
+                Use Defaults
+              </DefaultsButton>
+              <ClearAllButton id="postsortClear" onClick={handleClearAll}>
+                Clear Section
+              </ClearAllButton>
+              <RefImageButton id="postsortImage" onClick={handleRefImage}>
+                View Reference Image
+              </RefImageButton>
+              <RefImageButton
+                id="postsortImage2"
+                marginRight="35px"
+                onClick={handleRefImage}
+              >
+                View Reference Image 2
+              </RefImageButton>
+            </div>
+          </HeaderButtonBar>
           <UserTextInput
-            label="Postsort Header"
+            label="1. Postsort Header"
             stateId="langPostsortHeader"
             sectionName="lang"
             width={25}
             left={0}
           />
           <UserTextAreaInput
-            label="Postsort Instructions"
+            label="2. Postsort Instructions"
             stateId="langPostsortInstructions"
             sectionName="lang"
             width={30}
@@ -492,35 +512,35 @@ const Language = () => {
             left={0}
           />
           <UserTextInput
-            label="Text input placeholder"
+            label="3. Text input placeholder"
             stateId="langPlaceholder"
             sectionName="lang"
             width={25}
             left={0}
           />
           <UserTextInput
-            label="Agreement label"
+            label="4. Agreement label"
             stateId="langPostsortAgreement"
             sectionName="lang"
             width={35}
             left={0}
           />
           <UserTextInput
-            label="Disagreement label"
+            label="5. Disagreement label"
             stateId="langPostsortDisagreement"
             sectionName="lang"
             width={35}
             left={0}
           />
           <UserTextInput
-            label="Postsort help modal header"
+            label="2-1. Postsort help modal header"
             stateId="langPostsortModalHead"
             sectionName="lang"
             width={25}
             left={0}
           />
           <UserTextAreaInput
-            label="Postsort help modal text"
+            label="2-2. Postsort help modal text"
             stateId="langPostsortModalText"
             sectionName="lang"
             width={30}
@@ -529,133 +549,180 @@ const Language = () => {
           />
         </ColorContainer>
 
-        <ColorContainer>
-          <h3>
-            Questionnaire
+        <HeaderButtonBar>
+          <SectionTitle>
+            Questionnaire Screen
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            (Optional section)
-          </h3>
-          <UserTextInput
-            label="Post-Sort Questionnaire Header"
-            stateId="langSurveyHeader"
-            sectionName="lang"
-            width={25}
-            left={0}
-          />
-          <UserTextInput
-            label="Questionnaire help modal head"
-            stateId="langSurveyModalHead"
-            sectionName="lang"
-            width={25}
-            left={0}
-          />
+            (Optional sect.)
+          </SectionTitle>
+          <div>
+            <DefaultsButton id="surveyDef" onClick={handleShowDefaults}>
+              Use Defaults
+            </DefaultsButton>
+            <ClearAllButton id="surveyClear" onClick={handleClearAll}>
+              Clear Section
+            </ClearAllButton>
+            <RefImageButton id="surveyImage" onClick={handleRefImage}>
+              View Ref. Img.
+            </RefImageButton>
+            <RefImageButton id="surveyImage2" onClick={handleRefImage}>
+              View Ref. Img. 2
+            </RefImageButton>
+            <RefImageButton
+              id="surveyImage3"
+              marginRight="35px"
+              onClick={handleRefImage}
+            >
+              View Ref. Img. 3
+            </RefImageButton>
+          </div>
+        </HeaderButtonBar>
+        <UserTextInput
+          label="1. Post-Sort Questionnaire Header"
+          stateId="langSurveyHeader"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+        <UserTextInput
+          label="2-1. Questionnaire help modal header"
+          stateId="langSurveyModalHead"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
 
-          <UserTextAreaInput
-            label="Questionnaire help modal text"
-            stateId="langSurveyModalText"
-            sectionName="lang"
-            width={45}
-            height={100}
-            left={0}
-          />
+        <UserTextAreaInput
+          label="2-2. Questionnaire help modal text"
+          stateId="langSurveyModalText"
+          sectionName="lang"
+          width={35}
+          height={100}
+          left={0}
+        />
+        <UserTextInput
+          label="3-1. Prevent navigation modal header"
+          stateId="langSurveyPreventNavModalHead"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+
+        <UserTextAreaInput
+          label="3-2. Prevent navigation modal text"
+          stateId="langSurveyPreventNavModalText"
+          sectionName="lang"
+          width={35}
+          height={100}
+          left={0}
+        />
+        <ColorContainer>
+          <HeaderButtonBar>
+            <SectionTitle>Submit Screen</SectionTitle>
+            <div>
+              <DefaultsButton id="submitDef" onClick={handleShowDefaults}>
+                Use Defaults
+              </DefaultsButton>
+              <ClearAllButton id="submitClear" onClick={handleClearAll}>
+                Clear Section
+              </ClearAllButton>
+              <RefImageButton id="submitImage" onClick={handleRefImage}>
+                View Ref. Image
+              </RefImageButton>
+              <RefImageButton id="submitImage2" onClick={handleRefImage}>
+                View Ref. Image 2
+              </RefImageButton>
+              <RefImageButton id="submitImage3" onClick={handleRefImage}>
+                View Ref. Image 3
+              </RefImageButton>
+              <RefImageButton
+                id="submitImage4"
+                marginRight="35px"
+                onClick={handleRefImage}
+              >
+                View Ref. Image 4
+              </RefImageButton>
+            </div>
+          </HeaderButtonBar>
+
           <UserTextInput
-            label="Prevent navigation modal header"
-            stateId="langSurveyPreventNavModalHead"
+            label="1. Final Step"
+            stateId="langTransferHead"
             sectionName="lang"
             width={25}
             left={0}
           />
-
           <UserTextAreaInput
-            label="Prevent navigation modal text"
-            stateId="langSurveyPreventNavModalText"
+            label="2. Text above Submit Data Button"
+            stateId="langTransferTextAbove"
             sectionName="lang"
-            width={45}
-            height={100}
+            width={35}
+            height={75}
+            left={0}
+          />
+          <UserTextInput
+            label="3. Submit Data"
+            stateId="langBtnTransfer"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+          <UserTextAreaInput
+            label="4. Text below Submit Data Button"
+            stateId="langTransferTextBelow"
+            sectionName="lang"
+            width={35}
+            height={75}
+            left={0}
+          />
+          <UserTextInput
+            label="2-1. Submit data success modal header"
+            stateId="langTransferOkModalHeader"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+          <UserTextAreaInput
+            label="2-2. Submit data success modal text"
+            stateId="langTransferOkModalText"
+            sectionName="lang"
+            width={35}
+            height={75}
+            left={0}
+          />
+          <UserTextInput
+            label="3-1. Submit data fail modal header"
+            stateId="langTransferFailModalHeader"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+          <UserTextAreaInput
+            label="3-2. Submit data fail modal text"
+            stateId="langTransferFailModalText"
+            sectionName="lang"
+            width={35}
+            height={75}
+            left={0}
+          />
+          <UserTextAreaInput
+            label="4-1. Fallback message"
+            stateId="langFallbackMessage"
+            sectionName="lang"
+            width={35}
+            height={75}
+            left={0}
+          />
+          <UserTextInput
+            label="4-2. Download button label"
+            stateId="langBtnDownload"
+            sectionName="lang"
+            width={25}
             left={0}
           />
         </ColorContainer>
-        <h3>Submit Data</h3>
-        <UserTextInput
-          label="Submit Data"
-          stateId="langBtnTransfer"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextInput
-          label="Final Step"
-          stateId="langTransferHead"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextAreaInput
-          label="Text above Submit Data Button"
-          stateId="langTransferTextAbove"
-          sectionName="lang"
-          width={35}
-          height={75}
-          left={0}
-        />
-        <UserTextAreaInput
-          label="Text below Submit Data Button"
-          stateId="langTransferTextBelow"
-          sectionName="lang"
-          width={35}
-          height={75}
-          left={0}
-        />
-        <UserTextInput
-          label="Submit data success modal header"
-          stateId="langTransferOkModalHeader"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextAreaInput
-          label="Submit data success modal text"
-          stateId="langTransferOkModalText"
-          sectionName="lang"
-          width={35}
-          height={75}
-          left={0}
-        />
-        <UserTextInput
-          label="Submit data fail modal header"
-          stateId="langTransferFailModalHeader"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextAreaInput
-          label="Submit data fail modal text"
-          stateId="langTransferFailModalText"
-          sectionName="lang"
-          width={35}
-          height={75}
-          left={0}
-        />
-        <UserTextAreaInput
-          label="Fallback message"
-          stateId="langFallbackMessage"
-          sectionName="lang"
-          width={35}
-          height={75}
-          left={0}
-        />
-        <UserTextInput
-          label="Download button label"
-          stateId="langBtnDownload"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
 
         {/* +++++++++++++  OLD STUFF ++++++++++ */}
-
-        <TenPxSpacer></TenPxSpacer>
-        <TenPxSpacer></TenPxSpacer>
       </SectionContainer>
       <DownloadMapButton onClick={() => handleClick()}>
         Click here to save to the <b>SETTINGS</b> folder and replace the

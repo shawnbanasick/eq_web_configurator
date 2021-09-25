@@ -14,6 +14,15 @@ import sortImage2 from "../../assets/images/sortImage2.png";
 import sortImage3 from "../../assets/images/sortImage3.png";
 import sortImage4 from "../../assets/images/sortImage4.png";
 import sortImage5 from "../../assets/images/sortImage5.png";
+import postsortImage from "../../assets/images/postsortImage.png";
+import postsortImage2 from "../../assets/images/postsortImage2.png";
+import surveyImage from "../../assets/images/surveyImage.png";
+import surveyImage2 from "../../assets/images/surveyImage2.png";
+import surveyImage3 from "../../assets/images/surveyImage3.png";
+import submitImage from "../../assets/images/submitImage.png";
+import submitImage2 from "../../assets/images/submitImage2.png";
+import submitImage3 from "../../assets/images/submitImage3.png";
+import submitImage4 from "../../assets/images/submitImage4.png";
 
 const ImageSelector = () => {
   const selector = appState.imageToShow;
@@ -58,6 +67,33 @@ const ImageSelector = () => {
   }
   if (selector === "sortImage5") {
     return <img src={sortImage5} alt="s"></img>;
+  }
+  if (selector === "postsortImage") {
+    return <img src={postsortImage} alt="s"></img>;
+  }
+  if (selector === "postsortImage2") {
+    return <img src={postsortImage2} alt="s"></img>;
+  }
+  if (selector === "surveyImage") {
+    return <img src={surveyImage} alt="s"></img>;
+  }
+  if (selector === "surveyImage2") {
+    return <img src={surveyImage2} alt="s"></img>;
+  }
+  if (selector === "surveyImage3") {
+    return <img src={surveyImage3} alt="s"></img>;
+  }
+  if (selector === "submitImage") {
+    return <img src={submitImage} alt="s"></img>;
+  }
+  if (selector === "submitImage2") {
+    return <img src={submitImage2} alt="s"></img>;
+  }
+  if (selector === "submitImage3") {
+    return <img src={submitImage3} alt="s"></img>;
+  }
+  if (selector === "submitImage4") {
+    return <img src={submitImage4} alt="s"></img>;
   }
 };
 

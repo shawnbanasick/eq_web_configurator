@@ -81,6 +81,46 @@ const showSectionDefaults = (section) => {
 
     clearSection(selectorArray);
   }
+  if (section === "postsortClear") {
+    selectorArray = [
+      "langPostsortHeader",
+      "langPostsortInstructions",
+      "langPlaceholder",
+      "langPostsortAgreement",
+      "langPostsortDisagreement",
+      "langPostsortModalHead",
+      "langPostsortModalText",
+    ];
+
+    clearSection(selectorArray);
+  }
+  if (section === "surveyClear") {
+    selectorArray = [
+      "langSurveyHeader",
+      "langSurveyModalHead",
+      "langSurveyModalText",
+      "langSurveyPreventNavModalHead",
+      "langSurveyPreventNavModalText",
+    ];
+
+    clearSection(selectorArray);
+  }
+  if (section === "submitClear") {
+    selectorArray = [
+      "langBtnTransfer",
+      "langTransferHead",
+      "langTransferTextAbove",
+      "langTransferTextBelow",
+      "langTransferOkModalHeader",
+      "langTransferOkModalText",
+      "langTransferFailModalHeader",
+      "langTransferFailModalText",
+      "langFallbackMessage",
+      "langBtnDownload",
+    ];
+
+    clearSection(selectorArray);
+  }
 };
 
 export default showSectionDefaults;
