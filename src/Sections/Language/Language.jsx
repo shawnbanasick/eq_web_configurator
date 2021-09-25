@@ -74,7 +74,11 @@ const Language = () => {
             <ClearAllButton id="footerClear" onClick={handleClearAll}>
               Clear Section
             </ClearAllButton>
-            <RefImageButton id="footerImage" onClick={handleRefImage}>
+            <RefImageButton
+              id="footerImage"
+              marginRight="35px"
+              onClick={handleRefImage}
+            >
               View Reference Image
             </RefImageButton>
           </div>
@@ -121,73 +125,67 @@ const Language = () => {
               <RefImageButton id="landingImage" onClick={handleRefImage}>
                 View Reference Image
               </RefImageButton>
+              <RefImageButton
+                id="landingImage2"
+                marginRight="35px"
+                onClick={handleRefImage}
+              >
+                View Reference Image 2
+              </RefImageButton>
             </div>
           </HeaderButtonBar>
           <UserTextInput
             label="1. Landing Page Title Bar"
             stateId="langLandingHead"
             sectionName="lang"
-            width={25}
+            width={35}
             left={0}
           />
           <UserTextAreaInput
             label="2. Welcome Message"
             stateId="langWelcomeMessage"
             sectionName="lang"
-            width={35}
+            width={40}
             height={300}
+            left={0}
+          />
+          <UserTextInput
+            label="2-1. Help modal header text"
+            stateId="langLandingHelpModalHead"
+            sectionName="lang"
+            width={38}
+            left={0}
+          />
+          <UserTextAreaInput
+            label="2-2. Help modal main text"
+            stateId="langLandingHelpModalText"
+            sectionName="lang"
+            width={37}
+            height={140}
             left={0}
           />
         </ColorContainer>
         {/* +++++++++++++  ACCESS CONTROL ++++++++++ */}
-        <h3>Access Control</h3>
-        <UserTextInput
-          label="Access Code"
-          stateId="langAccessCodeText"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
+        <HeaderButtonBar>
+          <SectionTitle>Access Control</SectionTitle>
+          <div>
+            <DefaultsButton id="accessDef" onClick={handleShowDefaults}>
+              Use Defaults
+            </DefaultsButton>
+            <ClearAllButton id="accessClear" onClick={handleClearAll}>
+              Clear Section
+            </ClearAllButton>
+            <RefImageButton
+              id="accessImage"
+              marginRight="35px"
+              onClick={handleRefImage}
+            >
+              View Reference Image
+            </RefImageButton>
+          </div>
+        </HeaderButtonBar>
         <UserTextAreaInput
-          label="Access Input Text"
-          stateId="langAccessInputText"
-          sectionName="lang"
-          width={40}
-          height={50}
-          left={0}
-        />
-
-        <UserTextInput
-          label="Participant name or Id number"
-          stateId="langPartIdText"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-
-        <UserTextInput
-          label="Access code invalid"
-          stateId="langAccessCodeWarning"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextInput
-          label="Invalid name or ID"
-          stateId="langPartIdWarning"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextInput
-          label="Log-in modal header text"
-          stateId="langLoginHeaderText"
-          sectionName="lang"
-          width={38}
-          left={0}
-        />
-        <UserTextAreaInput
-          label="Log-in modal main text"
+          label="1. Log-in welcome text"
           stateId="langLoginWelcomeText"
           sectionName="lang"
           width={40}
@@ -195,66 +193,124 @@ const Language = () => {
           left={0}
         />
         <UserTextInput
-          label="Help modal header text"
-          stateId="langLandingHelpModalHead"
+          label="2. Log-in box header text"
+          stateId="langLoginHeaderText"
           sectionName="lang"
-          width={38}
+          width={30}
           left={0}
         />
-        <UserTextAreaInput
-          label="Help modal main text"
-          stateId="langLandingHelpModalText"
+
+        <UserTextInput
+          label="3. Participant name label"
+          stateId="langLoginPartIdText"
           sectionName="lang"
-          width={40}
-          height={140}
+          width={25}
           left={0}
         />
+
+        <UserTextInput
+          label="4. Access code label"
+          stateId="langAccessInputText"
+          sectionName="lang"
+          width={30}
+          left={0}
+        />
+
+        <UserTextInput
+          label="5. Invalid name warning"
+          stateId="langPartIdWarning"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+
+        <UserTextInput
+          label="6. Invalid access code warning"
+          stateId="langAccessCodeWarning"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+        <UserTextInput
+          label="7. Log-in submit button"
+          stateId="loginSubmitButtonText"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+
         <ColorContainer>
-          <h3>Presort Screen</h3>
+          <HeaderButtonBar>
+            <SectionTitle>Presort Screen</SectionTitle>
+            <div>
+              <DefaultsButton id="presortDef" onClick={handleShowDefaults}>
+                Use Defaults
+              </DefaultsButton>
+              <ClearAllButton id="presortClear" onClick={handleClearAll}>
+                Clear Section
+              </ClearAllButton>
+              <RefImageButton id="presortImage" onClick={handleRefImage}>
+                View Ref. Image
+              </RefImageButton>
+              <RefImageButton id="presortImage2" onClick={handleRefImage}>
+                View Ref. Image 2
+              </RefImageButton>
+              <RefImageButton id="presortImage3" onClick={handleRefImage}>
+                View Ref. Image 3
+              </RefImageButton>
+              <RefImageButton
+                id="presortImage4"
+                marginRight="35px"
+                onClick={handleRefImage}
+              >
+                View Ref. Image 4
+              </RefImageButton>
+            </div>
+          </HeaderButtonBar>
           <UserTextInput
-            label="Title bar text"
+            label="1. Title bar text"
             stateId="langtitleBarText"
             sectionName="lang"
             width={25}
             left={0}
           />
           <UserTextInput
-            label={`"Agree"`}
-            stateId="langPresortAgreement"
-            sectionName="lang"
-            width={25}
-            left={0}
-          />
-          <UserTextInput
-            label="Statements"
+            label="2. Statements"
             stateId="langPresortStatements"
             sectionName="lang"
             width={25}
             left={0}
           />
           <UserTextInput
-            label="Neutral"
+            label={`3. "Agree"`}
+            stateId="langPresortAgreement"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+          <UserTextInput
+            label={`4. "Neutral"`}
             stateId="langPresortNeutral"
             sectionName="lang"
             width={25}
             left={0}
           />
           <UserTextInput
-            label="Disagree"
+            label={`5. "Disagree"`}
             stateId="langPresortDisagreement"
             sectionName="lang"
             width={25}
             left={0}
           />
           <UserTextInput
-            label="Presort modal header text"
+            label="2-1. Presort modal header text"
             stateId="langPresortModalHead"
             sectionName="lang"
             width={25}
             left={0}
           />
           <UserTextAreaInput
-            label="Presort modal main text"
+            label="2-2. Presort modal main text"
             stateId="langPresortModalText"
             sectionName="lang"
             width={25}
@@ -262,14 +318,14 @@ const Language = () => {
             left={0}
           />
           <UserTextInput
-            label="Prevent navigation modal head"
+            label="3-1. Prevent navigation modal head"
             stateId="langPresortPreventNavModalHead"
             sectionName="lang"
             width={25}
             left={0}
           />
           <UserTextAreaInput
-            label="Prevent navigation modal main text"
+            label="3-2. Prevent navigation modal main text"
             stateId="langPresortPreventNavModalText"
             sectionName="lang"
             width={20}
@@ -277,14 +333,14 @@ const Language = () => {
             left={0}
           />
           <UserTextInput
-            label="Presort complete modal head"
+            label="4-1. Presort complete modal head"
             stateId="langPresortFinishedModalHead"
             sectionName="lang"
             width={25}
             left={0}
           />
           <UserTextAreaInput
-            label="Presort complete modal main text"
+            label="4-2. Presort complete modal main text"
             stateId="langPresortFinishedModalText"
             sectionName="lang"
             width={20}
@@ -293,10 +349,38 @@ const Language = () => {
           />
         </ColorContainer>
 
-        <h3>Sort Grid</h3>
-
+        <HeaderButtonBar>
+          <SectionTitle>Sort Screen</SectionTitle>
+          <div>
+            <DefaultsButton id="sortDef" onClick={handleShowDefaults}>
+              Use Defaults
+            </DefaultsButton>
+            <ClearAllButton id="sortClear" onClick={handleClearAll}>
+              Clear Section
+            </ClearAllButton>
+            <RefImageButton id="sortImage" onClick={handleRefImage}>
+              View Ref. Img.
+            </RefImageButton>
+            <RefImageButton id="sortImage2" onClick={handleRefImage}>
+              View Ref. Img. 2
+            </RefImageButton>
+            <RefImageButton id="sortImage3" onClick={handleRefImage}>
+              View Ref. Img. 3
+            </RefImageButton>
+            <RefImageButton id="sortImage4" onClick={handleRefImage}>
+              View Ref. Img. 4
+            </RefImageButton>
+            <RefImageButton
+              id="sortImage5"
+              marginRight="35px"
+              onClick={handleRefImage}
+            >
+              View Ref. Img. 5
+            </RefImageButton>
+          </div>
+        </HeaderButtonBar>
         <UserTextInput
-          label="Sort help modal head"
+          label="1. Sort help modal head"
           stateId="langSortHelpModalHead"
           sectionName="lang"
           width={25}
@@ -304,7 +388,7 @@ const Language = () => {
         />
 
         <UserTextAreaInput
-          label="Sort help modal main text"
+          label="2. Sort help modal main text"
           stateId="langSortHelpModalText"
           sectionName="lang"
           width={30}
@@ -313,15 +397,7 @@ const Language = () => {
         />
 
         <UserTextInput
-          label="Agree"
-          stateId="langSortAgreement"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-
-        <UserTextInput
-          label="Disagree"
+          label="2-1. Disagree"
           stateId="langSortDisagreement"
           sectionName="lang"
           width={25}
@@ -329,16 +405,23 @@ const Language = () => {
         />
 
         <UserTextAreaInput
-          label="Sort conditions of instruction"
+          label="2-2. Sort conditions of instruction"
           stateId="langCondOfInst"
           sectionName="lang"
           width={30}
           height={80}
           left={0}
         />
+        <UserTextInput
+          label="2-3. Agree"
+          stateId="langSortAgreement"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
 
         <UserTextInput
-          label="Sorting complete modal head"
+          label="3-1. Sorting complete modal head"
           stateId="langSortingCompleteModalHead"
           sectionName="lang"
           width={25}
@@ -346,7 +429,7 @@ const Language = () => {
         />
 
         <UserTextAreaInput
-          label="Sorting complete modal text"
+          label="3-2. Sorting complete modal text"
           stateId="langSortingCompleteModalText"
           sectionName="lang"
           width={30}
@@ -355,7 +438,7 @@ const Language = () => {
         />
 
         <UserTextInput
-          label="Prevent Navigation modal head"
+          label="4-1. Prevent Navigation modal head"
           stateId="langSortPreventNavModalHead"
           sectionName="lang"
           width={25}
@@ -363,7 +446,7 @@ const Language = () => {
         />
 
         <UserTextAreaInput
-          label="Prevent Navigation modal text"
+          label="4-2. Prevent Navigation modal text"
           stateId="langSortPreventNavModalText"
           sectionName="lang"
           width={30}
@@ -372,7 +455,7 @@ const Language = () => {
         />
 
         <UserTextInput
-          label="Overloaded column modal head"
+          label="5-1. Overloaded column modal head"
           stateId="langSortOverloadedColumnModalHead"
           sectionName="lang"
           width={25}
@@ -380,7 +463,7 @@ const Language = () => {
         />
 
         <UserTextAreaInput
-          label="Overloaded modal text"
+          label="5-2. Overloaded modal text"
           stateId="langSortOverloadedColumnModalText"
           sectionName="lang"
           width={30}
@@ -725,7 +808,7 @@ const RefImageButton = styled.button`
   align-self: flex-end;
   margin-bottom: 10px;
   margin-left: 10px;
-  margin-right: 35px;
+  margin-right: ${(props) => props.marginRight};
   justify-self: flex-end;
   color: black;
   user-select: none;

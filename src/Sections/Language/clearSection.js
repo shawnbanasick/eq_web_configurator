@@ -1,26 +1,85 @@
 import appState from "../../GlobalState/appState";
 
+const clearSection = (array) => {
+  array.forEach((item) => {
+    localStorage.setItem(item, "");
+    appState[item] = "";
+  });
+};
+
 const showSectionDefaults = (section) => {
+  let selectorArray = [];
+
   if (section === "footerClear") {
-    // step completed message
-    localStorage.setItem("langBtnHelp", "");
-    appState.langBtnHelp = "";
+    selectorArray = [
+      "langBtnHelp",
+      "langFooterTextSize",
+      "langFooterCardHeight",
+      "langBtnNext",
+    ];
 
-    localStorage.setItem("langFooterTextSize", "");
-    appState.langFooterTextSize = "";
-
-    localStorage.setItem("langFooterCardHeight", "");
-    appState.langFooterCardHeight = "";
-
-    localStorage.setItem("langBtnNext", "");
-    appState.langBtnNext = "";
+    clearSection(selectorArray);
   }
-  if (section === "landingClear") {
-    localStorage.setItem("langLandingHead", "");
-    appState.langLandingHead = "";
 
-    localStorage.setItem("langWelcomeMessage", "");
-    appState.langWelcomeMessage = "";
+  if (section === "landingClear") {
+    selectorArray = [
+      "langLandingHead",
+      "langWelcomeMessage",
+      "langLandingHelpModalHead",
+      "langLandingHelpModalText",
+    ];
+
+    clearSection(selectorArray);
+  }
+
+  if (section === "accessClear") {
+    selectorArray = [
+      "langLoginWelcomeText",
+      "langLoginHeaderText",
+      "langLoginPartIdText",
+      "langAccessInputText",
+      "langPartIdWarning",
+      "langAccessCodeWarning",
+      "loginSubmitButtonText",
+    ];
+
+    clearSection(selectorArray);
+  }
+
+  if (section === "presortClear") {
+    selectorArray = [
+      "langtitleBarText",
+      "langPresortStatements",
+      "langPresortAgreement",
+      "langPresortNeutral",
+      "langPresortDisagreement",
+      "langPresortModalHead",
+      "langPresortModalText",
+      "langPresortPreventNavModalHead",
+      "langPresortPreventNavModalText",
+      "langPresortFinishedModalHead",
+      "langPresortFinishedModalText",
+    ];
+
+    clearSection(selectorArray);
+  }
+
+  if (section === "sortClear") {
+    selectorArray = [
+      "langSortHelpModalHead",
+      "langSortHelpModalText",
+      "langSortAgreement",
+      "langSortDisagreement",
+      "langCondOfInst",
+      "langSortingCompleteModalHead",
+      "langSortingCompleteModalText",
+      "langSortPreventNavModalHead",
+      "langSortPreventNavModalText",
+      "langSortOverloadedColumnModalHead",
+      "langSortOverloadedColumnModalText",
+    ];
+
+    clearSection(selectorArray);
   }
 };
 

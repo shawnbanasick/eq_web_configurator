@@ -42,17 +42,17 @@ const showSectionDefaults = () => {
   
      </div>`,
 
-    langAccessCodeText: `Access Code`,
-    langAccessInputText: "Please enter the access code for this survey.",
-    loginSubmitButtonText: `Submit`,
+    langLoginWelcomeText: `<center><h3>Welcome!</h3></center><br> Thank you for participating in this Q methodology research project. <br>Please <strong>sign in</strong> using the form below to begin the process. `,
+    langLoginHeaderText: `Sign In`,
     langLoginPartIdText: `Please enter your name or participant ID`,
-    langAccessCodeWarning: `Access code invalid`,
+    langAccessInputText: "Please enter the access code for this survey.",
     langPartIdWarning: `Invalid name or ID`,
-    langLoginHeaderText: `Sign In &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  (use ID="demo" and Access Code= "demo")`,
-    langLoginWelcomeText: `<center></center><h3>Welcome!</h3></center><br> Thank you for participating in this Q methodology research project. <br>Please <strong>sign in</strong> using the form below to begin the process. `,
+    langAccessCodeWarning: `Access code invalid`,
+    loginSubmitButtonText: `Submit`,
+
     langLandingHelpModalHead: `Welcome!`,
-    langLandingHelpModalText: `Thank you for participating in this University Research Project. Please sign in to begin the process. After you submit your participant ID and/or the project access code, the instructions for the survey will appear. Please read them carefully, then click the "<strong></strong>Continue</strong>" button at the bottom right side of the screen to go to the next step.<br><br> <center><iframe width="640" height="360"
-    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+    langLandingHelpModalText: `Thank you for participating in this University Research Project. Please sign in to begin the process. After you submit your participant ID and/or the project access code, the instructions for the survey will appear. Please read them carefully, then click the "<strong>Continue</strong>" button at the bottom right side of the screen to go to the next step.<br><br> <center><iframe width="640" height="360"
+    src="https://www.youtube.com/embed/aHpeu5M7Rlo">
     </iframe></center>`,
     /*
      ******** PRESORT  ****************** */

@@ -3,28 +3,85 @@ import defObject from "./textareaDefaultObject";
 
 const showSectionDefaults = (section) => {
   let defObj = defObject();
+  let selectorArray = [];
+
+  const setDefaults = (array) => {
+    array.forEach((item) => {
+      localStorage.setItem(item, defObj[item]);
+      appState[item] = defObj[item];
+    });
+  };
 
   if (section === "footerDef") {
-    // step completed message
-    localStorage.setItem("langBtnHelp", "Help me!");
-    appState.langBtnHelp = "Help me!";
+    selectorArray = [
+      "langBtnHelp",
+      "langFooterTextSize",
+      "langFooterCardHeight",
+      "langBtnNext",
+    ];
 
-    localStorage.setItem("langFooterTextSize", "Text Size");
-    appState.langFooterTextSize = "Text Size";
-
-    localStorage.setItem("langFooterCardHeight", "Card Height");
-    appState.langFooterCardHeight = "Card Height";
-
-    localStorage.setItem("langBtnNext", "Continue");
-    appState.langBtnNext = "Continue";
+    setDefaults(selectorArray);
   }
 
   if (section === "landingDef") {
-    localStorage.setItem("langLandingHead", "University Research Project");
-    appState.langLandingHead = "University Research Project";
+    selectorArray = [
+      "langLandingHead",
+      "langWelcomeMessage",
+      "langLandingHelpModalHead",
+      "langLandingHelpModalText",
+    ];
 
-    localStorage.setItem("langWelcomeMessage", defObj.langWelcomeMessage);
-    appState.langWelcomeMessage = defObj.langWelcomeMessage;
+    setDefaults(selectorArray);
+  }
+
+  if (section === "accessDef") {
+    selectorArray = [
+      "langLoginWelcomeText",
+      "langLoginHeaderText",
+      "langLoginPartIdText",
+      "langAccessInputText",
+      "langPartIdWarning",
+      "langAccessCodeWarning",
+      "loginSubmitButtonText",
+    ];
+
+    setDefaults(selectorArray);
+  }
+
+  if (section === "presortDef") {
+    selectorArray = [
+      "langtitleBarText",
+      "langPresortStatements",
+      "langPresortAgreement",
+      "langPresortNeutral",
+      "langPresortDisagreement",
+      "langPresortModalHead",
+      "langPresortModalText",
+      "langPresortPreventNavModalHead",
+      "langPresortPreventNavModalText",
+      "langPresortFinishedModalHead",
+      "langPresortFinishedModalText",
+    ];
+
+    setDefaults(selectorArray);
+  }
+
+  if (section === "sortDef") {
+    selectorArray = [
+      "langSortHelpModalHead",
+      "langSortHelpModalText",
+      "langSortAgreement",
+      "langSortDisagreement",
+      "langCondOfInst",
+      "langSortingCompleteModalHead",
+      "langSortingCompleteModalText",
+      "langSortPreventNavModalHead",
+      "langSortPreventNavModalText",
+      "langSortOverloadedColumnModalHead",
+      "langSortOverloadedColumnModalText",
+    ];
+
+    setDefaults(selectorArray);
   }
 };
 

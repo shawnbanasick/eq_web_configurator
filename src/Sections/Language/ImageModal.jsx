@@ -4,9 +4,6 @@ import { Modal } from "react-responsive-modal";
 import { view } from "@risingstack/react-easy-state";
 import styled from "styled-components";
 import appState from "../../GlobalState/appState";
-import ReactHtmlParser from "react-html-parser";
-// import decodeHTML from "../../utilities/decodeHTML";
-// import testImage from "../../assets/images/testImage.png";
 import ImageSelector from "./ImageSelector";
 
 const ImageModal = () => {
@@ -16,10 +13,10 @@ const ImageModal = () => {
   /*  const loginHelpModalText = ReactHtmlParser(
     decodeHTML(langObj.landingHelpModalText)
   ); */
-
+  /* 
   const loginHelpModalText = "text here";
 
-  const imageName = `testImage`;
+  const imageName = `testImage`; */
 
   // const onOpenModal = () => setOpen(true);
   const onCloseModal = () => {
