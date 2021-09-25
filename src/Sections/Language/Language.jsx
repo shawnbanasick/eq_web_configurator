@@ -64,403 +64,388 @@ const Language = () => {
       )}
 
       <SectionContainer>
-        {/* +++++++++++++  MULTI-PURPOSE MODALS ++++++++++ */}
+        {/* +++++++++++++  FOOTER INFO ++++++++++ */}
         <HeaderButtonBar>
-          <SectionTitle>Multi-Purpose Modals</SectionTitle>
+          <SectionTitle>Footer Text</SectionTitle>
           <div>
-            <DefaultsButton id="multiModalsDef" onClick={handleShowDefaults}>
-              Show Defaults
+            <DefaultsButton id="footerDef" onClick={handleShowDefaults}>
+              Use Defaults
             </DefaultsButton>
-            <ClearAllButton id="multiModalsClear" onClick={handleClearAll}>
+            <ClearAllButton id="footerClear" onClick={handleClearAll}>
               Clear Section
             </ClearAllButton>
-            <RefImageButton id="multiModalsImage" onClick={handleRefImage}>
+            <RefImageButton id="footerImage" onClick={handleRefImage}>
               View Reference Image
             </RefImageButton>
           </div>
         </HeaderButtonBar>
-        <UserTextAreaInput
-          label="Step Completed Message"
-          stateId="langStepCompleted"
-          sectionName="lang"
-          width={35}
-          height={100}
-          left={0}
-        />
         <UserTextInput
-          label="Log in first"
-          stateId="langLoginFirst"
+          label="1. Help me!"
+          stateId="langBtnHelp"
           sectionName="lang"
           width={25}
           left={0}
         />
-        {/* +++++++++++++  FOOTER INFO ++++++++++ */}
+        <UserTextInput
+          label="2. Text Size"
+          stateId="langFooterTextSize"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+        <UserTextInput
+          label="3. Card Height"
+          stateId="langFooterCardHeight"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+        <UserTextInput
+          label="4. Continue"
+          stateId="langBtnNext"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+        {/* +++++++++++++  LANDING SCREEN ++++++++++ */}
         <ColorContainer>
           <HeaderButtonBar>
-            <SectionTitle>Footer Text</SectionTitle>
+            <SectionTitle>Landing Screen</SectionTitle>
             <div>
-              <DefaultsButton id="footerDef" onClick={handleShowDefaults}>
-                Show Defaults
+              <DefaultsButton id="landingDef" onClick={handleShowDefaults}>
+                Use Defaults
               </DefaultsButton>
-              <ClearAllButton id="footerClear" onClick={handleClearAll}>
+              <ClearAllButton id="landingClear" onClick={handleClearAll}>
                 Clear Section
               </ClearAllButton>
-              <RefImageButton id="footerImage" onClick={handleRefImage}>
+              <RefImageButton id="landingImage" onClick={handleRefImage}>
                 View Reference Image
               </RefImageButton>
             </div>
           </HeaderButtonBar>
           <UserTextInput
-            label="Text Size"
-            stateId="langFooterTextSize"
+            label="1. Landing Page Title Bar"
+            stateId="langLandingHead"
             sectionName="lang"
             width={25}
             left={0}
           />
-          <UserTextInput
-            label="Card Height"
-            stateId="langFooterCardHeight"
+          <UserTextAreaInput
+            label="2. Welcome Message"
+            stateId="langWelcomeMessage"
             sectionName="lang"
-            width={25}
-            left={0}
-          />
-          <UserTextInput
-            label="Help me!"
-            stateId="langBtnHelp"
-            sectionName="lang"
-            width={25}
-            left={0}
-          />
-          <UserTextInput
-            label="Continue"
-            stateId="langBtnNext"
-            sectionName="lang"
-            width={25}
+            width={35}
+            height={300}
             left={0}
           />
         </ColorContainer>
-        {/* +++++++++++++  LANDING SCREEN ++++++++++ */}
-        <h3>Landing Screen</h3>
+        {/* +++++++++++++  ACCESS CONTROL ++++++++++ */}
+        <h3>Access Control</h3>
         <UserTextInput
-          label="Landing Page Title Bar"
-          stateId="langLandingHead"
+          label="Access Code"
+          stateId="langAccessCodeText"
           sectionName="lang"
           width={25}
           left={0}
         />
         <UserTextAreaInput
-          label="Welcome Message"
-          stateId="langWelcomeMessage"
+          label="Access Input Text"
+          stateId="langAccessInputText"
           sectionName="lang"
-          width={35}
-          height={300}
+          width={40}
+          height={50}
           left={0}
         />
-        {/* +++++++++++++  ACCESS CONTROL ++++++++++ */}
+
+        <UserTextInput
+          label="Participant name or Id number"
+          stateId="langPartIdText"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+
+        <UserTextInput
+          label="Access code invalid"
+          stateId="langAccessCodeWarning"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+        <UserTextInput
+          label="Invalid name or ID"
+          stateId="langPartIdWarning"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+        <UserTextInput
+          label="Log-in modal header text"
+          stateId="langLoginHeaderText"
+          sectionName="lang"
+          width={38}
+          left={0}
+        />
+        <UserTextAreaInput
+          label="Log-in modal main text"
+          stateId="langLoginWelcomeText"
+          sectionName="lang"
+          width={40}
+          height={100}
+          left={0}
+        />
+        <UserTextInput
+          label="Help modal header text"
+          stateId="langLandingHelpModalHead"
+          sectionName="lang"
+          width={38}
+          left={0}
+        />
+        <UserTextAreaInput
+          label="Help modal main text"
+          stateId="langLandingHelpModalText"
+          sectionName="lang"
+          width={40}
+          height={140}
+          left={0}
+        />
         <ColorContainer>
-          <h3>Access Control</h3>
+          <h3>Presort Screen</h3>
           <UserTextInput
-            label="Access Code"
-            stateId="langAccessCodeText"
+            label="Title bar text"
+            stateId="langtitleBarText"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+          <UserTextInput
+            label={`"Agree"`}
+            stateId="langPresortAgreement"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+          <UserTextInput
+            label="Statements"
+            stateId="langPresortStatements"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+          <UserTextInput
+            label="Neutral"
+            stateId="langPresortNeutral"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+          <UserTextInput
+            label="Disagree"
+            stateId="langPresortDisagreement"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+          <UserTextInput
+            label="Presort modal header text"
+            stateId="langPresortModalHead"
             sectionName="lang"
             width={25}
             left={0}
           />
           <UserTextAreaInput
-            label="Access Input Text"
-            stateId="langAccessInputText"
-            sectionName="lang"
-            width={40}
-            height={50}
-            left={0}
-          />
-
-          <UserTextInput
-            label="Participant name or Id number"
-            stateId="langPartIdText"
+            label="Presort modal main text"
+            stateId="langPresortModalText"
             sectionName="lang"
             width={25}
+            height={140}
             left={0}
           />
-
           <UserTextInput
-            label="Access code invalid"
-            stateId="langAccessCodeWarning"
+            label="Prevent navigation modal head"
+            stateId="langPresortPreventNavModalHead"
             sectionName="lang"
             width={25}
-            left={0}
-          />
-          <UserTextInput
-            label="Invalid name or ID"
-            stateId="langPartIdWarning"
-            sectionName="lang"
-            width={25}
-            left={0}
-          />
-          <UserTextInput
-            label="Log-in modal header text"
-            stateId="langLoginHeaderText"
-            sectionName="lang"
-            width={38}
             left={0}
           />
           <UserTextAreaInput
-            label="Log-in modal main text"
-            stateId="langLoginWelcomeText"
+            label="Prevent navigation modal main text"
+            stateId="langPresortPreventNavModalText"
             sectionName="lang"
-            width={40}
-            height={100}
+            width={20}
+            height={140}
             left={0}
           />
           <UserTextInput
-            label="Help modal header text"
-            stateId="langLandingHelpModalHead"
+            label="Presort complete modal head"
+            stateId="langPresortFinishedModalHead"
             sectionName="lang"
-            width={38}
+            width={25}
             left={0}
           />
           <UserTextAreaInput
-            label="Help modal main text"
-            stateId="langLandingHelpModalText"
+            label="Presort complete modal main text"
+            stateId="langPresortFinishedModalText"
             sectionName="lang"
-            width={40}
+            width={20}
             height={140}
             left={0}
           />
         </ColorContainer>
-        <h3>Presort Screen</h3>
+
+        <h3>Sort Grid</h3>
+
         <UserTextInput
-          label="Title bar text"
-          stateId="langtitleBarText"
+          label="Sort help modal head"
+          stateId="langSortHelpModalHead"
           sectionName="lang"
           width={25}
           left={0}
         />
-        <UserTextInput
-          label={`"Agree"`}
-          stateId="langPresortAgreement"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextInput
-          label="Statements"
-          stateId="langPresortStatements"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextInput
-          label="Neutral"
-          stateId="langPresortNeutral"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextInput
-          label="Disagree"
-          stateId="langPresortDisagreement"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextInput
-          label="Presort modal header text"
-          stateId="langPresortModalHead"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
+
         <UserTextAreaInput
-          label="Presort modal main text"
-          stateId="langPresortModalText"
-          sectionName="lang"
-          width={25}
-          height={140}
-          left={0}
-        />
-        <UserTextInput
-          label="Prevent navigation modal head"
-          stateId="langPresortPreventNavModalHead"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextAreaInput
-          label="Prevent navigation modal main text"
-          stateId="langPresortPreventNavModalText"
-          sectionName="lang"
-          width={20}
-          height={140}
-          left={0}
-        />
-        <UserTextInput
-          label="Presort complete modal head"
-          stateId="langPresortFinishedModalHead"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextAreaInput
-          label="Presort complete modal main text"
-          stateId="langPresortFinishedModalText"
-          sectionName="lang"
-          width={20}
-          height={140}
-          left={0}
-        />
-        <ColorContainer>
-          <h3>Sort Grid</h3>
-
-          <UserTextInput
-            label="Sort help modal head"
-            stateId="langSortHelpModalHead"
-            sectionName="lang"
-            width={25}
-            left={0}
-          />
-
-          <UserTextAreaInput
-            label="Sort help modal main text"
-            stateId="langSortHelpModalText"
-            sectionName="lang"
-            width={30}
-            height={100}
-            left={0}
-          />
-
-          <UserTextInput
-            label="Agree"
-            stateId="langSortAgreement"
-            sectionName="lang"
-            width={25}
-            left={0}
-          />
-
-          <UserTextInput
-            label="Disagree"
-            stateId="langSortDisagreement"
-            sectionName="lang"
-            width={25}
-            left={0}
-          />
-
-          <UserTextAreaInput
-            label="Sort conditions of instruction"
-            stateId="langCondOfInst"
-            sectionName="lang"
-            width={30}
-            height={80}
-            left={0}
-          />
-
-          <UserTextInput
-            label="Sorting complete modal head"
-            stateId="langSortingCompleteModalHead"
-            sectionName="lang"
-            width={25}
-            left={0}
-          />
-
-          <UserTextAreaInput
-            label="Sorting complete modal text"
-            stateId="langSortingCompleteModalText"
-            sectionName="lang"
-            width={30}
-            height={100}
-            left={0}
-          />
-
-          <UserTextInput
-            label="Prevent Navigation modal head"
-            stateId="langSortPreventNavModalHead"
-            sectionName="lang"
-            width={25}
-            left={0}
-          />
-
-          <UserTextAreaInput
-            label="Prevent Navigation modal text"
-            stateId="langSortPreventNavModalText"
-            sectionName="lang"
-            width={30}
-            height={50}
-            left={0}
-          />
-
-          <UserTextInput
-            label="Overloaded column modal head"
-            stateId="langSortOverloadedColumnModalHead"
-            sectionName="lang"
-            width={25}
-            left={0}
-          />
-
-          <UserTextAreaInput
-            label="Overloaded modal text"
-            stateId="langSortOverloadedColumnModalText"
-            sectionName="lang"
-            width={30}
-            height={100}
-            left={0}
-          />
-        </ColorContainer>
-        <h3>
-          Postsort
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Optional
-          section)
-        </h3>
-        <UserTextInput
-          label="Postsort Header"
-          stateId="langPostsortHeader"
-          sectionName="lang"
-          width={25}
-          left={0}
-        />
-        <UserTextAreaInput
-          label="Postsort Instructions"
-          stateId="langPostsortInstructions"
+          label="Sort help modal main text"
+          stateId="langSortHelpModalText"
           sectionName="lang"
           width={30}
-          height={50}
+          height={100}
           left={0}
         />
+
         <UserTextInput
-          label="Text input placeholder"
-          stateId="langPlaceholder"
+          label="Agree"
+          stateId="langSortAgreement"
           sectionName="lang"
           width={25}
           left={0}
         />
+
         <UserTextInput
-          label="Agreement label"
-          stateId="langPostsortAgreement"
-          sectionName="lang"
-          width={35}
-          left={0}
-        />
-        <UserTextInput
-          label="Disagreement label"
-          stateId="langPostsortDisagreement"
-          sectionName="lang"
-          width={35}
-          left={0}
-        />
-        <UserTextInput
-          label="Postsort help modal header"
-          stateId="langPostsortModalHead"
+          label="Disagree"
+          stateId="langSortDisagreement"
           sectionName="lang"
           width={25}
           left={0}
         />
+
         <UserTextAreaInput
-          label="Postsort help modal text"
-          stateId="langPostsortModalText"
+          label="Sort conditions of instruction"
+          stateId="langCondOfInst"
           sectionName="lang"
           width={30}
           height={80}
           left={0}
         />
+
+        <UserTextInput
+          label="Sorting complete modal head"
+          stateId="langSortingCompleteModalHead"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+
+        <UserTextAreaInput
+          label="Sorting complete modal text"
+          stateId="langSortingCompleteModalText"
+          sectionName="lang"
+          width={30}
+          height={100}
+          left={0}
+        />
+
+        <UserTextInput
+          label="Prevent Navigation modal head"
+          stateId="langSortPreventNavModalHead"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+
+        <UserTextAreaInput
+          label="Prevent Navigation modal text"
+          stateId="langSortPreventNavModalText"
+          sectionName="lang"
+          width={30}
+          height={50}
+          left={0}
+        />
+
+        <UserTextInput
+          label="Overloaded column modal head"
+          stateId="langSortOverloadedColumnModalHead"
+          sectionName="lang"
+          width={25}
+          left={0}
+        />
+
+        <UserTextAreaInput
+          label="Overloaded modal text"
+          stateId="langSortOverloadedColumnModalText"
+          sectionName="lang"
+          width={30}
+          height={100}
+          left={0}
+        />
+        <ColorContainer>
+          <h3>
+            Postsort
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Optional
+            section)
+          </h3>
+          <UserTextInput
+            label="Postsort Header"
+            stateId="langPostsortHeader"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+          <UserTextAreaInput
+            label="Postsort Instructions"
+            stateId="langPostsortInstructions"
+            sectionName="lang"
+            width={30}
+            height={50}
+            left={0}
+          />
+          <UserTextInput
+            label="Text input placeholder"
+            stateId="langPlaceholder"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+          <UserTextInput
+            label="Agreement label"
+            stateId="langPostsortAgreement"
+            sectionName="lang"
+            width={35}
+            left={0}
+          />
+          <UserTextInput
+            label="Disagreement label"
+            stateId="langPostsortDisagreement"
+            sectionName="lang"
+            width={35}
+            left={0}
+          />
+          <UserTextInput
+            label="Postsort help modal header"
+            stateId="langPostsortModalHead"
+            sectionName="lang"
+            width={25}
+            left={0}
+          />
+          <UserTextAreaInput
+            label="Postsort help modal text"
+            stateId="langPostsortModalText"
+            sectionName="lang"
+            width={30}
+            height={80}
+            left={0}
+          />
+        </ColorContainer>
+
         <ColorContainer>
           <h3>
             Questionnaire

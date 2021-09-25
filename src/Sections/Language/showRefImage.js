@@ -1,10 +1,16 @@
 import appState from "../../GlobalState/appState";
 
 const showSectionDefaults = (section) => {
-  if (section === "multiModalsImage") {
+  console.log(section);
+  if (section === "footerImage") {
+    // multi-modals ref image
+    appState.imageToShow = section;
+    appState["triggerImageModal"] = true;
+  }
+  if (section === "landingImage") {
     // multi-modals ref image
     console.log("Clicked");
-    appState.imageToShow = "testImage";
+    appState.imageToShow = section;
     appState["triggerImageModal"] = true;
   }
 };

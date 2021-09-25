@@ -1,13 +1,30 @@
 import appState from "../../GlobalState/appState";
+import defObject from "./textareaDefaultObject";
 
 const showSectionDefaults = (section) => {
-  if (section === "multiModalsDef") {
+  let defObj = defObject();
+
+  if (section === "footerDef") {
     // step completed message
-    localStorage.setItem(
-      "langStepCompleted",
-      `You have completed this step. Please click on the <strong> blue "Continue" button </strong> at the bottom right-side of your screen to go to the next step.`
-    );
-    appState.langStepCompleted = `You have completed this step. Please click on the <strong> blue "Continue" button </strong> at the bottom right-side of your screen to go to the next step.`;
+    localStorage.setItem("langBtnHelp", "Help me!");
+    appState.langBtnHelp = "Help me!";
+
+    localStorage.setItem("langFooterTextSize", "Text Size");
+    appState.langFooterTextSize = "Text Size";
+
+    localStorage.setItem("langFooterCardHeight", "Card Height");
+    appState.langFooterCardHeight = "Card Height";
+
+    localStorage.setItem("langBtnNext", "Continue");
+    appState.langBtnNext = "Continue";
+  }
+
+  if (section === "landingDef") {
+    localStorage.setItem("langLandingHead", "University Research Project");
+    appState.langLandingHead = "University Research Project";
+
+    localStorage.setItem("langWelcomeMessage", defObj.langWelcomeMessage);
+    appState.langWelcomeMessage = defObj.langWelcomeMessage;
   }
 };
 

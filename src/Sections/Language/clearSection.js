@@ -1,10 +1,26 @@
 import appState from "../../GlobalState/appState";
 
 const showSectionDefaults = (section) => {
-  if (section === "multiModalsClear") {
+  if (section === "footerClear") {
     // step completed message
-    localStorage.setItem("langStepCompleted", "");
-    appState.langStepCompleted = "";
+    localStorage.setItem("langBtnHelp", "");
+    appState.langBtnHelp = "";
+
+    localStorage.setItem("langFooterTextSize", "");
+    appState.langFooterTextSize = "";
+
+    localStorage.setItem("langFooterCardHeight", "");
+    appState.langFooterCardHeight = "";
+
+    localStorage.setItem("langBtnNext", "");
+    appState.langBtnNext = "";
+  }
+  if (section === "landingClear") {
+    localStorage.setItem("langLandingHead", "");
+    appState.langLandingHead = "";
+
+    localStorage.setItem("langWelcomeMessage", "");
+    appState.langWelcomeMessage = "";
   }
 };
 
