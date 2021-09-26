@@ -4,8 +4,9 @@ import styled from "styled-components";
 import appState from "../../GlobalState/appState";
 
 const handleChange = (event) => {
-  let infoInput = event.target.value;
-  appState.currentFirebaseInfo = infoInput;
+  let infoInput = `${event.target.value}`;
+  console.log(infoInput);
+  /*  appState.currentFirebaseInfo = infoInput;
 
   // if (infoInput === undefined) {
   //   return;
@@ -40,9 +41,10 @@ const handleChange = (event) => {
       if (substring1 === "</script") {
         shouldConcat = false;
       }
-    }
-    appState.firebaseInfo = filteredArrayText;
-  }
+    } */
+
+  appState.firebaseInfo = infoInput;
+  // }
 };
 
 const FirebaseTextArea = () => {
@@ -52,7 +54,7 @@ const FirebaseTextArea = () => {
       <StatementTextsInput
         type="textarea"
         name="textValue"
-        value={appState.currentFirebaseInfo || ""}
+        value={appState.firebaseInfo || ""}
         onChange={handleChange}
       />
     </Container>

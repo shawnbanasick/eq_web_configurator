@@ -46,7 +46,7 @@ const text = `
 
 const handleClick = () => {
   const data = generateHtmlWithFirebase();
-  // console.log(data);
+  console.log(data);
   if (data !== undefined) {
     exportToXml("index.html", data, "html");
   }
