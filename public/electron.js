@@ -91,7 +91,6 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
       enableRemoteModule: true,
-      contextIsolation: false,
     },
   };
 
@@ -225,6 +224,10 @@ function createWindow() {
 
 // IPC communications
 ipcMain.on("get-file-path", (event, data) => {
+  console.log(event);
+
+  console.log("message received");
+  console.log(JSON.stringify(data));
   // kill server child process if already active
   if (ps !== undefined) {
     ps.kill();
@@ -234,9 +237,8 @@ ipcMain.on("get-file-path", (event, data) => {
     stdio: ["pipe", "pipe", "pipe", "ipc"],
   });
 
-  console.log(data);
-
   if (data !== undefined) {
+    console.log("sending data");
     // start server with file location data
     ps.send(data);
   }
@@ -295,8 +297,8 @@ function installExtensions() {
     mainWindow.webContents.openDevTools();
 
     // Install extensions
-    installExtension(REACT_DEVELOPER_TOOLS)
+    /*   installExtension(REACT_DEVELOPER_TOOLS)
       .then((name) => console.log(`Added Extension:  ${name}`))
-      .catch((err) => console.log("An error occurred: ", err));
+      .catch((err) => console.log("An error occurred: ", err)); */
   }
 }

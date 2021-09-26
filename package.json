@@ -1,7 +1,7 @@
 {
   "name": "eq-configurator",
   "description": "Configurator for online Q sorting",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "private": true,
   "author": {
     "name": "Shawn Banasick",
@@ -28,7 +28,6 @@
         {
           "target": "rpm",
           "arch": [
-            "ia32",
             "x64"
           ]
         },

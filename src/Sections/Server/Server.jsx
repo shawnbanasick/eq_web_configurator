@@ -57,8 +57,10 @@ const handleClick = async () => {
       console.log(result.filePaths);
 
       if (result.canceled === false) {
+        console.log(result.filePaths);
         appState.userSelectedFilePath = result.filePaths;
         ipcRenderer.send("get-file-path", result.filePaths);
+        console.log("still going");
         return;
       }
     })
