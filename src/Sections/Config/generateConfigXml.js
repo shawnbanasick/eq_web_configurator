@@ -78,7 +78,7 @@ const generateConfigXml = () => {
   let data = data1.concat(data2);
   /* 
   appState.surveyQuestionsArray = JSON.parse(
-    localStorage.getItem("surveyQuestionArray")
+    localStorage.getItem("surveyQuestionsArray")
   );
  */
   const surveyQuestionsArray = appState.surveyQuestionsArray;

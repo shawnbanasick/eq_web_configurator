@@ -48,7 +48,7 @@ const handleClick = () => {
   const data = generateHtmlWithFirebase();
   console.log(data);
   if (data !== undefined) {
-    exportToXml("index.html", data, "html");
+    exportToXml("firebaseInfo.js", data, "js");
   }
 };
 
@@ -169,14 +169,13 @@ const FirebaseInfo = () => {
         <b>1i.</b>
         <br /> Paste the Firebase Javascript SDK information into the text area
         below. Then click the orange button to save the new file to the{" "}
-        <b>Easy HTMLQ base files folder</b> and replace the "<b>index.html</b>"
-        file.
+        <b>settings folder</b> and replace the "<b>firebaseInfo.js</b>" file.
       </DisplayModeText>
       <SpacerDiv />
       <FirebaseTextArea />
       <SaveFileButton onClick={() => handleClick()}>
-        Click here and save file to the <b>Easy HTMLQ folder</b> and replace the
-        "index.html" file
+        Click here to save file to the <b>settings folder</b> and replace the
+        "firebaseInfo.js" file
       </SaveFileButton>
       <SpacerDiv />
       <SpacerDiv />
@@ -451,5 +450,5 @@ const SpacerDiv = styled.div`
 
 const SaveFileButton = styled(GeneralButton)`
   background-color: #eb8100;
-  width: 300px;
+  width: 280px;
 `;

@@ -4,24 +4,30 @@ import styled from "styled-components";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import GeneralButton from "../../Utils/GeneralButton";
 import appState from "../../GlobalState/appState";
+import ReactHtmlParser from "react-html-parser";
 
 const clone = require("rfdc/default");
 
 const SurveyItemDndList = () => {
   const grid = 5;
   let testItems = clone(appState.surveyQuestionsArray);
+  console.log(JSON.stringify(testItems, null, 2));
 
   useEffect(() => {
-    let testItems = clone(appState.surveyQuestionsArray);
+    testItems = clone(appState.surveyQuestionsArray);
+
+    // if nothing in memory, look in localStorage
     if (testItems.length < 1) {
       console.log("branch");
       let testItems2 = JSON.parse(localStorage.getItem("surveyQuestionsArray"));
+
+      // if nothing in localStorage, then go with empty array
       if (testItems2 === null || testItems2 === undefined) {
         testItems2 = [];
       }
       appState.surveyQuestionsArray = testItems2;
     }
-  }, []);
+  }, [testItems]);
 
   const getItemStyle = (isDragging, draggableStyle) => ({
     // drag container style
@@ -115,7 +121,7 @@ const SurveyItemDndList = () => {
                         <UlDiv>
                           <ul>
                             {item.content.map((item) => (
-                              <li key={item}>{item}</li>
+                              <li key={item}>{ReactHtmlParser(item)}</li>
                             ))}
                           </ul>
                         </UlDiv>

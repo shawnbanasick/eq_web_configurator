@@ -23,7 +23,6 @@ import { toast } from "react-toastify";
 import { ToastContainer, Slide } from "react-toastify";
 import clearAddItemForm from "./clearAddItemForm";
 import ConfigColorPicker from "../Config/ConfigColorPicker";
-import ReactHtmlParser from "react-html-parser";
 import decodeHTML from "../../Utils/decodeHtml";
 
 const clone = require("rfdc/default");
@@ -96,17 +95,13 @@ const Survey = () => {
       if (displayBoolean.label === true) {
         newItemObj.label = appState.surveyQuestionLabel;
         newItemArray.push(
-          ReactHtmlParser(
-            `label text: ${decodeHTML(appState.surveyQuestionLabel)}`
-          )
+          `label text: ${decodeHTML(appState.surveyQuestionLabel)}`
         );
       }
       if (displayBoolean.note === true) {
         newItemObj.note = appState.surveyQuestionNote;
         newItemArray.push(
-          ReactHtmlParser(
-            `question note: ${decodeHTML(appState.surveyQuestionNote)}`
-          )
+          `question note: ${decodeHTML(appState.surveyQuestionNote)}`
         );
       }
       if (displayBoolean.maxlength === true) {
@@ -121,16 +116,14 @@ const Survey = () => {
       }
       if (displayBoolean.scale === true) {
         newItemObj.scale = appState.surveyQuestionScale;
-        newItemArray.push(`scale: ${appState.surveyQuestionScale}`);
+        newItemArray.push(`scale: ${decodeHTML(appState.surveyQuestionScale)}`);
       }
       if (displayBoolean.options === true) {
         displayOptionsSemiWarn = true;
         console.log(appState.surveyQuestionOptions);
         newItemObj.options = appState.surveyQuestionOptions;
         newItemArray.push(
-          ReactHtmlParser(
-            `options: ${decodeHTML(appState.surveyQuestionOptions)}`
-          )
+          `options: ${decodeHTML(appState.surveyQuestionOptions)}`
         );
       }
       if (displayBoolean.bg === true) {
@@ -144,16 +137,10 @@ const Survey = () => {
       // get survey questions from STATE
       let surveyQuestionsArray = clone(appState.surveyQuestionsArray);
 
-      /*       let surveyQuestionsArray = clone(
-        JSON.parse(localStorage.getItem("surveyQuestionArray"))
-      );
-
-      if (surveyQuestionsArray === null || surveyQuestionsArray === undefined) {
-        surveyQuestionsArray = [];
-      }
- */
-
       // ADD new question to ARRAY and save to STATE
+
+      console.log(JSON.stringify(newItemObj));
+
       surveyQuestionsArray.push(newItemObj);
       appState.surveyQuestionsArray = surveyQuestionsArray;
 
