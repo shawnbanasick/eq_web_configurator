@@ -11,16 +11,16 @@ import { ToastContainer, Slide } from "react-toastify";
 import addProject from "../../assets/images/firebase_add_project.png";
 import realtimeDatabase from "../../assets/images/firebase-realtime-database.png";
 import authentication from "../../assets/images/firebase-authentication.png";
-import authenticationSignInMethod from "../../assets/images/firebase-authentication-sign-in-method.png";
-import authenticationEnableAnonymous from "../../assets/images/firebase-authentication-enable-anonymous.png";
-import anonEnableSwitch from "../../assets/images/firebase-anon-enable-switch.png";
-import anonSelect from "../../assets/images/firebase-anon-select.png";
+import authentication1 from "../../assets/images/authentication1.png";
+import authentication4 from "../../assets/images/authentication4.png";
+import authentication3 from "../../assets/images/authentication3.png";
+import authentication2 from "../../assets/images/authentication2.png";
 import addProjectName from "../../assets/images/firebase-add-project-name.png";
 import createProject from "../../assets/images/firebase-create-project.png";
 import projectCreated from "../../assets/images/firebase-project-created.png";
 import getJavascriptApi from "../../assets/images/firebase-get-javascript-api.png";
 import addNickname from "../../assets/images/firebase-add-nickname.png";
-import copyApiInfo from "../../assets/images/firebase-copy-api-info.png";
+import newSetupFirebaseConfig from "../../assets/images/newSetupFirebaseConfig.png";
 import createDatabase from "../../assets/images/firebase-create-database.png";
 import databaseLocation from "../../assets/images/firebase-database-location.png";
 import defaultRules from "../../assets/images/firebase-default-rules.png";
@@ -153,26 +153,31 @@ const FirebaseInfo = () => {
         <b>1g.</b>
         <br /> Input a nickname for your app, then click on "Register app".
       </DisplayModeText>
+
       <img src={addNickname} alt="s" />
+
       <DisplayModeText>
         <b>1h.</b>
-        <br /> Copy the Firebase SDK information by clicking on the icon in the
-        bottom right corner. Then click "Continue to console".
+        <br /> Click "Use a script tag" at the top of the page. Then highlight
+        the "firebaseConfig" section (as shown in the image). Right-click and
+        &nbsp;<b>COPY</b> only this section.
       </DisplayModeText>
-      <img src={copyApiInfo} width="90%" alt="s" />
+
+      <img src={newSetupFirebaseConfig} width="700" alt="s" />
+
       <DisplayModeText>
         <b>1i.</b>
-        <br /> Paste the Firebase Javascript SDK inforamtion into the text area
-        below. Then click the gray button to save the new file to the{" "}
+        <br /> Paste the Firebase Javascript SDK information into the text area
+        below. Then click the orange button to save the new file to the{" "}
         <b>Easy HTMLQ base files folder</b> and replace the "<b>index.html</b>"
         file.
       </DisplayModeText>
       <SpacerDiv />
       <FirebaseTextArea />
-      <GeneralButton onClick={() => handleClick()}>
-        Save file to the <b>Easy HTMLQ folder</b> and replace the "index.html"
-        file
-      </GeneralButton>
+      <SaveFileButton onClick={() => handleClick()}>
+        Click here and save file to the <b>Easy HTMLQ folder</b> and replace the
+        "index.html" file
+      </SaveFileButton>
       <SpacerDiv />
       <SpacerDiv />
       <SpacerDiv />
@@ -188,23 +193,24 @@ const FirebaseInfo = () => {
         <b>2b.</b>
         <br /> Click on "Sign-in method"
       </DisplayModeText>
-      <img src={authenticationSignInMethod} alt="a" />
+      <img src={authentication1} width="700" alt="a" />
       <DisplayModeText>
         <b>2c.</b>
-        <br /> Scroll down the page to find "Anonymous" and click it.
+        <br />
+        Find "Anonymous" and click it.
       </DisplayModeText>
-      <img src={anonSelect} alt="ae" />
+      <img src={authentication2} width="700" alt="ae" />
       <DisplayModeText>
         <b>2d.</b>
         <br /> Click the slider in the top right to enable anonymous sign-in,
         and then click "<b>Save</b>".
       </DisplayModeText>
-      <img src={anonEnableSwitch} alt="a" />
+      <img src={authentication3} width="700" alt="a" />
       <DisplayModeText>
         <b>2e.</b>
         <br /> Anonymous mode should now indicate "Enabled".
       </DisplayModeText>
-      <img src={authenticationEnableAnonymous} alt="ad" />
+      <img src={authentication4} width="700" alt="ad" />
       <SpacerDiv />
       <SpacerDiv />
       <SpacerDiv />
@@ -404,6 +410,8 @@ const FirebaseRulesLink = styled.div`
 const LinkCopyButton = styled(GeneralButton)`
   margin-top: 20px;
   margin-bottom: 20px;
+  background-color: #eb8100;
+
   font-weight: bold;
   font-size: 20px;
 `;
@@ -439,4 +447,9 @@ const SpacerDiv = styled.div`
   height: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+`;
+
+const SaveFileButton = styled(GeneralButton)`
+  background-color: #eb8100;
+  width: 300px;
 `;
