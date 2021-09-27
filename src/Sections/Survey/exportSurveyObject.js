@@ -8,19 +8,23 @@ const exportSurveyObject = () => {
       "maxlength: 4",
       `answer restricted to numbers "0-9" (true/false): true`,
     ],
-    textarea: ["answer required (true/false): false", "label: Comments"],
+    textarea: [
+      "answer required (true/false): false",
+      "placeholder: input comments here (no html formatting possible)",
+      "label: Comments",
+    ],
     radio: [
       "item type: radio",
       "answer required (true/false): true",
       "label text: Year",
       "question note: Please select your year",
-      "options: Freshman;;;Sophomore;;;Junior;;;Senior",
+      "options: Freshman;;;Sophomore;;;Junior;;;Senior  (** caution - no HTML pair tag formatting for these options)",
     ],
     rating2: [
       "item type: rating2",
       "answer required (true/false): false",
       "label text: Please answer the following questions.",
-      "scale: Yes;;;No",
+      `scale: Yes;;;No   (** caution - no HTML pair tag formatting for this scale)`,
       "options: I have used an iPad in class before.;;;I have used a notebook computer in class before.",
     ],
     rating5: [
@@ -39,13 +43,13 @@ const exportSurveyObject = () => {
       "item type: checkbox",
       "answer required (true/false): false",
       "label text: What kind of class do you prefer?",
-      "options: Lecture;;;Group Discussion;;;Active Learning",
+      "options: Lecture;;;Group Discussion;;;Active Learning  (** caution - no HTML pair tag formatting for these options)",
     ],
     select: [
       "item type: select",
       "answer required (true/false): false",
       "label text: What is your program focus?",
-      "options: Global Studies;;;Linguistics;;;English Literature",
+      "options: Global Studies;;;Linguistics;;;English Literature  (** caution - no HTML pair tag formatting for these options)",
     ],
     information: [
       "item type: information",

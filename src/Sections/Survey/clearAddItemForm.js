@@ -18,6 +18,7 @@ const clearAddItemForm = () => {
   appState.surveyAnswerRestrictedfalseActive = false;
   appState.surveyQuestionScale = "";
   appState.surveyQuestionOptions = "";
+  appState.surveyPlaceholder = "";
 
   appState.surveyBackgroundDisplay = true;
   appState.surveyBackgroundDisplaytrueActive = true;
@@ -27,6 +28,7 @@ const clearAddItemForm = () => {
   localStorage.setItem("surveyQuestionNote", "");
   localStorage.setItem("surveyQuestionScale", "");
   localStorage.setItem("surveyQuestionOptions", "");
+  localStorage.setItem("surveyPlaceholder", "");
 
   return null;
 };

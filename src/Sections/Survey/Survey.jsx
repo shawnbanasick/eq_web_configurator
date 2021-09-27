@@ -108,6 +108,10 @@ const Survey = () => {
         newItemObj.maxlength = appState.surveyAnswerLenMax;
         newItemArray.push(`max length: ${appState.surveyAnswerLenMax}`);
       }
+      if (displayBoolean.placeholder === true) {
+        newItemObj.placeholder = appState.surveyPlaceholder;
+        newItemArray.push(`placeholder: ${appState.surveyPlaceholder}`);
+      }
       if (displayBoolean.restricted === true) {
         newItemObj.restricted = appState.surveyAnswerRestricted;
         newItemArray.push(
@@ -273,6 +277,15 @@ const Survey = () => {
               stateId="surveyAnswerLenMax"
               sectionName="survey"
               width={5}
+              left={0}
+            />
+          )}
+          {displayBoolean.placeholder && (
+            <UserTextInput
+              label="Placeholder:"
+              stateId="surveyPlaceholder"
+              sectionName="survey"
+              width={35}
               left={0}
             />
           )}

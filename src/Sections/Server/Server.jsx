@@ -113,8 +113,8 @@ const Server = () => {
           <DisplayModeText>
             To start the local web server, all you need to do is
             <strong> find the uncompressed folder </strong>with the Easy HTMLQ
-            base files. You dont't need to select a specific file - you just
-            need to find the folder.
+            base files. You don't need to select a specific file - you just need
+            to find the folder.
           </DisplayModeText>
           <SpacerDiv />
         </>

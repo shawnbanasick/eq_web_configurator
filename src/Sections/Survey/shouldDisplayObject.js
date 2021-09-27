@@ -6,6 +6,7 @@ const shouldDisplayObject = () => {
       note: true,
       maxlength: true,
       restricted: true,
+      placeholder: false,
       scale: false,
       options: false,
       bg: false,
@@ -16,6 +17,7 @@ const shouldDisplayObject = () => {
       note: false,
       maxlength: false,
       restricted: false,
+      placeholder: true,
       scale: false,
       options: false,
       bg: false,
@@ -26,6 +28,7 @@ const shouldDisplayObject = () => {
       note: true,
       maxlength: false,
       restricted: false,
+      placeholder: false,
       scale: false,
       options: true,
       bg: false,
@@ -33,6 +36,7 @@ const shouldDisplayObject = () => {
     rating2: {
       required: true,
       label: true,
+      placeholder: false,
       note: false,
       maxlength: false,
       restricted: false,
@@ -43,6 +47,7 @@ const shouldDisplayObject = () => {
     rating5: {
       required: true,
       label: true,
+      placeholder: false,
       note: false,
       maxlength: false,
       restricted: false,
@@ -58,6 +63,7 @@ const shouldDisplayObject = () => {
       restricted: false,
       scale: false,
       options: true,
+      placeholder: false,
       bg: false,
     },
     checkbox: {
@@ -66,6 +72,7 @@ const shouldDisplayObject = () => {
       note: false,
       maxlength: false,
       restricted: false,
+      placeholder: false,
       scale: false,
       options: true,
       bg: false,
@@ -73,6 +80,7 @@ const shouldDisplayObject = () => {
     select: {
       required: true,
       label: true,
+      placeholder: false,
       note: false,
       maxlength: false,
       restricted: false,
@@ -83,6 +91,7 @@ const shouldDisplayObject = () => {
     information: {
       required: false,
       label: false,
+      placeholder: false,
       note: false,
       maxlength: false,
       restricted: false,

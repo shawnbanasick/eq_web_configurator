@@ -18,7 +18,6 @@ const SurveyItemDndList = () => {
 
     // if nothing in memory, look in localStorage
     if (testItems.length < 1) {
-      console.log("branch");
       let testItems2 = JSON.parse(localStorage.getItem("surveyQuestionsArray"));
 
       // if nothing in localStorage, then go with empty array
