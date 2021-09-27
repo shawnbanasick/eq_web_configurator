@@ -27,7 +27,7 @@ const SurveyItemDndList = () => {
       }
       appState.surveyQuestionsArray = testItems2;
     }
-  }, [testItems]);
+  }, [testItems.length]);
 
   const getItemStyle = (isDragging, draggableStyle) => ({
     // drag container style

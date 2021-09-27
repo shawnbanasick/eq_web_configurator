@@ -14,8 +14,43 @@ const handleChange = (event) => {
 };
 
 const StatementTextArea = () => {
+  let displayMode = appState.displayMode;
+  if (displayMode === "beginner") {
+    displayMode = true;
+  } else {
+    displayMode = false;
+  }
+
   return (
     <Container>
+      {displayMode && (
+        <DisplayModeText>
+          Statements can include HTML paired tag formatting:
+          <ul>
+            <li>
+              &lt;b&gt;&nbsp;bold words&nbsp;&lt;/b&gt; produces{" "}
+              <b>bold words</b>
+            </li>
+            <li>
+              &lt;u&gt;&nbsp;underlined words&nbsp;&lt;/u&gt; produces{" "}
+              <u>underlined words</u>
+            </li>
+            <li>
+              &lt;i&gt;&nbsp;italicized words&nbsp;&lt;/i&gt; produces{" "}
+              <i>italicized words</i>
+            </li>
+            <li>
+              &lt;b&gt;&lt;u&gt;&lt;i&gt;&nbsp;nested
+              tags&nbsp;&lt;/i&gt;&lt;/u&gt;/b&gt; can produce{" "}
+              <b>
+                <u>
+                  <i>all three</i>
+                </u>
+              </b>
+            </li>
+          </ul>
+        </DisplayModeText>
+      )}
       <label>Enter or Paste Statements (1 statement per line) : </label>
       <StatementTextsInput
         type="textarea"
@@ -41,4 +76,19 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   user-select: all;
+`;
+
+const DisplayModeText = styled.div`
+  align-self: left;
+  margin-left: 10px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  width: 78vw;
+  max-width: 1200px;
+  font-size: 20px;
+  padding: 10px;
+  background: whitesmoke;
+  border-radius: 3px;
+
+  border: 2px solid black;
 `;

@@ -36,7 +36,30 @@ const SurveyOptions = (props) => {
           step is blocked and the question is outlined in pink.
           <br />
           <br />
-          Html tags can be used to style the questions. Wrapping text with
+          Questions can include HTML paired tag formatting:
+          <ul>
+            <li>
+              &lt;b&gt;&nbsp;bold words&nbsp;&lt;/b&gt; produces{" "}
+              <b>bold words</b>
+            </li>
+            <li>
+              &lt;u&gt;&nbsp;underlined words&nbsp;&lt;/u&gt; produces{" "}
+              <u>underlined words</u>
+            </li>
+            <li>
+              &lt;i&gt;&nbsp;italicized words&nbsp;&lt;/i&gt; produces{" "}
+              <i>italicized words</i>
+            </li>
+            <li>
+              &lt;b&gt;&lt;u&gt;&lt;i&gt;&nbsp;nested
+              tags&nbsp;&lt;/i&gt;&lt;/u&gt;/b&gt; can produce{" "}
+              <b>
+                <u>
+                  <i>all three</i>
+                </u>
+              </b>
+            </li>
+          </ul>
         </DisplayModeText>
         <RadioButtons
           label="14. Include survey (Step 4):"

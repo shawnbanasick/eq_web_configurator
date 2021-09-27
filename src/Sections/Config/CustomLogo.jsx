@@ -18,12 +18,26 @@ const CustomLogo = () => {
       <SubTitle>Custom Logo Footer Image</SubTitle>
       {displayMode && (
         <DisplayModeText>
-          Figma (https://www.figma.com) or similar software can be used to make
-          a custom image (40 pixels height by 250 pixels width in PNG or SVG
-          format) can be used as a logo in the footer. Add the image to the
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.figma.com/"
+          >
+            Figma
+          </a>{" "}
+          or similar software can be used to make a custom image (40 pixels
+          height by 250 pixels width in PNG or SVG format) that can be used as a
+          logo in the footer. Add the image to the
           <b>"images" folder</b> and input the <b>exact name</b> (case
           sensitive) here. The hex color code for the footer background color is
-          "#ececec"
+          "#ececec". There are many hex color code websites, but I use{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.colorhexa.com/"
+          >
+            ColorHexa
+          </a>{" "}
         </DisplayModeText>
       )}
       <ImageContainer>

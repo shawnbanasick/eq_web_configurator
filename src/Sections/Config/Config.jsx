@@ -34,12 +34,7 @@ const Config = () => {
       <DisplayModeText>
         This file has two sections. The first section sets up the overall
         structure of your project. The second section is a question generator
-        for the (optional) Step 5 questionnaire. <br />
-        <br />
-        By default Easy HTMLQ changes the Q sort card size and font size
-        according to the size of the participant's screen. If you want to change
-        this behavior, you can specify a constant size for the Q-sort cards
-        here. See the description for question 11a for more details.
+        for the (optional) Step 4 questionnaire.
       </DisplayModeText>
 
       <QuestionContainer>
