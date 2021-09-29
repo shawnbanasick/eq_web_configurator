@@ -80,7 +80,7 @@ const generateConfigXml = () => {
     if (numStates !== 0) {
       qSortPatternArray.push(numStates);
       // for colors arrays
-      if (mapColColors === "no colors") {
+      if (mapColColors === "no coloring") {
         columnHeadersColorsArray.push("whitesmoke");
         columnColorsArray.push("whitesmoke");
       }

@@ -46,7 +46,7 @@ const Map = () => {
 
       <RadioButtons
         label="1. Color application:"
-        buttonIdArray={["headers", "headers and columns", "no colors"]}
+        buttonIdArray={["headers", "headers and columns", "no coloring"]}
         stateId="mapColColors"
         sectionName="map"
       />

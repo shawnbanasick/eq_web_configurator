@@ -148,7 +148,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValueM6}
             stateDesig={"colColN6"}
-            default={"#FF9898"}
+            default={appState.colColN6}
           />
           <InputDiv
             label={"-5"}
@@ -156,7 +156,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValueM5}
             stateDesig={"colColN5"}
-            default={"#ffb2b2"}
+            default={appState.colColN5}
           />
           <InputDiv
             label={"-4"}
@@ -164,7 +164,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValueM4}
             stateDesig={"colColN4"}
-            default={"#ffbfbf"}
+            default={appState.colColN4}
           />
           <InputDiv
             label={"-3"}
@@ -172,7 +172,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValueM3}
             stateDesig={"colColN3"}
-            default={"#ffcbcb"}
+            default={appState.colColN3}
           />
           <InputDiv
             label={"-2"}
@@ -180,7 +180,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValueM2}
             stateDesig={"colColN2"}
-            default={"#ffd8d8"}
+            default={appState.colColN2}
           />
           <InputDiv
             label={"-1"}
@@ -188,7 +188,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValueM1}
             stateDesig={"colColN1"}
-            default={"#ffe5e5"}
+            default={appState.colColN1}
           />
           <InputDiv
             label={"0"}
@@ -196,7 +196,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue0}
             stateDesig={"colCol0"}
-            default={"#e0e0e0"}
+            default={appState.colCol0}
           />
           <InputDiv
             label={"1"}
@@ -204,7 +204,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue1}
             stateDesig={"colCol1"}
-            default={"#d6f5d6"}
+            default={appState.colCol1}
           />
           <InputDiv
             label={"2"}
@@ -212,7 +212,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue2}
             stateDesig={"colCol2"}
-            default={"#c1f0c1"}
+            default={appState.colCol2}
           />
           <InputDiv
             label={"3"}
@@ -220,7 +220,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue3}
             stateDesig={"colCol3"}
-            default={"#adebad"}
+            default={appState.colCol3}
           />
           <InputDiv
             label={"4"}
@@ -228,7 +228,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue4}
             stateDesig={"colCol4"}
-            default={"#98E698"}
+            default={appState.colCol4}
           />
           <InputDiv
             label={"5"}
@@ -236,7 +236,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue5}
             stateDesig={"colCol5"}
-            default={"#84e184"}
+            default={appState.colCol5}
           />
           <InputDiv
             label={"6"}
@@ -244,7 +244,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue6}
             stateDesig={"colCol6"}
-            default={"#57E157"}
+            default={appState.colCol6}
           />
           <InputDiv
             label={"7"}
@@ -252,7 +252,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue7}
             stateDesig={"colCol7"}
-            default={"#e0e0e0"}
+            default={appState.colCol7}
           />
           <InputDiv
             label={"8"}
@@ -260,7 +260,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue8}
             stateDesig={"colCol8"}
-            default={"#e0e0e0"}
+            default={appState.colCol8}
           />
           <InputDiv
             label={"9"}
@@ -268,7 +268,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue9}
             stateDesig={"colCol9"}
-            default={"#e0e0e0"}
+            default={appState.colCol9}
           />
           <InputDiv
             label={"10"}
@@ -276,7 +276,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue10}
             stateDesig={"colCol10"}
-            default={"#e0e0e0"}
+            default={appState.colCol10}
           />
           <InputDiv
             label={"11"}
@@ -284,7 +284,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue11}
             stateDesig={"colCol11"}
-            default={"#e0e0e0"}
+            default={appState.colCol11}
           />
           <InputDiv
             label={"12"}
@@ -292,7 +292,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue12}
             stateDesig={"colCol12"}
-            default={"#e0e0e0"}
+            default={appState.colCol12}
           />
           <InputDiv
             label={"13"}
@@ -300,7 +300,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValue13}
             stateDesig={"colCol13"}
-            default={"#e0e0e0"}
+            default={appState.colCol13}
           />
         </InputRow>
       </DesignDiv>
