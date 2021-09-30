@@ -18,6 +18,8 @@ const handleClick = () => {
 
 const handleDefaultColor = (e) => {
   console.log(e.target.id);
+  appState.setSampleColor = e.target.id;
+  appState.displaySampleColorRange = true;
 };
 
 const Map = () => {
@@ -51,14 +53,14 @@ const Map = () => {
       <DefaultButtonContainer>
         <div>1. Sample Color Range</div>
         <DefaultButton
-          id="default1"
+          id="sample1"
           leftMar={"10px"}
           onClick={handleDefaultColor}
         >
           Sample 1
         </DefaultButton>
         <DefaultButton
-          id="default2"
+          id="sample2"
           leftMar={"2px"}
           onClick={handleDefaultColor}
         >

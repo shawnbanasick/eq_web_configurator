@@ -76,6 +76,9 @@ const calcQsortDesign = (event) => {
 const QsortDesignInputElement = () => {
   //   const { t } = useTranslation();
 
+  const displaySampleColorRange = appState.displaySampleColorRange;
+  const setSampleColor = appState.setSampleColor;
+
   // getState
   const statementsLength = appState.statements.length;
   localStore.statementsLength = statementsLength;
@@ -130,6 +133,21 @@ const QsortDesignInputElement = () => {
   localStore.activeValue12 = activeValue12;
   localStore.activeValue13 = activeValue13;
 
+  //let colorN6 = localStorage.getItem("colColN6") || appState.colColN6;
+  // const colorN6 = localStorage.getItem("colColN6") || "#E02424";
+
+  if (displaySampleColorRange === true) {
+    if (setSampleColor === "sample1") {
+      console.log("in range");
+      appState.colColN6 = "#E02424";
+      localStorage.setItem("colColN6", "#E02424");
+      localStore.colorN6 = "#E02424";
+    }
+  }
+
+  // colorN6 = localStore.colorN6;
+  console.log(localStore.colorN6);
+
   if (true) {
     return (
       <DesignDiv>
@@ -148,7 +166,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValueM6}
             stateDesig={"colColN6"}
-            default={localStorage.getItem("colColN6")}
+            default={localStore.colorN6}
           />
           <InputDiv
             label={"-5"}

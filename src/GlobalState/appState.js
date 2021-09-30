@@ -89,6 +89,8 @@ const appState = store({
   colCol12: "#e0e0e0",
   colCol13: "#e0e0e0",
 
+  displaySampleColorRange: false,
+
   stylesStatementNumberDisplayfalseActive: true,
   stylesStatementNumberDisplay: false,
   stylesStatementNumberSizesmallActive: true,
