@@ -156,7 +156,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValueM5}
             stateDesig={"colColN5"}
-            default={appState.colColN5}
+            default={localStorage.getItem("colColN5")}
           />
           <InputDiv
             label={"-4"}
@@ -164,7 +164,7 @@ const QsortDesignInputElement = () => {
             onChangeCallback={calcQsortDesign}
             value={localStore.activeValueM4}
             stateDesig={"colColN4"}
-            default={appState.colColN4}
+            default={localStorage.getItem("colColN4")}
           />
           <InputDiv
             label={"-3"}
