@@ -10,6 +10,7 @@ const ConfigColorPicker = (props) => {
   const handleOnChange = useDebouncyFn((e) => {
     console.log(e);
     appState[props.stateDesig] = e;
+    localStorage.setItem(props.stateDesig, e);
     setColor(e);
   }, 200);
 

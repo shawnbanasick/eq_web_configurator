@@ -16,6 +16,10 @@ const handleClick = () => {
   exportToXml("map.xml", data, "xml");
 };
 
+const handleDefaultColor = (e) => {
+  console.log(e.target.id);
+};
+
 const Map = () => {
   let displayMode = appState.displayMode;
   if (displayMode === "beginner") {
@@ -44,8 +48,26 @@ const Map = () => {
       )}
       <MapInputElement />
 
+      <DefaultButtonContainer>
+        <div>1. Sample Color Range</div>
+        <DefaultButton
+          id="default1"
+          leftMar={"10px"}
+          onClick={handleDefaultColor}
+        >
+          Sample 1
+        </DefaultButton>
+        <DefaultButton
+          id="default2"
+          leftMar={"2px"}
+          onClick={handleDefaultColor}
+        >
+          Sample 2
+        </DefaultButton>
+      </DefaultButtonContainer>
+
       <RadioButtons
-        label="1. Color application:"
+        label="2. Color target:"
         buttonIdArray={["headers", "headers and columns", "no coloring"]}
         stateId="mapColColors"
         sectionName="map"
@@ -122,4 +144,14 @@ const DisplayModeText = styled.div`
   border: 2px solid black;
   background: whitesmoke;
   border-radius: 5px;
+`;
+
+const DefaultButton = styled(GeneralButton)`
+  margin-left: ${(props) => props.leftMar};
+`;
+
+const DefaultButtonContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
 `;

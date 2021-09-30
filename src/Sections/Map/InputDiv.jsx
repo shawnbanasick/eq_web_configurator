@@ -6,6 +6,8 @@ import ConfigColorPicker from "../Config/ConfigColorPicker";
 const InputDiv = (props) => {
   const saveInputValueToState = (event) => {
     props.onChangeCallback(event);
+    console.log(event);
+    console.log(props);
   };
 
   return (
