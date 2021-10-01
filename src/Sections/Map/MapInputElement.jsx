@@ -5,75 +5,32 @@ import InputDiv from "./InputDiv";
 import convertQsortObjectToArray from "./convertQsortObjectToArray";
 import appState from "../../GlobalState/appState";
 
-const localStore = store({
-  qSortPatternObject: {},
-  activeValueM6: "",
-  activeValueM5: "",
-  activeValueM4: "",
-  activeValueM3: "",
-  activeValueM2: "",
-  activeValueM1: "",
-  activeValue0: "",
-  activeValue1: "",
-  activeValue2: "",
-  activeValue3: "",
-  activeValue4: "",
-  activeValue5: "",
-  activeValue6: "",
-  activeValue7: "",
-  activeValue8: "",
-  activeValue9: "",
-  activeValue10: "",
-  activeValue11: "",
-  activeValue12: "",
-  activeValue13: "",
-  inputTitle: "Enter the Number of Statements in Each Column",
-  inputColor: "white",
-});
-
-const calcQsortDesign = (event) => {
-  let columnName = event.target.name;
-
-  // set column in local state to new value
-  localStore[`activeValue${event.target.name}`] = event.target.value;
-
-  // to get local state of all current values
-  const qSortPatternObject = localStore.qSortPatternObject;
-  // if negative, substitute - for M
-  if (columnName.charAt(0) === "M") {
-    columnName = +columnName.replace("M", "-");
-  }
-
-  // set new key - value in qSortPatternObject
-  qSortPatternObject[columnName] = event.target.value;
-  // send all current values back to local state
-  localStore.qSortPatternObject = qSortPatternObject;
-
-  // process array for completeness and UI feedback
-  const qSortPattern = convertQsortObjectToArray(qSortPatternObject);
-  const enteredStatements = qSortPattern.length;
-  const difference = localStore.statementsLength - enteredStatements;
-  const fullColumnName = `activeValue${event.target.name}`;
-  const targetValue = event.target.value;
-
-  if (difference === 0) {
-    localStore.inputTitle = "All Statements Allocated";
-    localStore.inputColor = "rgba(144,	238,	144, .6)";
-  }
-  if (difference > 0) {
-    localStore.inputTitle = `${difference} Statements Left`;
-    localStore.inputColor = "white";
-  }
-  if (difference < 0) {
-    localStore.inputTitle = `Over-Allocated: ${-difference} statements`;
-    localStore.inputColor = "lightpink";
-  }
-  appState[fullColumnName] = targetValue;
-  appState.qSortPattern = qSortPattern;
-  appState.qSortPatternObject = qSortPatternObject;
-};
-
 const QsortDesignInputElement = () => {
+  const localStore = store({
+    qSortPatternObject: {},
+    activeValueM6: "",
+    activeValueM5: "",
+    activeValueM4: "",
+    activeValueM3: "",
+    activeValueM2: "",
+    activeValueM1: "",
+    activeValue0: "",
+    activeValue1: "",
+    activeValue2: "",
+    activeValue3: "",
+    activeValue4: "",
+    activeValue5: "",
+    activeValue6: "",
+    activeValue7: "",
+    activeValue8: "",
+    activeValue9: "",
+    activeValue10: "",
+    activeValue11: "",
+    activeValue12: "",
+    activeValue13: "",
+    inputTitle: "Enter the Number of Statements in Each Column",
+    inputColor: "white",
+  });
   //   const { t } = useTranslation();
 
   const displaySampleColorRange = appState.displaySampleColorRange;
@@ -132,6 +89,48 @@ const QsortDesignInputElement = () => {
   localStore.activeValue11 = activeValue11;
   localStore.activeValue12 = activeValue12;
   localStore.activeValue13 = activeValue13;
+
+  const calcQsortDesign = (event) => {
+    let columnName = event.target.name;
+
+    // set column in local state to new value
+    localStore[`activeValue${event.target.name}`] = event.target.value;
+
+    // to get local state of all current values
+    const qSortPatternObject = localStore.qSortPatternObject;
+    // if negative, substitute - for M
+    if (columnName.charAt(0) === "M") {
+      columnName = +columnName.replace("M", "-");
+    }
+
+    // set new key - value in qSortPatternObject
+    qSortPatternObject[columnName] = event.target.value;
+    // send all current values back to local state
+    localStore.qSortPatternObject = qSortPatternObject;
+
+    // process array for completeness and UI feedback
+    const qSortPattern = convertQsortObjectToArray(qSortPatternObject);
+    const enteredStatements = qSortPattern.length;
+    const difference = localStore.statementsLength - enteredStatements;
+    const fullColumnName = `activeValue${event.target.name}`;
+    const targetValue = event.target.value;
+
+    if (difference === 0) {
+      localStore.inputTitle = "All Statements Allocated";
+      localStore.inputColor = "rgba(144,	238,	144, .6)";
+    }
+    if (difference > 0) {
+      localStore.inputTitle = `${difference} Statements Left`;
+      localStore.inputColor = "white";
+    }
+    if (difference < 0) {
+      localStore.inputTitle = `Over-Allocated: ${-difference} statements`;
+      localStore.inputColor = "lightpink";
+    }
+    appState[fullColumnName] = targetValue;
+    appState.qSortPattern = qSortPattern;
+    appState.qSortPatternObject = qSortPatternObject;
+  };
 
   //let colorN6 = localStorage.getItem("colColN6") || appState.colColN6;
   // const colorN6 = localStorage.getItem("colColN6") || "#E02424";

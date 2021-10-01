@@ -11,10 +11,9 @@ const clone = require("rfdc/default");
 const SurveyItemDndList = () => {
   const grid = 5;
   let testItems = clone(appState.surveyQuestionsArray);
-  console.log(JSON.stringify(testItems, null, 2));
 
   useEffect(() => {
-    testItems = clone(appState.surveyQuestionsArray);
+    // testItems = clone(appState.surveyQuestionsArray);
 
     // if nothing in memory, look in localStorage
     if (testItems.length < 1) {
@@ -26,7 +25,7 @@ const SurveyItemDndList = () => {
       }
       appState.surveyQuestionsArray = testItems2;
     }
-  }, [testItems.length]);
+  }, [testItems]);
 
   const getItemStyle = (isDragging, draggableStyle) => ({
     // drag container style
