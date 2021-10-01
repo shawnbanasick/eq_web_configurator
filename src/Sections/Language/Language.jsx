@@ -819,10 +819,10 @@ const SectionContainer = styled.div`
   /* border-radius: 3px; */
 `;
 
-const TenPxSpacer = styled.div`
+/* const TenPxSpacer = styled.div`
   height: 10px;
 `;
-
+ */
 const HeaderButtonBar = styled.div`
   display: flex;
   flex-direction: row;

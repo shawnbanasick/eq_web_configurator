@@ -7,7 +7,7 @@ import exportToXml from "../../Utils/exportToXml";
 import generateMapXml from "./generateMapXml";
 import GeneralButton from "../../Utils/GeneralButton";
 import appState from "../../GlobalState/appState";
-import RadioButtons from "../../Utils/RadioButtons";
+import MapRadioButtons from "../../Utils/MapRadioButtons";
 
 const handleClick = () => {
   // const userSelectedFilePath = `${appState.userSelectedFilePath}/settings/map.xml`;
@@ -16,11 +16,12 @@ const handleClick = () => {
   exportToXml("map.xml", data, "xml");
 };
 
-const handleDefaultColor = (e) => {
+/* const handleDefaultColor = (e) => {
   console.log(e.target.id);
   appState.setSampleColor = e.target.id;
   appState.displaySampleColorRange = true;
 };
+ */
 
 const Map = () => {
   let displayMode = appState.displayMode;
@@ -50,26 +51,8 @@ const Map = () => {
       )}
       <MapInputElement />
 
-      <DefaultButtonContainer>
-        <div>1. Sample Color Range</div>
-        <DefaultButton
-          id="sample1"
-          leftMar={"10px"}
-          onClick={handleDefaultColor}
-        >
-          Sample 1
-        </DefaultButton>
-        <DefaultButton
-          id="sample2"
-          leftMar={"2px"}
-          onClick={handleDefaultColor}
-        >
-          Sample 2
-        </DefaultButton>
-      </DefaultButtonContainer>
-
-      <RadioButtons
-        label="2. Color target:"
+      <MapRadioButtons
+        label="Color target:"
         buttonIdArray={["headers", "headers and columns", "no coloring"]}
         stateId="mapColColors"
         sectionName="map"
@@ -148,12 +131,12 @@ const DisplayModeText = styled.div`
   border-radius: 5px;
 `;
 
-const DefaultButton = styled(GeneralButton)`
-  margin-left: ${(props) => props.leftMar};
-`;
+// const DefaultButton = styled(GeneralButton)`
+//   margin-left: ${(props) => props.leftMar};
+// `;
 
-const DefaultButtonContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-`;
+// const DefaultButtonContainer = styled.div`
+//   display: flex;
+//   flex-direction: row;
+//   align-items: baseline;
+// `;

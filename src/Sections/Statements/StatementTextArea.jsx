@@ -25,23 +25,22 @@ const StatementTextArea = () => {
     <Container>
       {displayMode && (
         <DisplayModeText>
-          Statements can include HTML paired tag formatting:
+          Statements can include HTML paired tag formatting if desired:
           <ul>
             <li>
-              &lt;b&gt;&nbsp;bold words&nbsp;&lt;/b&gt; produces{" "}
-              <b>bold words</b>
+              &lt;b&gt;&nbsp;bold &nbsp;&lt;/b&gt; produces <b>bold </b>
             </li>
             <li>
-              &lt;u&gt;&nbsp;underlined words&nbsp;&lt;/u&gt; produces{" "}
-              <u>underlined words</u>
+              &lt;u&gt;&nbsp;underlined &nbsp;&lt;/u&gt; produces{" "}
+              <u>underlined </u>
             </li>
             <li>
-              &lt;i&gt;&nbsp;italicized words&nbsp;&lt;/i&gt; produces{" "}
-              <i>italicized words</i>
+              &lt;i&gt;&nbsp;italicized &nbsp;&lt;/i&gt; produces{" "}
+              <i>italicized </i>
             </li>
             <li>
               &lt;b&gt;&lt;u&gt;&lt;i&gt;&nbsp;nested
-              tags&nbsp;&lt;/i&gt;&lt;/u&gt;/b&gt; can produce{" "}
+              tagsC&lt;/i&gt;&lt;/u&gt;&lt;/b&gt; can produce{" "}
               <b>
                 <u>
                   <i>all three</i>
