@@ -8,9 +8,16 @@ const encodeHTML = (string) => {
       const stringText2 = string.replace(replaceLeft, "{{{");
       const stringText3 = stringText2.replace(replaceRight, "}}}");
       const stringText4 = `{{{div}}}${stringText3}{{{/div}}}`;
-      return stringText4;
+      const stringText5 = stringText4
+        .replace(/&/g, "&amp;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&apos;");
+      return stringText5;
     } else {
-      return string;
+      return string
+        .replace(/&/g, "&amp;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&apos;");
     }
   } catch (error) {
     console.log("There was an error encoding into HTML");

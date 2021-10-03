@@ -60,6 +60,28 @@ const SurveyOptions = (props) => {
               </b>
             </li>
           </ul>
+          Since the text is converted to html format, all &lt; (less than) and
+          &gt; (greater than) characters will be interpreted as being part of
+          HTML pair tags. If you want to use them in different context, you will
+          need to use special codes to represent the character. These codes
+          begin with the "<b>&amp;</b>" character and end with a semi-colon.
+          <ul>
+            <li>
+              For the "less than" symbol "&lt;", use <b>&amp;lt;</b> in your
+              text (for example, if you input "hamburgers &amp;lt; pizza" here,
+              it will become "hamburgers &lt; pizza" on the web
+            </li>
+            <li>
+              For the "greater than" symbol "&gt;", use <b>&amp;gt;</b> in your
+              text (for example, "hamburgers &amp;gt; pizza" here, it will
+              become "hamburgers &gt; pizza" on the web
+            </li>
+          </ul>
+          Because it is used for these types of special codes, the <b>&amp;</b>{" "}
+          character cannot be used by itself. It is an invalid character and{" "}
+          <b>will cause an error</b>. So, if you use text like "hamburgers &amp;
+          pizza" in the input below it <b>prevent your web page from loading</b>
+          .
         </DisplayModeText>
         <RadioButtons
           label="14. Include survey (Step 4):"

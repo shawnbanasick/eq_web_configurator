@@ -12,6 +12,7 @@ import showSectionDefaults from "./showSectionDefaults";
 import clearSection from "./clearSection";
 import ImageModal from "./ImageModal";
 import showRefImage from "./showRefImage";
+// import DownloadCsvButton from "./DownloadCsvButton";
 
 const Language = () => {
   const handleClick = () => {
@@ -62,11 +63,13 @@ const Language = () => {
           {`See the default text below for more examples.`}
         </DisplayModeText>
       )}
-
+      {/*  <ButtonsContainer>
+        <DownloadCsvButton />
+      </ButtonsContainer> */}
       <SectionContainer>
         {/* +++++++++++++  FOOTER INFO ++++++++++ */}
         <HeaderButtonBar>
-          <SectionTitle>Footer Text</SectionTitle>
+          <SectionTitle>Multiple Screen Text</SectionTitle>
           <div>
             <DefaultsButton id="footerDef" onClick={handleShowDefaults}>
               Use Defaults
@@ -109,6 +112,22 @@ const Language = () => {
           stateId="langBtnNext"
           sectionName="lang"
           width={25}
+          left={0}
+        />
+        <UserTextAreaInput
+          label="5. Step completed message"
+          stateId="langStepCompleted"
+          sectionName="lang"
+          width={30}
+          height={150}
+          left={0}
+        />
+        <UserTextAreaInput
+          label="6. Log in first message"
+          stateId="langLoginFirst"
+          sectionName="lang"
+          width={30}
+          height={150}
           left={0}
         />
         {/* +++++++++++++  LANDING SCREEN ++++++++++ */}
@@ -894,3 +913,12 @@ const RefImageButton = styled.button`
 const SectionTitle = styled.h3`
   margin-top: 20px;
 `;
+/* 
+const ButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 92%;
+  max-width: 1000px;
+`;
+ */

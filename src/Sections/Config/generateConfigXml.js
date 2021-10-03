@@ -71,11 +71,8 @@ const generateConfigXml = () => {
    <item id="showPostsort">${appState.configShowStep3}</item>
    <item id="showSecondPosColumn">${appState.configShowSecondPosColumn}</item>
    <item id="showSecondNegColumn">${appState.configShowSecondNegColumn}</item>
-   <item id="postsortAgreeColDisp1">column4</item>
-   <item id="postsortAgreeColDisp2">column3</item>
-   <item id="postsortDisagreeColDisp1">columnN4</item>
-   <item id="postsortDisagreeColDisp2">columnN3</item>
    
+
    <item id="displayNeutralObjects">false</item>
 
 
@@ -106,7 +103,7 @@ const generateConfigXml = () => {
       } else {
         restrictedString = ``;
       }
-      label = `        <label>${encodeHTML(itemObject.label)}*</label>\n`;
+      label = `        <label>${encodeHTML(itemObject.label)}</label>\n`;
       const note = `        <note>${encodeHTML(itemObject.note)}</note>\n`;
       const input = `        <input type="text" required="${itemObject.required}" maxlength="${itemObject.maxlength}" ${restrictedString}></input>\n`;
 

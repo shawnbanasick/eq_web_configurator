@@ -16,6 +16,8 @@ const showSectionDefaults = (section) => {
       "langFooterTextSize",
       "langFooterCardHeight",
       "langBtnNext",
+      "langStepCompleted",
+      "langLoginFirst",
     ];
 
     clearSection(selectorArray);
