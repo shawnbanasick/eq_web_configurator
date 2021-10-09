@@ -32,7 +32,10 @@ const Start = () => {
   return (
     <MainContent>
       <GlobalStyle />
-      <Title>Easy HTMLQ Configurator</Title>
+      <Title>
+        Easy HTMLQ Configurator <br />
+        Version 3
+      </Title>
       <IntroText>
         Easy HTMLQ Configurator simplifies the set-up and testing of an online Q
         sort project. It provides simplified editing of the HTMLQ configuration

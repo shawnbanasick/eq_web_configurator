@@ -49,6 +49,7 @@ const Language = () => {
       <Title>Language Settings</Title>
       {displayMode && (
         <DisplayModeText>
+          <h4>Simple HTML Formatting</h4>
           {`Simple text formatting is available here by using tags before and after the text to be modified. Simple formatting options include bold <b> </b>, italics <i> </i>, and underline <u> </u>.`}{" "}
           <br />
           <br />
@@ -60,6 +61,12 @@ const Language = () => {
           {`<a href="https://qmethod.org/" target="_blank"> <u>qmethod.org</u> </a>.`}
           <br />
           <br />
+          <h4>Complex HTML Layouts</h4>
+          Complex HTML layouts are possible, including the use of images and
+          embedded videos, for the Landing screen, the Submit screen, and pop-up
+          modal texts.
+          <br />
+          <br />
           {`Use `}
           <a
             href="https://codepen.io"
@@ -68,10 +75,10 @@ const Language = () => {
           >
             CodePen
           </a>{" "}
-          {`to interactively develop more complex layouts (click on the "Start Coding" button on the top left side of the page, then try out your code in the "HTML" box).`}
+          {`to interactively develop complex layouts (click on the "Start Coding" button on the top left side of the page, then try out your code in the "HTML" box).`}
           <br />
           <br />
-          {`For example, see the layout for the `}
+          {`For example, see the default layout for the `}
           <a href="https://codepen.io" target="_blank">
             &quot;Welcome Message&quot; here
           </a>{" "}
