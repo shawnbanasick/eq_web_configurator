@@ -91,6 +91,22 @@ const MainContent = styled.div`
   transition: visibility 0.5s linear;
   font-size: 18px;
   user-select: none;
+
+  a {
+    padding-bottom: 1px;
+    text-decoration: none;
+    color: #000;
+    box-shadow: inset 0 -4px 0 var(--second-theme-color);
+    transition: background-color 0.25s ease-out;
+    margin-left: 5px;
+  }
+
+  a:hover {
+    background-color: var(--second-theme-color);
+    padding-top: 2px;
+    box-shadow: none;
+    color: white;
+  }
 `;
 
 const Title = styled.h1`

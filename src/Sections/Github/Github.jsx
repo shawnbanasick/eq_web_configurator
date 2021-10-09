@@ -356,6 +356,7 @@ const MainContent = styled.div`
     background-color: var(--second-theme-color);
     padding-top: 2px;
     box-shadow: none;
+    color: white;
   }
 
   img {

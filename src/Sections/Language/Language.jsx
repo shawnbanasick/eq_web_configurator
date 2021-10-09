@@ -66,14 +66,14 @@ const Language = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <u>CodePen</u>
+            CodePen
           </a>{" "}
           {`to interactively develop more complex layouts (click on the "Start Coding" button on the top left side of the page, then try out your code in the "HTML" box).`}
           <br />
           <br />
           {`For example, see the layout for the `}
           <a href="https://codepen.io" target="_blank">
-            <u>&quot;Welcome Message&quot; here</u>
+            &quot;Welcome Message&quot; here
           </a>{" "}
           <br />
           <br />
@@ -801,7 +801,24 @@ const MainContent = styled.div`
   transition: visibility 0.5s linear;
   font-size: 18px;
   padding-bottom: 30px;
+
+  a {
+    padding-bottom: 1px;
+    text-decoration: none;
+    color: #000;
+    box-shadow: inset 0 -4px 0 var(--second-theme-color);
+    transition: background-color 0.25s ease-out;
+    margin-left: 5px;
+  }
+
+  a:hover {
+    background-color: var(--second-theme-color);
+    padding-top: 2px;
+    box-shadow: none;
+    color: white;
+  }
 `;
+
 const Title = styled.h1`
   font-size: 5vw;
   align-self: center;

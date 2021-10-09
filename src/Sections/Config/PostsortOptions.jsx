@@ -34,14 +34,14 @@ const PostsortOptions = () => {
       />
 
       <RadioButtons
-        label="12. Display positive column 2:"
+        label="12. Display cards from second most positive column:"
         buttonIdArray={["true", "false"]}
         stateId="configShowSecondPosColumn"
         sectionName="config"
       />
 
       <RadioButtons
-        label="13. Display negative column 2:"
+        label="13. Display cards from second most negative column:"
         buttonIdArray={["true", "false"]}
         stateId="configShowSecondNegColumn"
         sectionName="config"
