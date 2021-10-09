@@ -64,7 +64,8 @@ const Language = () => {
           <h4>Complex HTML Layouts</h4>
           Complex HTML layouts are possible, including the use of images and
           embedded videos, for the Landing screen, the Submit screen, and pop-up
-          modal texts.
+          modal texts. In-line CSS styling can be used to modify the HTML
+          elements.
           <br />
           <br />
           {`Use `}
