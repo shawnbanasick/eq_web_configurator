@@ -189,6 +189,12 @@ function createWindow() {
     mainWindow.webContents.openDevTools();
   }
 
+  // force weblinks to open in default browswer
+  mainWindow.webContents.on("new-window", function (e, url) {
+    e.preventDefault();
+    require("electron").shell.openExternal(url);
+  });
+
   // Emitted when the window is closed.
   // Dereference the window object, usually you would store windows
   // in an array if your app supports multi windows, this is the time
