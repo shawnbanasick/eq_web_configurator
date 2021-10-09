@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { view } from "@risingstack/react-easy-state";
 import styled from "styled-components";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
@@ -6,26 +6,10 @@ import GeneralButton from "../../Utils/GeneralButton";
 import appState from "../../GlobalState/appState";
 import ReactHtmlParser from "react-html-parser";
 
-const clone = require("rfdc/default");
+// const clone = require("rfdc/default");
 
 const SurveyItemDndList = () => {
   const grid = 5;
-  let testItems = clone(appState.surveyQuestionsArray);
-
-  useEffect(() => {
-    // testItems = clone(appState.surveyQuestionsArray);
-
-    // if nothing in memory, look in localStorage
-    if (testItems.length < 1) {
-      let testItems2 = JSON.parse(localStorage.getItem("surveyQuestionsArray"));
-
-      // if nothing in localStorage, then go with empty array
-      if (testItems2 === null || testItems2 === undefined) {
-        testItems2 = [];
-      }
-      appState.surveyQuestionsArray = testItems2;
-    }
-  }, [testItems]);
 
   const getItemStyle = (isDragging, draggableStyle) => ({
     // drag container style
@@ -72,9 +56,10 @@ const SurveyItemDndList = () => {
       result.destination.index
     );
 
-    testItems = [...items];
-    appState.surveyQuestionsArray = testItems;
+    //setTestItems([...items]);
+    appState.surveyQuestionsArray = [...items];
     localStorage.setItem("surveyQuestionsArray", JSON.stringify(testItems));
+    // setTestItems([...items]);
   }; // end DragEnd
 
   const callDelete = (e) => {
@@ -82,7 +67,13 @@ const SurveyItemDndList = () => {
     testItems.splice(item, 1);
     appState.surveyQuestionsArray = testItems;
     localStorage.setItem("surveyQuestionsArray", JSON.stringify(testItems));
+    // setTestItems(testItems);
   };
+
+  let testItems = appState.surveyQuestionsArray;
+  if (testItems === null || testItems === undefined || testItems.length < 1) {
+    testItems = [...JSON.parse(localStorage.getItem("surveyQuestionsArray"))];
+  }
 
   return (
     <DragAndDropContainer>
