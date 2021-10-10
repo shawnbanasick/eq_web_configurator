@@ -5,7 +5,7 @@ import InputDiv from "./InputDiv";
 import convertQsortObjectToArray from "./convertQsortObjectToArray";
 import appState from "../../GlobalState/appState";
 
-const QsortDesignInputElement = () => {
+const QsortDesignInputElement = (props) => {
   const localStore = store({
     qSortPatternObject: {},
     activeValueM6: "",
@@ -34,7 +34,7 @@ const QsortDesignInputElement = () => {
   //   const { t } = useTranslation();
 
   // getState
-  const statementsLength = appState.statements.length;
+  const statementsLength = props.numStatements;
   localStore.statementsLength = statementsLength;
 
   const {

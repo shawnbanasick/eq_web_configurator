@@ -31,7 +31,12 @@ const Map = () => {
     displayMode = false;
   }
 
-  let numStatements = appState.statements.length;
+  let statements = localStorage.getItem("currentStatements");
+  let arr = statements.split(/\r\n|\r|\n/g);
+  let filteredArray = arr.filter(function (el) {
+    return el;
+  });
+  let numStatements = filteredArray.length;
   if (numStatements === 0) {
     numStatements = "No";
   }
@@ -49,7 +54,7 @@ const Map = () => {
           been allocated.
         </DisplayModeText>
       )}
-      <MapInputElement />
+      <MapInputElement numStatements={numStatements} />
 
       <MapRadioButtons
         label="Color Palette:"
