@@ -66,8 +66,9 @@ const appState = store({
   configStep2ConstantWidthfalseActive: true,
   configStep2CardWidth: 200,
 
-  mapColColors: "headers only",
-  mapColColorsheadersActive: true,
+  mapColColors: "Headers",
+  mapColColorsHeadersActive: true,
+  mapColorPalette: "",
   colColN6: "#E02424",
   colColN5: "#F05252",
   colColN4: "#F98080",
@@ -249,6 +250,7 @@ const appState = store({
   langTransferFailModalText: `Please try again in a few moments.`,
   langFallbackMessage: `Data transmission has failed. Please download the results and email them as an attachment to ken.q.tools@gmail.com.  Thank you!`,
   langBtnDownload: `Download`,
+  langGoodbyeMessage: `<div>Thank You!</div> <br /><div>You can now close the browser tab"</div>`,
 
   uploadService: "Netlify",
   uploadServiceNetlifyActive: true,

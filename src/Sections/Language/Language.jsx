@@ -63,7 +63,7 @@ const Language = () => {
           <br />
           <h4>Complex HTML Layouts</h4>
           Complex HTML layouts are possible, including the use of images and
-          embedded videos, for the Landing screen, the Submit screen, and pop-up
+          embedded videos, for the Landing screen, Submit screen, and pop-up
           modal texts. In-line CSS styling can be used to modify the HTML
           elements.
           <br />
@@ -76,7 +76,7 @@ const Language = () => {
           >
             CodePen
           </a>{" "}
-          {`to interactively develop complex layouts (click on the "Start Coding" button on the top left side of the page, then try out your code in the "HTML" box).`}
+          {`to interactively develop complex layouts (click on the "Start Coding" button on the top left side of the page, then try out your code in the "HTML" box). Then, copy and paste the HTML code from CodePen to the input boxes here`}
           <br />
           <br />
           {`For example, see the default layout for the `}
@@ -85,6 +85,18 @@ const Language = () => {
           </a>{" "}
           <br />
           <br />
+          <ul>
+            <li>
+              <a
+                href="https://codepen.io/shawnbanasick/pen/NWvWGMY"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Vertical and horizontal centering
+              </a>
+              &nbsp;(for Landing section and goodbyeMessage){" "}
+            </li>
+          </ul>
           {`See the default text below for more HTML examples.`}
         </DisplayModeText>
       )}
@@ -762,6 +774,14 @@ const Language = () => {
             stateId="langBtnDownload"
             sectionName="lang"
             width={25}
+            left={0}
+          />
+          <UserTextAreaInput
+            label="5. Goodbye Message"
+            stateId="langGoodbyeMessage"
+            sectionName="lang"
+            width={35}
+            height={75}
             left={0}
           />
         </ColorContainer>

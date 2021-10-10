@@ -39,7 +39,7 @@ const Map = () => {
   return (
     <MainContent>
       <GlobalStyle />
-      <Title>Q sort Grid Settings</Title>
+      <Title>Q Sort Grid Settings</Title>
       <h2>{numStatements} Statements Loaded</h2>
       {displayMode && (
         <DisplayModeText>
@@ -52,8 +52,15 @@ const Map = () => {
       <MapInputElement />
 
       <MapRadioButtons
-        label="Color target:"
-        buttonIdArray={["headers", "headers and columns", "no coloring"]}
+        label="Color Palette:"
+        buttonIdArray={["Steps", "Tints", "Custom"]}
+        stateId="mapColorPalette"
+        sectionName="map"
+      />
+
+      <MapRadioButtons
+        label="Color Use:"
+        buttonIdArray={["Headers", "Headers and Columns", "No Coloring"]}
         stateId="mapColColors"
         sectionName="map"
       />

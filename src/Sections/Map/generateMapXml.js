@@ -80,20 +80,25 @@ const generateConfigXml = () => {
     if (numStates !== 0) {
       qSortPatternArray.push(numStates);
       // for colors arrays
-      if (mapColColors === "no coloring") {
+      if (mapColColors === "No Coloring") {
         columnHeadersColorsArray.push("whitesmoke");
         columnColorsArray.push("whitesmoke");
       }
 
       let colorIndex = `colCol${headersLookupArray[i]}`;
-      let color = appState[colorIndex];
+
+      let color = localStorage.getItem(colorIndex);
+      if (!color) {
+        color = appState[colorIndex];
+      }
+
       console.log(color);
 
-      if (mapColColors === "headers") {
+      if (mapColColors === "Headers") {
         columnHeadersColorsArray.push(color);
         columnColorsArray.push("whitesmoke");
       }
-      if (mapColColors === "headers and columns") {
+      if (mapColColors === "Headers and Columns") {
         columnHeadersColorsArray.push(color);
         columnColorsArray.push(color);
       }

@@ -82,6 +82,7 @@ const showSectionDefaults = () => {
     langTransferFailModalText: `Please try again in a few moments.`,
     langFallbackMessage: `Data transmission has failed. Please download the results and email them as an attachment to ken.q.tools@gmail.com.  Thank you!`,
     langBtnDownload: `Download`,
+    langGoodbyeMessage: `<div>Thank You!</div> <br /><div>You can now close the browser tab"</div>`,
   };
   return obj;
 };

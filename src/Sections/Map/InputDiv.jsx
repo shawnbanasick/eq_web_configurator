@@ -1,7 +1,7 @@
 import { view } from "@risingstack/react-easy-state";
 import styled from "styled-components";
 import React from "react";
-import ConfigColorPicker from "../Config/ConfigColorPicker";
+import MapColorPicker from "../Config/MapColorPicker";
 
 const InputDiv = (props) => {
   const saveInputValueToState = (event) => {
@@ -19,10 +19,7 @@ const InputDiv = (props) => {
         onChange={saveInputValueToState}
         value={props.value}
       />
-      <ConfigColorPicker
-        stateDesig={props.stateDesig}
-        default={props.default}
-      />
+      <MapColorPicker stateDesig={props.stateDesig} default={props.default} />
     </InputColumn>
   );
 };

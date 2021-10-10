@@ -119,6 +119,7 @@ const showSectionDefaults = (section) => {
       "langTransferFailModalText",
       "langFallbackMessage",
       "langBtnDownload",
+      "langGoodbyeMessage",
     ];
 
     clearSection(selectorArray);

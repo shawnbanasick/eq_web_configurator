@@ -72,7 +72,10 @@ const SurveyItemDndList = () => {
 
   let testItems = appState.surveyQuestionsArray;
   if (testItems === null || testItems === undefined || testItems.length < 1) {
-    testItems = [...JSON.parse(localStorage.getItem("surveyQuestionsArray"))];
+    let storedItems = JSON.parse(localStorage.getItem("surveyQuestionsArray"));
+    if (storedItems) {
+      testItems = [...storedItems];
+    }
   }
 
   return (
