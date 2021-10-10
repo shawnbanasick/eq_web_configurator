@@ -49,6 +49,13 @@ const Language = () => {
       <Title>Language Settings</Title>
       {displayMode && (
         <DisplayModeText>
+          <h4>Section Buttons</h4>
+          The "Use Defaults" button will insert the default text into all of the
+          input boxes in that section. The "Clear Section" button will clear all
+          of the input boxes in that section. The "View Reference Image" buttons
+          give hints about the location of the text in the application.
+          <br />
+          <br />
           <h4>Simple HTML Formatting</h4>
           {`Simple text formatting is available here by using tags before and after the text to be modified. Simple formatting options include bold <b> </b>, italics <i> </i>, and underline <u> </u>.`}{" "}
           <br />
@@ -62,10 +69,9 @@ const Language = () => {
           <br />
           <br />
           <h4>Complex HTML Layouts</h4>
-          Complex HTML layouts are possible, including the use of images and
-          embedded videos, for the Landing screen, Submit screen, and pop-up
-          modal texts. In-line CSS styling can be used to modify the HTML
-          elements.
+          Complex HTML layouts are possible for the Welcome message, Submit Data
+          text, Goodbye message, and pop-up modal texts. In-line CSS styling can
+          be used to modify the HTML elements.
           <br />
           <br />
           {`Use `}
@@ -79,15 +85,44 @@ const Language = () => {
           {`to interactively develop complex layouts (click on the "Start Coding" button on the top left side of the page, then try out your code in the "HTML" box). When you are happy with the layout, copy and paste the HTML code from CodePen to the input boxes below.`}
           <br />
           <br />
-          {`Examples: `}
+          {`CodePen Examples: `}
           <ListContainer>
+            <li>
+              <a
+                href="https://codepen.io/shawnbanasick/pen/gOxOQrr"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Headers and text
+              </a>{" "}
+            </li>
+
+            <li>
+              <a
+                href="https://codepen.io/shawnbanasick/pen/QWMWJEM"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Lists
+              </a>{" "}
+            </li>
             <li>
               <a
                 href="https://codepen.io/shawnbanasick/pen/WNENYNp"
                 target="_blank"
                 rel="noreferrer"
               >
-                Change font size
+                Font size adjustment
+              </a>{" "}
+            </li>
+
+            <li>
+              <a
+                href="https://codepen.io/shawnbanasick/pen/vYJYQxN"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Side-by-side layouts
               </a>{" "}
             </li>
 
@@ -99,15 +134,30 @@ const Language = () => {
               >
                 Vertical and horizontal centering
               </a>
-              &nbsp;(for Landing section and goodbyeMessage){" "}
+              &nbsp;(for Landing section){" "}
             </li>
+
+            <li>
+              <a
+                href="https://codepen.io/shawnbanasick/pen/mdMdQby"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Vertical and horizontal centering
+              </a>
+              &nbsp;(for modals){" "}
+            </li>
+
             <li>
               <a href="https://codepen.io" target="_blank" rel="noreferrer">
-                default &quot;Welcome Message&quot;
+                Combined example - the default &quot;Welcome Message&quot;
               </a>{" "}
             </li>
           </ListContainer>
           {`See the default text below for more HTML examples.`}
+          <br />
+          <br />
+          {`When finished, click the orange button and save the file.`}
         </DisplayModeText>
       )}
       {/*  <ButtonsContainer>
