@@ -6,6 +6,8 @@ import convertQsortObjectToArray from "./convertQsortObjectToArray";
 import appState from "../../GlobalState/appState";
 
 const QsortDesignInputElement = (props) => {
+  let backgroundCol = "#d6dbe0";
+
   const localStore = store({
     qSortPatternObject: {},
     activeValueM6: "",
@@ -127,6 +129,8 @@ const QsortDesignInputElement = (props) => {
     // set column in local state to new value
     localStore[`activeValue${event.target.name}`] = event.target.value;
 
+    console.log(event.target.value);
+
     // to get local state of all current values
     // const qSortPatternObject = localStore.qSortPatternObject;
     let qSortPatternObject = JSON.parse(
@@ -175,6 +179,8 @@ const QsortDesignInputElement = (props) => {
     );
   };
 
+  console.log(backgroundCol);
+
   if (true) {
     return (
       <DesignDiv>
@@ -194,6 +200,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValueM6}
             stateDesig={"colColN6"}
             default={appState.colColN6}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"-5"}
@@ -202,6 +209,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValueM5}
             stateDesig={"colColN5"}
             default={appState.colColN5}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"-4"}
@@ -210,6 +218,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValueM4}
             stateDesig={"colColN4"}
             default={appState.colColN4}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"-3"}
@@ -218,6 +227,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValueM3}
             stateDesig={"colColN3"}
             default={appState.colColN3}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"-2"}
@@ -226,6 +236,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValueM2}
             stateDesig={"colColN2"}
             default={appState.colColN2}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"-1"}
@@ -234,6 +245,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValueM1}
             stateDesig={"colColN1"}
             default={appState.colColN1}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"0"}
@@ -242,6 +254,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValue0}
             stateDesig={"colCol0"}
             default={appState.colCol0}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"1"}
@@ -250,6 +263,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValue1}
             stateDesig={"colCol1"}
             default={appState.colCol1}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"2"}
@@ -258,6 +272,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValue2}
             stateDesig={"colCol2"}
             default={appState.colCol2}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"3"}
@@ -266,6 +281,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValue3}
             stateDesig={"colCol3"}
             default={appState.colCol3}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"4"}
@@ -274,6 +290,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValue4}
             stateDesig={"colCol4"}
             default={appState.colCol4}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"5"}
@@ -282,6 +299,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValue5}
             stateDesig={"colCol5"}
             default={appState.colCol5}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"6"}
@@ -290,6 +308,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValue6}
             stateDesig={"colCol6"}
             default={appState.colCol6}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"7"}
@@ -298,6 +317,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValue7}
             stateDesig={"colCol7"}
             default={appState.colCol7}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"8"}
@@ -306,6 +326,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValue8}
             stateDesig={"colCol8"}
             default={appState.colCol8}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"9"}
@@ -314,6 +335,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValue9}
             stateDesig={"colCol9"}
             default={appState.colCol9}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"10"}
@@ -322,6 +344,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValue10}
             stateDesig={"colCol10"}
             default={appState.colCol10}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"11"}
@@ -330,6 +353,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValue11}
             stateDesig={"colCol11"}
             default={appState.colCol11}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"12"}
@@ -338,6 +362,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValue12}
             stateDesig={"colCol12"}
             default={appState.colCol12}
+            backgroundCol={backgroundCol}
           />
           <InputDiv
             label={"13"}
@@ -346,6 +371,7 @@ const QsortDesignInputElement = (props) => {
             value={localStore.activeValue13}
             stateDesig={"colCol13"}
             default={appState.colCol13}
+            backgroundCol={backgroundCol}
           />
         </InputRow>
       </DesignDiv>

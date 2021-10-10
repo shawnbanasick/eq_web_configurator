@@ -4,14 +4,20 @@ import React from "react";
 import MapColorPicker from "../Config/MapColorPicker";
 
 const InputDiv = (props) => {
+  console.log(props.value);
   const saveInputValueToState = (event) => {
     props.onChangeCallback(event);
     // console.log(event);
     // console.log(props);
   };
 
+  let backgroundCol = props.backgroundCol;
+  if (isNaN(props.value) || +props.value < 0) {
+    backgroundCol = "yellow";
+  }
+
   return (
-    <InputColumn>
+    <InputColumn backgroundCol={backgroundCol}>
       <StyledLabel>{props.label}</StyledLabel>
       <StyledInput
         type="text"
@@ -33,7 +39,7 @@ const InputColumn = styled.div`
   width: 40px;
   height: 85px;
   border: 1px solid darkgray;
-  background-color: #d6dbe0;
+  background-color: ${(props) => props.backgroundCol};
   padding-right: 2px;
   justify-content: center;
   align-items: center;
