@@ -1,8 +1,14 @@
-import appState from "../../GlobalState/appState";
+// import appState from "../../GlobalState/appState";
 import encodeHTML from "../../Utils/encodeHTML";
 
 const generateStatementXml = () => {
-  let statementsArray = appState.statements;
+  // let statementsArray = appState.statements;
+  let statements = localStorage.getItem("currentStatements");
+  let arr = statements.split(/\r\n|\r|\n/g);
+  let filteredArray = arr.filter(function (el) {
+    return el;
+  });
+  const statementsArray = filteredArray;
 
   let data = `<?xml version="1.0" encoding="UTF-8"?>
 

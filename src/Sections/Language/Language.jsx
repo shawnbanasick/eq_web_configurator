@@ -58,7 +58,7 @@ const Language = () => {
           <br />
           {`A web link can be inserted by using this pattern:`}
           <br />
-          {`<a href="https://qmethod.org/" target="_blank"> <u>qmethod.org</u> </a>.`}
+          {`<a href="https://qmethod.org/" target="_blank" rel="noreferrer"> <u>qmethod.org</u> </a>.`}
           <br />
           <br />
           <h4>Complex HTML Layouts</h4>
@@ -80,7 +80,7 @@ const Language = () => {
           <br />
           <br />
           {`For example, see the default layout for the `}
-          <a href="https://codepen.io" target="_blank">
+          <a href="https://codepen.io" target="_blank" rel="noreferrer">
             &quot;Welcome Message&quot; here
           </a>{" "}
           <br />

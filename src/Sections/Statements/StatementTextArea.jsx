@@ -5,12 +5,17 @@ import appState from "../../GlobalState/appState";
 
 const handleChange = (event) => {
   let statementInput = event.target.value;
-  appState.currentStatementInput = statementInput;
+  appState.currentStatements = statementInput;
+  localStorage.setItem("currentStatements", statementInput);
+
+  // appState.currentStatementInput = statementInput;
+  // localStorage.setItem("currentStatements", JSON.stringify(statementInput));
+  /* 
   let arr = statementInput.split(/\r\n|\r|\n/g);
   let filteredArray = arr.filter(function (el) {
     return el;
   });
-  appState.statements = filteredArray;
+  appState.statements = filteredArray; */
 };
 
 const StatementTextArea = () => {
@@ -20,6 +25,21 @@ const StatementTextArea = () => {
   } else {
     displayMode = false;
   }
+
+  appState.currentStatements = localStorage.getItem("currentStatements");
+
+  /* 
+  let currentStatements = JSON.parse(localStorage.getItem("currentStatements"));
+  if (!currentStatements) {
+    currentStatements = appState.currentStatementInput || "";
+  } else {
+     let arr = currentStatements.split(/\r\n|\r|\n/g);
+    let filteredArray = arr.filter(function (el) {
+      return el;
+    });
+    appState.statements = filteredArray; 
+  } 
+  */
 
   return (
     <Container>
@@ -54,7 +74,7 @@ const StatementTextArea = () => {
       <StatementTextsInput
         type="textarea"
         name="textValue"
-        value={appState.currentStatementInput || ""}
+        value={appState.currentStatements || ""}
         onChange={handleChange}
       />
     </Container>

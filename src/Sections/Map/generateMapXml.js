@@ -46,7 +46,7 @@ const generateConfigXml = () => {
     "12",
     "13",
   ];
-
+  /* 
   const valuesTextArray = [
     "activeValueM6",
     "activeValueM5",
@@ -69,21 +69,15 @@ const generateConfigXml = () => {
     "activeValue12",
     "activeValue13",
   ];
-
-  //  console.log(JSON.stringify(appState, null, 2));
-
+ */
   let qSortPatternObject = JSON.parse(
     localStorage.getItem("qSortPatternObject")
   );
   if (!qSortPatternObject) {
-    console.log("no object");
     qSortPatternObject = appState.qSortPatternObject;
   }
 
-  console.log(JSON.stringify(qSortPatternObject));
-
   const mapColColors = appState.mapColColors;
-  console.log(mapColColors);
 
   let data = `<?xml version="1.0" encoding="UTF-8"?>
 
@@ -119,7 +113,6 @@ const generateConfigXml = () => {
     let colorString = "";
     let value = parseInt(columnsArray[i], 10);
     let numStates = parseInt(qSortPatternObject[columnsArray[i]], 10) || 0;
-    console.log(numStates);
     // for Q sort pattern array
     if (numStates !== 0) {
       qSortPatternArray.push(numStates);
@@ -135,8 +128,6 @@ const generateConfigXml = () => {
       if (!color) {
         color = appState[colorIndex];
       }
-
-      console.log(color);
 
       if (mapColColors === "Headers") {
         columnHeadersColorsArray.push(color);
