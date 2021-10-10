@@ -4,11 +4,8 @@ import React from "react";
 import MapColorPicker from "../Config/MapColorPicker";
 
 const InputDiv = (props) => {
-  console.log(props.value);
   const saveInputValueToState = (event) => {
     props.onChangeCallback(event);
-    // console.log(event);
-    // console.log(props);
   };
 
   let backgroundCol = props.backgroundCol;
@@ -43,7 +40,6 @@ const InputColumn = styled.div`
   padding-right: 2px;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid red; */
 `;
 
 const StyledInput = styled.input`
