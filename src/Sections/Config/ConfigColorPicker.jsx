@@ -8,7 +8,6 @@ const ConfigColorPicker = (props) => {
   const [color, setColor] = useState(props.default);
 
   const handleOnChange = useDebouncyFn((e) => {
-    console.log(e);
     appState[props.stateDesig] = e;
     localStorage.setItem(props.stateDesig, e);
     setColor(e);
@@ -16,7 +15,6 @@ const ConfigColorPicker = (props) => {
 
   useEffect(() => {
     let savedColor = localStorage.getItem(props.stateDesig);
-    console.log(savedColor);
     if (savedColor === null || savedColor === undefined) {
       savedColor = appState[props.stateDesig];
       setColor(props.default);

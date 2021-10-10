@@ -10,7 +10,6 @@ import appState from "../../GlobalState/appState";
 import MapRadioButtons from "../../Utils/MapRadioButtons";
 
 const handleClick = () => {
-  // const userSelectedFilePath = `${appState.userSelectedFilePath}/settings/map.xml`;
   const data = generateMapXml();
 
   exportToXml("map.xml", data, "xml");

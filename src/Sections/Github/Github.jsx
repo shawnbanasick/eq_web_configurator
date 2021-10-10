@@ -51,28 +51,20 @@ const Server = () => {
       <Title>Upload Your Files to the Web</Title>
 
       <DisplayModeText>
-        The next step is to <strong>upload</strong> your Easy HTMLQ files to a
-        web server. I recommend either
+        The last step is to <strong>upload</strong> your Easy HTMLQ files to a
+        web server. I recommend
         <a
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.netlify.com/"
         >
           Netlify
-        </a>{" "}
-        or{" "}
-        <a target="_blank" rel="noopener noreferrer" href="https://github.com/">
-          Github
         </a>
-        . Both options are free to use for small, non-commercial projects.
-        Netlify is quicker and easier to setup. With Github it is easier to make
-        small changes to your project after you have uploaded it. Note that if
-        you use Github your user account name becomes part of the url for your
-        project.
+        .{" "}
       </DisplayModeText>
       <RadioButtons
         label="Display instructions for:"
-        buttonIdArray={["Netlify", "Github"]}
+        buttonIdArray={["Netlify"]}
         stateId="uploadService"
         sectionName="upload"
       />
@@ -102,7 +94,7 @@ const Server = () => {
           <DisplayModeText>
             <b>1b.</b>
             <br />
-            Drag the Easy HTMLQ <b>folder</b> to the Netlify page and drop it
+            Drag the Easy HTMLQ <b>FOLDER</b> to the Netlify page and drop it
             into the box.
           </DisplayModeText>
           <SpacerDiv20 />
@@ -369,8 +361,7 @@ const MainContent = styled.div`
 `;
 
 const Title = styled.h1`
-  width: 80vw;
-  max-width: 700px;
+  font-size: 50px;
   align-self: center;
 `;
 
@@ -391,8 +382,10 @@ const DisplayModeText = styled.div`
   width: 78vw;
   max-width: 1200px;
   font-size: 20px;
-  padding: 0 10px 0 10px;
+  padding: 10px;
   border: 2px solid black;
+  background: whitesmoke;
+  border-radius: 5px;
 `;
 
 const SpacerDiv50 = styled.div`

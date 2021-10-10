@@ -100,13 +100,12 @@ const FirebaseInfo = () => {
         <br />
         There are three steps needed to provide a database for Easy HTMLQ:
         <br /> &nbsp;&nbsp;&nbsp;1&#41; create a new Firebase project;
-        <br /> &nbsp;&nbsp;&nbsp;2&#41; set the database to allow anonymous
-        log-ins;
-        <br /> &nbsp;&nbsp;&nbsp;3&#41; initialize the database and set the
-        access rules.
+        <br /> &nbsp;&nbsp;&nbsp;2&#41; set up anonymous log-ins;
+        <br /> &nbsp;&nbsp;&nbsp;3&#41; initialize the database
+        <br /> &nbsp;&nbsp;&nbsp;4&#41; set the database access rules.
       </DisplayModeText>
       <SpacerDiv />
-      <Title2>Step 1 of 3 - Create a New Project</Title2>
+      <Title2>Step 1 of 4 - Create a New Project</Title2>
 
       <DisplayModeText>
         <b>1a.</b>
@@ -181,7 +180,7 @@ const FirebaseInfo = () => {
       <SpacerDiv />
       <SpacerDiv />
 
-      <Title2>Step 2 of 3 - Allow Anonymous Log-ins</Title2>
+      <Title2>Step 2 of 4 - Allow Anonymous Log-ins</Title2>
       <DisplayModeText>
         <b>2a.</b>
         <br /> Go back to Firebase and click on "Authentication" in the
@@ -213,7 +212,7 @@ const FirebaseInfo = () => {
       <SpacerDiv />
       <SpacerDiv />
       <SpacerDiv />
-      <Title2>Step 3 of 3 - Initialize and Set Access Rules</Title2>
+      <Title2>Step 3 of 4 - Initialize the Database</Title2>
       <DisplayModeText>
         <b>3a.</b>
         <br /> In the navigation panel on the left side, click on "Realtime
@@ -242,19 +241,20 @@ const FirebaseInfo = () => {
         the image below).
       </DisplayModeText>
       <img src={initialDatabase} width="90%" alt="s" />
+      <Title2>Step 4 of 4 - Set the Database Access Rules</Title2>
       <DisplayModeText>
-        <b>3f.</b>
+        <b>4a.</b>
         <br />
         Click on "Rules".
       </DisplayModeText>
       <img src={clickRules} width="90%" alt="s" />
       <DisplayModeText>
-        <b>3g.</b>
+        <b>4b.</b>
         <br /> Click on "Edit Rules"
       </DisplayModeText>
       <img src={editRules} alt="s" />
       <DisplayModeText>
-        <b>3h.</b>
+        <b>4c.</b>
         <br /> Click the gray button below to copy the new rules to your
         clipboard.
       </DisplayModeText>
@@ -265,18 +265,18 @@ const FirebaseInfo = () => {
         Copy Rules to Clipboard
       </LinkCopyButton>
       <DisplayModeText>
-        <b>3i.</b>
+        <b>4d.</b>
         <br /> Go back to Firebase. Select all of the old rules and delete them.
         Paste the new rules into the text area.
       </DisplayModeText>
       <img src={newRules} width="90%" alt="s" />
       <DisplayModeText>
-        <b>3j.</b>
+        <b>4e.</b>
         <br /> Click "Publish" to activate the new rules.
       </DisplayModeText>
       <img src={publishRules} width="90%" alt="s" />
       <DisplayModeText>
-        <b>3k.</b>
+        <b>4f.</b>
         <br /> Firebase setup is now complete. Use the local server to test the
         submission of your project's data. Remember to delete the test data
         before you begin the survey (See the information below on how to delete
@@ -393,8 +393,7 @@ const MainContent = styled.div`
 `;
 
 const Title = styled.h1`
-  width: 80vw;
-  max-width: 700px;
+  font-size: 50px;
   align-self: center;
 `;
 
@@ -433,8 +432,10 @@ const DisplayModeText = styled.div`
   width: 78vw;
   max-width: 1200px;
   font-size: 20px;
-  padding: 0 10px 0 10px;
+  padding: 10px;
   border: 2px solid black;
+  background: whitesmoke;
+  border-radius: 5px;
 `;
 
 const Title2 = styled.h1`

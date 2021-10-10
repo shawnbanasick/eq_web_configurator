@@ -33,7 +33,6 @@ const QsortDesignInputElement = (props) => {
     inputTitle: "Enter the Number of Statements in Each Column",
     inputColor: "white",
   });
-  //   const { t } = useTranslation();
 
   // getState
   const statementsLength = props.numStatements;
@@ -129,8 +128,6 @@ const QsortDesignInputElement = (props) => {
     // set column in local state to new value
     localStore[`activeValue${event.target.name}`] = event.target.value;
 
-    console.log(event.target.value);
-
     // to get local state of all current values
     // const qSortPatternObject = localStore.qSortPatternObject;
     let qSortPatternObject = JSON.parse(
@@ -178,8 +175,6 @@ const QsortDesignInputElement = (props) => {
       JSON.stringify(qSortPatternObject)
     );
   };
-
-  console.log(backgroundCol);
 
   if (true) {
     return (
@@ -391,7 +386,6 @@ const DesignDiv = styled.div`
   margin-bottom: 50px;
   display: flex;
   flex-direction: column;
-  /* grid-column-start: 1; */
   width: auto;
 `;
 
@@ -417,5 +411,4 @@ const TextDiv2 = styled.div`
 const TitleDiv = styled.div`
   display: flex;
   width: 700px;
-  /* border: 2px solid red; */
 `;

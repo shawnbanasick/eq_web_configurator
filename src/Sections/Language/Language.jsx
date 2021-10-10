@@ -848,7 +848,7 @@ const MainContent = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 5vw;
+  font-size: 50px;
   align-self: center;
 `;
 

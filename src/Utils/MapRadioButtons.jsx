@@ -26,8 +26,6 @@ const SelectionButtons = (props) => {
     const key = `${props.stateId}`; //
     appState[buttonActiveState] = true;
     appState[key] = value;
-    console.log("button: ", event.target.dataset.value);
-    console.log("value: ", event.target.id);
   };
 
   return (

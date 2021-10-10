@@ -213,7 +213,7 @@ const MainContent = styled.div`
 const Title = styled.h1`
   display: grid;
   grid-area: row1;
-  font-size: 5vw;
+  font-size: 50px;
   width: 70vw;
   align-items: center;
   justify-content: center;

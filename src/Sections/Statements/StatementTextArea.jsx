@@ -7,15 +7,6 @@ const handleChange = (event) => {
   let statementInput = event.target.value;
   appState.currentStatements = statementInput;
   localStorage.setItem("currentStatements", statementInput);
-
-  // appState.currentStatementInput = statementInput;
-  // localStorage.setItem("currentStatements", JSON.stringify(statementInput));
-  /* 
-  let arr = statementInput.split(/\r\n|\r|\n/g);
-  let filteredArray = arr.filter(function (el) {
-    return el;
-  });
-  appState.statements = filteredArray; */
 };
 
 const StatementTextArea = () => {
@@ -27,19 +18,6 @@ const StatementTextArea = () => {
   }
 
   appState.currentStatements = localStorage.getItem("currentStatements");
-
-  /* 
-  let currentStatements = JSON.parse(localStorage.getItem("currentStatements"));
-  if (!currentStatements) {
-    currentStatements = appState.currentStatementInput || "";
-  } else {
-     let arr = currentStatements.split(/\r\n|\r|\n/g);
-    let filteredArray = arr.filter(function (el) {
-      return el;
-    });
-    appState.statements = filteredArray; 
-  } 
-  */
 
   return (
     <Container>
@@ -59,8 +37,8 @@ const StatementTextArea = () => {
               <i>italicized </i>
             </li>
             <li>
-              &lt;b&gt;&lt;u&gt;&lt;i&gt;&nbsp;nested
-              tagsC&lt;/i&gt;&lt;/u&gt;&lt;/b&gt; can produce{" "}
+              &lt;b&gt;&lt;u&gt;&lt;i&gt;&nbsp;nested tags
+              &lt;/i&gt;&lt;/u&gt;&lt;/b&gt; produces{" "}
               <b>
                 <u>
                   <i>all three</i>
@@ -68,6 +46,8 @@ const StatementTextArea = () => {
               </b>
             </li>
           </ul>
+          Other information on HTML paired tag formatting can be found in the
+          Config section.
         </DisplayModeText>
       )}
       <label>Enter or Paste Statements (1 statement per line) : </label>
