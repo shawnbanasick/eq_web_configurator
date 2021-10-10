@@ -6,8 +6,8 @@ import MapColorPicker from "../Config/MapColorPicker";
 const InputDiv = (props) => {
   const saveInputValueToState = (event) => {
     props.onChangeCallback(event);
-    console.log(event);
-    console.log(props);
+    // console.log(event);
+    // console.log(props);
   };
 
   return (

@@ -38,7 +38,6 @@ const QsortDesignInputElement = () => {
   localStore.statementsLength = statementsLength;
 
   const {
-    qSortPatternObject,
     activeValueM6,
     activeValueM5,
     activeValueM4,
@@ -65,28 +64,63 @@ const QsortDesignInputElement = () => {
     activeValue13,
   } = appState;
 
-  localStore.qSortPatternObject = qSortPatternObject;
-  localStore.activeValueM6 = activeValueM6;
-  localStore.activeValueM5 = activeValueM5;
-  localStore.activeValueM4 = activeValueM4;
-  localStore.activeValueM3 = activeValueM3;
-  localStore.activeValueM2 = activeValueM2;
-  localStore.activeValueM1 = activeValueM1;
-  localStore.activeValue0 = activeValue0;
-  localStore.activeValue1 = activeValue1;
-  localStore.activeValue2 = activeValue2;
-  localStore.activeValue3 = activeValue3;
-  localStore.activeValue4 = activeValue4;
-  localStore.activeValue5 = activeValue5;
-  localStore.activeValue6 = activeValue6;
-  localStore.activeValue7 = activeValue7;
-  localStore.activeValue8 = activeValue8;
-  localStore.activeValue9 = activeValue9;
-  localStore.activeValue10 = activeValue10;
-  localStore.activeValue11 = activeValue11;
-  localStore.activeValue12 = activeValue12;
-  localStore.activeValue13 = activeValue13;
+  const valuesArray = [
+    activeValueM6,
+    activeValueM5,
+    activeValueM4,
+    activeValueM3,
+    activeValueM2,
+    activeValueM1,
+    activeValue0,
+    activeValue1,
+    activeValue2,
+    activeValue3,
+    activeValue4,
+    activeValue5,
+    activeValue6,
+    activeValue7,
+    activeValue8,
+    activeValue9,
+    activeValue10,
+    activeValue11,
+    activeValue12,
+    activeValue13,
+  ];
 
+  const valuesTextArray = [
+    "activeValueM6",
+    "activeValueM5",
+    "activeValueM4",
+    "activeValueM3",
+    "activeValueM2",
+    "activeValueM1",
+    "activeValue0",
+    "activeValue1",
+    "activeValue2",
+    "activeValue3",
+    "activeValue4",
+    "activeValue5",
+    "activeValue6",
+    "activeValue7",
+    "activeValue8",
+    "activeValue9",
+    "activeValue10",
+    "activeValue11",
+    "activeValue12",
+    "activeValue13",
+  ];
+
+  valuesTextArray.forEach((item, index) => {
+    let storedValue = localStorage.getItem(item);
+    if (!storedValue) {
+      localStore[item] = valuesArray[index];
+      localStorage.setItem(item, valuesArray[index]);
+    } else {
+      localStore[item] = storedValue;
+    }
+  });
+
+  // handle # cards input in each column
   const calcQsortDesign = (event) => {
     let columnName = event.target.name;
 
@@ -94,7 +128,14 @@ const QsortDesignInputElement = () => {
     localStore[`activeValue${event.target.name}`] = event.target.value;
 
     // to get local state of all current values
-    const qSortPatternObject = localStore.qSortPatternObject;
+    // const qSortPatternObject = localStore.qSortPatternObject;
+    let qSortPatternObject = JSON.parse(
+      localStorage.getItem("qSortPatternObject")
+    );
+    if (!qSortPatternObject) {
+      qSortPatternObject = localStore.qSortPatternObject;
+    }
+
     // if negative, substitute - for M
     if (columnName.charAt(0) === "M") {
       columnName = +columnName.replace("M", "-");
@@ -125,8 +166,13 @@ const QsortDesignInputElement = () => {
       localStore.inputColor = "lightpink";
     }
     appState[fullColumnName] = targetValue;
+    localStorage.setItem(`${fullColumnName}`, targetValue);
     appState.qSortPattern = qSortPattern;
     appState.qSortPatternObject = qSortPatternObject;
+    localStorage.setItem(
+      "qSortPatternObject",
+      JSON.stringify(qSortPatternObject)
+    );
   };
 
   if (true) {

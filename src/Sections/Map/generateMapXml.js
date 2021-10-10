@@ -1,54 +1,86 @@
 import appState from "../../GlobalState/appState";
 
-const qSortPatternObject = appState.qSortPatternObject;
-const columnsArray = [
-  "-6",
-  "-5",
-  "-4",
-  "-3",
-  "-2",
-  "-1",
-  "0",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10",
-  "11",
-  "12",
-  "13",
-];
-
-const headersLookupArray = [
-  "N6",
-  "N5",
-  "N4",
-  "N3",
-  "N2",
-  "N1",
-  "0",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10",
-  "11",
-  "12",
-  "13",
-];
-
 const generateConfigXml = () => {
-  console.log(JSON.stringify(appState, null, 2));
+  const columnsArray = [
+    "-6",
+    "-5",
+    "-4",
+    "-3",
+    "-2",
+    "-1",
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+  ];
+
+  const headersLookupArray = [
+    "N6",
+    "N5",
+    "N4",
+    "N3",
+    "N2",
+    "N1",
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+  ];
+
+  const valuesTextArray = [
+    "activeValueM6",
+    "activeValueM5",
+    "activeValueM4",
+    "activeValueM3",
+    "activeValueM2",
+    "activeValueM1",
+    "activeValue0",
+    "activeValue1",
+    "activeValue2",
+    "activeValue3",
+    "activeValue4",
+    "activeValue5",
+    "activeValue6",
+    "activeValue7",
+    "activeValue8",
+    "activeValue9",
+    "activeValue10",
+    "activeValue11",
+    "activeValue12",
+    "activeValue13",
+  ];
+
+  //  console.log(JSON.stringify(appState, null, 2));
+
+  let qSortPatternObject = JSON.parse(
+    localStorage.getItem("qSortPatternObject")
+  );
+  if (!qSortPatternObject) {
+    console.log("no object");
+    qSortPatternObject = appState.qSortPatternObject;
+  }
+
+  console.log(JSON.stringify(qSortPatternObject));
 
   const mapColColors = appState.mapColColors;
   console.log(mapColColors);
@@ -58,7 +90,18 @@ const generateConfigXml = () => {
    <map version="1.0" htmlParse="false">\n`;
 
   // CALC COL ARRAYS
-  let keys = Object.keys(qSortPatternObject);
+  let filteredQSortPatternObject = Object.keys(qSortPatternObject).reduce(
+    (property, index) => {
+      if (+qSortPatternObject[index] > 0)
+        property[index] = qSortPatternObject[index];
+      return property;
+    },
+    {}
+  );
+
+  console.log(JSON.stringify(filteredQSortPatternObject));
+
+  let keys = Object.keys(filteredQSortPatternObject);
   keys = keys.map((x) => +x);
   keys.sort((a, b) => a - b);
   keys = keys.toString();
@@ -76,6 +119,7 @@ const generateConfigXml = () => {
     let colorString = "";
     let value = parseInt(columnsArray[i], 10);
     let numStates = parseInt(qSortPatternObject[columnsArray[i]], 10) || 0;
+    console.log(numStates);
     // for Q sort pattern array
     if (numStates !== 0) {
       qSortPatternArray.push(numStates);
