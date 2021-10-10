@@ -27,7 +27,7 @@ const ProjectAccessOptions = () => {
       <SubTitle>Project Access</SubTitle>
       {displayMode && (
         <DisplayModeText>
-          <strong>Project Access</strong>
+          <b>Project Access</b>
           <br /> There are four access options available:
           <br />
           <br />* anonymous (no sign-in screen shown)

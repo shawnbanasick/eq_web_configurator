@@ -51,8 +51,8 @@ const Server = () => {
       <Title>Upload Your Files to the Web</Title>
 
       <DisplayModeText>
-        The last step is to <strong>upload</strong> your Easy HTMLQ files to a
-        web server. I recommend
+        The last step is to <b>upload</b> your Easy HTMLQ files to a web server.
+        I recommend
         <a
           target="_blank"
           rel="noopener noreferrer"

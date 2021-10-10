@@ -15,13 +15,6 @@ const handleClick = () => {
   exportToXml("map.xml", data, "xml");
 };
 
-/* const handleDefaultColor = (e) => {
-  console.log(e.target.id);
-  appState.setSampleColor = e.target.id;
-  appState.displaySampleColorRange = true;
-};
- */
-
 const Map = () => {
   let displayMode = appState.displayMode;
   if (displayMode === "beginner") {
@@ -30,7 +23,7 @@ const Map = () => {
     displayMode = false;
   }
 
-  let statements = localStorage.getItem("currentStatements");
+  let statements = localStorage.getItem("currentStatements") || "";
   let arr = statements.split(/\r\n|\r|\n/g);
   let filteredArray = arr.filter(function (el) {
     return el;
@@ -141,13 +134,3 @@ const DisplayModeText = styled.div`
   background: whitesmoke;
   border-radius: 5px;
 `;
-
-// const DefaultButton = styled(GeneralButton)`
-//   margin-left: ${(props) => props.leftMar};
-// `;
-
-// const DefaultButtonContainer = styled.div`
-//   display: flex;
-//   flex-direction: row;
-//   align-items: baseline;
-// `;

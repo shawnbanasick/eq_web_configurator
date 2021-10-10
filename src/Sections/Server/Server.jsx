@@ -112,9 +112,9 @@ const Server = () => {
           <img src={eqDownloadZip} alt="a" />
           <DisplayModeText>
             To start the local web server, all you need to do is
-            <strong> find the uncompressed folder </strong>with the Easy HTMLQ
-            base files. You don't need to select a specific file - you just need
-            to find the folder.
+            <b> find the uncompressed folder </b>with the Easy HTMLQ base files.
+            You don't need to select a specific file - you just need to find the
+            folder.
           </DisplayModeText>
           <SpacerDiv />
         </>

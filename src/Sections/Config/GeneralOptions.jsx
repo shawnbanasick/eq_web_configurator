@@ -45,6 +45,7 @@ const GeneralOptions = () => {
           stateDesig="configHeaderBarColor"
           default="#337ab7"
         />
+        (Default color is "337ab7")
       </ColorLabel>
     </React.Fragment>
   );

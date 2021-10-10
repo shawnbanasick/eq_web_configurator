@@ -218,7 +218,7 @@ const Survey = () => {
             )}
           </ImageContainer>
           <SettingsTextContainer>
-            <strong>Settings:</strong>
+            <b>Settings:</b>
             {detailsArray && (
               <ul>
                 {detailsArray.map((item) => (

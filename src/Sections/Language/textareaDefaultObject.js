@@ -1,6 +1,6 @@
 const showSectionDefaults = () => {
   const obj = {
-    langStepCompleted: `You have completed this step. Please click on the <strong> blue "Continue" button </strong> at the bottom right-side of your screen to go to the next step.`,
+    langStepCompleted: `You have completed this step. Please click on the <b> blue "Continue" button </b> at the bottom right-side of your screen to go to the next step.`,
     langLoginFirst: `Please complete the log-in process first.`,
     langFooterTextSize: `Text Size`,
     langFooterCardHeight: `Card Height`,
@@ -14,7 +14,7 @@ const showSectionDefaults = () => {
     <div style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-around; width: 100%"> <div style="display:flex; flex-direction:column"> Images<img src="/images/sortScreen3.png" width="640" /> </div>
     <div style="display:flex; flex-direction:column"> Video (enable subtitles / closed captions) <iframe width="640" height="360" src="https://www.youtube.com/embed/aHpeu5M7Rlo"> </iframe> </div> </div>`,
 
-    langLoginWelcomeText: `<center><h3>Welcome!</h3></center><br> Thank you for participating in this Q methodology research project. <br>Please <strong>sign in</strong> using the form below to begin the process. `,
+    langLoginWelcomeText: `<center><h3>Welcome!</h3></center><br> Thank you for participating in this Q methodology research project. <br>Please <b>sign in</b> using the form below to begin the process. `,
     langLoginHeaderText: `Sign In`,
     langLoginPartIdText: `Please enter your name or participant ID`,
     langAccessInputText: "Please enter the access code for this survey.",
@@ -23,7 +23,7 @@ const showSectionDefaults = () => {
     loginSubmitButtonText: `Submit`,
 
     langLandingHelpModalHead: `Welcome!`,
-    langLandingHelpModalText: `Thank you for participating in this University Research Project. Please sign in to begin the process. After you submit your participant ID and/or the project access code, the instructions for the survey will appear. Please read them carefully, then click the "<strong>Continue</strong>" button at the bottom right side of the screen to go to the next step.<br><br> <center><iframe width="640" height="360"
+    langLandingHelpModalText: `Thank you for participating in this University Research Project. Please sign in to begin the process. After you submit your participant ID and/or the project access code, the instructions for the survey will appear. Please read them carefully, then click the "<b>Continue</b>" button at the bottom right side of the screen to go to the next step.<br><br> <center><iframe width="640" height="360"
     src="https://www.youtube.com/embed/aHpeu5M7Rlo">
     </iframe></center>`,
     /*

@@ -98,7 +98,7 @@ const FirebaseInfo = () => {
         Information on how to export the Firebase data for analysis and how to
         delete individual data entries is at the bottom of this page. <br />{" "}
         <br />
-        There are three steps needed to provide a database for Easy HTMLQ:
+        There are four steps needed to provide a database for Easy HTMLQ:
         <br /> &nbsp;&nbsp;&nbsp;1&#41; create a new Firebase project;
         <br /> &nbsp;&nbsp;&nbsp;2&#41; set up anonymous log-ins;
         <br /> &nbsp;&nbsp;&nbsp;3&#41; initialize the database

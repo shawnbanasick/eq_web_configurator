@@ -76,16 +76,21 @@ const Language = () => {
           >
             CodePen
           </a>{" "}
-          {`to interactively develop complex layouts (click on the "Start Coding" button on the top left side of the page, then try out your code in the "HTML" box). Then, copy and paste the HTML code from CodePen to the input boxes here`}
+          {`to interactively develop complex layouts (click on the "Start Coding" button on the top left side of the page, then try out your code in the "HTML" box). When you are happy with the layout, copy and paste the HTML code from CodePen to the input boxes below.`}
           <br />
           <br />
-          {`For example, see the default layout for the `}
-          <a href="https://codepen.io" target="_blank" rel="noreferrer">
-            &quot;Welcome Message&quot; here
-          </a>{" "}
-          <br />
-          <br />
-          <ul>
+          {`Examples: `}
+          <ListContainer>
+            <li>
+              <a
+                href="https://codepen.io/shawnbanasick/pen/WNENYNp"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Change font size
+              </a>{" "}
+            </li>
+
             <li>
               <a
                 href="https://codepen.io/shawnbanasick/pen/NWvWGMY"
@@ -96,7 +101,12 @@ const Language = () => {
               </a>
               &nbsp;(for Landing section and goodbyeMessage){" "}
             </li>
-          </ul>
+            <li>
+              <a href="https://codepen.io" target="_blank" rel="noreferrer">
+                default &quot;Welcome Message&quot;
+              </a>{" "}
+            </li>
+          </ListContainer>
           {`See the default text below for more HTML examples.`}
         </DisplayModeText>
       )}
@@ -975,12 +985,7 @@ const RefImageButton = styled.button`
 const SectionTitle = styled.h3`
   margin-top: 20px;
 `;
-/* 
-const ButtonsContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  width: 92%;
-  max-width: 1000px;
+
+const ListContainer = styled.ul`
+  margin-top: 5px;
 `;
- */

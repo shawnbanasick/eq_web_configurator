@@ -10,7 +10,7 @@ const generateCsvFile = () => {
     [
       "multiple 1",
       "langStepCompleted",
-      "You have completed this step. Please click on the <strong> blue 'Continue' button </strong> at the bottom right-side of your screen to go to the next step",
+      "You have completed this step. Please click on the <b> blue 'Continue' button </b> at the bottom right-side of your screen to go to the next step",
     ],
     ["multiiple ", "", ""],
     ["multiiple ", "", ""],
