@@ -187,35 +187,35 @@ const Language = () => {
           label="1. Help me!"
           stateId="langBtnHelp"
           sectionName="lang"
-          width={25}
+          width={40}
           left={0}
         />
         <UserTextInput
           label="2. Text Size"
           stateId="langFooterTextSize"
           sectionName="lang"
-          width={25}
+          width={40}
           left={0}
         />
         <UserTextInput
           label="3. Card Height"
           stateId="langFooterCardHeight"
           sectionName="lang"
-          width={25}
+          width={39}
           left={0}
         />
         <UserTextInput
           label="4. Continue"
           stateId="langBtnNext"
           sectionName="lang"
-          width={25}
+          width={40}
           left={0}
         />
         <UserTextAreaInput
           label="5. Step completed message"
           stateId="langStepCompleted"
           sectionName="lang"
-          width={30}
+          width={29}
           height={150}
           left={0}
         />
@@ -223,7 +223,7 @@ const Language = () => {
           label="6. Log in first message"
           stateId="langLoginFirst"
           sectionName="lang"
-          width={30}
+          width={34}
           height={150}
           left={0}
         />
@@ -251,32 +251,32 @@ const Language = () => {
             </div>
           </HeaderButtonBar>
           <UserTextInput
-            label="1. Landing Page Title Bar"
+            label="2-1. Landing Page Title Bar"
             stateId="langLandingHead"
             sectionName="lang"
-            width={35}
+            width={34}
             left={0}
           />
           <UserTextAreaInput
-            label="2. Welcome Message"
+            label="2-2. Welcome Message"
             stateId="langWelcomeMessage"
             sectionName="lang"
-            width={40}
+            width={36}
             height={300}
             left={0}
           />
           <UserTextInput
-            label="2-1. Help modal header text"
+            label="2-3. Help modal header text"
             stateId="langLandingHelpModalHead"
             sectionName="lang"
-            width={38}
+            width={34}
             left={0}
           />
           <UserTextAreaInput
-            label="2-2. Help modal main text"
+            label="2-4. Help modal main text"
             stateId="langLandingHelpModalText"
             sectionName="lang"
-            width={37}
+            width={35}
             height={140}
             left={0}
           />
@@ -301,57 +301,57 @@ const Language = () => {
           </div>
         </HeaderButtonBar>
         <UserTextAreaInput
-          label="1. Log-in welcome text"
+          label="3-1. Log-in welcome text"
           stateId="langLoginWelcomeText"
           sectionName="lang"
-          width={40}
+          width={36}
           height={100}
           left={0}
         />
         <UserTextInput
-          label="2. Log-in box header text"
+          label="3-2. Log-in box header text"
           stateId="langLoginHeaderText"
           sectionName="lang"
-          width={30}
+          width={35}
           left={0}
         />
 
         <UserTextInput
-          label="3. Participant name label"
+          label="3-3. Participant name label"
           stateId="langLoginPartIdText"
           sectionName="lang"
-          width={25}
+          width={35}
           left={0}
         />
 
         <UserTextInput
-          label="4. Access code label"
+          label="3-4. Access code label"
           stateId="langAccessInputText"
           sectionName="lang"
-          width={30}
+          width={37}
           left={0}
         />
 
         <UserTextInput
-          label="5. Invalid name warning"
+          label="3-5. Invalid name warning"
           stateId="langPartIdWarning"
           sectionName="lang"
-          width={25}
+          width={35}
           left={0}
         />
 
         <UserTextInput
-          label="6. Invalid access code warning"
+          label="3-6. Invalid access code warning"
           stateId="langAccessCodeWarning"
           sectionName="lang"
-          width={25}
+          width={32}
           left={0}
         />
         <UserTextInput
-          label="7. Log-in submit button"
+          label="3-7. Log-in submit button"
           stateId="loginSubmitButtonText"
           sectionName="lang"
-          width={25}
+          width={36}
           left={0}
         />
 
@@ -384,82 +384,82 @@ const Language = () => {
             </div>
           </HeaderButtonBar>
           <UserTextInput
-            label="1. Title bar text"
+            label="4-1. Title bar text"
             stateId="langtitleBarText"
             sectionName="lang"
-            width={25}
+            width={39}
             left={0}
           />
           <UserTextInput
-            label="2. Statements"
+            label="4-2. Statements"
             stateId="langPresortStatements"
             sectionName="lang"
-            width={25}
+            width={39}
             left={0}
           />
           <UserTextInput
-            label={`3. "Agree"`}
+            label={`4-3. "Agree"`}
             stateId="langPresortAgreement"
             sectionName="lang"
-            width={25}
+            width={41}
             left={0}
           />
           <UserTextInput
-            label={`4. "Neutral"`}
+            label={`4-4. "Neutral"`}
             stateId="langPresortNeutral"
             sectionName="lang"
-            width={25}
+            width={40}
             left={0}
           />
           <UserTextInput
-            label={`5. "Disagree"`}
+            label={`4-5. "Disagree"`}
             stateId="langPresortDisagreement"
             sectionName="lang"
-            width={25}
+            width={39}
             left={0}
           />
           <UserTextInput
-            label="2-1. Presort modal header text"
+            label="4-6. Presort modal header text"
             stateId="langPresortModalHead"
             sectionName="lang"
-            width={25}
+            width={32}
             left={0}
           />
           <UserTextAreaInput
-            label="2-2. Presort modal main text"
+            label="4-7. Presort modal main text"
             stateId="langPresortModalText"
             sectionName="lang"
-            width={25}
+            width={31}
             height={140}
             left={0}
           />
           <UserTextInput
-            label="3-1. Prevent navigation modal header"
+            label="4-8. Prevent navigation modal header"
             stateId="langPresortPreventNavModalHead"
             sectionName="lang"
-            width={25}
+            width={28}
             left={0}
           />
           <UserTextAreaInput
-            label="3-2. Prevent navigation modal main text"
+            label="4-9. Prevent navigation modal main text"
             stateId="langPresortPreventNavModalText"
             sectionName="lang"
-            width={20}
+            width={21}
             height={140}
             left={0}
           />
           <UserTextInput
-            label="4-1. Presort complete modal header"
+            label="4-10. Presort complete modal header"
             stateId="langPresortFinishedModalHead"
             sectionName="lang"
-            width={25}
+            width={28}
             left={0}
           />
           <UserTextAreaInput
-            label="4-2. Presort complete modal main text"
+            label="4-11. Presort complete modal main text"
             stateId="langPresortFinishedModalText"
             sectionName="lang"
-            width={20}
+            width={21}
             height={140}
             left={0}
           />
@@ -496,15 +496,15 @@ const Language = () => {
           </div>
         </HeaderButtonBar>
         <UserTextInput
-          label="1. Sort help modal header"
+          label="5-1. Sort help modal header"
           stateId="langSortHelpModalHead"
           sectionName="lang"
-          width={25}
+          width={34}
           left={0}
         />
 
         <UserTextAreaInput
-          label="2. Sort help modal main text"
+          label="5-2. Sort help modal main text"
           stateId="langSortHelpModalText"
           sectionName="lang"
           width={30}
@@ -513,76 +513,76 @@ const Language = () => {
         />
 
         <UserTextInput
-          label="2-1. Disagree"
+          label="5-3. Disagree"
           stateId="langSortDisagreement"
           sectionName="lang"
-          width={25}
+          width={41}
           left={0}
         />
 
         <UserTextAreaInput
-          label="2-2. Sort conditions of instruction"
+          label="5-4. Sort conditions of instruction"
           stateId="langCondOfInst"
           sectionName="lang"
-          width={30}
+          width={28}
           height={80}
           left={0}
         />
         <UserTextInput
-          label="2-3. Agree"
+          label="5-5. Agree"
           stateId="langSortAgreement"
           sectionName="lang"
-          width={25}
+          width={43}
           left={0}
         />
 
         <UserTextInput
-          label="3-1. Sorting complete modal header"
+          label="5-6. Sorting complete modal header"
           stateId="langSortingCompleteModalHead"
           sectionName="lang"
-          width={25}
+          width={30}
           left={0}
         />
 
         <UserTextAreaInput
-          label="3-2. Sorting complete modal text"
+          label="5-7. Sorting complete modal text"
           stateId="langSortingCompleteModalText"
           sectionName="lang"
-          width={30}
+          width={28}
           height={100}
           left={0}
         />
 
         <UserTextInput
-          label="4-1. Prevent Navigation modal header"
+          label="5-8. Prevent Navigation modal header"
           stateId="langSortPreventNavModalHead"
           sectionName="lang"
-          width={25}
+          width={29}
           left={0}
         />
 
         <UserTextAreaInput
-          label="4-2. Prevent Navigation modal text"
+          label="5-9. Prevent Navigation modal text"
           stateId="langSortPreventNavModalText"
           sectionName="lang"
-          width={30}
+          width={26}
           height={50}
           left={0}
         />
 
         <UserTextInput
-          label="5-1. Overloaded column modal header"
+          label="5-10. Overloaded column modal header"
           stateId="langSortOverloadedColumnModalHead"
           sectionName="lang"
-          width={25}
+          width={28}
           left={0}
         />
 
         <UserTextAreaInput
-          label="5-2. Overloaded modal text"
+          label="5-11. Overloaded modal text"
           stateId="langSortOverloadedColumnModalText"
           sectionName="lang"
-          width={30}
+          width={32}
           height={100}
           left={0}
         />
@@ -613,53 +613,53 @@ const Language = () => {
             </div>
           </HeaderButtonBar>
           <UserTextInput
-            label="1. Postsort Header"
+            label="6-1. Postsort Header"
             stateId="langPostsortHeader"
             sectionName="lang"
-            width={25}
+            width={37}
             left={0}
           />
           <UserTextAreaInput
-            label="2. Postsort Instructions"
+            label="6-2. Postsort Instructions"
             stateId="langPostsortInstructions"
             sectionName="lang"
-            width={30}
-            height={50}
+            width={35}
+            height={60}
             left={0}
           />
           <UserTextInput
-            label="3. Text input placeholder"
+            label="6-3. Text input placeholder (no HTML tags here)"
             stateId="langPlaceholder"
             sectionName="lang"
-            width={25}
+            width={24}
             left={0}
           />
           <UserTextInput
-            label="4. Agreement label"
+            label="6-4. Agreement label"
             stateId="langPostsortAgreement"
             sectionName="lang"
-            width={35}
+            width={38}
             left={0}
           />
           <UserTextInput
-            label="5. Disagreement label"
+            label="6-5. Disagreement label"
             stateId="langPostsortDisagreement"
             sectionName="lang"
-            width={35}
+            width={36}
             left={0}
           />
           <UserTextInput
-            label="2-1. Postsort help modal header"
+            label="6-6. Postsort help modal header"
             stateId="langPostsortModalHead"
             sectionName="lang"
-            width={25}
+            width={32}
             left={0}
           />
           <UserTextAreaInput
-            label="2-2. Postsort help modal text"
+            label="6-7. Postsort help modal text"
             stateId="langPostsortModalText"
             sectionName="lang"
-            width={30}
+            width={32}
             height={80}
             left={0}
           />
@@ -694,41 +694,41 @@ const Language = () => {
           </div>
         </HeaderButtonBar>
         <UserTextInput
-          label="1. Post-Sort Questionnaire Header"
+          label="7-1. Post-Sort Questionnaire Header"
           stateId="langSurveyHeader"
           sectionName="lang"
-          width={25}
+          width={30}
           left={0}
         />
         <UserTextInput
-          label="2-1. Questionnaire help modal header"
+          label="7-2. Questionnaire help modal header"
           stateId="langSurveyModalHead"
           sectionName="lang"
-          width={25}
+          width={29}
           left={0}
         />
 
         <UserTextAreaInput
-          label="2-2. Questionnaire help modal text"
+          label="7-3. Questionnaire help modal text"
           stateId="langSurveyModalText"
           sectionName="lang"
-          width={35}
+          width={27}
           height={100}
           left={0}
         />
         <UserTextInput
-          label="3-1. Prevent navigation modal header"
+          label="7-4. Prevent navigation modal header"
           stateId="langSurveyPreventNavModalHead"
           sectionName="lang"
-          width={25}
+          width={29}
           left={0}
         />
 
         <UserTextAreaInput
-          label="3-2. Prevent navigation modal text"
+          label="7-5. Prevent navigation modal text"
           stateId="langSurveyPreventNavModalText"
           sectionName="lang"
-          width={35}
+          width={28}
           height={100}
           left={0}
         />
@@ -762,86 +762,86 @@ const Language = () => {
           </HeaderButtonBar>
 
           <UserTextInput
-            label="1. Final Step"
+            label="8-1. Final Step"
             stateId="langTransferHead"
             sectionName="lang"
-            width={25}
+            width={40}
             left={0}
           />
           <UserTextAreaInput
-            label="2. Text above Submit Data Button"
+            label="8-2. Text above Submit Data Button"
             stateId="langTransferTextAbove"
             sectionName="lang"
-            width={35}
+            width={26}
             height={75}
             left={0}
           />
           <UserTextInput
-            label="3. Submit Data"
+            label="8-3. Submit Data"
             stateId="langBtnTransfer"
             sectionName="lang"
-            width={25}
+            width={39}
             left={0}
           />
           <UserTextAreaInput
-            label="4. Text below Submit Data Button"
+            label="8-4. Text below Submit Data Button"
             stateId="langTransferTextBelow"
             sectionName="lang"
-            width={35}
+            width={26}
             height={75}
             left={0}
           />
           <UserTextInput
-            label="2-1. Submit data success modal header"
+            label="8-5. Submit data success modal header"
             stateId="langTransferOkModalHeader"
             sectionName="lang"
-            width={25}
+            width={28}
             left={0}
           />
           <UserTextAreaInput
-            label="2-2. Submit data success modal text"
+            label="8-6. Submit data success modal text"
             stateId="langTransferOkModalText"
             sectionName="lang"
-            width={35}
+            width={26}
             height={75}
             left={0}
           />
           <UserTextInput
-            label="3-1. Submit data fail modal header"
+            label="8-7. Submit data fail modal header"
             stateId="langTransferFailModalHeader"
             sectionName="lang"
-            width={25}
+            width={31}
             left={0}
           />
           <UserTextAreaInput
-            label="3-2. Submit data fail modal text"
+            label="8-8. Submit data fail modal text"
             stateId="langTransferFailModalText"
             sectionName="lang"
-            width={35}
+            width={31}
             height={75}
             left={0}
           />
           <UserTextAreaInput
-            label="4-1. Fallback message"
+            label="8-9. Fallback message"
             stateId="langFallbackMessage"
             sectionName="lang"
-            width={35}
+            width={38}
             height={75}
             left={0}
           />
           <UserTextInput
-            label="4-2. Download button label"
+            label="8-10. Download button label"
             stateId="langBtnDownload"
             sectionName="lang"
-            width={25}
+            width={34}
             left={0}
           />
           <UserTextAreaInput
-            label="5. Goodbye Message"
+            label="8-11. Goodbye Message"
             stateId="langGoodbyeMessage"
             sectionName="lang"
-            width={35}
-            height={75}
+            width={36}
+            height={80}
             left={0}
           />
         </ColorContainer>

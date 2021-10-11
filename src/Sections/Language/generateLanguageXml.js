@@ -185,6 +185,9 @@ const generateLanguageXml = () => {
           appState.langFallbackMessage
         )}</item>   
         <item id="btnDownload">${encodeHTML(appState.langBtnDownload)}</item>   
+        <item id="goodbyeMessage">${encodeHTML(
+          appState.langGoodbyeMessage
+        )}</item>   
 
    </language>`;
 

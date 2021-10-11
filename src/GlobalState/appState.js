@@ -202,7 +202,7 @@ const appState = store({
   langPresortNeutral: `No Strong Feelings`,
   langPresortDisagreement: `Disagree`,
   langPresortModalHead: `Step 1 of 4`,
-  langPresortModalText: `Read the folowing statements carefully and split them up into three piles: a pile for statements you tend to disagree with, a pile for cards you tend to agree with, and a pile for the rest. Changes can be made later.<br><br>If you want to read this instruction a second time, click the help-button at the bottom left corner.`,
+  langPresortModalText: `Read the following statements carefully and split them up into three piles: a pile for statements you tend to disagree with, a pile for cards you tend to agree with, and a pile for the rest. Changes can be made later.<br><br>If you want to read this instruction a second time, click the help-button at the bottom left corner.`,
   langPresortPreventNavModalHead: `Navigation Disabled`,
   langPresortPreventNavModalText: `Please finish the preliminary sorting before going to the next step.`,
   langPresortFinishedModalHead: `Preliminary Sorting Complete`,
@@ -250,7 +250,7 @@ const appState = store({
   langTransferFailModalText: `Please try again in a few moments.`,
   langFallbackMessage: `Data transmission has failed. Please download the results and email them as an attachment to ken.q.tools@gmail.com.  Thank you!`,
   langBtnDownload: `Download`,
-  langGoodbyeMessage: `<div>Thank You!</div> <br /><div>You can now close the browser tab"</div>`,
+  langGoodbyeMessage: `<div>Thank You!</div> <br /><div>You can now close the browser tab</div>`,
 
   uploadService: "Netlify",
   uploadServiceNetlifyActive: true,

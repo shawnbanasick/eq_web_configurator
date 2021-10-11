@@ -1,6 +1,6 @@
 const encodeHTML = (string) => {
   try {
-    let shouldDoReplace = string.includes("<");
+    let shouldDoReplace = true; // string.includes("<");
 
     if (shouldDoReplace === true) {
       const replaceLeft = /</gi;
