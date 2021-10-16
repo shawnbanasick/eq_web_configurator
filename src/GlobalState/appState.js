@@ -132,6 +132,7 @@ const appState = store({
   surveyBackgroundDisplay: true,
   surveyBackgroundDisplaytrueActive: true,
   surveyBackgroundDisplayfalseActive: false,
+  triggerOptionsWarningModal: false,
 
   surveyQuestionsArray: [],
 

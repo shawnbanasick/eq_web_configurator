@@ -24,6 +24,7 @@ import { ToastContainer, Slide } from "react-toastify";
 import clearAddItemForm from "./clearAddItemForm";
 import ConfigColorPicker from "../Config/ConfigColorPicker";
 import decodeHTML from "../../Utils/decodeHtml";
+import OptionsWarningModal from "../Language/OptionsWarningModal";
 
 const clone = require("rfdc/default");
 
@@ -47,6 +48,16 @@ const notifyError = () => {
     position: toast.POSITION.BOTTOM_CENTER,
     transition: Slide,
   });
+};
+
+const getOptionsArray = (options) => {
+  console.log(options);
+  let array = options.split(";;;");
+  array = array.filter(function (e) {
+    return e;
+  });
+  array = array.map((x) => x.replace(/\s/g, ""));
+  return array;
 };
 
 const Survey = () => {
@@ -120,9 +131,30 @@ const Survey = () => {
       }
       if (displayBoolean.scale === true) {
         newItemObj.scale = appState.surveyQuestionScale;
+        let currentScale = decodeHTML(appState.surveyQuestionScale);
+
+        let testArray = getOptionsArray(currentScale);
+        console.log(testArray);
+        if (testArray.length < 2) {
+          console.log("there is an issue");
+          appState.triggerOptionsWarningModal = true;
+          return null;
+        }
+
         newItemArray.push(`scale: ${decodeHTML(appState.surveyQuestionScale)}`);
       }
       if (displayBoolean.options === true) {
+        let currentOptions = decodeHTML(appState.surveyQuestionOptions);
+        console.log(currentOptions);
+
+        let testArray = getOptionsArray(currentOptions);
+        console.log(testArray);
+        if (testArray.length < 2) {
+          console.log("there is an issue");
+          appState.triggerOptionsWarningModal = true;
+          return null;
+        }
+
         displayOptionsSemiWarn = true;
         console.log(appState.surveyQuestionOptions);
         newItemObj.options = appState.surveyQuestionOptions;
@@ -165,6 +197,7 @@ const Survey = () => {
     <>
       <GlobalStyle />
       <StyledToastContainer />
+      <OptionsWarningModal />
       <Title>Survey Question Creator</Title>
       {/* {showSurvey === "true" && ( */}
       <SurveyContainer>

@@ -137,9 +137,7 @@ const generateConfigXml = () => {
 
     // for RADIO items
     if (itemObject.surveyQuestionType === "radio") {
-      const input = `        <input type="radio" required="${
-        itemObject.required
-      }">${encodeHTML(itemObject.options)}</input>\n`;
+      const input = `        <input type="radio" required="${itemObject.required}">${itemObject.options}</input>\n`;
       label = `        <label>${encodeHTML(itemObject.label)}</label>\n`;
       const note = `        <note>${encodeHTML(itemObject.note)}</note>\n`;
       item = accumulatorString.concat(open, input, label, note, close);
@@ -147,9 +145,7 @@ const generateConfigXml = () => {
 
     // for SELECT items
     if (itemObject.surveyQuestionType === "select") {
-      const input = `        <input type="select" required="${
-        itemObject.required
-      }">${encodeHTML(itemObject.options)}</input>\n`;
+      const input = `        <input type="select" required="${itemObject.required}">${itemObject.options}</input>\n`;
       label = `        <label>${encodeHTML(
         encodeHTML(itemObject.label)
       )}</label>\n`;
@@ -158,9 +154,7 @@ const generateConfigXml = () => {
 
     // for CHECKBOX items
     if (itemObject.surveyQuestionType === "checkbox") {
-      const input = `        <input type="checkbox" required="${
-        itemObject.required
-      }">${encodeHTML(itemObject.options)}</input>\n`;
+      const input = `        <input type="checkbox" required="${itemObject.required}">${itemObject.options}</input>\n`;
       label = `        <label>${encodeHTML(itemObject.label)}</label>\n`;
       item = accumulatorString.concat(open, input, label, close);
     }

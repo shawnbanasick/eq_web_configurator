@@ -29,7 +29,7 @@ const PostsortOptions = () => {
       <RadioButtons
         label="11. Include individual card comments screen (Step 3):"
         buttonIdArray={["true", "false"]}
-        stateId="configShowStep4"
+        stateId="configShowStep3"
         sectionName="config"
       />
 

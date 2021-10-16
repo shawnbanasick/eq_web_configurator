@@ -4,6 +4,10 @@ import styled, { keyframes } from "styled-components";
 import appState from "../../GlobalState/appState";
 import Survey from "../Survey/Survey";
 import RadioButtons from "../../Utils/RadioButtons";
+import { CSSTransition } from "react-transition-group";
+
+const appearDuration = 500;
+const transitionName = "survey";
 
 const SurveyOptions = (props) => {
   const localState = store({ displayItem: true });
@@ -90,9 +94,18 @@ const SurveyOptions = (props) => {
           sectionName="config"
         />
       </QuestionContainer>
-      <SurveyContainer displayVar={configShowStep4}>
-        <Survey />
-      </SurveyContainer>
+
+      <CSSTransition>
+        <SurveyContainer>
+          {configShowStep4 && (
+            <Survey
+              transitionName={transitionName}
+              transitionEnterTimeout={0.1}
+              transitionLeaveTimeout={2000}
+            />
+          )}
+        </SurveyContainer>
+      </CSSTransition>
     </React.Fragment>
   );
 };
@@ -152,6 +165,11 @@ const QuestionContainer = styled.div`
 `;
 
 const SurveyContainer = styled.div`
-  display: ${({ displayVar }) => (displayVar ? "inline-block" : "none")};
-  animation: ${(displayVar) => (displayVar ? fadeIn : fadeOut)} 1s ease-in-out;
+  ${({ transitionName }) => `.${transitionName}-enter`} {
+    opacity: 0;
+  }
+
+  ${({ transitionName }) => `.${transitionName}-leave`} {
+    opacity: 1;
+  }
 `;
