@@ -95,7 +95,7 @@ const SurveyOptions = (props) => {
         />
       </QuestionContainer>
 
-      <CSSTransition>
+      <CSSTransition timeout={appearDuration}>
         <SurveyContainer>
           {configShowStep4 && (
             <Survey
