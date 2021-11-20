@@ -114,28 +114,6 @@ export default view(SurveyOptions);
 
 // todo - try onTransitionEnd for proper fade out and remove from dom
 
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-`;
-
-const fadeOut = keyframes`
-  from {
-    opacity: 1;
-    height: auto;
-  }
-
-  to {
-    opacity: 0;
-    height: 0px;
-  }
-`;
-
 const SubTitle = styled.h1`
   font-size: 30px;
   width: 70vw;

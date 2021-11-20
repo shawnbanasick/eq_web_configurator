@@ -150,9 +150,11 @@ const Survey = () => {
         let testArray = getOptionsArray(currentOptions);
         console.log(testArray);
         if (testArray.length < 2) {
-          console.log("there is an issue");
-          appState.triggerOptionsWarningModal = true;
-          return null;
+          if (surveyQuestionType !== "information") {
+            console.log("there is an issue");
+            appState.triggerOptionsWarningModal = true;
+            return null;
+          }
         }
 
         displayOptionsSemiWarn = true;
