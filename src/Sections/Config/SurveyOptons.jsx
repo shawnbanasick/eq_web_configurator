@@ -1,6 +1,6 @@
 import React from "react";
 import { view, store } from "@risingstack/react-easy-state";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import appState from "../../GlobalState/appState";
 import Survey from "../Survey/Survey";
 import RadioButtons from "../../Utils/RadioButtons";

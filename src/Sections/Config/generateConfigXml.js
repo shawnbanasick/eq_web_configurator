@@ -129,9 +129,7 @@ const generateConfigXml = () => {
     if (itemObject.surveyQuestionType === "textarea") {
       const input = `        <input type="textarea" required="${itemObject.required}"></input>\n`;
       label = `        <label>${encodeHTML(itemObject.label)}</label>\n`;
-      const placeholder = `        <placeholder>${encodeHTML(
-        itemObject.placeholder
-      )}</placeholder>\n`;
+      const placeholder = `        <placeholder>${itemObject.placeholder}</placeholder>\n`;
       item = accumulatorString.concat(open, input, label, placeholder, close);
     }
 
