@@ -13,6 +13,7 @@ import clearSection from "./clearSection";
 import ImageModal from "./ImageModal";
 import showRefImage from "./showRefImage";
 // import DownloadCsvButton from "./DownloadCsvButton";
+import UploadXmlFileButton from "./UploadXmlFileButton";
 
 const Language = () => {
   const handleClick = () => {
@@ -167,6 +168,9 @@ const Language = () => {
       {/*  <ButtonsContainer>
         <DownloadCsvButton />
       </ButtonsContainer> */}
+      <UploadButtonContainer>
+        <UploadXmlFileButton />
+      </UploadButtonContainer>
       <SectionContainer>
         {/* +++++++++++++  FOOTER INFO ++++++++++ */}
         <HeaderButtonBar>
@@ -959,6 +963,15 @@ const SectionContainer = styled.div`
   flex-direction: column;
   align-items: left;
   border: 1px solid black;
+  width: 92%;
+  max-width: 1000px;
+  /* border-radius: 3px; */
+`;
+
+const UploadButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: left;
   width: 92%;
   max-width: 1000px;
   /* border-radius: 3px; */
