@@ -149,7 +149,11 @@ const Language = () => {
             </li>
 
             <li>
-              <a href="https://codepen.io" target="_blank" rel="noreferrer">
+              <a
+                href="https://codepen.io/shawnbanasick/pen/WNEqVJM"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Combined example - the default &quot;Welcome Message&quot;
               </a>{" "}
             </li>
