@@ -50,7 +50,7 @@ const showSectionDefaults = (section) => {
 
   if (section === "presortClear") {
     selectorArray = [
-      "langtitleBarText",
+      "langTitleBarText",
       "langPresortStatements",
       "langPresortAgreement",
       "langPresortNeutral",

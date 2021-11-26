@@ -59,7 +59,7 @@ const generateLanguageXml = () => {
         )}</item>
 
         <!-- PRESORT: rough sorting into three piles (leave blank to skip popup)-->
-        <item id="titleBarText">${encodeHTML(appState.langtitleBarText)}</item>
+        <item id="titleBarText">${encodeHTML(appState.langTitleBarText)}</item>
         <item id="presortAgreement">${encodeHTML(
           appState.langPresortAgreement
         )}</item>

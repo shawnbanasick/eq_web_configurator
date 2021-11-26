@@ -393,7 +393,7 @@ const Language = () => {
           </HeaderButtonBar>
           <UserTextInput
             label="4-1. Title bar text"
-            stateId="langtitleBarText"
+            stateId="langTitleBarText"
             sectionName="lang"
             width={39}
             left={0}

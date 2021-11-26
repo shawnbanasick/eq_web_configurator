@@ -104,6 +104,7 @@
     "react-toastify": "^6.2.0",
     "react-toggle": "^4.1.1",
     "react-transition-group": "^4.4.2",
+    "react-xml-parser": "^1.1.8",
     "rfdc": "^1.2.0",
     "styled-components": "^5.2.1",
     "use-debouncy": "^4.2.0"

@@ -28,7 +28,7 @@ const showSectionDefaults = () => {
     </iframe></center>`,
     /*
      ******** PRESORT  ****************** */
-    langtitleBarText: `Preliminary Sorting`,
+    langTitleBarText: `Preliminary Sorting`,
     langPresortAgreement: `Agree`,
     langPresortStatements: `Statements`,
     langPresortNeutral: `No Strong Feelings`,

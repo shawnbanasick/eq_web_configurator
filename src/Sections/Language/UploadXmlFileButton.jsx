@@ -2,7 +2,10 @@ import React from "react";
 import { view } from "@risingstack/react-easy-state";
 import styled from "styled-components";
 import GeneralButton from "../../Utils/GeneralButton";
-// import appState from "../../GlobalState/appState";
+import appState from "../../GlobalState/appState";
+import XMLParser from "react-xml-parser";
+import getNameTranslationObject from "./getNameTranslationObject";
+import decodeHTML from "../../Utils/decodeHtml";
 
 const { dialog } = require("electron").remote;
 const fs = require("fs");
@@ -35,7 +38,33 @@ const UploadXmlFileButton = () => {
           alert("file open error.");
           return;
         }
-        console.log(JSON.stringify(data));
+        // console.log(JSON.stringify(data));
+
+        const parser = new XMLParser();
+        const xml = parser.parseFromString(data, "text/xml");
+
+        const xmlObjectArray = xml.getElementsByTagName("item");
+
+        console.log(xmlObjectArray[0].attributes.id);
+        console.log(xmlObjectArray[0].value);
+
+        const translateObject = getNameTranslationObject();
+
+        xmlObjectArray.forEach((item, index) => {
+          let key1 = xmlObjectArray[index].attributes.id;
+
+          let key = translateObject[key1];
+          let value = decodeHTML(xmlObjectArray[index].value);
+
+          localStorage.setItem(key, value);
+          appState[key] = value;
+        });
+
+        // console.log(JSON.stringify(xml, null, 2));
+        /*  console.log(
+          "data",
+          new XMLSerializer().serializeToString(xml.documentElement)
+        ); */
 
         /*const logMessageObj1 = {
             logMessage: `Data loaded from CSV file`,
