@@ -6,6 +6,7 @@ import appState from "../../GlobalState/appState";
 import XMLParser from "react-xml-parser";
 import getNameTranslationObject from "./getNameTranslationObject";
 import decodeHTML from "../../Utils/decodeHtml";
+import XmlUploadErrorModal from "./XmlUploadErrorModal";
 
 const { dialog } = require("electron").remote;
 const fs = require("fs");
@@ -59,26 +60,20 @@ const UploadXmlFileButton = () => {
           localStorage.setItem(key, value);
           appState[key] = value;
         });
-
-        // console.log(JSON.stringify(xml, null, 2));
-        /*  console.log(
-          "data",
-          new XMLSerializer().serializeToString(xml.documentElement)
-        ); */
-
-        /*const logMessageObj1 = {
-            logMessage: `Data loaded from CSV file`,
-            logType: "csvInput"
-          };*/
       });
     } catch (error) {
-      //inputState.errorMessage = error.message;
-      // inputState.showErrorMessageBar = true;
+      appState["triggerXmlUploadErrorModal"] = true;
+      console.log("Error - Couldn't upload language.XML file");
     }
   };
 
   return (
-    <UploadButton onClick={handleOnClick}>Load language.xml File</UploadButton>
+    <>
+      <XmlUploadErrorModal />
+      <UploadButton onClick={handleOnClick}>
+        Load "language.xml" File Data
+      </UploadButton>
+    </>
   );
 };
 

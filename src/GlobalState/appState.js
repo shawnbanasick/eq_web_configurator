@@ -132,9 +132,10 @@ const appState = store({
   surveyBackgroundDisplay: true,
   surveyBackgroundDisplaytrueActive: true,
   surveyBackgroundDisplayfalseActive: false,
-  triggerOptionsWarningModal: false,
 
   surveyQuestionsArray: [],
+
+  triggerOptionsWarningModal: false,
 
   /*
   statements.xml settings */
@@ -255,6 +256,8 @@ const appState = store({
 
   uploadService: "Netlify",
   uploadServiceNetlifyActive: true,
+
+  triggerXmlUploadErrorModal: false,
   /*
   firebase.xml settings */
 });

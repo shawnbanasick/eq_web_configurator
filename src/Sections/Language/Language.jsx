@@ -83,7 +83,7 @@ const Language = () => {
           >
             CodePen
           </a>{" "}
-          {`to interactively develop complex layouts (click on the "Start Coding" button on the top left side of the page, then try out your code in the "HTML" box). When you are happy with the layout, copy and paste the HTML code from CodePen to the input boxes below.`}
+          {`to interactively develop complex layouts (click on the "Start Coding" button on the top left side of the page, then put your code in the "HTML" box on the left). When you are happy with the layout, copy and paste the HTML code from CodePen into the input boxes below.`}
           <br />
           <br />
           {`CodePen Examples: `}
