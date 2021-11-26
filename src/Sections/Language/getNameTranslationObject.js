@@ -13,7 +13,7 @@ const showSectionDefaults = () => {
      ******** Landing Screen **** */
     landingHead: "langLandingHead",
     welcomeText: "langWelcomeMessage",
-    langLandingHelpModalHead: "langLandingHelpModalHead",
+    landingHelpModalHead: "langLandingHelpModalHead",
     landingHelpModalText: "langLandingHelpModalText",
 
     /*
