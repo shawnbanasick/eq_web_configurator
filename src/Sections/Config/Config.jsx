@@ -13,6 +13,7 @@ import ProjectAccessOptions from "./ProjectAccessOptions";
 import CustomLogo from "./CustomLogo";
 import PostsortOptions from "./PostsortOptions";
 import SurveyOptons from "./SurveyOptons";
+import UploadXmlConfigButton from "./UploadXmlConfigButton";
 
 const Config = () => {
   const handleClick = () => {
@@ -36,6 +37,10 @@ const Config = () => {
         structure of your project. The second section is a question generator
         for the (optional) Step 4 questionnaire.
       </DisplayModeText>
+
+      <UploadButtonContainer>
+        <UploadXmlConfigButton />
+      </UploadButtonContainer>
 
       <QuestionContainer>
         <GeneralOptions />
@@ -136,6 +141,16 @@ const DownloadConfigButton = styled(GeneralButton)`
   margin-bottom: 100px;
   background-color: #eb8100;
   border: 1px solid black;
+`;
+
+const UploadButtonContainer = styled.div`
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 92%;
+  max-width: 1000px;
+  /* border-radius: 3px; */
 `;
 
 const DisplayModeText = styled.div`
