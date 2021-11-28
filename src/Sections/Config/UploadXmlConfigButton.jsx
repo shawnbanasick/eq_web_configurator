@@ -118,7 +118,7 @@ const UploadXmlFileButton = () => {
 
         // START MODIFY SETTINGS
 
-        // set study title
+        // set  1. study title
         let title = inputObj.studyTitle;
         console.log(inputObj);
         localStorage.setItem("configTitle", title);
@@ -139,6 +139,91 @@ const UploadXmlFileButton = () => {
         // set  4. title bar color
         localStorage.setItem("configHeaderBarColor", inputObj.headerBarColor);
         appState["configHeaderBarColor"] = inputObj.headerBarColor;
+
+        // set  5a. project access
+        //  ["anonymous", "Name only", "Name + access code", "access code only"]
+        appState["configAccessanonymousActive"] = false;
+        appState["configAccessName onlyActive"] = false;
+        appState["configAccessName + access codeActive"] = false;
+        appState["configAccessaccess code onlActive"] = false;
+        if (inputObj.initialScreen === "anonymous") {
+          appState["configAccessanonymousActive"] = true;
+          localStorage.setItem("configAccess", "anonymous");
+          appState["configAccess"] = "anonymous";
+        }
+        if (inputObj.initialScreen === "partId") {
+          appState["configAccessName onlyActive"] = true;
+          localStorage.setItem("configAccess", "Name only");
+          appState["configAccess"] = "Name only";
+        }
+        if (inputObj.initialScreen === "partId-access") {
+          appState["configAccessName + access codeActive"] = true;
+          localStorage.setItem("configAccess", "Name + access code");
+          appState["configAccess"] = "Name + access code";
+        }
+        if (inputObj.initialScreen === "access") {
+          appState["configAccessaccess code onlyActive"] = true;
+          localStorage.setItem("configAccess", "access code only");
+          appState["configAccess"] = "access code only";
+        }
+
+        // set 5b. project access
+        localStorage.setItem("configLogInPassword", inputObj.accessCode);
+        appState["configLogInPassword"] = inputObj.accessCode;
+
+        // set 6. Logo
+        localStorage.setItem("configLogoHtml", inputObj.footerLogoName);
+        appState["configLogoHtml"] = inputObj.footerLogoName;
+
+        // set 7a. positive card color
+        localStorage.setItem("greenCardColor", inputObj.greenCardColor);
+        appState["greenCardColor"] = inputObj.greenCardColor;
+
+        // set 7b. positive card color
+        localStorage.setItem("yellowCardColor", inputObj.yellowCardColor);
+        appState["yellowCardColor"] = inputObj.yellowCardColor;
+
+        // set 7c. positive card color
+        localStorage.setItem("pinkCardColor", inputObj.pinkCardColor);
+        appState["pinkCardColor"] = inputObj.pinkCardColor;
+
+        // set 8. Condition of instruction font size
+        localStorage.setItem(
+          "configCondOfInstFontSize",
+          inputObj.condOfInstFontSize
+        );
+        appState["configCondOfInstFontSize"] = inputObj.condOfInstFontSize;
+
+        // set 9. allow unforced sorts
+        localStorage.setItem(
+          "configAllowUnforcedSorts",
+          inputObj.allowUnforcedSorts
+        );
+        appState["configAllowUnforcedSorts"] = inputObj.allowUnforcedSorts;
+        appState.configAllowUnforcedSortstrueActive = false;
+        appState.configAllowUnforcedSortsfalseActive = false;
+        if (inputObj.allowUnforcedSorts === "true") {
+          appState.configAllowUnforcedSortstrueActive = true;
+        }
+        if (inputObj.allowUnforcedSorts === "false") {
+          appState.configAllowUnforcedSortsfalseActive = true;
+        }
+
+        // set 10. display overloaded column warning
+        localStorage.setItem(
+          "configDisplayOverloadedColWarn",
+          inputObj.warnOverloadedColumn
+        );
+        appState["configDisplayOverloadedColWarn"] =
+          inputObj.warnOverloadedColumn;
+        appState.configDisplayOverloadedColWarntrueActive = false;
+        appState.configDisplayOverloadedColWarnfalseActive = false;
+        if (inputObj.warnOverloadedColumn === "true") {
+          appState.configDisplayOverloadedColWarntrueActive = true;
+        }
+        if (inputObj.warnOverloadedColumn === "false") {
+          appState.configDisplayOverloadedColWarnfalseActive = true;
+        }
 
         console.log(JSON.stringify(inputObj, null, 2));
         console.log(JSON.stringify(surveyQuestArray, null, 2));

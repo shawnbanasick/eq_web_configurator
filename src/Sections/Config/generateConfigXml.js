@@ -53,6 +53,8 @@ const generateConfigXml = () => {
    <!-- FOOTER -->
    <item id="footerLogo">{{{center}}}{{{img src="/images/${appState.configLogoHtml}" height="40" width="250" /}}}{{{/center}}}</item>
 
+   <item id="footerLogoName">${appState.configLogoHtml}</item>
+
 
    <!-- PRESORT -->
    <!-- default colors #ccffcc, #e0e0e0, #ffe0f0 -->
