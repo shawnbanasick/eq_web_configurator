@@ -91,6 +91,8 @@ const Survey = () => {
   }
 
   const addItem = () => {
+    console.log(JSON.stringify(displayBoolean));
+
     try {
       displayOptionsSemiWarn = false;
       const newItemObj = {};

@@ -4,6 +4,8 @@ import styled from "styled-components";
 import GeneralButton from "../../Utils/GeneralButton";
 import appState from "../../GlobalState/appState";
 import XMLParser from "react-xml-parser";
+import shouldDisplayObject from "../Survey/shouldDisplayObject";
+import decodeHTML from "../../Utils/decodeHtml";
 // import getNameTranslationObject from "./getNameTranslationObject";
 // import decodeHTML from "../../Utils/decodeHtml";
 // import XmlUploadErrorModal from "./XmlUploadErrorModal";
@@ -12,6 +14,16 @@ const { dialog } = require("electron").remote;
 const fs = require("fs");
 const { remote } = require("electron");
 const mainWindow = remote.getCurrentWindow();
+
+const getOptionsArray = (options) => {
+  console.log(options);
+  let array = options.split(";;;");
+  array = array.filter(function (e) {
+    return e;
+  });
+  array = array.map((x) => x.replace(/\s/g, ""));
+  return array;
+};
 
 const UploadXmlFileButton = () => {
   const surveyQuestArray = [];
@@ -115,6 +127,8 @@ const UploadXmlFileButton = () => {
           /*  localStorage.setItem(key, value);
           appState[key] = value;  */
         });
+
+        inputObj.surveyQuestArray = surveyQuestArray;
 
         // START MODIFY SETTINGS
 
@@ -225,7 +239,112 @@ const UploadXmlFileButton = () => {
           appState.configDisplayOverloadedColWarnfalseActive = true;
         }
 
-        console.log(JSON.stringify(inputObj, null, 2));
+        // set 11. include individual card comments screen
+        localStorage.setItem("configShowStep3", inputObj.showPostsort);
+        appState["configShowStep3"] = inputObj.showPostsort;
+        appState.configShowStep3trueActive = false;
+        appState.configShowStep3falseActive = false;
+        if (inputObj.showPostsort === "true") {
+          appState.configShowStep3trueActive = true;
+        }
+        if (inputObj.showPostsort === "false") {
+          appState.configShowStep3falseActive = true;
+        }
+
+        // set 12. display second positive column
+        localStorage.setItem(
+          "configShowSecondPosColumn",
+          inputObj.showSecondPosColumn
+        );
+        appState["configShowSecondPosColumn"] = inputObj.showSecondPosColumn;
+        appState.configShowSecondPosColumntrueActive = false;
+        appState.configShowSecondPosColumnfalseActive = false;
+        if (inputObj.showSecondPosColumn === "true") {
+          appState.configShowSecondPosColumntrueActive = true;
+        }
+        if (inputObj.showSecondPosColumn === "false") {
+          appState.configShowSecondPosColumnfalseActive = true;
+        }
+
+        // set 13. display second negative column
+        localStorage.setItem(
+          "configShowSecondNegColumn",
+          inputObj.showPostsort
+        );
+        appState["configShowSecondNegColumn"] = inputObj.showSecondNegColumn;
+        appState.configShowSecondNegColumntrueActive = false;
+        appState.configShowSecondNegColumnfalseActive = false;
+        if (inputObj.showSecondNegColumn === "true") {
+          appState.configShowSecondNegColumntrueActive = true;
+        }
+        if (inputObj.showSecondNegColumn === "false") {
+          appState.configShowSecondNegColumnfalseActive = true;
+        }
+
+        // set 14. show step 4
+        localStorage.setItem("configShowStep4", inputObj.showPostsort);
+        appState["configShowStep4"] = inputObj.showSurvey;
+        appState.configShowStep4trueActive = false;
+        appState.configShowStep4falseActive = false;
+        if (inputObj.showSurvey === "true") {
+          appState.configShowStep4trueActive = true;
+        }
+        if (inputObj.showSurvey === "false") {
+          appState.configShowStep4falseActive = true;
+        }
+
+        // ADD SURVEY QUESTIONS
+        const displayBoolean2 = shouldDisplayObject();
+        let displayBoolean;
+
+        const array = inputObj.surveyQuestArray;
+
+        array.forEach((item, index) => {
+          const newItemObj = {};
+
+          displayBoolean = displayBoolean2[item.type];
+
+          newItemObj.surveyQuestionType = item.type;
+          const newItemArray = [`item type: ${item.type}`];
+
+          if (displayBoolean.required === true) {
+            newItemObj.required = item.required;
+            newItemArray.push(`answer required (true/false): ${item.required}`);
+          }
+
+          if (displayBoolean.label === true) {
+            newItemObj.label = item.label;
+            newItemArray.push(`label text: ${decodeHTML(item.label)}`);
+          }
+
+          if (displayBoolean.note === true) {
+            newItemObj.note = item.note;
+            newItemArray.push(`question note: ${decodeHTML(item.note)}`);
+          }
+          if (displayBoolean.maxlength === true) {
+            newItemObj.maxlength = item.maxlength;
+            newItemArray.push(`max length: ${item.maxlength}`);
+          }
+          if (displayBoolean.placeholder === true) {
+            newItemObj.placeholder = item.placeholder;
+            newItemArray.push(`placeholder: ${item.placeholder}`);
+          }
+          if (displayBoolean.restricted === true) {
+            newItemObj.restricted = item.restricted;
+            newItemArray.push(
+              `answer restricted to numbers "0-9" (true/false): ${item.restricted}`
+            );
+          }
+
+          if (displayBoolean.scale === true) {
+            newItemObj.scale = item.scale;
+            newItemArray.push(
+              `scale: ${decodeHTML(appState.surveyQuestionScale)}`
+            );
+          }
+        }); // end for each
+
+        // console.log(JSON.stringify(inputObj, null, 2));
         console.log(JSON.stringify(surveyQuestArray, null, 2));
       });
     } catch (error) {
