@@ -10,6 +10,7 @@ const SelectionButtons = (props) => {
 
   const clearAllButtons = () => {
     const array = props.buttonIdArray;
+    console.log(array);
     array.forEach((element) => {
       let key = `${props.stateId}${element}Active`; //
       appState[key] = false;

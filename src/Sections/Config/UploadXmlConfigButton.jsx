@@ -14,6 +14,8 @@ const { remote } = require("electron");
 const mainWindow = remote.getCurrentWindow();
 
 const UploadXmlFileButton = () => {
+  const surveyQuestArray = [];
+
   const handleOnClick = async () => {
     console.log("clicked");
     try {
@@ -45,7 +47,7 @@ const UploadXmlFileButton = () => {
         const xml = parser.parseFromString(data, "text/xml");
 
         const xmlObjectArray = xml.getElementsByTagName("item");
-        console.log(xmlObjectArray[20]);
+        console.log(xmlObjectArray[23]);
         console.log(xmlObjectArray[24].attributes?.id);
         console.log(xmlObjectArray[24].children[0].attributes?.type);
         console.log(xmlObjectArray[24].children[0].attributes?.required);
@@ -59,7 +61,6 @@ const UploadXmlFileButton = () => {
         // const translateObject = getNameTranslationObject();
 
         const inputObj = {};
-        const surveyQuestArray = [];
         xmlObjectArray.forEach((item, index) => {
           // standard items
           let key = xmlObjectArray[index].attributes.id;
@@ -78,6 +79,12 @@ const UploadXmlFileButton = () => {
             if (questType === "information") {
               questObj.note = inputObj[1]?.value;
               questObj.bg = inputObj[1]?.attributes?.bg;
+            }
+            if (questType === "text") {
+              questObj.maxlength = inputObj[0].attributes?.maxlength;
+            }
+            if (questType === "textarea") {
+              questObj.placeholder = inputObj[2]?.value;
             }
             if (questType === "radio") {
               questObj[inputObj[2].name] = inputObj[2]?.value;
@@ -108,6 +115,30 @@ const UploadXmlFileButton = () => {
           /*  localStorage.setItem(key, value);
           appState[key] = value;  */
         });
+
+        // START MODIFY SETTINGS
+
+        // set study title
+        let title = inputObj.studyTitle;
+        console.log(inputObj);
+        localStorage.setItem("configTitle", title);
+        appState["configTitle"] = title;
+
+        // set  3. shuffle
+        localStorage.setItem("configshuffleCards", inputObj.shuffleCards);
+        appState["configshuffleCards"] = inputObj.shuffleCards;
+        appState.configshuffleCardstrueActive = false;
+        appState.configshuffleCardsfalseActive = false;
+        if (inputObj.shuffleCards === "true") {
+          appState.configshuffleCardstrueActive = true;
+        }
+        if (inputObj.shuffleCards === "false") {
+          appState.configshuffleCardsfalseActive = true;
+        }
+
+        // set  4. title bar color
+        localStorage.setItem("configHeaderBarColor", inputObj.headerBarColor);
+        appState["configHeaderBarColor"] = inputObj.headerBarColor;
 
         console.log(JSON.stringify(inputObj, null, 2));
         console.log(JSON.stringify(surveyQuestArray, null, 2));
