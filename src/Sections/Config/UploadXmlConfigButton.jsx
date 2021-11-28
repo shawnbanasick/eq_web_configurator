@@ -10,20 +10,12 @@ import decodeHTML from "../../Utils/decodeHtml";
 // import decodeHTML from "../../Utils/decodeHtml";
 // import XmlUploadErrorModal from "./XmlUploadErrorModal";
 
+const clone = require("rfdc/default");
+
 const { dialog } = require("electron").remote;
 const fs = require("fs");
 const { remote } = require("electron");
 const mainWindow = remote.getCurrentWindow();
-
-const getOptionsArray = (options) => {
-  console.log(options);
-  let array = options.split(";;;");
-  array = array.filter(function (e) {
-    return e;
-  });
-  array = array.map((x) => x.replace(/\s/g, ""));
-  return array;
-};
 
 const UploadXmlFileButton = () => {
   const surveyQuestArray = [];
@@ -342,6 +334,37 @@ const UploadXmlFileButton = () => {
               `scale: ${decodeHTML(appState.surveyQuestionScale)}`
             );
           }
+
+          if (displayBoolean.options === true) {
+            newItemObj.options = item.options;
+            newItemArray.push(`options: ${decodeHTML(item.options)}`);
+          }
+
+          if (displayBoolean.bg === true) {
+            newItemObj.bg = item.bg;
+            newItemArray.push(`background: ${item.bg}`);
+          }
+
+          const val = Math.floor(1000 + Math.random() * 9000);
+          newItemObj.id = `item-${val}`;
+          newItemObj.content = newItemArray;
+
+          // get survey questions from STATE
+          let surveyQuestionsArray = clone(appState.surveyQuestionsArray);
+
+          // ADD new question to ARRAY and save to STATE
+
+          console.log(JSON.stringify(newItemObj));
+
+          surveyQuestionsArray.push(newItemObj);
+          appState.surveyQuestionsArray = surveyQuestionsArray;
+
+          const newArray = [...surveyQuestionsArray];
+
+          localStorage.setItem(
+            "surveyQuestionsArray",
+            JSON.stringify(newArray)
+          );
         }); // end for each
 
         // console.log(JSON.stringify(inputObj, null, 2));
