@@ -51,6 +51,7 @@ const UploadXmlFileButton = () => {
         const xml = parser.parseFromString(data, "text/xml");
 
         const xmlObjectArray = xml.getElementsByTagName("item");
+        /*
         console.log(xmlObjectArray[23]);
         console.log(xmlObjectArray[24].attributes?.id);
         console.log(xmlObjectArray[24].children[0].attributes?.type);
@@ -60,7 +61,8 @@ const UploadXmlFileButton = () => {
         console.log(xmlObjectArray[24].children[2]?.name);
         console.log(xmlObjectArray[24].children[2]?.value);
         console.log(xmlObjectArray[24]?.value);
-        // console.log(JSON.stringify(xmlObjectArray, null, 2));
+        */
+        console.log(JSON.stringify(xmlObjectArray, null, 2));
 
         // const translateObject = getNameTranslationObject();
 
@@ -86,6 +88,7 @@ const UploadXmlFileButton = () => {
             }
             if (questType === "text") {
               questObj.maxlength = inputObj[0].attributes?.maxlength;
+              questObj.note = inputObj[2]?.value;
             }
             if (questType === "textarea") {
               questObj.placeholder = inputObj[2]?.value;
@@ -112,6 +115,7 @@ const UploadXmlFileButton = () => {
               // questObj[inputObj[2].name] = inputObj[2]?.value;
               // questObj.options = inputObj[0]?.value;
               questObj.scale = inputObj[0].attributes?.scale;
+              console.log(questObj.scale);
             }
             surveyQuestArray.push(questObj);
           }
@@ -291,6 +295,12 @@ const UploadXmlFileButton = () => {
 
         const array = inputObj.surveyQuestArray;
 
+        let newArray = [];
+        localStorage.setItem("surveyQuestionsArray", JSON.stringify(newArray));
+        appState.surveyQuestionsArray = newArray;
+
+        // localStorage.removeItem("surveyQuestionsArray");
+
         array.forEach((item, index) => {
           const newItemObj = {};
 
@@ -330,9 +340,7 @@ const UploadXmlFileButton = () => {
 
           if (displayBoolean.scale === true) {
             newItemObj.scale = item.scale;
-            newItemArray.push(
-              `scale: ${decodeHTML(appState.surveyQuestionScale)}`
-            );
+            newItemArray.push(`scale: ${decodeHTML(item.scale)}`);
           }
 
           if (displayBoolean.options === true) {

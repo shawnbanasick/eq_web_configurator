@@ -195,7 +195,7 @@ const generateConfigXml = () => {
     // for INFORMATION items
     if (itemObject.surveyQuestionType === "information") {
       const infoText = `       <input type="information"></input>\n`;
-      const infoNoteHtml = encodeHTML(itemObject.options);
+      const infoNoteHtml = encodeHTML(itemObject.note);
       const note = `       <note bg="${itemObject.bg}">${infoNoteHtml}</note>\n`;
       item = accumulatorString.concat(open, infoText, note, close);
     }

@@ -92,11 +92,11 @@ const shouldDisplayObject = () => {
       required: false,
       label: false,
       placeholder: false,
-      note: false,
+      note: true,
       maxlength: false,
       restricted: false,
       scale: false,
-      options: true,
+      options: false,
       bg: true,
     },
   };

@@ -113,9 +113,7 @@ const Survey = () => {
       }
       if (displayBoolean.note === true) {
         newItemObj.note = appState.surveyQuestionNote;
-        newItemArray.push(
-          `question note: ${decodeHTML(appState.surveyQuestionNote)}`
-        );
+        newItemArray.push(`note: ${decodeHTML(appState.surveyQuestionNote)}`);
       }
       if (displayBoolean.maxlength === true) {
         newItemObj.maxlength = appState.surveyAnswerLenMax;
