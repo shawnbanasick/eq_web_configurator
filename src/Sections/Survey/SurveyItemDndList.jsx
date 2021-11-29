@@ -155,6 +155,13 @@ const DelDiv = styled.div`
 
 const UlDiv = styled.div`
   width: 660px;
+
+  li {
+    list-style-type: square;
+  }
+  div {
+    display: inline-block;
+  }
 `;
 
 const Container = styled.div`
