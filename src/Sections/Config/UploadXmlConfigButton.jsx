@@ -21,7 +21,6 @@ const UploadXmlFileButton = () => {
   const handleOnClick = async () => {
     const surveyQuestArray = [];
     appState.surveyQuestArray = [];
-    console.log("clicked");
     try {
       const files = await dialog.showOpenDialog(mainWindow, {
         properties: ["openFile"],
@@ -51,20 +50,6 @@ const UploadXmlFileButton = () => {
         const xml = parser.parseFromString(data, "text/xml");
 
         const xmlObjectArray = xml.getElementsByTagName("item");
-        /*
-        console.log(xmlObjectArray[23]);
-        console.log(xmlObjectArray[24].attributes?.id);
-        console.log(xmlObjectArray[24].children[0].attributes?.type);
-        console.log(xmlObjectArray[24].children[0].attributes?.required);
-        console.log(xmlObjectArray[24].children[1]?.name);
-        console.log(xmlObjectArray[24].children[1]?.value);
-        console.log(xmlObjectArray[24].children[2]?.name);
-        console.log(xmlObjectArray[24].children[2]?.value);
-        console.log(xmlObjectArray[24]?.value);
-        */
-        console.log(JSON.stringify(xmlObjectArray, null, 2));
-
-        // const translateObject = getNameTranslationObject();
 
         const inputObj = {};
         xmlObjectArray.forEach((item, index) => {
@@ -113,16 +98,10 @@ const UploadXmlFileButton = () => {
               questType === "rating5" ||
               questType === "rating10"
             ) {
-              // questObj[inputObj[2].name] = inputObj[2]?.value;
-              // questObj.options = inputObj[0]?.value;
               questObj.scale = inputObj[0].attributes?.scale;
-              console.log(questObj.scale);
             }
             surveyQuestArray.push(questObj);
           }
-
-          /*  localStorage.setItem(key, value);
-          appState[key] = value;  */
         });
 
         inputObj.surveyQuestArray = surveyQuestArray;
@@ -300,11 +279,6 @@ const UploadXmlFileButton = () => {
         localStorage.setItem("surveyQuestionsArray", JSON.stringify(newArray));
         appState.surveyQuestionsArray = [...newArray];
 
-        let test = JSON.parse(localStorage.getItem("surveyQuesitonsArray"));
-        console.log(test);
-
-        // localStorage.removeItem("surveyQuestionsArray");
-
         array.forEach((item, index) => {
           const newItemObj = {};
 
@@ -366,8 +340,6 @@ const UploadXmlFileButton = () => {
 
           // ADD new question to ARRAY and save to STATE
 
-          console.log(JSON.stringify(newItemObj));
-
           surveyQuestionsArray.push(newItemObj);
           appState.surveyQuestionsArray = surveyQuestionsArray;
 
@@ -378,17 +350,12 @@ const UploadXmlFileButton = () => {
             JSON.stringify(newArray)
           );
         }); // end for each
-
-        // console.log(JSON.stringify(inputObj, null, 2));
-        console.log(JSON.stringify(surveyQuestArray, null, 2));
       });
     } catch (error) {
-      // appState["triggerXmlUploadErrorModal"] = true;
       console.log("Error - Couldn't upload language.XML file");
     }
   };
 
-  // <XmlUploadErrorModal />
   return (
     <>
       <UploadButton onClick={handleOnClick}>
