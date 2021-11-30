@@ -18,9 +18,9 @@ const { remote } = require("electron");
 const mainWindow = remote.getCurrentWindow();
 
 const UploadXmlFileButton = () => {
-  const surveyQuestArray = [];
-
   const handleOnClick = async () => {
+    const surveyQuestArray = [];
+    appState.surveyQuestArray = [];
     console.log("clicked");
     try {
       const files = await dialog.showOpenDialog(mainWindow, {
@@ -88,6 +88,7 @@ const UploadXmlFileButton = () => {
             }
             if (questType === "text") {
               questObj.maxlength = inputObj[0].attributes?.maxlength;
+              questObj.restricted = inputObj[0].attributes?.restricted;
               questObj.note = inputObj[2]?.value;
             }
             if (questType === "textarea") {
@@ -297,7 +298,10 @@ const UploadXmlFileButton = () => {
 
         let newArray = [];
         localStorage.setItem("surveyQuestionsArray", JSON.stringify(newArray));
-        appState.surveyQuestionsArray = newArray;
+        appState.surveyQuestionsArray = [...newArray];
+
+        let test = JSON.parse(localStorage.getItem("surveyQuesitonsArray"));
+        console.log(test);
 
         // localStorage.removeItem("surveyQuestionsArray");
 

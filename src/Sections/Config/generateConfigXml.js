@@ -103,9 +103,9 @@ const generateConfigXml = () => {
     if (itemObject.surveyQuestionType === "text") {
       let restrictedString;
       if (itemObject.restricted === true || itemObject.restricted === "true") {
-        restrictedString = `restricted="0-9"`;
+        restrictedString = `restricted="true"`;
       } else {
-        restrictedString = ``;
+        restrictedString = `restricted="false"`;
       }
       label = `        <label>${encodeHTML(itemObject.label)}</label>\n`;
       const note = `        <note>${encodeHTML(itemObject.note)}</note>\n`;
