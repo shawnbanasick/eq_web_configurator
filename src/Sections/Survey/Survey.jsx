@@ -117,7 +117,11 @@ const Survey = () => {
       }
       if (displayBoolean.maxlength === true) {
         newItemObj.maxlength = appState.surveyAnswerLenMax;
-        newItemArray.push(`max length: ${appState.surveyAnswerLenMax}`);
+        if (isNaN(appState.surveyAnswerLenMax)) {
+          newItemArray.push(`max length: noLimit`);
+        } else {
+          newItemArray.push(`max length: ${appState.surveyAnswerLenMax}`);
+        }
       }
       if (displayBoolean.placeholder === true) {
         newItemObj.placeholder = appState.surveyPlaceholder;
