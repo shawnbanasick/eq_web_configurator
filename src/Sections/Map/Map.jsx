@@ -8,6 +8,7 @@ import generateMapXml from "./generateMapXml";
 import GeneralButton from "../../Utils/GeneralButton";
 import appState from "../../GlobalState/appState";
 import MapRadioButtons from "../../Utils/MapRadioButtons";
+import UploadMapXmlButton from "./UploadMapXmlButton";
 
 const handleClick = () => {
   const data = generateMapXml();
@@ -46,6 +47,11 @@ const Map = () => {
           been allocated.
         </DisplayModeText>
       )}
+
+      <UploadButtonContainer>
+        <UploadMapXmlButton />
+      </UploadButtonContainer>
+
       <MapInputElement numStatements={numStatements} />
 
       <MapRadioButtons
@@ -133,4 +139,14 @@ const DisplayModeText = styled.div`
   border: 2px solid black;
   background: whitesmoke;
   border-radius: 5px;
+`;
+
+const UploadButtonContainer = styled.div`
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 78%;
+  max-width: 1000px;
+  /* border-radius: 3px; */
 `;
