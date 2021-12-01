@@ -13,7 +13,6 @@ const mainWindow = remote.getCurrentWindow();
 
 const UploadXmlFileButton = () => {
   const handleOnClick = async () => {
-    console.log("clicked");
     try {
       const files = await dialog.showOpenDialog(mainWindow, {
         properties: ["openFile"],
@@ -37,27 +36,16 @@ const UploadXmlFileButton = () => {
           alert("file open error.");
           return;
         }
-        // console.log(JSON.stringify(data));
 
+        // parse file
         const parser = new XMLParser();
         const xml = parser.parseFromString(data, "text/xml");
-
         const xmlObjectArray = xml.getElementsByTagName("item");
-        // const xmlObjectArray2 = xml.getElementsByTagName("column");
 
-        console.log(xmlObjectArray);
-
-        console.log(xmlObjectArray[0].value);
-        console.log(xmlObjectArray[1].value);
-        console.log(xmlObjectArray[2].value);
-        console.log(xmlObjectArray[3].value);
-        console.log(xmlObjectArray[4].value);
-
+        // read file contents
         let nameArray = xmlObjectArray[1].value.split(",");
         let countArray = xmlObjectArray[2].value.split(",");
         let colorsArray = xmlObjectArray[3].value.split(",");
-
-        console.log(countArray);
 
         const clearArray = [
           "M6",
@@ -81,6 +69,13 @@ const UploadXmlFileButton = () => {
           "12",
           "13",
         ];
+
+        // reset color pallette
+        appState["mapColorPalette"] = "Custom";
+        localStorage.setItem("mapColorPalette", "Custom");
+        appState["mapColorPaletteStepsActive"] = false;
+        appState["mapColorPaletteTintsActive"] = false;
+        appState["mapColorPaletteCustomActive"] = true;
 
         clearArray.forEach((item) => {
           // clear counts
@@ -107,22 +102,6 @@ const UploadXmlFileButton = () => {
           appState[designation3] = colorsArray[index];
           localStorage.setItem(designation3, colorsArray[index]);
         });
-
-        /*
-        console.log(xmlObjectArray[0].attributes.id);
-        console.log(xmlObjectArray[0].value);
-
-        
-        xmlObjectArray.forEach((item, index) => {
-          let key1 = xmlObjectArray[index].attributes.id;
-
-          let key = translateObject[key1];
-          let value = decodeHTML(xmlObjectArray[index].value);
-
-          localStorage.setItem(key, value);
-          appState[key] = value;
-        });
-        */
       });
     } catch (error) {
       appState["triggerXmlUploadErrorModal"] = true;
