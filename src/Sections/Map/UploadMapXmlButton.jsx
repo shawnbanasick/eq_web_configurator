@@ -4,7 +4,6 @@ import styled from "styled-components";
 import GeneralButton from "../../Utils/GeneralButton";
 import appState from "../../GlobalState/appState";
 import XMLParser from "react-xml-parser";
-import decodeHTML from "../../Utils/decodeHtml";
 
 const { dialog } = require("electron").remote;
 const fs = require("fs");
@@ -104,8 +103,7 @@ const UploadXmlFileButton = () => {
         });
       });
     } catch (error) {
-      appState["triggerXmlUploadErrorModal"] = true;
-      console.log("Error - Couldn't upload language.XML file");
+      console.log("Error - Couldn't upload map.XML file");
     }
   };
 

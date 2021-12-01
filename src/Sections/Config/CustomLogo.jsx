@@ -30,7 +30,7 @@ const CustomLogo = () => {
           logo in the footer. Add the image to the
           <b>"images" folder</b> and input the <b>exact name</b> (case
           sensitive) here. The hex color code for the footer background color is
-          "#ececec". There are many hex color code websites, but I use{" "}
+          "#ececec". There are many color hexcode websites, but I use{" "}
           <a
             target="_blank"
             rel="noopener noreferrer"

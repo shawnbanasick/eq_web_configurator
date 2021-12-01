@@ -10,7 +10,6 @@ const SelectionButtons = (props) => {
 
   const clearAllButtons = () => {
     const array = props.buttonIdArray;
-    console.log(array);
     array.forEach((element) => {
       let key = `${props.stateId}${element}Active`; //
       appState[key] = false;
@@ -27,8 +26,6 @@ const SelectionButtons = (props) => {
     const key = `${props.stateId}`; //
     appState[buttonActiveState] = true;
     appState[key] = value;
-    console.log("button: ", event.target.dataset.value);
-    console.log("value: ", event.target.id);
   };
 
   return (

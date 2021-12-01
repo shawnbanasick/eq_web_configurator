@@ -15,7 +15,6 @@ const mainWindow = remote.getCurrentWindow();
 
 const UploadXmlFileButton = () => {
   const handleOnClick = async () => {
-    console.log("clicked");
     try {
       const files = await dialog.showOpenDialog(mainWindow, {
         properties: ["openFile"],
@@ -39,16 +38,13 @@ const UploadXmlFileButton = () => {
           alert("file open error.");
           return;
         }
-        // console.log(JSON.stringify(data));
 
+        // parse file data
         const parser = new XMLParser();
         const xml = parser.parseFromString(data, "text/xml");
-
         const xmlObjectArray = xml.getElementsByTagName("item");
 
-        console.log(xmlObjectArray[0].attributes.id);
-        console.log(xmlObjectArray[0].value);
-
+        // translator
         const translateObject = getNameTranslationObject();
 
         xmlObjectArray.forEach((item, index) => {
