@@ -287,46 +287,46 @@ const UploadXmlFileButton = () => {
           newItemObj.surveyQuestionType = item.type;
           const newItemArray = [`item type: ${item.type}`];
 
-          if (displayBoolean.required === true) {
+          if (displayBoolean?.required === true) {
             newItemObj.required = item.required;
             newItemArray.push(`answer required (true/false): ${item.required}`);
           }
 
-          if (displayBoolean.label === true) {
+          if (displayBoolean?.label === true) {
             newItemObj.label = item.label;
             newItemArray.push(`label text: ${decodeHTML(item.label)}`);
           }
 
-          if (displayBoolean.note === true) {
+          if (displayBoolean?.note === true) {
             newItemObj.note = item.note;
             newItemArray.push(`question note: ${decodeHTML(item.note)}`);
           }
-          if (displayBoolean.maxlength === true) {
+          if (displayBoolean?.maxlength === true) {
             newItemObj.maxlength = item.maxlength;
             newItemArray.push(`max length: ${item.maxlength}`);
           }
-          if (displayBoolean.placeholder === true) {
+          if (displayBoolean?.placeholder === true) {
             newItemObj.placeholder = item.placeholder;
             newItemArray.push(`placeholder: ${item.placeholder}`);
           }
-          if (displayBoolean.restricted === true) {
+          if (displayBoolean?.restricted === true) {
             newItemObj.restricted = item.restricted;
             newItemArray.push(
               `answer restricted to numbers "0-9" (true/false): ${item.restricted}`
             );
           }
 
-          if (displayBoolean.scale === true) {
+          if (displayBoolean?.scale === true) {
             newItemObj.scale = item.scale;
             newItemArray.push(`scale: ${decodeHTML(item.scale)}`);
           }
 
-          if (displayBoolean.options === true) {
+          if (displayBoolean?.options === true) {
             newItemObj.options = item.options;
             newItemArray.push(`options: ${decodeHTML(item.options)}`);
           }
 
-          if (displayBoolean.bg === true) {
+          if (displayBoolean?.bg === true) {
             newItemObj.bg = item.bg;
             newItemArray.push(`background: ${item.bg}`);
           }
