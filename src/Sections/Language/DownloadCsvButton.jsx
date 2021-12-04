@@ -29,9 +29,7 @@ const generateCsvFile = () => {
 };
 
 const DownloadCsvButton = () => {
-  const handleOnClick = () => {
-    console.log("clicked");
-  };
+  const handleOnClick = () => {};
   return (
     <DownloadButton onClick={handleOnClick}>Download as CSV</DownloadButton>
   );
