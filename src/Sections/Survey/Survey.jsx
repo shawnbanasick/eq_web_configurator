@@ -97,40 +97,44 @@ const Survey = () => {
       displayOptionsSemiWarn = false;
       const newItemObj = {};
       newItemObj.surveyQuestionType = surveyQuestionType;
-      const newItemArray = [`item type: ${surveyQuestionType}`];
+      const newItemArray = [`<b>item type:</b> ${surveyQuestionType}`];
 
       if (displayBoolean.required === true) {
         newItemObj.required = appState.surveyAnswerRequired;
         newItemArray.push(
-          `answer required (true/false): ${appState.surveyAnswerRequired}`
+          `<b>answer required (true/false):</b> ${appState.surveyAnswerRequired}`
         );
       }
       if (displayBoolean.label === true) {
         newItemObj.label = appState.surveyQuestionLabel;
         newItemArray.push(
-          `label text: ${decodeHTML(appState.surveyQuestionLabel)}`
+          `<b>label text:</b> ${decodeHTML(appState.surveyQuestionLabel)}`
         );
       }
       if (displayBoolean.note === true) {
         newItemObj.note = appState.surveyQuestionNote;
-        newItemArray.push(`note: ${decodeHTML(appState.surveyQuestionNote)}`);
+        newItemArray.push(
+          `<b>note:</b> ${decodeHTML(appState.surveyQuestionNote)}`
+        );
       }
       if (displayBoolean.maxlength === true) {
         newItemObj.maxlength = appState.surveyAnswerLenMax;
         if (isNaN(appState.surveyAnswerLenMax)) {
-          newItemArray.push(`max length: noLimit`);
+          newItemArray.push(`<b>max length:</b> noLimit`);
         } else {
-          newItemArray.push(`max length: ${appState.surveyAnswerLenMax}`);
+          newItemArray.push(
+            `<b>max length:</b> ${appState.surveyAnswerLenMax}`
+          );
         }
       }
       if (displayBoolean.placeholder === true) {
         newItemObj.placeholder = appState.surveyPlaceholder;
-        newItemArray.push(`placeholder: ${appState.surveyPlaceholder}`);
+        newItemArray.push(`<b>placeholder:</b> ${appState.surveyPlaceholder}`);
       }
       if (displayBoolean.restricted === true) {
         newItemObj.restricted = appState.surveyAnswerRestricted;
         newItemArray.push(
-          `answer restricted to numbers "0-9" (true/false): ${appState.surveyAnswerRestricted}`
+          `<b>answer restricted to numbers "0-9" (true/false):</b> ${appState.surveyAnswerRestricted}`
         );
       }
       if (displayBoolean.scale === true) {

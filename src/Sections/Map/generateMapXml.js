@@ -93,8 +93,6 @@ const generateConfigXml = () => {
     {}
   );
 
-  console.log(JSON.stringify(filteredQSortPatternObject));
-
   let keys = Object.keys(filteredQSortPatternObject);
   keys = keys.map((x) => +x);
   keys.sort((a, b) => a - b);

@@ -51,8 +51,8 @@ const Server = () => {
       <Title>Upload Your Files to the Web</Title>
 
       <DisplayModeText>
-        The last step is to <b>upload</b> your Easy HTMLQ files to a web server.
-        I recommend
+        The last step is to <b>upload</b> your EQ Web Sort files to a web
+        server. I recommend
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -94,7 +94,7 @@ const Server = () => {
           <DisplayModeText>
             <b>1b.</b>
             <br />
-            Drag the Easy HTMLQ <b>FOLDER</b> to the Netlify page and drop it
+            Drag the EQ Web Sort <b>FOLDER</b> to the Netlify page and drop it
             into the box.
           </DisplayModeText>
           <SpacerDiv20 />
@@ -218,8 +218,8 @@ const Server = () => {
           <DisplayModeText>
             <b>2f.</b>
             <br />
-            Drag-and-drop or choose your configured Easy HTMLQ <b>files</b>. You
-            can see the upload progress below the drop zone.
+            Drag-and-drop or choose your configured EQ Web Sort <b>files</b>.
+            You can see the upload progress below the drop zone.
           </DisplayModeText>
           <img src={githubFileUploading} width="90%" alt="a" />
           <SpacerDiv20 />

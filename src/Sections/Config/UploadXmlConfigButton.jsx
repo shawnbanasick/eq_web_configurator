@@ -162,6 +162,7 @@ const UploadXmlFileButton = () => {
         appState["configLogInPassword"] = inputObj.accessCode;
 
         // set 6. Logo
+
         localStorage.setItem("configLogoHtml", inputObj.footerLogoName);
         appState["configLogoHtml"] = inputObj.footerLogoName;
 
@@ -285,50 +286,52 @@ const UploadXmlFileButton = () => {
           displayBoolean = displayBoolean2[item.type];
 
           newItemObj.surveyQuestionType = item.type;
-          const newItemArray = [`item type: ${item.type}`];
+          const newItemArray = [`<b>item type:</b> ${item.type}`];
 
           if (displayBoolean?.required === true) {
             newItemObj.required = item.required;
-            newItemArray.push(`answer required (true/false): ${item.required}`);
+            newItemArray.push(
+              `<b>answer required (true/false):</b> ${item.required}`
+            );
           }
 
           if (displayBoolean?.label === true) {
             newItemObj.label = item.label;
-            newItemArray.push(`label text: ${decodeHTML(item.label)}`);
+            newItemArray.push(`<b>label text:</b> ${decodeHTML(item.label)}`);
           }
 
           if (displayBoolean?.note === true) {
             newItemObj.note = item.note;
-            newItemArray.push(`question note: ${decodeHTML(item.note)}`);
+            newItemArray.push(`<b>question note:</b> ${decodeHTML(item.note)}`);
           }
           if (displayBoolean?.maxlength === true) {
             newItemObj.maxlength = item.maxlength;
-            newItemArray.push(`max length: ${item.maxlength}`);
+            newItemArray.push(`<b>max length:</b> ${item.maxlength}`);
           }
           if (displayBoolean?.placeholder === true) {
             newItemObj.placeholder = item.placeholder;
-            newItemArray.push(`placeholder: ${item.placeholder}`);
+            newItemArray.push(`<b>placeholder:</b> ${item.placeholder}`);
           }
           if (displayBoolean?.restricted === true) {
             newItemObj.restricted = item.restricted;
             newItemArray.push(
-              `answer restricted to numbers "0-9" (true/false): ${item.restricted}`
+              `<b>answer restricted to numbers "0-9" (true/false):</b> ${item.restricted}`
             );
           }
 
           if (displayBoolean?.scale === true) {
             newItemObj.scale = item.scale;
-            newItemArray.push(`scale: ${decodeHTML(item.scale)}`);
+            newItemArray.push(`<b>scale:</b> ${decodeHTML(item.scale)}`);
           }
 
           if (displayBoolean?.options === true) {
             newItemObj.options = item.options;
-            newItemArray.push(`options: ${decodeHTML(item.options)}`);
+            newItemArray.push(`<b>options:</b> ${decodeHTML(item.options)}`);
           }
 
           if (displayBoolean?.bg === true) {
             newItemObj.bg = item.bg;
-            newItemArray.push(`background: ${item.bg}`);
+            newItemArray.push(`<b>background:</b> ${item.bg}`);
           }
 
           const val = Math.floor(1000 + Math.random() * 9000);

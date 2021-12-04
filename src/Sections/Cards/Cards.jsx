@@ -27,9 +27,9 @@ const Cards = () => {
       <GlobalStyle />
       <Title>Cards Settings</Title>
       <DisplayModeText>
-        The default mode for Easy HTMLQ is for a responsive Q-sort card size. In
-        other words, the size of the cards will change according to the size of
-        the participant's browser on the initial web page load of Easy HTMLQ.
+        The default mode for EQ Web Sort is for a responsive Q-sort card size.
+        In other words, the size of the cards will change according to the size
+        of the participant's browser on the initial web page load of Easy HTMLQ.
         All of the cards will be visible on the screen and no page scrolling is
         needed.
         <br />

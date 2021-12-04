@@ -7,7 +7,7 @@ const showSectionDefaults = () => {
     langBtnHelp: "Help me!",
     langBtnNext: "Continue",
     langLandingHead: `University Research Project`,
-    langWelcomeMessage: `<center><h2>Easy HtmlQ V3 Demo Project - iPad Use in the Classroom.</h2> </center><br/><br> <div style="display: flex; flex-direction: column; align-items: center;"> <div><h2>Features</h2>
+    langWelcomeMessage: `<center><h2>EQ Web Sort V3 Demo Project - iPad Use in the Classroom.</h2> </center><br/><br> <div style="display: flex; flex-direction: column; align-items: center;"> <div><h2>Features</h2>
     <ul style="margin-left: 20px;"> <li>Smooth drag and drop actions for desktop and mobile (touch) devices </li> <li>Custom Image and video embedding capability (on the page and in help messages) </li> 
     <li>Participant-adjustable text and card sizes </li>  <li>Simple localization into the research language </li> <li>HTML formatting for statements and User Interface text (including bold font, italics, underlines, line breaks) </li> <li>Custom logo in page footers </li> <li>Ability to do offline data collection when used on a notebook computer with EQ-Configurator</li> </ul><a href="https://qmethod.org/" target="_blank"> <u>qmethod.org</u> </a></div></div>
     <br><br>

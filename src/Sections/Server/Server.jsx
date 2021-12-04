@@ -87,15 +87,15 @@ const Server = () => {
       {displayMode && (
         <>
           <DisplayModeText>
-            The first step is to download the base files for Easy HTMLQ and save
-            them to an accessible place on your computer (for example, to the
-            "Desktop" folder). To download, go to the{" "}
+            The first step is to download the base files for EQ Web Sort and
+            save them to an accessible place on your computer (for example, to
+            the "Desktop" folder). To download, go to the{" "}
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://github.com/shawnbanasick/easy-htmlq"
             >
-              Easy HTMLQ
+              EQ Web Sort
             </a>{" "}
             home page and click the green "Code" button.
           </DisplayModeText>
@@ -112,16 +112,17 @@ const Server = () => {
           <img src={eqDownloadZip} alt="a" />
           <DisplayModeText>
             To start the local web server, all you need to do is
-            <b> find the uncompressed folder </b>with the Easy HTMLQ base files.
-            You don't need to select a specific file - you just need to find the
-            folder.
+            <b> find the uncompressed folder </b>with the EQ Web Sort base
+            files. You don't need to select a specific file - you just need to
+            find the folder.
           </DisplayModeText>
           <SpacerDiv />
         </>
       )}
 
       <FindServerButton onClick={() => handleClick()}>
-        Navigate to the HTMLQ base files folder where "index.html" is located.
+        Navigate to the EQ Web Sort setup files folder where "index.html" is
+        located.
       </FindServerButton>
       <IntroText>
         After opening the folder, the configurator will find the "index.html"
@@ -134,8 +135,8 @@ const Server = () => {
       </ProjectLinkDiv>
       {displayMode && (
         <DisplayModeText>
-          The default Easy HTMLQ demo project will now load in your browser. The
-          project is not on the internet - it is being hosted from your
+          The default EQ Web Sort demo project will now load in your browser.
+          The project is not on the internet - it is being hosted from your
           computer, and you're accessing it from the browser on your machine.
           However, after you set up your Firebase file, this demo project will
           save completed Q sort data to the Firebase realtime database. So, you

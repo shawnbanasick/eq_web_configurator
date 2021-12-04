@@ -97,8 +97,6 @@ const generateConfigXml = () => {
     let accumulatorString = "";
     let itemObject = surveyQuestionsArray[i];
 
-    console.log(itemObject);
-
     // for TEXT items
     if (itemObject.surveyQuestionType === "text") {
       let restrictedString;

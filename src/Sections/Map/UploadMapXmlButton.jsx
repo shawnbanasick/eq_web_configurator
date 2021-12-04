@@ -76,6 +76,21 @@ const UploadXmlFileButton = () => {
         appState["mapColorPaletteTintsActive"] = false;
         appState["mapColorPaletteCustomActive"] = true;
 
+        // create qSortPatternObject
+        const qSortPatternObject = {};
+        nameArray.forEach((item, index) => {
+          if (item.charAt(0) === "N") {
+            item = +item.replace("N", "-");
+          } else {
+            item = +item;
+          }
+          qSortPatternObject[item] = `${countArray[index]}`;
+        });
+        localStorage.setItem(
+          "qSortPatternObject",
+          JSON.stringify(qSortPatternObject)
+        );
+
         clearArray.forEach((item) => {
           // clear counts
           let designation = `activeValue${item}`;

@@ -16,7 +16,7 @@
     "linux": {
       "category": "Science",
       "description": "Open source Q methodology app",
-      "synopsis": "Use EQ-Configurator to setup an Easy HTMLQ project for online Q sorting",
+      "synopsis": "Use EQ-Configurator to setup an EQ Web Sort project for online Q sorting",
       "icon": "../build/icons/icon.icns",
       "target": [
         {
