@@ -2,11 +2,13 @@ import React from "react";
 import { view } from "@risingstack/react-easy-state";
 import styled from "styled-components";
 import appState from "../../GlobalState/appState";
+import UploadStatementsXmlButton from "./UploadStatementsXmlButton";
 
 const handleChange = (event) => {
   let statementInput = event.target.value;
   appState.currentStatements = statementInput;
   localStorage.setItem("currentStatements", statementInput);
+  console.log("click");
 };
 
 const StatementTextArea = () => {
@@ -18,6 +20,7 @@ const StatementTextArea = () => {
   }
 
   appState.currentStatements = localStorage.getItem("currentStatements");
+  console.log(appState.currentStatements);
 
   return (
     <Container>
@@ -50,6 +53,7 @@ const StatementTextArea = () => {
           Config section.
         </DisplayModeText>
       )}
+      <UploadStatementsXmlButton />
       <label>Enter or Paste Statements (1 statement per line) : </label>
       <StatementTextsInput
         type="textarea"
@@ -74,7 +78,7 @@ const StatementTextsInput = styled.textarea`
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  user-select: all;
+  user-select: none;
 `;
 
 const DisplayModeText = styled.div`
