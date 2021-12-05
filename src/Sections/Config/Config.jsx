@@ -12,7 +12,7 @@ import GeneralOptions from "./GeneralOptions";
 import ProjectAccessOptions from "./ProjectAccessOptions";
 import CustomLogo from "./CustomLogo";
 import PostsortOptions from "./PostsortOptions";
-import SurveyOptons from "./SurveyOptons";
+import SurveyOptions from "./SurveyOptons";
 import UploadXmlConfigButton from "./UploadXmlConfigButton";
 
 const Config = () => {
@@ -49,7 +49,7 @@ const Config = () => {
         <PresortOptions />
         <SortOptions />
         <PostsortOptions />
-        <SurveyOptons />
+        <SurveyOptions />
 
         <SubTitle>
           **Required Last Step** &nbsp;&nbsp;&nbsp;&nbsp; Save Options to File
@@ -128,12 +128,13 @@ const SubTitle = styled.h1`
 `;
 
 const QuestionContainer = styled.div`
-  align-self: center;
   display: flex;
   flex-direction: column;
+  justify-items: center;
+  align-self: center;
   align-items: left;
   margin-bottom: 25px;
-  width: 78vw;
+  width: clamp(500px, 78vw, 1300px);
 `;
 
 const DownloadConfigButton = styled(GeneralButton)`
@@ -164,4 +165,9 @@ const DisplayModeText = styled.div`
   border: 2px solid black;
   background: whitesmoke;
   border-radius: 5px;
+`;
+
+const QuestionDiv = styled.div`
+  display: flex;
+  align-self: center;
 `;

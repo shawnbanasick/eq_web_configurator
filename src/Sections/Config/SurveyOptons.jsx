@@ -134,10 +134,6 @@ const DisplayModeText = styled.div`
 `;
 
 const QuestionContainer = styled.div`
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
   margin-bottom: 25px;
   width: 78vw;
 `;

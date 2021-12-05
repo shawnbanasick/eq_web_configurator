@@ -427,7 +427,7 @@ const AddItemButton = styled(GeneralButton)`
 `;
 
 const ImageContainer = styled.div`
-  width: clamp(300px, 74vw, 1175px);
+  width: clamp(250px, 70vw, 1175px);
 `;
 
 const StyledToastContainer = styled(ToastContainer).attrs({
