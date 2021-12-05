@@ -222,9 +222,9 @@ const Title = styled.h1`
 `;
 
 const IntroText = styled.span`
-  font-size: 2vw;
+  font-size: clamp(15px, 1.8vw, 30px);
   align-self: center;
-  width: 70vw;
+  width: 55vw;
   padding: 15px;
   /* border: 2px solid red; */
 `;
