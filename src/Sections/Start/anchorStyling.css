@@ -7,7 +7,7 @@ a:active {
   position: relative;
   transition: 0.5s color ease;
   text-decoration: none;
-  color: black;
+  color: var(--font-color);
   font-size: 1 em;
 }
 a:hover {

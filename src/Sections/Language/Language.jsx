@@ -897,6 +897,7 @@ const MainContent = styled.div`
   transition: visibility 0.5s linear;
   font-size: 18px;
   padding-bottom: 30px;
+  color: var(--font-color);
 
   a {
     padding-bottom: 1px;
@@ -993,7 +994,7 @@ const DefaultsButton = styled.button`
   box-sizing: border-box;
   align-self: flex-end;
   margin-bottom: 10px;
-  color: black;
+  color: var(--font-color);
   transition: 0.3s ease all;
   user-select: none;
 
@@ -1013,7 +1014,7 @@ const ClearAllButton = styled.button`
   align-self: flex-end;
   margin-bottom: 10px;
   margin-left: 10px;
-  color: black;
+  color: var(--font-color);
   transition: 0.3s ease all;
   user-select: none;
 
@@ -1035,7 +1036,7 @@ const RefImageButton = styled.button`
   margin-left: 10px;
   margin-right: ${(props) => props.marginRight};
   justify-self: flex-end;
-  color: black;
+  color: var(--font-color);
   user-select: none;
 
   &:hover {

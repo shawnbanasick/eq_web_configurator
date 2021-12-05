@@ -189,6 +189,7 @@ const MainContent = styled.div`
   max-height: calc(100vh - 3px);
   overflow: auto;
   user-select: none;
+  color: var(--font-color);
 
   img {
     max-width: 1000px;

@@ -4,6 +4,7 @@ import styled, { keyframes } from "styled-components";
 import GlobalStyle from "../../Utils/GlobalStyle";
 import GeneralButton from "../../Utils/GeneralButton";
 import appState from "../../GlobalState/appState";
+import Image from "../../assets/images/EQ-brand.svg";
 
 const setMode = (event) => {
   if (event.target.id === "pro") {
@@ -32,10 +33,13 @@ const Start = () => {
   return (
     <MainContent>
       <GlobalStyle />
-      <Title>
-        EQ Configurator <br />
-        Version 3
-      </Title>
+      <HeroContainer>
+        <img src={Image} height="180" alt="s" />
+        <Title>
+          EQ Configurator <br />
+          Version 3
+        </Title>
+      </HeroContainer>
       <IntroText>
         EQ Configurator simplifies the set-up and testing of an{" "}
         <a
@@ -45,10 +49,10 @@ const Start = () => {
         >
           EQ Web Sort
         </a>{" "}
-        project for online Q-sorting. It provides simplified editing of the EQ
-        Web Sort configuration files and offers increased control over the
-        appearance of the Q-sort. It also includes a local web server to
-        immediately test the setup on any installed web browser.
+        project for online Q-sorting. It provides guided editing of the EQ Web
+        Sort configuration files and offers increased control over the design of
+        the Q-sort. It also includes a built-in web server to immediately test
+        the Q-sort setup on any locally installed web browser.
       </IntroText>
       <CustomH2>Select Configurator Display Mode:</CustomH2>
       <ButtonContainer>
@@ -68,9 +72,11 @@ const Start = () => {
         </ProButton>
       </ButtonContainer>
       <DescriptionDiv>
-        {showDescriptionPro && <IntroText>just the essentials</IntroText>}
+        {showDescriptionPro && (
+          <IntroText>shows only the essential configurations</IntroText>
+        )}
         {showDescriptionBeginner && (
-          <IntroText>in-depth descriptions and directions</IntroText>
+          <IntroText>displays in-depth descriptions and directions</IntroText>
         )}
       </DescriptionDiv>
     </MainContent>
@@ -115,6 +121,8 @@ const MainContent = styled.div`
   min-height: calc(100vh - 3px);
   overflow: auto;
   user-select: none;
+  color: var(--font-color);
+
   /* border: 2px solid green; */
   a {
     padding-bottom: 1px;
@@ -132,11 +140,13 @@ const MainContent = styled.div`
   }
 `;
 
-const Title = styled.h1`
+const Title = styled.div`
   align-self: center;
   text-align: center;
-  font-size: 5vw;
-  width: 70vw;
+  font-size: 70px;
+  width: 450px;
+  font-family: "Contrail";
+  color: var(--font-color);
 `;
 
 const BeginnerButton = styled(GeneralButton)`
@@ -175,7 +185,7 @@ const IntroText = styled.span`
   align-self: center;
   padding: 30px;
   width: 70vw;
-  font-size: 2vw;
+  font-size: 1.6vw;
 `;
 
 const CustomH2 = styled.h2`
@@ -185,4 +195,9 @@ const CustomH2 = styled.h2`
 const DescriptionDiv = styled.div`
   text-align: center;
   margin-top: 25px;
+`;
+
+const HeroContainer = styled.div`
+  display: flex;
+  justify-content: center;
 `;

@@ -334,6 +334,7 @@ const MainContent = styled.div`
   animation: ${(props) => (props.view ? fadeOut : fadeIn)} 0.5s linear;
   transition: visibility 0.5s linear;
   font-size: 18px;
+  color: var(--font-color);
 
   a {
     padding-bottom: 1px;

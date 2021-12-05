@@ -67,6 +67,7 @@ const MainContent = styled.div`
   overflow: auto;
   user-select: none;
   padding-bottom: 30px;
+  color: var(--font-color);
 `;
 
 const Title = styled.h1`

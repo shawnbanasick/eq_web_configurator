@@ -1,15 +1,16 @@
 :root {
   --main-theme-color: #a5d6a7;
   --second-theme-color: rgba(32, 156, 238, 0.6);
+  --font-color: #333333;
 }
 
 .Toastify__toast--success {
   background: var(--main-theme-color);
-  color: black;
+  color: var(--font-color);
 }
 
 .Toastify__close-button.Toastify__close-button--success {
-  color: black;
+  color: var(--font-color);
 }
 
 .Toastify__progress-bar.Toastify__progress-bar--animated.Toastify__progress-bar--success {
@@ -24,7 +25,7 @@
   justify-content: center;
   border: 1px solid black;
   font-size: 16px;
-  color: black;
+  color: var(--font-color);
   padding-top: 10px;
   height: 48px;
   width: 155px;

@@ -80,6 +80,7 @@ const MainContent = styled.div`
   max-height: calc(100vh - 23px);
   overflow: auto;
   user-select: none;
+  color: var(--font-color);
 `;
 
 const WebLinkDiv1 = styled.div`

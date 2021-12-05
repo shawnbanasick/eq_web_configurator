@@ -181,6 +181,7 @@ const AppWrap = styled.div`
   box-sizing: border-box;
   height: 100vh;
   width: 100vw;
+  color: var(--font-color);
 `;
 
 const FilesWindow = styled.div`
@@ -211,7 +212,7 @@ const FileButton = styled.button`
   width: 100%;
   height: auto;
   background: ${(props) => props.buttonColor || "#d6dbe0"};
-  color: black;
+  color: var(--font-color);
   border: none;
   text-align: left;
   transition: 0.3s ease all;
@@ -234,7 +235,7 @@ const FileButton = styled.button`
     font-weight: bold;
     font-size: 0.9rem;
     margin: 0 0 5px;
-    color: black;
+    color: var(--font-color);
   }
 `;
 
@@ -258,7 +259,7 @@ const StartButton = styled.button`
     font-weight: bold;
     font-size: 1.2rem;
     margin: 5px 0 5px;
-    color: black;
+    color: var(--font-color);
   }
 
   &:hover {
@@ -275,7 +276,7 @@ const StartButton = styled.button`
     font-weight: bold;
     font-size: 1.2rem;
     margin: 5px 0 5px;
-    color: black;
+    color: var(--font-color);
   } 
     `};
 `;

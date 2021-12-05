@@ -5,7 +5,7 @@ import styled from "styled-components";
 const localStore = store({
   expanded: false,
   value: "", // "Select Participant Id..."
-  hasClicked: false
+  hasClicked: false,
 });
 
 class Dropdown extends React.Component {
@@ -44,7 +44,7 @@ class Dropdown extends React.Component {
             <div
               role="listbox"
               key={item.toString() + index}
-              onClick={e => {
+              onClick={(e) => {
                 this.handleItemClick(e);
               }}
               className="item"
@@ -85,7 +85,7 @@ export default view(Dropdown);
 // blue color => #d6dbe0
 
 const DropdownDiv = styled.div`
-  width: ${props => props.width};
+  width: ${(props) => props.width};
   box-shadow: 0 4px 10px rgba(#7c4dff, 0.2);
   margin-top: 7px;
   outline: none;
@@ -103,14 +103,14 @@ const DropdownDiv = styled.div`
   &:hover > .trigger,
   &.active > .trigger {
     background: #d6dbe0;
-    color: black;
+    color: var(--font-color);
   }
 
   &.active > .trigger {
     background: #d6dbe0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-    color: black;
+    color: var(--font-color);
     overflow: visible;
   }
 
@@ -150,7 +150,7 @@ const DropdownDiv = styled.div`
 
     &:hover {
       background: #d6dbe0;
-      color: black;
+      color: var(--font-color);
       cursor: pointer;
     }
   }

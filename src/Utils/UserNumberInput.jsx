@@ -98,7 +98,7 @@ const NumberWarningMessage = styled.div`
   padding-left: 10px;
   padding-right: 10px;
   background-color: lightpink;
-  color: black;
+  color: var(--font-color);
   height: 25px;
   width: auto;
   font-size: 14px;

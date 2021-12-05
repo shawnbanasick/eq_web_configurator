@@ -17,7 +17,7 @@ const GeneralButton = styled.button`
   cursor: pointer;
   background: #d6dbe0;
   text-decoration: none;
-  color: black;
+  color: var(--font-color);
   transition: all 0.5s ease;
   transition-duration: 0.3s;
   transition-property: box-shadow;

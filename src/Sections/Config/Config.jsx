@@ -96,6 +96,7 @@ const MainContent = styled.div`
   transition: visibility 0.5s linear;
   font-size: 18px;
   user-select: none;
+  color: var(--font-color);
 
   a {
     padding-bottom: 1px;

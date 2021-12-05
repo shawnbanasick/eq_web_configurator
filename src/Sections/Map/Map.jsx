@@ -110,6 +110,7 @@ const MainContent = styled.div`
   font-size: 18px;
   user-select: none;
   padding-bottom: 30px;
+  color: var(--font-color);
 `;
 
 const Title = styled.h1`

@@ -366,6 +366,8 @@ const MainContent = styled.div`
   font-size: 18px;
   padding-bottom: 30px;
   /* user-select: none; */
+  color: var(--font-color);
+
   img {
     /* width: 150px; */
     -webkit-filter: drop-shadow(5px 5px 5px #222);
