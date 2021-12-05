@@ -14,7 +14,7 @@ const ipcMain = electron.ipcMain;
 const fs = require("fs");
 
 const { fork } = require("child_process");
-// console.log(`${__dirname}/server/server.js`);
+console.log(`${__dirname}`);
 
 // server reference
 let ps;

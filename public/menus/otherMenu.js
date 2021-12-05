@@ -1,6 +1,10 @@
 const config = require("../configs/app.config");
+const openAboutWindow = require("about-window").default;
+const join = require("path").join;
 
 const isMac = process.platform === "darwin";
+
+// console.log(`${join(__dirname)}`);
 
 module.exports = (app, mainWindow, i18n) => {
   let menu = [
@@ -10,7 +14,7 @@ module.exports = (app, mainWindow, i18n) => {
             label: app.name,
             submenu: [
               {
-                label: i18n.t("About KADE"),
+                label: i18n.t("About EQ Configurator"),
                 role: "about",
               },
               {
@@ -96,9 +100,18 @@ module.exports = (app, mainWindow, i18n) => {
       label: i18n.t("Help"),
       submenu: [
         {
-          label: i18n.t("About App"),
-          click: function (item, focusedWindow) {
+          label: i18n.t("About EQ Configurator"),
+          click: function (item, focusedWindow, app, mainWindow) {
             if (focusedWindow) {
+              openAboutWindow({
+                icon_path: join(__dirname, "../icon.png"),
+                copyright: "Copyright (c) 2021 Shawn Banasick",
+                show_close_button: "Close",
+                package_json_dir: join(__dirname, "../../"),
+                use_inner_html: true,
+                app,
+                mainWindow,
+              });
             }
           },
         },

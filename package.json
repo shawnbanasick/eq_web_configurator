@@ -1,8 +1,9 @@
 {
   "name": "eq-configurator",
-  "description": "Configurator for online Q sorting",
+  "description": "Configurator for EQ Web Sort",
   "version": "3.0.0",
   "private": true,
+  "license": "GPL-3",
   "author": {
     "name": "Shawn Banasick",
     "email": "ken.q.tools@gmail.com",
@@ -83,6 +84,7 @@
   },
   "dependencies": {
     "@risingstack/react-easy-state": "^6.3.0",
+    "about-window": "^1.15.2",
     "cross-env": "^7.0.3",
     "dotenv": "^8.2.0",
     "electron-context-menu": "^2.4.0",
