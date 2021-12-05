@@ -17,7 +17,7 @@ const Statements = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/shawnbanasick/eq_configurator"
+            href="https://github.com/shawnbanasick/eq_configurator_v3"
           >
             EQ Configurator Home Page
           </a>
@@ -26,9 +26,9 @@ const Statements = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/shawnbanasick/easy-htmlq"
+            href="https://github.com/shawnbanasick/eq_web_sort_v3"
           >
-            Easy HTMLQ
+            EQ Web Sort
           </a>
         </p>
         <p>

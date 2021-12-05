@@ -33,15 +33,22 @@ const Start = () => {
     <MainContent>
       <GlobalStyle />
       <Title>
-        EQ Web Sort Configurator <br />
+        EQ Configurator <br />
         Version 3
       </Title>
       <IntroText>
-        EQ Web Sort Configurator simplifies the set-up and testing of an online
-        Q sort project. It provides simplified editing of the EQ Web Sort
-        configuration files and offers increased control over the appearance of
-        the Q-sort. It also includes a local web server to immediately test the
-        setup on any installed web browser.
+        EQ Configurator simplifies the set-up and testing of an{" "}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/shawnbanasick/eq_web_sort_v3"
+        >
+          EQ Web Sort
+        </a>{" "}
+        project for online Q-sorting. It provides simplified editing of the EQ
+        Web Sort configuration files and offers increased control over the
+        appearance of the Q-sort. It also includes a local web server to
+        immediately test the setup on any installed web browser.
       </IntroText>
       <CustomH2>Select Configurator Display Mode:</CustomH2>
       <ButtonContainer>
@@ -109,6 +116,20 @@ const MainContent = styled.div`
   overflow: auto;
   user-select: none;
   /* border: 2px solid green; */
+  a {
+    padding-bottom: 1px;
+    text-decoration: none;
+    color: #000;
+    box-shadow: inset 0 -4px 0 var(--second-theme-color);
+    transition: background-color 0.25s ease-out;
+    margin-left: 5px;
+  }
+
+  a:hover {
+    background-color: var(--second-theme-color);
+    padding-top: 2px;
+    box-shadow: none;
+  }
 `;
 
 const Title = styled.h1`
