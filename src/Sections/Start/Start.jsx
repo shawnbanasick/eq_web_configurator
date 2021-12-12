@@ -36,8 +36,8 @@ const Start = () => {
       <HeroContainer>
         <img src={Image} height="180" alt="s" />
         <Title>
-          EQ Configurator <br />
-          Version 3
+          EQ Web Configurator <br />
+          Version 1
         </Title>
       </HeroContainer>
       <IntroText>
