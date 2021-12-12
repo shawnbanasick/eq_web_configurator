@@ -29,6 +29,7 @@ const clearAddItemForm = () => {
   localStorage.setItem("surveyQuestionScale", "");
   localStorage.setItem("surveyQuestionOptions", "");
   localStorage.setItem("surveyPlaceholder", "");
+  localStorage.setItem("surveyAnswerLenMax", "");
 
   return null;
 };
