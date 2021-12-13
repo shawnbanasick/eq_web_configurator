@@ -118,11 +118,16 @@ const Survey = () => {
         );
       }
       if (displayBoolean.maxlength === true) {
-        newItemObj.maxlength = appState.surveyAnswerLenMax;
-        if (isNaN(appState.surveyAnswerLenMax)) {
-          newItemArray.push(`<b>max length:</b> noLimit`);
+        newItemObj.limited = appState.surveyAnswerLenIsLimited;
+        newItemObj.length = appState.surveyAnswerLenMax;
+        if (
+          appState.surveyAnswerLenIsLimited === "false" ||
+          appState.surveyAnswerLenIsLimited === false
+        ) {
+          newItemArray.push(`<b>length limit:</b> false`);
         } else {
           newItemArray.push(
+            `<b>length limit:</b> ${appState.surveyAnswerLenIsLimited}`,
             `<b>max length:</b> ${appState.surveyAnswerLenMax}`
           );
         }

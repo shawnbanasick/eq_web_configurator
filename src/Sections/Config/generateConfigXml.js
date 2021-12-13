@@ -100,14 +100,24 @@ const generateConfigXml = () => {
     // for TEXT items
     if (itemObject.surveyQuestionType === "text") {
       let restrictedString;
+      let limitedString;
+      let maxLengthNum;
       if (itemObject.restricted === true || itemObject.restricted === "true") {
         restrictedString = `restricted="true"`;
       } else {
         restrictedString = `restricted="false"`;
       }
+      if (itemObject.limited === true || itemObject.limited === "true") {
+        limitedString = `true`;
+        maxLengthNum = itemObject.length;
+      } else {
+        console.log(itemObject.surveyAnswerLenIsLimited);
+        limitedString = `false`;
+        maxLengthNum = 99999;
+      }
       label = `        <label>${encodeHTML(itemObject.label)}</label>\n`;
       const note = `        <note>${encodeHTML(itemObject.note)}</note>\n`;
-      const input = `        <input type="text" required="${itemObject.required}" maxlength="${itemObject.maxlength}" ${restrictedString}></input>\n`;
+      const input = `        <input type="text" required="${itemObject.required}" limited="${limitedString}" maxlength="${maxLengthNum}" ${restrictedString}></input>\n`;
 
       item = accumulatorString.concat(open, input, label, note, close);
     }
