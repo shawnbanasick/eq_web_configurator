@@ -305,6 +305,7 @@ const UploadXmlFileButton = () => {
             newItemArray.push(`<b>question note:</b> ${decodeHTML(item.note)}`);
           }
           if (displayBoolean?.maxlength === true) {
+            console.log(item);
             newItemObj.maxlength = item.maxlength;
             newItemArray.push(`<b>max length:</b> ${item.maxlength}`);
           }
