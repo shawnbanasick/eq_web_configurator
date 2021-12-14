@@ -72,6 +72,8 @@ const UploadXmlFileButton = () => {
               questObj.bg = inputObj[1]?.attributes?.bg;
             }
             if (questType === "text") {
+              console.log(inputObj[0]);
+              questObj.limited = inputObj[0].attributes?.limited;
               questObj.maxlength = inputObj[0].attributes?.maxlength;
               questObj.restricted = inputObj[0].attributes?.restricted;
               questObj.note = inputObj[2]?.value;
@@ -302,11 +304,13 @@ const UploadXmlFileButton = () => {
 
           if (displayBoolean?.note === true) {
             newItemObj.note = item.note;
-            newItemArray.push(`<b>question note:</b> ${decodeHTML(item.note)}`);
+            newItemArray.push(`<b>note:</b> ${decodeHTML(item.note)}`);
           }
           if (displayBoolean?.maxlength === true) {
             console.log(item);
             newItemObj.maxlength = item.maxlength;
+            newItemObj.limited = item.limited;
+            newItemArray.push(`<b>length limit</b>:</b> ${item.limited}`);
             newItemArray.push(`<b>max length:</b> ${item.maxlength}`);
           }
           if (displayBoolean?.placeholder === true) {
