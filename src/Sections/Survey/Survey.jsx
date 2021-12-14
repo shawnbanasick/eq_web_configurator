@@ -117,7 +117,7 @@ const Survey = () => {
           `<b>note:</b> ${decodeHTML(appState.surveyQuestionNote)}`
         );
       }
-      if (displayBoolean.maxlength === true) {
+      if (displayBoolean.limited === true) {
         newItemObj.limited = appState.surveyAnswerLenIsLimited;
         newItemObj.length = appState.surveyAnswerLenMax;
         if (

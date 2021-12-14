@@ -306,7 +306,7 @@ const UploadXmlFileButton = () => {
             newItemObj.note = item.note;
             newItemArray.push(`<b>note:</b> ${decodeHTML(item.note)}`);
           }
-          if (displayBoolean?.maxlength === true) {
+          if (displayBoolean?.limited === true) {
             console.log(item);
             newItemObj.maxlength = item.maxlength;
             newItemObj.limited = item.limited;
