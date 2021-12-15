@@ -7,7 +7,7 @@ const encodeHTML = (string) => {
       const replaceRight = />/gi;
       const stringText2 = string.replace(replaceLeft, "{{{");
       const stringText3 = stringText2.replace(replaceRight, "}}}");
-      const stringText4 = `{{{div}}}${stringText3}{{{/div}}}`;
+      const stringText4 = `${stringText3}`;
       const stringText5 = stringText4
         .replace(/&/g, "&amp;")
         .replace(/"/g, "&quot;")
