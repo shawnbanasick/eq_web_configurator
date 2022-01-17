@@ -27,7 +27,7 @@ const GeneralOptions = () => {
 
       <RadioButtons
         label="2. Setup target:"
-        buttonIdArray={["online"]}
+        buttonIdArray={["online", "local"]}
         stateId="configSetupTarget"
         sectionName="config"
       />
