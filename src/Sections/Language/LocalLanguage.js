@@ -42,15 +42,18 @@ const LocalLanguage = () => {
           <ClearAllButton id="localClear" onClick={handleClearAll}>
             Clear Section
           </ClearAllButton>
-          <RefImageButton id="localImage" onClick={handleRefImage}>
-            View Reference Image
+          <RefImageButton id="localPanel" onClick={handleRefImage}>
+            View Ref. Image
+          </RefImageButton>
+          <RefImageButton id="localPanel2" onClick={handleRefImage}>
+            View Ref. Image 2
           </RefImageButton>
           <RefImageButton
-            id="landingImage2"
+            id="localPanel3"
             marginRight="35px"
             onClick={handleRefImage}
           >
-            View Reference Image 2
+            View Ref. Image 3
           </RefImageButton>
         </div>
       </HeaderButtonBar>

@@ -23,6 +23,11 @@ import submitImage from "../../assets/images/submitImage.png";
 import submitImage2 from "../../assets/images/submitImage2.png";
 import submitImage3 from "../../assets/images/submitImage3.png";
 import submitImage4 from "../../assets/images/submitImage4.png";
+import localPanel from "../../assets/images/localPanel.png";
+import localPanel2 from "../../assets/images/localPanel2.png";
+import localPanel3 from "../../assets/images/localPanel3.png";
+import localSubmit from "../../assets/images/localSubmit.png";
+import localSubmit2 from "../../assets/images/localSubmit2.png";
 
 const ImageSelector = () => {
   const selector = appState.imageToShow;
@@ -41,6 +46,23 @@ const ImageSelector = () => {
   if (selector === "accessImage") {
     return <img src={accessImage} alt="s"></img>;
   }
+
+  if (selector === "localPanel") {
+    return <img src={localPanel} alt="s"></img>;
+  }
+  if (selector === "localPanel2") {
+    return <img src={localPanel2} alt="s"></img>;
+  }
+  if (selector === "localPanel3") {
+    return <img src={localPanel3} alt="s"></img>;
+  }
+  if (selector === "localSubmit") {
+    return <img src={localSubmit} alt="s"></img>;
+  }
+  if (selector === "localSubmit2") {
+    return <img src={localSubmit2} alt="s"></img>;
+  }
+
   if (selector === "presortImage") {
     return <img src={presortImage} alt="s"></img>;
   }
