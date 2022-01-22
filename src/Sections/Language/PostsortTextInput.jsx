@@ -62,14 +62,14 @@ const LocalLanguage = () => {
         label="6-1. Postsort Header"
         stateId="langPostsortHeader"
         sectionName="lang"
-        width={36}
+        width={40.7}
         left={0}
       />
       <UserTextAreaInput
         label="6-2. Postsort Instructions"
         stateId="langPostsortInstructions"
         sectionName="lang"
-        width={36.6}
+        width={37.3}
         height={60}
         left={0}
       />
@@ -77,35 +77,35 @@ const LocalLanguage = () => {
         label="6-3. Text input placeholder (no HTML tags here)"
         stateId="langPlaceholder"
         sectionName="lang"
-        width={23.3}
+        width={17.7}
         left={0}
       />
       <UserTextInput
         label="6-4. Agreement label"
         stateId="langPostsortAgreement"
         sectionName="lang"
-        width={36}
+        width={40.8}
         left={0}
       />
       <UserTextInput
         label="6-5. Disagreement label"
         stateId="langPostsortDisagreement"
         sectionName="lang"
-        width={34.4}
+        width={38.1}
         left={0}
       />
       <UserTextInput
         label="6-6. Postsort help modal header"
         stateId="langPostsortModalHead"
         sectionName="lang"
-        width={30.5}
+        width={31.1}
         left={0}
       />
       <UserTextAreaInput
         label="6-7. Postsort help modal text"
         stateId="langPostsortModalText"
         sectionName="lang"
-        width={33.4}
+        width={34.2}
         height={80}
         left={0}
       />

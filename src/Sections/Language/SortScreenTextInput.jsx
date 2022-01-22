@@ -67,7 +67,7 @@ const LocalLanguage = () => {
         label="5-1. Sort help modal header"
         stateId="langSortHelpModalHead"
         sectionName="lang"
-        width={32.5}
+        width={33.5}
         left={0}
       />
 
@@ -75,7 +75,7 @@ const LocalLanguage = () => {
         label="5-2. Sort help modal main text"
         stateId="langSortHelpModalText"
         sectionName="lang"
-        width={32}
+        width={31.8}
         height={100}
         left={0}
       />
@@ -84,7 +84,7 @@ const LocalLanguage = () => {
         label="5-3. Disagree"
         stateId="langSortDisagreement"
         sectionName="lang"
-        width={39.4}
+        width={46}
         left={0}
       />
 
@@ -92,7 +92,7 @@ const LocalLanguage = () => {
         label="5-4. Sort conditions of instruction"
         stateId="langCondOfInst"
         sectionName="lang"
-        width={29}
+        width={29.4}
         height={80}
         left={0}
       />
@@ -100,7 +100,7 @@ const LocalLanguage = () => {
         label="5-5. Agree"
         stateId="langSortAgreement"
         sectionName="lang"
-        width={41}
+        width={48.8}
         left={0}
       />
 
@@ -108,7 +108,7 @@ const LocalLanguage = () => {
         label="5-6. Sorting complete modal header"
         stateId="langSortingCompleteModalHead"
         sectionName="lang"
-        width={29}
+        width={26.7}
         left={0}
       />
 
@@ -116,7 +116,7 @@ const LocalLanguage = () => {
         label="5-7. Sorting complete modal text"
         stateId="langSortingCompleteModalText"
         sectionName="lang"
-        width={29.4}
+        width={29.8}
         height={100}
         left={0}
       />
@@ -125,7 +125,7 @@ const LocalLanguage = () => {
         label="5-8. Prevent Navigation modal header"
         stateId="langSortPreventNavModalHead"
         sectionName="lang"
-        width={28}
+        width={25}
         left={0}
       />
 
@@ -142,7 +142,7 @@ const LocalLanguage = () => {
         label="5-10. Overloaded column modal header"
         stateId="langSortOverloadedColumnModalHead"
         sectionName="lang"
-        width={27}
+        width={23.5}
         left={0}
       />
 
@@ -150,7 +150,7 @@ const LocalLanguage = () => {
         label="5-11. Overloaded modal text"
         stateId="langSortOverloadedColumnModalText"
         sectionName="lang"
-        width={33}
+        width={33.8}
         height={100}
         left={0}
       />

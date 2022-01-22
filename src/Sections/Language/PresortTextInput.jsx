@@ -64,49 +64,49 @@ const LocalLanguage = () => {
         label="4-1. Title bar text"
         stateId="langTitleBarText"
         sectionName="lang"
-        width={38}
+        width={43.7}
         left={0}
       />
       <UserTextInput
         label="4-2. Statements"
         stateId="langPresortStatements"
         sectionName="lang"
-        width={38.4}
+        width={44.4}
         left={0}
       />
       <UserTextInput
         label={`4-3. "Agree"`}
         stateId="langPresortAgreement"
         sectionName="lang"
-        width={40.2}
+        width={47.7}
         left={0}
       />
       <UserTextInput
         label={`4-4. "Neutral"`}
         stateId="langPresortNeutral"
         sectionName="lang"
-        width={39.6}
+        width={46.6}
         left={0}
       />
       <UserTextInput
         label={`4-5. "Disagree"`}
         stateId="langPresortDisagreement"
         sectionName="lang"
-        width={38.8}
+        width={45.2}
         left={0}
       />
       <UserTextInput
         label="4-6. Presort modal header text"
         stateId="langPresortModalHead"
         sectionName="lang"
-        width={31.5}
+        width={31.8}
         left={0}
       />
       <UserTextAreaInput
         label="4-7. Presort modal main text"
         stateId="langPresortModalText"
         sectionName="lang"
-        width={33.5}
+        width={33.8}
         height={140}
         left={0}
       />
@@ -114,14 +114,14 @@ const LocalLanguage = () => {
         label="4-8. Prevent navigation modal header"
         stateId="langPresortPreventNavModalHead"
         sectionName="lang"
-        width={28}
+        width={25.6}
         left={0}
       />
       <UserTextAreaInput
         label="4-9. Prevent navigation modal main text"
         stateId="langPresortPreventNavModalText"
         sectionName="lang"
-        width={23.3}
+        width={23.8}
         height={140}
         left={0}
       />
@@ -129,14 +129,14 @@ const LocalLanguage = () => {
         label="4-10. Presort complete modal header"
         stateId="langPresortFinishedModalHead"
         sectionName="lang"
-        width={28.2}
+        width={26}
         left={0}
       />
       <UserTextAreaInput
         label="4-11. Presort complete modal main text"
         stateId="langPresortFinishedModalText"
         sectionName="lang"
-        width={24}
+        width={24.2}
         height={140}
         left={0}
       />

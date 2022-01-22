@@ -59,7 +59,7 @@ const LocalLanguage = () => {
         label="8-1. Save Data Button"
         stateId="langLocalSaveDataButton"
         sectionName="lang"
-        width={37.6}
+        width={39.8}
         left={0}
       />
 
@@ -67,7 +67,7 @@ const LocalLanguage = () => {
         label="8-2. Save Q sort Success Header"
         stateId="langLocalSubmitSuccessModalHeader"
         sectionName="lang"
-        width={34.7}
+        width={30.1}
         left={0}
       />
 
@@ -75,7 +75,7 @@ const LocalLanguage = () => {
         label="8-3. Save Q sort Success Text"
         stateId="langLocalSubmitSuccessModalText"
         sectionName="lang"
-        width={32.3}
+        width={33}
         left={0}
       />
 
@@ -83,7 +83,7 @@ const LocalLanguage = () => {
         label="8-4. Return to Control Panel Button"
         stateId="langReturnToLocalPanelButtonText"
         sectionName="lang"
-        width={35.3}
+        width={28.8}
         left={0}
       />
     </SectionContainer>

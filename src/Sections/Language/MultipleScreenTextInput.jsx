@@ -55,35 +55,35 @@ const LocalLanguage = () => {
         label="1. Help me!"
         stateId="langBtnHelp"
         sectionName="lang"
-        width={40.4}
+        width={48.4}
         left={0}
       />
       <UserTextInput
         label="2. Text Size"
         stateId="langFooterTextSize"
         sectionName="lang"
-        width={40.4}
+        width={48.4}
         left={0}
       />
       <UserTextInput
         label="3. Card Height"
         stateId="langFooterCardHeight"
         sectionName="lang"
-        width={39}
+        width={46}
         left={0}
       />
       <UserTextInput
         label="4. Continue"
         stateId="langBtnNext"
         sectionName="lang"
-        width={40.5}
+        width={48.5}
         left={0}
       />
       <UserTextAreaInput
         label="5. Step completed message"
         stateId="langStepCompleted"
         sectionName="lang"
-        width={33}
+        width={34.5}
         height={150}
         left={0}
       />
@@ -91,7 +91,7 @@ const LocalLanguage = () => {
         label="6. Log in first message"
         stateId="langLoginFirst"
         sectionName="lang"
-        width={38}
+        width={39}
         height={150}
         left={0}
       />
