@@ -46,7 +46,8 @@ const UserText = styled.textarea((props) => ({
   width: `${props.width + 26}%`,
   height: `${props.height}px`,
   marginLeft: `${props.left}px`,
-  marginTop: `25px`,
+  marginTop: `15px`,
+  marginBottom: `15px`,
   paddingLeft: `10px`,
 }));
 

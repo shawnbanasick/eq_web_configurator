@@ -34,7 +34,9 @@ const LocalLanguage = () => {
   return (
     <SectionContainer>
       <HeaderButtonBar>
-        <SectionTitle>Local Data Collection - Control Panel</SectionTitle>
+        <SectionTitle>
+          Local Data Collection - Save to Browser Memory
+        </SectionTitle>
         <div>
           <DefaultsButton id="landingDef" onClick={handleShowDefaults}>
             Use Defaults
@@ -42,15 +44,13 @@ const LocalLanguage = () => {
           <ClearAllButton id="landingClear" onClick={handleClearAll}>
             Clear Section
           </ClearAllButton>
-          <RefImageButton id="landingImage" onClick={handleRefImage}>
-            View Reference Image
-          </RefImageButton>
+
           <RefImageButton
             id="landingImage2"
             marginRight="35px"
             onClick={handleRefImage}
           >
-            View Reference Image 2
+            View Reference Image
           </RefImageButton>
         </div>
       </HeaderButtonBar>
@@ -65,14 +65,14 @@ const LocalLanguage = () => {
         label="1-2. Participant Name"
         stateId="langPartIdText"
         sectionName="lang"
-        width={39.4}
+        width={37.4}
         left={0}
       />
       <UserTextInput
         label="1-3. Usercode"
         stateId="langUsercodeText"
         sectionName="lang"
-        width={46}
+        width={41.2}
         left={0}
       />
 
@@ -80,14 +80,14 @@ const LocalLanguage = () => {
         label="1-4. Start Button"
         stateId="langLocalStartButtonText"
         sectionName="lang"
-        width={44}
+        width={40}
         left={0}
       />
       <UserTextInput
         label="1-5. Delete Button"
         stateId="langLocalDeleteButtonText"
         sectionName="lang"
-        width={42.4}
+        width={39.1}
         left={0}
       />
 
@@ -95,7 +95,7 @@ const LocalLanguage = () => {
         label="1-6. Download Button"
         stateId="langLocalDownloadButtonText"
         sectionName="lang"
-        width={39.4}
+        width={37.4}
         left={0}
       />
 
@@ -103,7 +103,7 @@ const LocalLanguage = () => {
         label="1-7. Stored Q sorts Header Text"
         stateId="langStoredQsortsHeaderText"
         sectionName="lang"
-        width={30.3}
+        width={32.3}
         left={0}
       />
 
@@ -111,7 +111,7 @@ const LocalLanguage = () => {
         label="1-8. Delete Modal Header"
         stateId="langLocalDeleteModalHead"
         sectionName="lang"
-        width={35.5}
+        width={35.3}
         left={0}
       />
 
@@ -128,7 +128,7 @@ const LocalLanguage = () => {
         label="1-10. Participants"
         stateId="langLocalParticipantsText"
         sectionName="lang"
-        width={42.5}
+        width={39.5}
         left={0}
       />
 
@@ -136,7 +136,7 @@ const LocalLanguage = () => {
         label="1-11. Save Data Button"
         stateId="langLocalSaveDataButton"
         sectionName="lang"
-        width={37.6}
+        width={36.6}
         left={0}
       />
     </SectionContainer>

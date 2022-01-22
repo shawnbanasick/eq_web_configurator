@@ -43,16 +43,18 @@ const UserTextInput = (props) => {
 export default view(UserTextInput);
 
 const UserText = styled.input((props) => ({
-  width: `${props.width}vw`,
+  width: `${props.width + 26}%`,
   marginLeft: `${props.left}px`,
+  marginTop: `15px`,
+  marginBottom: `15px`,
   paddingLeft: `10px`,
+  display: `flex`,
+  alignSelf: `center`,
 }));
 
 const InputContainerDiv = styled.div`
   display: flex;
-  margin-top: 25px;
   margin-left: 70px;
-  width: 800px;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;

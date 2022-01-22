@@ -18,6 +18,7 @@ import SortScreenTextInput from "./SortScreenTextInput";
 import PostsortTextInput from "./PostsortTextInput";
 import SurveyTextInput from "./SurveyTextInput";
 import SubmitTextInput from "./SubmitTextInput";
+import LocalSubmitTextInput from "./LocalSubmitTextInput";
 
 const Language = () => {
   const handleClick = () => {
@@ -32,6 +33,8 @@ const Language = () => {
     displayMode = false;
   }
 
+  const configSetupTarget = appState.configSetupTarget;
+
   return (
     <MainContent>
       <GlobalStyle />
@@ -44,29 +47,42 @@ const Language = () => {
       </UploadButtonContainer>
 
       <SectionContainer>
-        <MultipleScreenTextInput />
-
-        <ColorContainer>
-          <LandingScreenTextInput />
-        </ColorContainer>
-
-        <AccessControlTextInput />
-
-        <ColorContainer>
-          <PresortTextInput />
-        </ColorContainer>
-
-        <SortScreenTextInput />
-
-        <ColorContainer>
-          <PostsortTextInput />
-        </ColorContainer>
-
-        <SurveyTextInput />
-
-        <ColorContainer>
-          <SubmitTextInput />
-        </ColorContainer>
+        {configSetupTarget === "local" ? (
+          <>
+            <MultipleScreenTextInput />
+            <ColorContainer>
+              <LocalLanguage />
+            </ColorContainer>
+            <PresortTextInput />
+            <ColorContainer>
+              <SortScreenTextInput />
+            </ColorContainer>
+            <PostsortTextInput />
+            <ColorContainer>
+              <SurveyTextInput />
+            </ColorContainer>
+            <LocalSubmitTextInput />
+          </>
+        ) : (
+          <>
+            <MultipleScreenTextInput />
+            <ColorContainer>
+              <LandingScreenTextInput />
+            </ColorContainer>
+            <AccessControlTextInput />
+            <ColorContainer>
+              <PresortTextInput />
+            </ColorContainer>
+            <SortScreenTextInput />
+            <ColorContainer>
+              <PostsortTextInput />
+            </ColorContainer>
+            <SurveyTextInput />
+            <ColorContainer>
+              <SubmitTextInput />
+            </ColorContainer>
+          </>
+        )}
       </SectionContainer>
       <DownloadMapButton onClick={() => handleClick()}>
         Click here to save to the <b>SETTINGS</b> folder and replace the
