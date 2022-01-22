@@ -34,54 +34,70 @@ const LocalLanguage = () => {
   return (
     <SectionContainer>
       <HeaderButtonBar>
-        <SectionTitle>Landing Screen</SectionTitle>
+        <SectionTitle>
+          Questionnaire Screen
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Optional
+          sect.)
+        </SectionTitle>
         <div>
-          <DefaultsButton id="landingDef" onClick={handleShowDefaults}>
+          <DefaultsButton id="surveyDef" onClick={handleShowDefaults}>
             Use Defaults
           </DefaultsButton>
-          <ClearAllButton id="landingClear" onClick={handleClearAll}>
+          <ClearAllButton id="surveyClear" onClick={handleClearAll}>
             Clear Section
           </ClearAllButton>
-          <RefImageButton id="landingImage" onClick={handleRefImage}>
-            View Reference Image
+          <RefImageButton id="surveyImage" onClick={handleRefImage}>
+            View Ref. Img.
+          </RefImageButton>
+          <RefImageButton id="surveyImage2" onClick={handleRefImage}>
+            View Ref. Img. 2
           </RefImageButton>
           <RefImageButton
-            id="landingImage2"
+            id="surveyImage3"
             marginRight="35px"
             onClick={handleRefImage}
           >
-            View Reference Image 2
+            View Ref. Img. 3
           </RefImageButton>
         </div>
       </HeaderButtonBar>
       <UserTextInput
-        label="2-1. Landing Page Title Bar"
-        stateId="langLandingHead"
+        label="7-1. Post-Sort Questionnaire Header"
+        stateId="langSurveyHeader"
         sectionName="lang"
-        width={34}
-        left={0}
-      />
-      <UserTextAreaInput
-        label="2-2. Welcome Message"
-        stateId="langWelcomeMessage"
-        sectionName="lang"
-        width={36}
-        height={300}
+        width={28.5}
         left={0}
       />
       <UserTextInput
-        label="2-3. Help modal header text"
-        stateId="langLandingHelpModalHead"
+        label="7-2. Questionnaire help modal header"
+        stateId="langSurveyModalHead"
         sectionName="lang"
-        width={34}
+        width={28}
         left={0}
       />
+
       <UserTextAreaInput
-        label="2-4. Help modal main text"
-        stateId="langLandingHelpModalText"
+        label="7-3. Questionnaire help modal text"
+        stateId="langSurveyModalText"
         sectionName="lang"
-        width={35}
-        height={140}
+        width={28}
+        height={100}
+        left={0}
+      />
+      <UserTextInput
+        label="7-4. Prevent navigation modal header"
+        stateId="langSurveyPreventNavModalHead"
+        sectionName="lang"
+        width={28}
+        left={0}
+      />
+
+      <UserTextAreaInput
+        label="7-5. Prevent navigation modal text"
+        stateId="langSurveyPreventNavModalText"
+        sectionName="lang"
+        width={28}
+        height={100}
         left={0}
       />
     </SectionContainer>

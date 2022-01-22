@@ -26,6 +26,28 @@ const showSectionDefaults = () => {
     langLandingHelpModalText: `Thank you for participating in this University Research Project. Please sign in to begin the process. After you submit your participant ID and/or the project access code, the instructions for the survey will appear. Please read them carefully, then click the "<b>Continue</b>" button at the bottom right side of the screen to go to the next step.<br><br> <center><iframe width="640" height="360"
     src="https://www.youtube.com/embed/aHpeu5M7Rlo">
     </iframe></center>`,
+
+    /*
+     ******** LOCAL DATA COLLECTION  ****************** */
+    localHeader: "{{{div}}}Offline Q-sort Control Panel{{{/div}}}",
+    partIdText: "{{{div}}}Participant Name{{{/div}}}",
+    usercodeText: "{{{div}}}Usercode{{{/div}}}",
+    localStartButtonText: "{{{div}}}Start Q-sort{{{/div}}}",
+    localDeleteButtonText: "{{{div}}}Delete{{{/div}}}",
+    localDownloadButtonText: "{{{div}}}Save Q-sort Data to Disk{{{/div}}}",
+    storedQsortsHeaderText: "Stored Q-sorts",
+    localDeleteModalText:
+      "{{{div}}}This will delete the particpant Q-sort data that is currently stored in the browser. You would usually only do this when you are starting a new project.{{{br}}}{{{br}}}{{{b}}}CAUTION - Deleted data cannot be recovered.{{{/b}}} {{{br}}}{{{br}}} {{{center}}}{{{/center}}}{{{/div}}}",
+    localDeleteModalHead: "{{{div}}}Delete Data Stored in Browser?{{{/div}}}",
+    localParticipantsText: "Participants",
+    localSaveDataButton: "Save Participant Data to Browser Memory",
+    localSubmitSuccessModalHeader: "Success",
+    localSubmitSuccessModalText:
+      "Participant Q sort data have been succesfully saved to browser memory",
+    returnToLocalPanelButtonText: "Return to Control Panel",
+    LocalSaveBeforeDeleteModalHeader: "Delete Disabled",
+    LocalSaveBeforeDeleteModalText: "Save Q sort Data to Disk before deleting.",
+
     /*
      ******** PRESORT  ****************** */
     langTitleBarText: `Preliminary Sorting`,

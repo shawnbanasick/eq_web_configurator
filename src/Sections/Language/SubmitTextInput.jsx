@@ -34,54 +34,114 @@ const LocalLanguage = () => {
   return (
     <SectionContainer>
       <HeaderButtonBar>
-        <SectionTitle>Landing Screen</SectionTitle>
+        <SectionTitle>Submit Screen</SectionTitle>
         <div>
-          <DefaultsButton id="landingDef" onClick={handleShowDefaults}>
+          <DefaultsButton id="submitDef" onClick={handleShowDefaults}>
             Use Defaults
           </DefaultsButton>
-          <ClearAllButton id="landingClear" onClick={handleClearAll}>
+          <ClearAllButton id="submitClear" onClick={handleClearAll}>
             Clear Section
           </ClearAllButton>
-          <RefImageButton id="landingImage" onClick={handleRefImage}>
-            View Reference Image
+          <RefImageButton id="submitImage" onClick={handleRefImage}>
+            View Ref. Image
+          </RefImageButton>
+          <RefImageButton id="submitImage2" onClick={handleRefImage}>
+            View Ref. Image 2
+          </RefImageButton>
+          <RefImageButton id="submitImage3" onClick={handleRefImage}>
+            View Ref. Image 3
           </RefImageButton>
           <RefImageButton
-            id="landingImage2"
+            id="submitImage4"
             marginRight="35px"
             onClick={handleRefImage}
           >
-            View Reference Image 2
+            View Ref. Image 4
           </RefImageButton>
         </div>
       </HeaderButtonBar>
+
       <UserTextInput
-        label="2-1. Landing Page Title Bar"
-        stateId="langLandingHead"
+        label="8-1. Final Step"
+        stateId="langTransferHead"
         sectionName="lang"
-        width={34}
+        width={39}
         left={0}
       />
       <UserTextAreaInput
-        label="2-2. Welcome Message"
-        stateId="langWelcomeMessage"
+        label="8-2. Text above Submit Data Button"
+        stateId="langTransferTextAbove"
         sectionName="lang"
-        width={36}
-        height={300}
+        width={27.5}
+        height={75}
         left={0}
       />
       <UserTextInput
-        label="2-3. Help modal header text"
-        stateId="langLandingHelpModalHead"
+        label="8-3. Submit Data"
+        stateId="langBtnTransfer"
         sectionName="lang"
-        width={34}
+        width={38}
         left={0}
       />
       <UserTextAreaInput
-        label="2-4. Help modal main text"
-        stateId="langLandingHelpModalText"
+        label="8-4. Text below Submit Data Button"
+        stateId="langTransferTextBelow"
         sectionName="lang"
-        width={35}
-        height={140}
+        width={28}
+        height={75}
+        left={0}
+      />
+      <UserTextInput
+        label="8-5. Submit data success modal header"
+        stateId="langTransferOkModalHeader"
+        sectionName="lang"
+        width={27}
+        left={0}
+      />
+      <UserTextAreaInput
+        label="8-6. Submit data success modal text"
+        stateId="langTransferOkModalText"
+        sectionName="lang"
+        width={27}
+        height={75}
+        left={0}
+      />
+      <UserTextInput
+        label="8-7. Submit data fail modal header"
+        stateId="langTransferFailModalHeader"
+        sectionName="lang"
+        width={29.6}
+        left={0}
+      />
+      <UserTextAreaInput
+        label="8-8. Submit data fail modal text"
+        stateId="langTransferFailModalText"
+        sectionName="lang"
+        width={31.5}
+        height={75}
+        left={0}
+      />
+      <UserTextAreaInput
+        label="8-9. Fallback message"
+        stateId="langFallbackMessage"
+        sectionName="lang"
+        width={39}
+        height={75}
+        left={0}
+      />
+      <UserTextInput
+        label="8-10. Download button label"
+        stateId="langBtnDownload"
+        sectionName="lang"
+        width={32.6}
+        left={0}
+      />
+      <UserTextAreaInput
+        label="8-11. Goodbye Message"
+        stateId="langGoodbyeMessage"
+        sectionName="lang"
+        width={37}
+        height={80}
         left={0}
       />
     </SectionContainer>

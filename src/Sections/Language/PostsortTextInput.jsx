@@ -34,19 +34,23 @@ const LocalLanguage = () => {
   return (
     <SectionContainer>
       <HeaderButtonBar>
-        <SectionTitle>Landing Screen</SectionTitle>
+        <SectionTitle>
+          Postsort Screen
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Optional
+          section)
+        </SectionTitle>
         <div>
-          <DefaultsButton id="landingDef" onClick={handleShowDefaults}>
+          <DefaultsButton id="postsortDef" onClick={handleShowDefaults}>
             Use Defaults
           </DefaultsButton>
-          <ClearAllButton id="landingClear" onClick={handleClearAll}>
+          <ClearAllButton id="postsortClear" onClick={handleClearAll}>
             Clear Section
           </ClearAllButton>
-          <RefImageButton id="landingImage" onClick={handleRefImage}>
+          <RefImageButton id="postsortImage" onClick={handleRefImage}>
             View Reference Image
           </RefImageButton>
           <RefImageButton
-            id="landingImage2"
+            id="postsortImage2"
             marginRight="35px"
             onClick={handleRefImage}
           >
@@ -55,33 +59,54 @@ const LocalLanguage = () => {
         </div>
       </HeaderButtonBar>
       <UserTextInput
-        label="2-1. Landing Page Title Bar"
-        stateId="langLandingHead"
+        label="6-1. Postsort Header"
+        stateId="langPostsortHeader"
         sectionName="lang"
-        width={34}
+        width={36}
         left={0}
       />
       <UserTextAreaInput
-        label="2-2. Welcome Message"
-        stateId="langWelcomeMessage"
+        label="6-2. Postsort Instructions"
+        stateId="langPostsortInstructions"
         sectionName="lang"
-        width={36}
-        height={300}
+        width={36.6}
+        height={60}
         left={0}
       />
       <UserTextInput
-        label="2-3. Help modal header text"
-        stateId="langLandingHelpModalHead"
+        label="6-3. Text input placeholder (no HTML tags here)"
+        stateId="langPlaceholder"
         sectionName="lang"
-        width={34}
+        width={23.3}
+        left={0}
+      />
+      <UserTextInput
+        label="6-4. Agreement label"
+        stateId="langPostsortAgreement"
+        sectionName="lang"
+        width={36}
+        left={0}
+      />
+      <UserTextInput
+        label="6-5. Disagreement label"
+        stateId="langPostsortDisagreement"
+        sectionName="lang"
+        width={34.4}
+        left={0}
+      />
+      <UserTextInput
+        label="6-6. Postsort help modal header"
+        stateId="langPostsortModalHead"
+        sectionName="lang"
+        width={30.5}
         left={0}
       />
       <UserTextAreaInput
-        label="2-4. Help modal main text"
-        stateId="langLandingHelpModalText"
+        label="6-7. Postsort help modal text"
+        stateId="langPostsortModalText"
         sectionName="lang"
-        width={35}
-        height={140}
+        width={33.4}
+        height={80}
         left={0}
       />
     </SectionContainer>

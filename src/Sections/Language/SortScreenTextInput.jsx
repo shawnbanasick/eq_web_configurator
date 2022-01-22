@@ -34,54 +34,124 @@ const LocalLanguage = () => {
   return (
     <SectionContainer>
       <HeaderButtonBar>
-        <SectionTitle>Landing Screen</SectionTitle>
+        <SectionTitle>Sort Screen</SectionTitle>
         <div>
-          <DefaultsButton id="landingDef" onClick={handleShowDefaults}>
+          <DefaultsButton id="sortDef" onClick={handleShowDefaults}>
             Use Defaults
           </DefaultsButton>
-          <ClearAllButton id="landingClear" onClick={handleClearAll}>
+          <ClearAllButton id="sortClear" onClick={handleClearAll}>
             Clear Section
           </ClearAllButton>
-          <RefImageButton id="landingImage" onClick={handleRefImage}>
-            View Reference Image
+          <RefImageButton id="sortImage" onClick={handleRefImage}>
+            View Ref. Img.
+          </RefImageButton>
+          <RefImageButton id="sortImage2" onClick={handleRefImage}>
+            View Ref. Img. 2
+          </RefImageButton>
+          <RefImageButton id="sortImage3" onClick={handleRefImage}>
+            View Ref. Img. 3
+          </RefImageButton>
+          <RefImageButton id="sortImage4" onClick={handleRefImage}>
+            View Ref. Img. 4
           </RefImageButton>
           <RefImageButton
-            id="landingImage2"
+            id="sortImage5"
             marginRight="35px"
             onClick={handleRefImage}
           >
-            View Reference Image 2
+            View Ref. Img. 5
           </RefImageButton>
         </div>
       </HeaderButtonBar>
       <UserTextInput
-        label="2-1. Landing Page Title Bar"
-        stateId="langLandingHead"
+        label="5-1. Sort help modal header"
+        stateId="langSortHelpModalHead"
         sectionName="lang"
-        width={34}
+        width={32.5}
         left={0}
       />
+
       <UserTextAreaInput
-        label="2-2. Welcome Message"
-        stateId="langWelcomeMessage"
+        label="5-2. Sort help modal main text"
+        stateId="langSortHelpModalText"
         sectionName="lang"
-        width={36}
-        height={300}
+        width={32}
+        height={100}
+        left={0}
+      />
+
+      <UserTextInput
+        label="5-3. Disagree"
+        stateId="langSortDisagreement"
+        sectionName="lang"
+        width={39.4}
+        left={0}
+      />
+
+      <UserTextAreaInput
+        label="5-4. Sort conditions of instruction"
+        stateId="langCondOfInst"
+        sectionName="lang"
+        width={29}
+        height={80}
         left={0}
       />
       <UserTextInput
-        label="2-3. Help modal header text"
-        stateId="langLandingHelpModalHead"
+        label="5-5. Agree"
+        stateId="langSortAgreement"
         sectionName="lang"
-        width={34}
+        width={41}
         left={0}
       />
-      <UserTextAreaInput
-        label="2-4. Help modal main text"
-        stateId="langLandingHelpModalText"
+
+      <UserTextInput
+        label="5-6. Sorting complete modal header"
+        stateId="langSortingCompleteModalHead"
         sectionName="lang"
-        width={35}
-        height={140}
+        width={29}
+        left={0}
+      />
+
+      <UserTextAreaInput
+        label="5-7. Sorting complete modal text"
+        stateId="langSortingCompleteModalText"
+        sectionName="lang"
+        width={29.4}
+        height={100}
+        left={0}
+      />
+
+      <UserTextInput
+        label="5-8. Prevent Navigation modal header"
+        stateId="langSortPreventNavModalHead"
+        sectionName="lang"
+        width={28}
+        left={0}
+      />
+
+      <UserTextAreaInput
+        label="5-9. Prevent Navigation modal text"
+        stateId="langSortPreventNavModalText"
+        sectionName="lang"
+        width={28}
+        height={50}
+        left={0}
+      />
+
+      <UserTextInput
+        label="5-10. Overloaded column modal header"
+        stateId="langSortOverloadedColumnModalHead"
+        sectionName="lang"
+        width={27}
+        left={0}
+      />
+
+      <UserTextAreaInput
+        label="5-11. Overloaded modal text"
+        stateId="langSortOverloadedColumnModalText"
+        sectionName="lang"
+        width={33}
+        height={100}
         left={0}
       />
     </SectionContainer>

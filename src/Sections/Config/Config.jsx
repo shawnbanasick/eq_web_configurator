@@ -166,8 +166,3 @@ const DisplayModeText = styled.div`
   background: whitesmoke;
   border-radius: 5px;
 `;
-
-const QuestionDiv = styled.div`
-  display: flex;
-  align-self: center;
-`;

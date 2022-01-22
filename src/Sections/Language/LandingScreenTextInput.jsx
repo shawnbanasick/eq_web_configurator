@@ -65,7 +65,7 @@ const LocalLanguage = () => {
         label="2-2. Welcome Message"
         stateId="langWelcomeMessage"
         sectionName="lang"
-        width={36}
+        width={37}
         height={300}
         left={0}
       />
@@ -73,14 +73,14 @@ const LocalLanguage = () => {
         label="2-3. Help modal header text"
         stateId="langLandingHelpModalHead"
         sectionName="lang"
-        width={34}
+        width={32.5}
         left={0}
       />
       <UserTextAreaInput
         label="2-4. Help modal main text"
         stateId="langLandingHelpModalText"
         sectionName="lang"
-        width={35}
+        width={35.5}
         height={140}
         left={0}
       />

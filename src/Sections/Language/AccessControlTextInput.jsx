@@ -34,54 +34,75 @@ const LocalLanguage = () => {
   return (
     <SectionContainer>
       <HeaderButtonBar>
-        <SectionTitle>Landing Screen</SectionTitle>
+        <SectionTitle>Access Control</SectionTitle>
         <div>
-          <DefaultsButton id="landingDef" onClick={handleShowDefaults}>
+          <DefaultsButton id="accessDef" onClick={handleShowDefaults}>
             Use Defaults
           </DefaultsButton>
-          <ClearAllButton id="landingClear" onClick={handleClearAll}>
+          <ClearAllButton id="accessClear" onClick={handleClearAll}>
             Clear Section
           </ClearAllButton>
-          <RefImageButton id="landingImage" onClick={handleRefImage}>
-            View Reference Image
-          </RefImageButton>
           <RefImageButton
-            id="landingImage2"
+            id="accessImage"
             marginRight="35px"
             onClick={handleRefImage}
           >
-            View Reference Image 2
+            View Reference Image
           </RefImageButton>
         </div>
       </HeaderButtonBar>
-      <UserTextInput
-        label="2-1. Landing Page Title Bar"
-        stateId="langLandingHead"
-        sectionName="lang"
-        width={34}
-        left={0}
-      />
       <UserTextAreaInput
-        label="2-2. Welcome Message"
-        stateId="langWelcomeMessage"
+        label="3-1. Log-in welcome text"
+        stateId="langLoginWelcomeText"
         sectionName="lang"
         width={36}
-        height={300}
+        height={100}
         left={0}
       />
       <UserTextInput
-        label="2-3. Help modal header text"
-        stateId="langLandingHelpModalHead"
+        label="3-2. Log-in box header text"
+        stateId="langLoginHeaderText"
         sectionName="lang"
-        width={34}
+        width={33}
         left={0}
       />
-      <UserTextAreaInput
-        label="2-4. Help modal main text"
-        stateId="langLandingHelpModalText"
+
+      <UserTextInput
+        label="3-3. Participant name label"
+        stateId="langLoginPartIdText"
+        sectionName="lang"
+        width={33}
+        left={0}
+      />
+
+      <UserTextInput
+        label="3-4. Access code label"
+        stateId="langAccessInputText"
         sectionName="lang"
         width={35}
-        height={140}
+        left={0}
+      />
+
+      <UserTextInput
+        label="3-5. Invalid name warning"
+        stateId="langPartIdWarning"
+        sectionName="lang"
+        width={33.5}
+        left={0}
+      />
+
+      <UserTextInput
+        label="3-6. Invalid access code warning"
+        stateId="langAccessCodeWarning"
+        sectionName="lang"
+        width={30.3}
+        left={0}
+      />
+      <UserTextInput
+        label="3-7. Log-in submit button"
+        stateId="loginSubmitButtonText"
+        sectionName="lang"
+        width={34}
         left={0}
       />
     </SectionContainer>

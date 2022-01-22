@@ -34,53 +34,109 @@ const LocalLanguage = () => {
   return (
     <SectionContainer>
       <HeaderButtonBar>
-        <SectionTitle>Landing Screen</SectionTitle>
+        <SectionTitle>Presort Screen</SectionTitle>
         <div>
-          <DefaultsButton id="landingDef" onClick={handleShowDefaults}>
+          <DefaultsButton id="presortDef" onClick={handleShowDefaults}>
             Use Defaults
           </DefaultsButton>
-          <ClearAllButton id="landingClear" onClick={handleClearAll}>
+          <ClearAllButton id="presortClear" onClick={handleClearAll}>
             Clear Section
           </ClearAllButton>
-          <RefImageButton id="landingImage" onClick={handleRefImage}>
-            View Reference Image
+          <RefImageButton id="presortImage" onClick={handleRefImage}>
+            View Ref. Image
+          </RefImageButton>
+          <RefImageButton id="presortImage2" onClick={handleRefImage}>
+            View Ref. Image 2
+          </RefImageButton>
+          <RefImageButton id="presortImage3" onClick={handleRefImage}>
+            View Ref. Image 3
           </RefImageButton>
           <RefImageButton
-            id="landingImage2"
+            id="presortImage4"
             marginRight="35px"
             onClick={handleRefImage}
           >
-            View Reference Image 2
+            View Ref. Image 4
           </RefImageButton>
         </div>
       </HeaderButtonBar>
       <UserTextInput
-        label="2-1. Landing Page Title Bar"
-        stateId="langLandingHead"
+        label="4-1. Title bar text"
+        stateId="langTitleBarText"
         sectionName="lang"
-        width={34}
-        left={0}
-      />
-      <UserTextAreaInput
-        label="2-2. Welcome Message"
-        stateId="langWelcomeMessage"
-        sectionName="lang"
-        width={36}
-        height={300}
+        width={38}
         left={0}
       />
       <UserTextInput
-        label="2-3. Help modal header text"
-        stateId="langLandingHelpModalHead"
+        label="4-2. Statements"
+        stateId="langPresortStatements"
         sectionName="lang"
-        width={34}
+        width={38.4}
+        left={0}
+      />
+      <UserTextInput
+        label={`4-3. "Agree"`}
+        stateId="langPresortAgreement"
+        sectionName="lang"
+        width={40.2}
+        left={0}
+      />
+      <UserTextInput
+        label={`4-4. "Neutral"`}
+        stateId="langPresortNeutral"
+        sectionName="lang"
+        width={39.6}
+        left={0}
+      />
+      <UserTextInput
+        label={`4-5. "Disagree"`}
+        stateId="langPresortDisagreement"
+        sectionName="lang"
+        width={38.8}
+        left={0}
+      />
+      <UserTextInput
+        label="4-6. Presort modal header text"
+        stateId="langPresortModalHead"
+        sectionName="lang"
+        width={31.5}
         left={0}
       />
       <UserTextAreaInput
-        label="2-4. Help modal main text"
-        stateId="langLandingHelpModalText"
+        label="4-7. Presort modal main text"
+        stateId="langPresortModalText"
         sectionName="lang"
-        width={35}
+        width={33.5}
+        height={140}
+        left={0}
+      />
+      <UserTextInput
+        label="4-8. Prevent navigation modal header"
+        stateId="langPresortPreventNavModalHead"
+        sectionName="lang"
+        width={28}
+        left={0}
+      />
+      <UserTextAreaInput
+        label="4-9. Prevent navigation modal main text"
+        stateId="langPresortPreventNavModalText"
+        sectionName="lang"
+        width={23.3}
+        height={140}
+        left={0}
+      />
+      <UserTextInput
+        label="4-10. Presort complete modal header"
+        stateId="langPresortFinishedModalHead"
+        sectionName="lang"
+        width={28.2}
+        left={0}
+      />
+      <UserTextAreaInput
+        label="4-11. Presort complete modal main text"
+        stateId="langPresortFinishedModalText"
+        sectionName="lang"
+        width={24}
         height={140}
         left={0}
       />

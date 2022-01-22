@@ -34,54 +34,65 @@ const LocalLanguage = () => {
   return (
     <SectionContainer>
       <HeaderButtonBar>
-        <SectionTitle>Landing Screen</SectionTitle>
+        <SectionTitle>Multiple Screen Text</SectionTitle>
         <div>
-          <DefaultsButton id="landingDef" onClick={handleShowDefaults}>
+          <DefaultsButton id="footerDef" onClick={handleShowDefaults}>
             Use Defaults
           </DefaultsButton>
-          <ClearAllButton id="landingClear" onClick={handleClearAll}>
+          <ClearAllButton id="footerClear" onClick={handleClearAll}>
             Clear Section
           </ClearAllButton>
-          <RefImageButton id="landingImage" onClick={handleRefImage}>
-            View Reference Image
-          </RefImageButton>
           <RefImageButton
-            id="landingImage2"
+            id="footerImage"
             marginRight="35px"
             onClick={handleRefImage}
           >
-            View Reference Image 2
+            View Reference Image
           </RefImageButton>
         </div>
       </HeaderButtonBar>
       <UserTextInput
-        label="2-1. Landing Page Title Bar"
-        stateId="langLandingHead"
+        label="1. Help me!"
+        stateId="langBtnHelp"
         sectionName="lang"
-        width={34}
-        left={0}
-      />
-      <UserTextAreaInput
-        label="2-2. Welcome Message"
-        stateId="langWelcomeMessage"
-        sectionName="lang"
-        width={36}
-        height={300}
+        width={40.4}
         left={0}
       />
       <UserTextInput
-        label="2-3. Help modal header text"
-        stateId="langLandingHelpModalHead"
+        label="2. Text Size"
+        stateId="langFooterTextSize"
         sectionName="lang"
-        width={34}
+        width={40.4}
+        left={0}
+      />
+      <UserTextInput
+        label="3. Card Height"
+        stateId="langFooterCardHeight"
+        sectionName="lang"
+        width={39}
+        left={0}
+      />
+      <UserTextInput
+        label="4. Continue"
+        stateId="langBtnNext"
+        sectionName="lang"
+        width={40.5}
         left={0}
       />
       <UserTextAreaInput
-        label="2-4. Help modal main text"
-        stateId="langLandingHelpModalText"
+        label="5. Step completed message"
+        stateId="langStepCompleted"
         sectionName="lang"
-        width={35}
-        height={140}
+        width={33}
+        height={150}
+        left={0}
+      />
+      <UserTextAreaInput
+        label="6. Log in first message"
+        stateId="langLoginFirst"
+        sectionName="lang"
+        width={38}
+        height={150}
         left={0}
       />
     </SectionContainer>
