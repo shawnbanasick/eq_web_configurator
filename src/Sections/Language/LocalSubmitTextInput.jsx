@@ -54,89 +54,36 @@ const LocalLanguage = () => {
           </RefImageButton>
         </div>
       </HeaderButtonBar>
+
       <UserTextInput
-        label="1-1. Control Panel Title Bar"
-        stateId="langLocalHeader"
+        label="8-1. Save Data Button"
+        stateId="langLocalSaveDataButton"
+        sectionName="lang"
+        width={37.6}
+        left={0}
+      />
+
+      <UserTextInput
+        label="8-2. Save Q sort Success Header"
+        stateId="langLocalSubmitSuccessModalHeader"
         sectionName="lang"
         width={34.7}
         left={0}
       />
-      <UserTextInput
-        label="1-2. Participant Name"
-        stateId="langPartIdText"
-        sectionName="lang"
-        width={37.4}
-        left={0}
-      />
-      <UserTextInput
-        label="1-3. Usercode"
-        stateId="langUsercodeText"
-        sectionName="lang"
-        width={41.2}
-        left={0}
-      />
 
       <UserTextInput
-        label="1-4. Start Button"
-        stateId="langLocalStartButtonText"
-        sectionName="lang"
-        width={40}
-        left={0}
-      />
-      <UserTextInput
-        label="1-5. Delete Button"
-        stateId="langLocalDeleteButtonText"
-        sectionName="lang"
-        width={39.1}
-        left={0}
-      />
-
-      <UserTextInput
-        label="1-6. Download Button"
-        stateId="langLocalDownloadButtonText"
-        sectionName="lang"
-        width={37.4}
-        left={0}
-      />
-
-      <UserTextInput
-        label="1-7. Stored Q sorts Header Text"
-        stateId="langStoredQsortsHeaderText"
+        label="8-3. Save Q sort Success Text"
+        stateId="langLocalSubmitSuccessModalText"
         sectionName="lang"
         width={32.3}
         left={0}
       />
 
       <UserTextInput
-        label="1-8. Delete Modal Header"
-        stateId="langLocalDeleteModalHead"
+        label="8-4. Return to Control Panel Button"
+        stateId="langReturnToLocalPanelButtonText"
         sectionName="lang"
         width={35.3}
-        left={0}
-      />
-
-      <UserTextAreaInput
-        label="1-9. Delete Modal Text"
-        stateId="langLocalDeleteModalText"
-        sectionName="lang"
-        width={38.5}
-        height={100}
-        left={0}
-      />
-
-      <UserTextInput
-        label="1-10. Participants"
-        stateId="langLocalParticipantsText"
-        sectionName="lang"
-        width={39.5}
-        left={0}
-      />
-
-      <UserTextInput
-        label="1-11. Save Data Button"
-        stateId="langLocalSaveDataButton"
-        sectionName="lang"
-        width={36.6}
         left={0}
       />
     </SectionContainer>

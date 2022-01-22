@@ -131,12 +131,18 @@ const LocalLanguage = () => {
         width={42.5}
         left={0}
       />
-
       <UserTextInput
-        label="1-11. Save Data Button"
-        stateId="langLocalSaveDataButton"
+        label="1-11. Save Before Delete Header"
+        stateId="langLocalSaveBeforeDeleteModalHeader"
         sectionName="lang"
-        width={37.6}
+        width={29}
+        left={0}
+      />
+      <UserTextInput
+        label="1-12. Save Before Delete Text"
+        stateId="langLocalSaveBeforeDeleteModalText"
+        sectionName="lang"
+        width={32}
         left={0}
       />
     </SectionContainer>
