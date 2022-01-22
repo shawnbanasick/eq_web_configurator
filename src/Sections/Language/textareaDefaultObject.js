@@ -29,24 +29,25 @@ const showSectionDefaults = () => {
 
     /*
      ******** LOCAL DATA COLLECTION  ****************** */
-    localHeader: "{{{div}}}Offline Q-sort Control Panel{{{/div}}}",
-    partIdText: "{{{div}}}Participant Name{{{/div}}}",
-    usercodeText: "{{{div}}}Usercode{{{/div}}}",
-    localStartButtonText: "{{{div}}}Start Q-sort{{{/div}}}",
-    localDeleteButtonText: "{{{div}}}Delete{{{/div}}}",
-    localDownloadButtonText: "{{{div}}}Save Q-sort Data to Disk{{{/div}}}",
-    storedQsortsHeaderText: "Stored Q-sorts",
-    localDeleteModalText:
-      "{{{div}}}This will delete the particpant Q-sort data that is currently stored in the browser. You would usually only do this when you are starting a new project.{{{br}}}{{{br}}}{{{b}}}CAUTION - Deleted data cannot be recovered.{{{/b}}} {{{br}}}{{{br}}} {{{center}}}{{{/center}}}{{{/div}}}",
-    localDeleteModalHead: "{{{div}}}Delete Data Stored in Browser?{{{/div}}}",
-    localParticipantsText: "Participants",
-    localSaveDataButton: "Save Participant Data to Browser Memory",
-    localSubmitSuccessModalHeader: "Success",
-    localSubmitSuccessModalText:
+    langLocalHeader: "Offline Q-sort Control Panel",
+    langPartIdText: "Participant Name",
+    langUsercodeText: "Usercode",
+    langLocalStartButtonText: "Start Q-sort",
+    langLocalDeleteButtonText: "Delete",
+    langLocalDownloadButtonText: "Save Q-sort Data to Disk",
+    langStoredQsortsHeaderText: "Stored Q-sorts",
+    langLocalDeleteModalText:
+      "This will delete the particpant Q-sort data that is currently stored in the browser. You would usually only do this when you are starting a new project.<br><br><b>CAUTION - Deleted data cannot be recovered.</b> <br><br> <center></center>",
+    langLocalDeleteModalHead: "Delete Data Stored in Browser?",
+    langLocalParticipantsText: "Participants",
+    langLocalSaveDataButton: "Save Participant Data to Browser Memory",
+    langLocalSubmitSuccessModalHeader: "Success",
+    langLocalSubmitSuccessModalText:
       "Participant Q sort data have been succesfully saved to browser memory",
-    returnToLocalPanelButtonText: "Return to Control Panel",
-    LocalSaveBeforeDeleteModalHeader: "Delete Disabled",
-    LocalSaveBeforeDeleteModalText: "Save Q sort Data to Disk before deleting.",
+    langReturnToLocalPanelButtonText: "Return to Control Panel",
+    langLocalSaveBeforeDeleteModalHeader: "Delete Disabled",
+    langLocalSaveBeforeDeleteModalText:
+      "Save Q sort Data to Disk before deleting.",
 
     /*
      ******** PRESORT  ****************** */

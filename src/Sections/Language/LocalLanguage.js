@@ -36,13 +36,13 @@ const LocalLanguage = () => {
       <HeaderButtonBar>
         <SectionTitle>Local Data Collection - Control Panel</SectionTitle>
         <div>
-          <DefaultsButton id="landingDef" onClick={handleShowDefaults}>
+          <DefaultsButton id="localDef" onClick={handleShowDefaults}>
             Use Defaults
           </DefaultsButton>
-          <ClearAllButton id="landingClear" onClick={handleClearAll}>
+          <ClearAllButton id="localClear" onClick={handleClearAll}>
             Clear Section
           </ClearAllButton>
-          <RefImageButton id="landingImage" onClick={handleRefImage}>
+          <RefImageButton id="localImage" onClick={handleRefImage}>
             View Reference Image
           </RefImageButton>
           <RefImageButton

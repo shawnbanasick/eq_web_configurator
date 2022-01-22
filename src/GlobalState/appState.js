@@ -196,6 +196,29 @@ const appState = store({
   langLandingHelpModalText: `Thank you for participating in this University Research Project. Please sign in to begin the process. After you submit your participant ID and/or the project access code, the instructions for the survey will appear. Please read them carefully, then click the "<b>Continue</b>" button at the bottom right side of the screen to go to the next step.<br><br> <center><iframe width="640" height="360"
   src="https://www.youtube.com/embed/tgbNymZ7vqY">
   </iframe></center>`,
+
+  /*
+   ******** LOCAL DATA COLLECTION  ****************** */
+  langLocalHeader: "Offline Q-sort Control Panel",
+  langPartIdText: "Participant Name",
+  langUsercodeText: "Usercode",
+  langLocalStartButtonText: "Start Q-sort",
+  langLocalDeleteButtonText: "Delete",
+  langLocalDownloadButtonText: "Save Q-sort Data to Disk",
+  langStoredQsortsHeaderText: "Stored Q-sorts",
+  langLocalDeleteModalText:
+    "This will delete the particpant Q-sort data that is currently stored in the browser. You would usually only do this when you are starting a new project.<br><br><b>CAUTION - Deleted data cannot be recovered.</b> <br><br> <center></center>",
+  langLocalDeleteModalHead: "Delete Data Stored in Browser?",
+  langLocalParticipantsText: "Participants",
+  langLocalSaveDataButton: "Save Participant Data to Browser Memory",
+  langLocalSubmitSuccessModalHeader: "Success",
+  langLocalSubmitSuccessModalText:
+    "Participant Q sort data have been succesfully saved to browser memory",
+  langReturnToLocalPanelButtonText: "Return to Control Panel",
+  langLocalSaveBeforeDeleteModalHeader: "Delete Disabled",
+  langLocalSaveBeforeDeleteModalText:
+    "Save Q sort Data to Disk before deleting.",
+
   /*
    ******** PRESORT  ****************** */
   langTitleBarText: `Preliminary Sorting`,

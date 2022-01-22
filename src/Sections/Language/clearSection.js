@@ -48,6 +48,25 @@ const showSectionDefaults = (section) => {
     clearSection(selectorArray);
   }
 
+  if (section === "localClear") {
+    selectorArray = [
+      "langLocalHeader",
+      "langPartIdText",
+      "langUsercodeText",
+      "langLocalStartButtonText",
+      "langLocalDeleteButtonText",
+      "langLocalDownloadButtonText",
+      "langStoredQsortsHeaderText",
+      "langLocalDeleteModalHead",
+      "langLocalDeleteModalText",
+      "langLocalParticipantsText",
+      "langLocalSaveBeforeDeleteModalHeader",
+      "langLocalSaveBeforeDeleteModalText",
+    ];
+
+    clearSection(selectorArray);
+  }
+
   if (section === "presortClear") {
     selectorArray = [
       "langTitleBarText",
@@ -120,6 +139,16 @@ const showSectionDefaults = (section) => {
       "langFallbackMessage",
       "langBtnDownload",
       "langGoodbyeMessage",
+    ];
+
+    clearSection(selectorArray);
+  }
+  if (section === "localSubmitClear") {
+    selectorArray = [
+      "langLocalSaveDataButton",
+      "langLocalSubmitSuccessModalHeader",
+      "langLocalSubmitSuccessModalText",
+      "langReturnToLocalPanelButtonText",
     ];
 
     clearSection(selectorArray);

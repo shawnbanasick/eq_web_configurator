@@ -50,6 +50,25 @@ const showSectionDefaults = (section) => {
     setDefaults(selectorArray);
   }
 
+  if (section === "localDef") {
+    selectorArray = [
+      "langLocalHeader",
+      "langPartIdText",
+      "langUsercodeText",
+      "langLocalStartButtonText",
+      "langLocalDeleteButtonText",
+      "langLocalDownloadButtonText",
+      "langStoredQsortsHeaderText",
+      "langLocalDeleteModalHead",
+      "langLocalDeleteModalText",
+      "langLocalParticipantsText",
+      "langLocalSaveBeforeDeleteModalHeader",
+      "langLocalSaveBeforeDeleteModalText",
+    ];
+
+    setDefaults(selectorArray);
+  }
+
   if (section === "presortDef") {
     selectorArray = [
       "langTitleBarText",
@@ -123,6 +142,16 @@ const showSectionDefaults = (section) => {
       "langFallbackMessage",
       "langBtnDownload",
       "langGoodbyeMessage",
+    ];
+
+    setDefaults(selectorArray);
+  }
+  if (section === "localSubmitDef") {
+    selectorArray = [
+      "langLocalSaveDataButton",
+      "langLocalSubmitSuccessModalHeader",
+      "langLocalSubmitSuccessModalText",
+      "langReturnToLocalPanelButtonText",
     ];
 
     setDefaults(selectorArray);

@@ -27,6 +27,25 @@ const showSectionDefaults = () => {
     loginSubmitButtonText: "loginSubmitButtonText",
 
     /*
+     ******** LOCAL Screen ****** */
+    localHeader: "langLocalHeader",
+    partIdText: "langPartIdText",
+    usercodeText: "langUsercodeText",
+    localStartButtonText: "langLocalStartButtonText",
+    localDeleteButtonText: "langLocalDeleteButtonText",
+    localDownloadButtonText: "langLocalDownloadButtonText",
+    storedQsortsHeaderText: "langStoredQsortsHeaderText",
+    localDeleteModalText: "langLocalDeleteModalHead",
+    localDeleteModalHead: "langLocalDeleteModalText",
+    localParticipantsText: "langLocalParticipantsText",
+    localSaveBeforeDeleteModalHeader: "langLocalSaveBeforeDeleteModalHeader",
+    localSaveBeforeDeleteModalText: "langLocalSaveBeforeDeleteModalText",
+    localSaveDataButton: "langLocalSaveDataButton",
+    localSubmitSuccessModalHeader: "langLocalSubmitSuccessModalHeader",
+    localSubmitSuccessModalText: "langLocalSubmitSuccessModalText",
+    returnToLocalPanelButtonText: "langReturnToLocalPanelButtonText",
+
+    /*
      ******** PRESORT Screen ****** */
     titleBarText: "langTitleBarText",
     presortStatements: "langPresortStatements",

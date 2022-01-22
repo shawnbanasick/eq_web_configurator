@@ -38,10 +38,10 @@ const LocalLanguage = () => {
           Local Data Collection - Save to Browser Memory
         </SectionTitle>
         <div>
-          <DefaultsButton id="landingDef" onClick={handleShowDefaults}>
+          <DefaultsButton id="localSubmitDef" onClick={handleShowDefaults}>
             Use Defaults
           </DefaultsButton>
-          <ClearAllButton id="landingClear" onClick={handleClearAll}>
+          <ClearAllButton id="localSubmitClear" onClick={handleClearAll}>
             Clear Section
           </ClearAllButton>
 
