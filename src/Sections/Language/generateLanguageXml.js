@@ -58,6 +58,50 @@ const generateLanguageXml = () => {
           appState.langLandingHelpModalText
         )}</item>
 
+        <!-- LOCAL DATA COLLECTION -->  
+        <item id="localHeader">${encodeHTML(appState.langLocalHeader)}</item>
+        <item id="partIdText">${encodeHTML(appState.langPartIdText)}</item>
+        <item id="usercodeText">${encodeHTML(appState.langUsercodeText)}</item>
+        <item id="localStartButtonText">${encodeHTML(
+          appState.langLocalStartButtonText
+        )}</item>
+        <item id="localDeleteButtonText">${encodeHTML(
+          appState.langLocalDeleteButtonText
+        )}</item>
+        <item id="localDownloadButtonText">${encodeHTML(
+          appState.langLocalDownloadButtonText
+        )}</item>
+        <item id="storedQsortsHeaderText">${encodeHTML(
+          appState.langStoredQsortsHeaderText
+        )}</item>
+        <item id="localDeleteModalHead">${encodeHTML(
+          appState.langLocalDeleteModalHead
+        )}</item>
+        <item id="localDeleteModalText">${encodeHTML(
+          appState.langLocalDeleteModalText
+        )}</item>
+        <item id="localParticipantsText">${encodeHTML(
+          appState.langLocalParticipantsText
+        )}</item>
+        <item id="localSaveBeforeDeleteModalHeader">${encodeHTML(
+          appState.langLocalSaveBeforeDeleteModalHeader
+        )}</item>
+        <item id="localSaveBeforeDeleteModalText">${encodeHTML(
+          appState.langLocalSaveBeforeDeleteModalText
+        )}</item>
+        <item id="localSaveDataButton">${encodeHTML(
+          appState.langLocalSaveDataButton
+        )}</item>
+        <item id="localSubmitSuccessModalHeader">${encodeHTML(
+          appState.langLocalSubmitSuccessModalHeader
+        )}</item>
+        <item id="localSubmitSuccessModalText">${encodeHTML(
+          appState.langLocalSubmitSuccessModalText
+        )}</item>
+        <item id="returnToLocalPanelButtonText">${encodeHTML(
+          appState.langReturnToLocalPanelButtonText
+        )}</item>
+
         <!-- PRESORT: rough sorting into three piles (leave blank to skip popup)-->
         <item id="titleBarText">${encodeHTML(appState.langTitleBarText)}</item>
         <item id="presortAgreement">${encodeHTML(
