@@ -14,6 +14,12 @@ const LocalLanguage = () => {
   return (
     <>
       <DisplayModeText>
+        <h4>Local Data Collection Mode</h4>
+        If you want to set up the language for a local, offline data collection
+        project, be sure to choose "local" for question 2 "Setup target" in the
+        Config section first.
+        <br />
+        <br />
         <h4>Section Buttons</h4>
         The "Use Defaults" button will insert the default text into all of the
         input boxes in that section. The "Clear Section" button will clear all

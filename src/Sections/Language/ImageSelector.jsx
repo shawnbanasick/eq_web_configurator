@@ -31,7 +31,6 @@ import localSubmit2 from "../../assets/images/localSubmit2.png";
 
 const ImageSelector = () => {
   const selector = appState.imageToShow;
-  console.log(selector);
 
   if (selector === "footerImage") {
     return <img src={footerImage} alt="s"></img>;

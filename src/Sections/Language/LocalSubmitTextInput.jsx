@@ -2,7 +2,6 @@ import React from "react";
 import { view } from "@risingstack/react-easy-state";
 import styled from "styled-components";
 import UserTextInput from "../../Utils/UserTextInput";
-import UserTextAreaInput from "../../Utils/UserTextAreaInput";
 import appState from "../../GlobalState/appState";
 import showSectionDefaults from "./showSectionDefaults";
 import clearSection from "./clearSection";
@@ -44,13 +43,16 @@ const LocalLanguage = () => {
           <ClearAllButton id="localSubmitClear" onClick={handleClearAll}>
             Clear Section
           </ClearAllButton>
+          <RefImageButton id="localSubmit" onClick={handleRefImage}>
+            View Reference Image
+          </RefImageButton>
 
           <RefImageButton
-            id="landingImage2"
+            id="localSubmit2"
             marginRight="35px"
             onClick={handleRefImage}
           >
-            View Reference Image
+            View Reference Image 2
           </RefImageButton>
         </div>
       </HeaderButtonBar>
