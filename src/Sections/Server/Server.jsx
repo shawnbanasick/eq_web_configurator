@@ -6,8 +6,8 @@ import GeneralButton from "../../Utils/GeneralButton";
 import appState from "../../GlobalState/appState";
 import { toast } from "react-toastify";
 import { ToastContainer, Slide } from "react-toastify";
-import eqClickSaveFiles from "../../assets/images/eq-click-save-files.png";
-import eqDownloadZip from "../../assets/images/eq-download-zip.png";
+import eqDownloadImage from "../../assets/images/eq-web-sort-download-link.png";
+import baseFilesImage from "../../assets/images/base-files.png";
 
 const electron = window.require("electron");
 const ipcRenderer = electron.ipcRenderer;
@@ -93,23 +93,24 @@ const Server = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/shawnbanasick/easy-htmlq"
+              href="https://github.com/shawnbanasick/eq-web-sort"
             >
               EQ Web Sort
             </a>{" "}
-            home page and click the green "Code" button.
+            home page and click the blue download link.
           </DisplayModeText>
           <SpacerDiv />
-          <img src={eqClickSaveFiles} width="90%" alt="a" />
+          <img src={eqDownloadImage} width="90%" alt="a" />
           <DisplayModeText>
-            Click on "Download ZIP". The files will be in a compressed format
-            (*.zip), so don't forget to{" "}
+            The files will be in a compressed format (*.zip), so don't forget to{" "}
             <b>
               <i>decompress</i>
             </b>{" "}
-            them.
+            them on your computer.
           </DisplayModeText>
-          <img src={eqDownloadZip} alt="a" />
+          <SpacerDiv />
+          <img src={baseFilesImage} alt="a" />
+
           <DisplayModeText>
             To start the local web server, all you need to do is
             <b> find the uncompressed folder </b>with the EQ Web Sort base
