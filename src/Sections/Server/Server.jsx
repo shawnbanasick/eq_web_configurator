@@ -100,6 +100,7 @@ const Server = () => {
             home page and click the blue download link.
           </DisplayModeText>
           <SpacerDiv />
+          <StyledParagraph>Figure 1</StyledParagraph>
           <img src={eqDownloadImage} width="90%" alt="a" />
           <DisplayModeText>
             The files will be in a compressed format (*.zip), so don't forget to{" "}
@@ -109,9 +110,15 @@ const Server = () => {
             them on your computer.
           </DisplayModeText>
           <SpacerDiv />
+
+          <StyledParagraph>Figure 2</StyledParagraph>
           <img src={baseFilesImage} alt="a" />
 
           <DisplayModeText>
+            In the uncompressed folder (Figure 2) you will see the index.html
+            file and another folder called "settings".
+            <br />
+            <br />
             To start the local web server, all you need to do is
             <b> find the uncompressed folder </b>with the EQ Web Sort base
             files. You don't need to select a specific file - you just need to
@@ -292,4 +299,10 @@ const DisplayModeText = styled.div`
 
 const SpacerDiv = styled.div`
   margin-bottom: 50px;
+`;
+
+const StyledParagraph = styled.div`
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 30px;
 `;
