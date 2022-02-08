@@ -6,8 +6,9 @@ import GeneralButton from "../../Utils/GeneralButton";
 import appState from "../../GlobalState/appState";
 import { toast } from "react-toastify";
 import { ToastContainer, Slide } from "react-toastify";
-import eqDownloadImage from "../../assets/images/eq-web-sort-download-link.png";
-import baseFilesImage from "../../assets/images/base-files.png";
+import eqDownloadImage from "../../assets/images/eq-web-sort-download-link2.png";
+import baseFilesImage from "../../assets/images/base-files2.png";
+import settingsFiles from "../../assets/images/settings-files.png";
 
 const electron = window.require("electron");
 const ipcRenderer = electron.ipcRenderer;
@@ -97,7 +98,7 @@ const Server = () => {
             >
               EQ Web Sort
             </a>{" "}
-            home page and click the blue download link.
+            home page and click the download link (Figure 1).
           </DisplayModeText>
           <SpacerDiv />
           <StyledParagraph>Figure 1</StyledParagraph>
@@ -116,13 +117,24 @@ const Server = () => {
 
           <DisplayModeText>
             In the uncompressed folder (Figure 2) you will see the index.html
-            file and another folder called "settings".
+            file (#1) and folder called "settings" (#2). Inside the settings
+            folder are the four xml configuration files and the Firebase
+            configuration file (Figure 3). These are the files that you will
+            modify to set up your project.
+          </DisplayModeText>
+          <SpacerDiv />
+
+          <StyledParagraph>Figure 3</StyledParagraph>
+          <img src={settingsFiles} alt="a" />
+          <DisplayModeText>
+            To facilitate the editing of the settings files, start the local web
+            server built into this software so that you can see the changes that
+            you make.
             <br />
             <br />
-            To start the local web server, all you need to do is
-            <b> find the uncompressed folder </b>with the EQ Web Sort base
-            files. You don't need to select a specific file - you just need to
-            find the folder.
+            Click the orange button below and navigate to the folder with the
+            index.html file (see Figure 2) to start the server. You don't need
+            to select a specific file - you just need to find the folder.
           </DisplayModeText>
           <SpacerDiv />
         </>
@@ -149,8 +161,8 @@ const Server = () => {
           However, after you set up your Firebase file, this demo project will
           save completed Q sort data to the Firebase realtime database. So, you
           can use this local server to test your complete setup - including data
-          upload (however, don't forget to delete any testing data from your
-          Firebase location before you begin your actual project).
+          upload (don't forget to delete any testing data from your Firebase
+          location before you begin your actual project).
         </DisplayModeText>
       )}
       <SpacerDiv />
