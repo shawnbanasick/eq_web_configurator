@@ -17,6 +17,14 @@ const GeneralOptions = () => {
   return (
     <React.Fragment>
       <SubTitle>General Options</SubTitle>
+
+      {displayMode && (
+        <DisplayModeText>
+          If you are planning to do the usual online Q sort project, leave the
+          setup target set to "<b>online</b>". The "<b>local</b>" option
+        </DisplayModeText>
+      )}
+
       <UserTextInput
         label="1. Project title:"
         stateId="configTitle"
@@ -68,6 +76,18 @@ const ColorLabel = styled.div`
   margin-top: 20px;
   align-items: center;
   gap: 20px;
+`;
+
+const DisplayModeText = styled.div`
+  align-self: left;
+  margin-left: 10px;
+  width: 75vw;
+  max-width: 1000px;
+  font-size: 20px;
+  padding: 10px;
+  border: 2px solid black;
+  background: whitesmoke;
+  border-radius: 5px;
 `;
 
 /* 

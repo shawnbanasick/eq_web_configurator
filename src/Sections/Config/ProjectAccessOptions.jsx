@@ -16,7 +16,7 @@ const ProjectAccessOptions = () => {
 
   let configAccess = appState.configAccess;
   let showAccessCodeInput;
-  if (configAccess === "Name only" || configAccess === "anonymous") {
+  if (configAccess === "name only" || configAccess === "anonymous") {
     showAccessCodeInput = false;
   } else {
     showAccessCodeInput = true;
@@ -27,18 +27,16 @@ const ProjectAccessOptions = () => {
       <SubTitle>Project Access</SubTitle>
       {displayMode && (
         <DisplayModeText>
-          <b>Project Access</b>
-          <br /> There are four access options available:
+          There are four sign-in screen options available:
           <br />
-          <br />* anonymous (no sign-in screen shown)
-          <br />* Name or Participant ID
-          <br />* Name or Participant ID and Access Code
-          <br />* Access Code only
+          <br />* Anonymous (no sign-in screen shown)
+          <br />* Project Access Code only
+          <br />* Participant name only
+          <br />* Participant name and Project Access Code
           <br />
           <br />
-          Currently, any text is accepted for the Name or Participant ID. The
-          project access code will be the same for all participants. The code
-          can be a phrase or a single word, and is case-sensitive.
+          The project access code will be the same for all participants. The
+          access code can be a phrase or a single word, and is case-sensitive.
         </DisplayModeText>
       )}
 
@@ -46,8 +44,8 @@ const ProjectAccessOptions = () => {
         label="5a. Project Access:"
         buttonIdArray={[
           "anonymous",
-          "Name only",
-          "Name + access code",
+          "name only",
+          "name + access code",
           "access code only",
         ]}
         stateId="configAccess"

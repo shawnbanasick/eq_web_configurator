@@ -133,10 +133,10 @@ const UploadXmlFileButton = () => {
         appState["configHeaderBarColor"] = inputObj.headerBarColor;
 
         // set  5a. project access
-        //  ["anonymous", "Name only", "Name + access code", "access code only"]
+        //  ["anonymous", "name only", "name + access code", "access code only"]
         appState["configAccessanonymousActive"] = false;
-        appState["configAccessName onlyActive"] = false;
-        appState["configAccessName + access codeActive"] = false;
+        appState["configAccessname onlyActive"] = false;
+        appState["configAccessname + access codeActive"] = false;
         appState["configAccessaccess code onlActive"] = false;
         if (inputObj.initialScreen === "anonymous") {
           appState["configAccessanonymousActive"] = true;
@@ -144,14 +144,14 @@ const UploadXmlFileButton = () => {
           appState["configAccess"] = "anonymous";
         }
         if (inputObj.initialScreen === "partId") {
-          appState["configAccessName onlyActive"] = true;
-          localStorage.setItem("configAccess", "Name only");
-          appState["configAccess"] = "Name only";
+          appState["configAccessname onlyActive"] = true;
+          localStorage.setItem("configAccess", "name only");
+          appState["configAccess"] = "name only";
         }
         if (inputObj.initialScreen === "partId-access") {
-          appState["configAccessName + access codeActive"] = true;
-          localStorage.setItem("configAccess", "Name + access code");
-          appState["configAccess"] = "Name + access code";
+          appState["configAccessname + access codeActive"] = true;
+          localStorage.setItem("configAccess", "name + access code");
+          appState["configAccess"] = "name + access code";
         }
         if (inputObj.initialScreen === "access") {
           appState["configAccessaccess code onlyActive"] = true;

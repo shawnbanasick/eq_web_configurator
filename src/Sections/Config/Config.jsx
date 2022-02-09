@@ -33,9 +33,18 @@ const Config = () => {
       <GlobalStyle />
       <Title>General Configuration</Title>
       <DisplayModeText>
-        This file has two sections. The first section sets up the overall
-        structure of your project. The second section is a question generator
-        for the (optional) Step 4 questionnaire.
+        The <b>config.xml</b> file has two sections. The first section has the
+        settings for the overall structure of your project. The second section
+        includes a question generator for an (optional) questionnaire after the
+        participant completes the Q sort.
+        <br />
+        <br />
+        If you have a config.xml file from another EQ Web Sort project, you can
+        load it into the Configurator by clicking the orange "
+        <b>Load 'config.xml' File Data</b>" button below. If you don't have a
+        file from a previous project, you can load the default config.xml file
+        from the settings folder or you can create a new file by inputting all
+        of the data yourself.
       </DisplayModeText>
 
       <UploadButtonContainer>

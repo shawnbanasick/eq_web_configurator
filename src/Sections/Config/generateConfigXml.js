@@ -7,13 +7,13 @@ import encodeHTML from "../../Utils/encodeHTML";
 const generateConfigXml = () => {
   let loginTypeText;
   const loginType = appState.configAccess;
-  if (loginType === "Name only") {
+  if (loginType === "name only") {
     loginTypeText = "partId";
   }
   if (loginType === "anonymous") {
     loginTypeText = "anonymous";
   }
-  if (loginType === "Name + access code") {
+  if (loginType === "name + access code") {
     loginTypeText = "partId-access";
   }
   if (loginType === "access code only") {
