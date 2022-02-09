@@ -22,6 +22,7 @@ const GeneralOptions = () => {
         <DisplayModeText>
           If you are planning to do the usual online Q sort project, leave the
           setup target set to "<b>online</b>". The "<b>local</b>" option
+          transforms EQ Web Sort into a tool for in-person data collection.
         </DisplayModeText>
       )}
 
@@ -88,6 +89,7 @@ const DisplayModeText = styled.div`
   border: 2px solid black;
   background: whitesmoke;
   border-radius: 5px;
+  margin-bottom: 10px;
 `;
 
 /* 

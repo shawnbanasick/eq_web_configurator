@@ -43,8 +43,8 @@ const Config = () => {
         load it into the Configurator by clicking the orange "
         <b>Load 'config.xml' File Data</b>" button below. If you don't have a
         file from a previous project, you can load the default config.xml file
-        from the settings folder or you can create a new file by inputting all
-        of the data yourself.
+        from the settings folder and modify it or you can create a new file by
+        inputting all of the data yourself.
       </DisplayModeText>
 
       <UploadButtonContainer>
