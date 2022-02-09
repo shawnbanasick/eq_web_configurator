@@ -27,16 +27,32 @@ const ProjectAccessOptions = () => {
       <SubTitle>Project Access</SubTitle>
       {displayMode && (
         <DisplayModeText>
-          There are four sign-in screen options available:
+          There are <b>four options</b> available for the participants to access
+          the project:
           <br />
           <br />* Anonymous (no sign-in screen shown)
           <br />* Project Access Code only
           <br />* Participant name only
-          <br />* Participant name and Project Access Code
+          <br />* Participant name and project access code
           <br />
           <br />
           The project access code will be the same for all participants. The
           access code can be a phrase or a single word, and is case-sensitive.
+          <br />
+          <br />
+          In addition, you can also combine any of the four options with a
+          participant-specific <b>"usercode"</b> embedded in the URL link. So,
+          for example, if your project URL is https://eq-web-demo.netlify.app/
+          you can add <br />
+          <br />
+          ?username=
+          <br />
+          <br />
+          to the URL with a unique designation at the end, so that it looks
+          something like this:
+          <br />
+          <br />
+          https://eq-web-demo.netlify.app/?username=participant17
         </DisplayModeText>
       )}
 
