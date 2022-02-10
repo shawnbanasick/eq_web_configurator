@@ -20,7 +20,6 @@ const StatementTextArea = () => {
   }
 
   appState.currentStatements = localStorage.getItem("currentStatements");
-  console.log(appState.currentStatements);
 
   return (
     <Container>
