@@ -62,17 +62,11 @@ const Server = () => {
         </a>
         .{" "}
       </DisplayModeText>
-      <RadioButtons
-        label="Display instructions for:"
-        buttonIdArray={["Netlify"]}
-        stateId="uploadService"
-        sectionName="upload"
-      />
       <SpacerDiv50 />
 
       {displayNetlify && (
         <>
-          <Title2>Option 1 - Upload to Netlify</Title2>
+          <Title2>Upload to Netlify</Title2>
           <DisplayModeText>
             <b>1a.</b>
             <br />

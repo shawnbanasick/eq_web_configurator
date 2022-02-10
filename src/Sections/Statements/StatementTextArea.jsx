@@ -51,6 +51,16 @@ const StatementTextArea = () => {
           </ul>
           Other information on HTML paired tag formatting can be found in the
           Config section.
+          <br />
+          <br />
+          If you have statements from a previous EQ Web Sort project, you can
+          click on the orange "Load 'statements.xml' File Data" button to upload
+          the statements.xml file.
+          <br />
+          <br />
+          When you have finished adding your data, click the orange button at
+          the bottom of the page and save your information as 'statements.xml'
+          in the settings folder (replace the default file).
         </DisplayModeText>
       )}
       <UploadStatementsXmlButton />

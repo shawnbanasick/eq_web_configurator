@@ -128,7 +128,10 @@ const LocalLanguage = () => {
         {`See the default text below for more HTML examples.`}
         <br />
         <br />
-        {`When finished, click the orange button and save the file.`}
+        <h4>Save Data</h4>
+        When you have finished adding your data, click the orange button at the
+        bottom of the page and save your information as 'language.xml' in the
+        settings folder (replace the default file).
       </DisplayModeText>
     </>
   );

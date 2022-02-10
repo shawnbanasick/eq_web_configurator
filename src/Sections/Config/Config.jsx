@@ -45,6 +45,11 @@ const Config = () => {
         file from a previous project, you can load the default config.xml file
         from the settings folder and modify it or you can create a new file by
         inputting all of the data yourself.
+        <br />
+        <br />
+        When you have finished adding your data, click the orange button at the
+        bottom of the page and save your information as 'config.xml' in the
+        settings folder (replace the default file).
       </DisplayModeText>
 
       <UploadButtonContainer>
