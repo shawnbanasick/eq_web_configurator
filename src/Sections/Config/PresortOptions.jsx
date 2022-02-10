@@ -18,12 +18,9 @@ const PresortOptions = (props) => {
 
       {displayMode && (
         <DisplayModeText>
-          You can set the color by moving the selector in the color picker
-          (click on the colored squares below) or by using html hex codes (input
-          the code at the bottom of the color picker box). There are many html
-          hex color code websites that can help you find appropriate colors. The
-          same presort colors are also displayed on the cards in the sort grid.
-          To use without color, set all three color values to "e0e0e0".
+          The same presort colors are also displayed on the statement cards in
+          the sort grid. To use without color, set all three color values to
+          "e0e0e0".
         </DisplayModeText>
       )}
       <ColorLabel>

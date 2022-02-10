@@ -22,7 +22,24 @@ const GeneralOptions = () => {
         <DisplayModeText>
           If you are planning to do the usual online Q sort project, leave the
           setup target set to "<b>online</b>". The "<b>local</b>" option
-          transforms EQ Web Sort into a tool for in-person data collection.
+          transforms EQ Web Sort into a tool for in-person data collection using
+          a notebook computer. For more information see the "Local Data
+          Collection" user guide on the EQ Web Sort homepage.
+          <br />
+          <br />
+          For option #4 - title bar color - you can set the color by moving the
+          selector in the color picker (click on the blue square below) or by
+          using html hex codes (input the code at the bottom of the color picker
+          box). To find an appropriate color, there are many websites that can
+          help you find the hex codes for custom colors, but I usually use{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.colorhexa.com/"
+          >
+            ColorHexa
+          </a>
+          .{" "}
         </DisplayModeText>
       )}
 

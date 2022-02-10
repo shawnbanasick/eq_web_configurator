@@ -27,17 +27,13 @@ const CustomLogo = () => {
           </a>{" "}
           or similar software can be used to make a custom image (40 pixels
           height by 250 pixels width in PNG or SVG format) that can be used as a
-          logo in the footer. Add the image to the
-          <b>"images" folder</b> and input the <b>exact name</b> (case
-          sensitive) here. The hex color code for the footer background color is
-          "#ececec". There are many color hexcode websites, but I use{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.colorhexa.com/"
-          >
-            ColorHexa
-          </a>{" "}
+          logo in the footer. The hex color code for the footer background color
+          is "#ececec".
+          <br />
+          <br />
+          Add your custom image to the
+          <b>"images" folder</b> (see Figure 1 in the "Server" section) and
+          input the <b>exact name</b> (case sensitive) here.
         </DisplayModeText>
       )}
       <ImageContainer>
