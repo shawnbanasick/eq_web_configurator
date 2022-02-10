@@ -10,8 +10,8 @@ const Statements = () => {
       <Title>Licenses</Title>
 
       <WebLinkDiv1>
-        <h1>EQ Configurator</h1>
-        <h2>Copyright (C) 2021 Shawn Banasick</h2>
+        <h1>EQ Web Configurator</h1>
+        <h2>Copyright (C) 2022 Shawn Banasick</h2>
 
         <br />
         <span>
@@ -42,8 +42,8 @@ const Statements = () => {
             <li>Electron (MIT license)</li>
             <li>Electron Builder (MIT license)</li>
             <li>React (MIT license) </li>
-            <li>React Easy State (MIT license)</li>
             <li>React Toastify (MIT license)</li>
+            <li>Zustand (MIT license)</li>
             <li>Styled Components (MIT license)</li>
             <li>Lodash (MIT license)</li>
           </ul>

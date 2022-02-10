@@ -6,8 +6,8 @@ import GeneralButton from "../../Utils/GeneralButton";
 import appState from "../../GlobalState/appState";
 import { toast } from "react-toastify";
 import { ToastContainer, Slide } from "react-toastify";
-import eqDownloadImage from "../../assets/images/eq-web-sort-download-link2.png";
-import baseFilesImage from "../../assets/images/base-files2.png";
+import eqDownloadImage from "../../assets/images/eq-web-sort-download-link3.png";
+import baseFilesImage from "../../assets/images/base-files3.png";
 import settingsFiles from "../../assets/images/settings-files.png";
 
 const electron = window.require("electron");

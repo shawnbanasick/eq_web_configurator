@@ -17,16 +17,16 @@ const Statements = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/shawnbanasick/eq_configurator_v3"
+            href="https://github.com/shawnbanasick/eq_web_configurator"
           >
-            EQ Configurator Home Page
+            EQ Web Configurator Home Page
           </a>
         </p>
         <p>
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/shawnbanasick/eq_web_sort_v3"
+            href="https://github.com/shawnbanasick/eq-web-sort"
           >
             EQ Web Sort
           </a>

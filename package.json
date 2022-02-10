@@ -1,7 +1,7 @@
 {
-  "name": "eq-configurator",
+  "name": "eq-web-configurator",
   "description": "Configurator for EQ Web Sort",
-  "version": "3.0.0",
+  "version": "1.0.0",
   "private": true,
   "license": "GPL-3",
   "author": {
@@ -13,7 +13,7 @@
     "afterSign": "scripts/notarize.js",
     "appId": "com.banasick.configurator",
     "productName": "EQ-Configurator",
-    "copyright": "Copyright © 2021 ${author}",
+    "copyright": "Copyright © 2022 ${author}",
     "linux": {
       "category": "Science",
       "description": "Open source Q methodology app",

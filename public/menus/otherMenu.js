@@ -14,13 +14,13 @@ module.exports = (app, mainWindow, i18n) => {
             label: app.name,
             submenu: [
               {
-                label: i18n.t("About EQ Configurator"),
+                label: i18n.t("About EQ Web Configurator"),
                 role: "about",
                 click: function (item, focusedWindow, app, mainWindow) {
                   if (focusedWindow) {
                     openAboutWindow({
                       icon_path: join(__dirname, "../icon.png"),
-                      copyright: "Copyright (c) 2021 Shawn Banasick",
+                      copyright: "Copyright (c) 2022 Shawn Banasick",
                       show_close_button: "Close",
                       package_json_dir: join(__dirname, "../../"),
                       use_inner_html: true,
