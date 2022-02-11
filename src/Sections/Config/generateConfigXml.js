@@ -38,8 +38,8 @@ const generateConfigXml = () => {
    <!-- GENERAL SETTINGS -->
    <item id="studyTitle">${appState.configTitle}</item> 
    <item id="setupTarget">${appState.configSetupTarget}</item>
-   <item id="firebaseOrLocal">firebase</item>
-   <item id="shuffleCards">${appState.configshuffleCards}</item>
+   <item id="firebaseOrLocal">${appState.configSetupTarget}</item>
+   <item id="shuffleCards">${appState.configShuffleCards}</item>
    <item id="headerBarColor">${appState.configHeaderBarColor}</item>
    <item id="devMode">false</item>
    

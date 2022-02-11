@@ -53,7 +53,7 @@ const GeneralOptions = () => {
 
       <RadioButtons
         label="2. Setup target:"
-        buttonIdArray={["online", "local"]}
+        buttonIdArray={["firebase", "local"]}
         stateId="configSetupTarget"
         sectionName="config"
       />
@@ -61,7 +61,7 @@ const GeneralOptions = () => {
       <RadioButtons
         label="3. Shuffle statement cards:"
         buttonIdArray={["true", "false"]}
-        stateId="configshuffleCards"
+        stateId="configShuffleCards"
         sectionName="config"
       />
 
