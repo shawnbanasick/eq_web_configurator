@@ -72,7 +72,7 @@ const UploadXmlFileButton = () => {
               questObj.bg = inputObj[1]?.attributes?.bg;
             }
             if (questType === "text") {
-              console.log(inputObj[0]);
+              console.log(JSON.stringify(inputObj[0], null, 2));
               questObj.limited = inputObj[0].attributes?.limited;
               questObj.maxlength = inputObj[0].attributes?.maxlength;
               questObj.restricted = inputObj[0].attributes?.restricted;
@@ -282,6 +282,7 @@ const UploadXmlFileButton = () => {
         localStorage.setItem("surveyQuestionsArray", JSON.stringify(newArray));
         appState.surveyQuestionsArray = [...newArray];
 
+        // iterate through question array
         array.forEach((item, index) => {
           const newItemObj = {};
 
@@ -307,11 +308,15 @@ const UploadXmlFileButton = () => {
             newItemArray.push(`<b>note:</b> ${decodeHTML(item.note)}`);
           }
           if (displayBoolean?.limited === true) {
-            console.log(item);
+            console.log(JSON.stringify(item, null, 2));
+            console.log(item.maxlength);
+            console.log(displayBoolean.limited);
             newItemObj.maxlength = item.maxlength;
             newItemObj.limited = item.limited;
             newItemArray.push(`<b>length limit</b>:</b> ${item.limited}`);
-            newItemArray.push(`<b>max length:</b> ${item.maxlength}`);
+            if (item?.limited === true || item?.limited === "true") {
+              newItemArray.push(`<b>max length:</b> ${item.maxlength}`);
+            }
           }
           if (displayBoolean?.placeholder === true) {
             newItemObj.placeholder = item.placeholder;

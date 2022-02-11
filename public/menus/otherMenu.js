@@ -113,7 +113,7 @@ module.exports = (app, mainWindow, i18n) => {
       label: i18n.t("Help"),
       submenu: [
         {
-          label: i18n.t("About EQ Configurator"),
+          label: i18n.t("About EQ Web Configurator"),
           click: function (item, focusedWindow, app, mainWindow) {
             if (focusedWindow) {
               openAboutWindow({

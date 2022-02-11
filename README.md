@@ -1,31 +1,32 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-
-<strong>Download Links:</strong> &nbsp; 
+<strong>Download Links:</strong> &nbsp;
 [macOS](https://github.com/shawnbanasick/eq_configurator/releases/download/v1.1.0/EQ-Configurator-1.1.0.dmg) &nbsp;||&nbsp;
 [Windows-installer](https://github.com/shawnbanasick/eq_configurator/releases/download/v1.1.0/EQ-Configurator.Setup.1.1.0.exe) &nbsp;||&nbsp;
 [Windows-portable](https://github.com/shawnbanasick/eq_configurator/releases/download/v1.1.0/EQ-Configurator.1.1.0.exe) &nbsp;||&nbsp;
 [Linux](https://github.com/shawnbanasick/eq_configurator/releases) <br/>
 
+# EQ Web Configurator
 
-# EQ Configurator
-EQ Configurator simplifies the set-up and testing of an online Q sort project. It includes a local web server to preview the project set-up on any installed web browser. It also has a guided editing process for the project settings files, and complete guides to attach a database and upload the project to a web host.
+EQ Web Configurator simplifies the set-up and testing of an online Q sort project. It includes a local web server to preview the project set-up on any installed web browser. It also has a guided editing process for the project settings files, and complete guides to attach a database and upload the project to a web host.
 
 #### A Built-in Local Web Server
+
 <p align="center">
 <img src="https://github.com/shawnbanasick/eq_configurator/blob/main/readme_assets/configurator%20Screenshot.png" width="500" />
 </p>
 
 #### A Survey Question Generator
+
 <p align="center">
 <img src="https://github.com/shawnbanasick/eq_configurator/raw/main/readme_assets/configurator%20survey%20question%20Screenshot.png" width="500" />
 </p>
 
 #### Complete Guides to Install a Database and Upload to a Web Host
+
 <p align="center">
 <img src="https://github.com/shawnbanasick/eq_configurator/raw/main/readme_assets/configurator%20firebase%20Screenshot.png" width="500" />
 </p>
-
 
 <br/>
 <br/>
@@ -53,14 +54,11 @@ EQ Configurator simplifies the set-up and testing of an online Q sort project. I
 
 ## Installation Instructions - Apple macOS
 
-#### EQ Configurator can be installed following the normal process for macOS.
+#### EQ Web Configurator can be installed following the normal process for macOS.
 
 <p align="center">
 <img src="https://github.com/shawnbanasick/eq_configurator/raw/main/readme_assets/configurator_mac_install.png" width="350" />
 </p>
-
-
-
 
 &nbsp;&nbsp;&nbsp;1. Double click the downloaded file.
 
@@ -80,7 +78,7 @@ EQ Configurator simplifies the set-up and testing of an online Q sort project. I
 <br/>
 </p>
 
-#### In this case, to open EQ Configurator you will need to reset your security settings to the defaults:
+#### In this case, to open EQ Web Configurator you will need to reset your security settings to the defaults:
 
 &nbsp;&nbsp;&nbsp;1. Open "System Preferences"
 
@@ -123,8 +121,8 @@ I have not integrated automatic updating functions into the application. To upda
 
 ## Uninstallation Instructions
 
-- In Windows, click the "Start" button, then click "Settings", "Apps", "EQ Configurator", and select "uninstall"
-- In macOS, use Finder to go to the "applications" folder and delete the EQ Configurator application
+- In Windows, click the "Start" button, then click "Settings", "Apps", "EQ Web Configurator", and select "uninstall"
+- In macOS, use Finder to go to the "applications" folder and delete the EQ Web Configurator application
 - In Linux, locate the AppImage file of the old version and delete it.
 
 ## Contributions and Problems

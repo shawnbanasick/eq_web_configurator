@@ -30,7 +30,7 @@ const appState = store({
 
   /*
   config.xml LOGO settings */
-  configLogoHtml: "EQ-logo.svg",
+  configLogoHtml: "EQ_default.svg",
 
   /*
   config.xml PRESORT settings */
