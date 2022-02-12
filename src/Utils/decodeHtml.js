@@ -3,11 +3,20 @@ const decodeHTML = (string) => {
     let shouldDoReplace = string.includes("{{{");
 
     if (shouldDoReplace === true) {
-      const replaceLeft = /{{{/gi;
-      const replaceRight = /}}}/gi;
-      const stringText2 = string.replace(replaceLeft, "<");
-      const stringText3 = stringText2.replace(replaceRight, ">");
-      return stringText3;
+      let string2 = `${string}`;
+
+      if (shouldDoReplace === true) {
+        const replaceLeft = /{{{/gi;
+        const replaceRight = /}}}/gi;
+        const replaceQuote = /&quot;/g;
+        const stringText2 = string2.replace(replaceLeft, "<");
+        const stringText3 = stringText2.replace(replaceRight, ">");
+        const stringText5 = stringText3.replace(replaceQuote, '"');
+        const stringText6 = stringText5
+          .replace(/&amp;/g, "&")
+          .replace(/&apos;/g, "\\'");
+        return stringText6;
+      }
     } else {
       return string;
     }

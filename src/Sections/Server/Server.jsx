@@ -54,14 +54,13 @@ const handleClick = async () => {
       properties: ["openDirectory"],
     })
     .then((result) => {
-      console.log(result.canceled);
-      console.log(result.filePaths);
+      console.log("server cancelled?: ", result.canceled);
 
       if (result.canceled === false) {
+        console.log("server up!");
         console.log(result.filePaths);
         appState.userSelectedFilePath = result.filePaths;
         ipcRenderer.send("get-file-path", result.filePaths);
-        console.log("still going");
         return;
       }
     })

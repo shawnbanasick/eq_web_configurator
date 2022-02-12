@@ -51,7 +51,7 @@ const UploadXmlFileButton = () => {
           let key1 = xmlObjectArray[index].attributes.id;
 
           let key = translateObject[key1];
-          let value = decodeHTML(xmlObjectArray[index].value);
+          let value = decodeHTML(`${xmlObjectArray[index].value}`);
 
           localStorage.setItem(key, value);
           appState[key] = value;

@@ -21,7 +21,7 @@ const generateConfigXml = () => {
   }
 
   let defaultLogo = appState.configLogoHtml;
-  if (defaultLogo === null || defaultLogo === undefined) {
+  if (defaultLogo === null || defaultLogo === undefined || defaultLogo === "") {
     appState.configLogoHtml = "EQ_default.svg";
   }
 
