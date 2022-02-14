@@ -45,14 +45,19 @@ const ProjectAccessOptions = () => {
           for example, if your project URL is https://eq-web-demo.netlify.app/
           you can add <br />
           <br />
-          ?username=
+          ?usercode=
           <br />
           <br />
           to the URL with a unique designation at the end, so that it looks
           something like this:
           <br />
           <br />
-          https://eq-web-demo.netlify.app/?username=participant17
+          https://eq-web-demo.netlify.app/?usercode=participant17
+          <br />
+          <br />
+          When the participant clicks on the link, they are taken to the project
+          web page and the participant's usercode is automatically added to the
+          database.
         </DisplayModeText>
       )}
 
