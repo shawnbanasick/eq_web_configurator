@@ -3,7 +3,8 @@ import { view } from "@risingstack/react-easy-state";
 import styled from "styled-components";
 import appState from "../../GlobalState/appState";
 import UserTextInput from "../../Utils/UserTextInput";
-import logoImage from "../../assets/images/EQ-logo.png";
+// import logoImage from "../../assets/images/EQ-logo.png";
+import logoImage from "../../assets/images/EQ_default.svg";
 
 const CustomLogo = () => {
   let displayMode = appState.displayMode;
