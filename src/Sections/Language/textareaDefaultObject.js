@@ -7,12 +7,7 @@ const showSectionDefaults = () => {
     langBtnHelp: "Help me!",
     langBtnNext: "Continue",
     langLandingHead: `University Research Project`,
-    langWelcomeMessage: `<center><h2>EQ Web Sort V3 Demo Project - iPad Use in the Classroom.</h2> </center><br/><br> <div style="display: flex; flex-direction: column; align-items: center;"> <div><h2>Features</h2>
-    <ul style="margin-left: 20px;"> <li>Smooth drag and drop actions for desktop and mobile (touch) devices </li> <li>Custom Image and video embedding capability (on the page and in help messages) </li> 
-    <li>Participant-adjustable text and card sizes </li>  <li>Simple localization into the research language </li> <li>HTML formatting for statements and User Interface text (including bold font, italics, underlines, line breaks) </li> <li>Custom logo in page footers </li> <li>Ability to do offline data collection when used on a notebook computer with EQ-Configurator</li> </ul></div></div>
-    <br><br>
-    <div style="display: flex; flex-direction: row; gap: 20px; flex-wrap: wrap; align-items: center; justify-content: space-around; width: 100%"> <div style="display:flex; flex-direction:column"> Images<img src="/images/sortScreen3.png" width="640" /> </div>
-    <div style="display:flex; flex-direction:column"> Video (enable subtitles / closed captions) <iframe width="640" height="360" src="https://www.youtube.com/embed/723gJhElR7Q"> </iframe> </div> </div>`,
+    langWelcomeMessage: `<div><h2>EQ Web Sort Demo Project - iPad Use in the Classroom.</h2><br/><br><p>Thank you for helping with this research project</p></div>`,
 
     langLoginWelcomeText: `<center><h3>Welcome!</h3></center><br> Thank you for participating in this Q methodology research project. <br>Please <b>sign in</b> using the form below to begin the process. `,
     langLoginHeaderText: `Sign In`,
