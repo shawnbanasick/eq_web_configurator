@@ -21,12 +21,23 @@ const generateConfigXml = () => {
   }
 
   let defaultLogo = appState.configLogoHtml;
-  if (defaultLogo === null || defaultLogo === undefined || defaultLogo === "") {
+  console.log(defaultLogo.length);
+
+  defaultLogo = defaultLogo.replace(/\s/g, "");
+  console.log(defaultLogo.length);
+
+  if (
+    defaultLogo === null ||
+    defaultLogo === undefined ||
+    defaultLogo.length === 0
+  ) {
+    defaultLogo = "EQ_default.svg";
     appState.configLogoHtml = "EQ_default.svg";
   }
+  console.log(defaultLogo);
 
   let studyTitle = appState.configTitle;
-  if (studyTitle === null || defaultLogo === undefined) {
+  if (studyTitle === null || studyTitle === undefined) {
     appState.configTitle = "my Q study";
   }
 
@@ -51,9 +62,9 @@ const generateConfigXml = () => {
 
 
    <!-- FOOTER -->
-   <item id="footerLogo">{{{center}}}{{{img src="/images/${appState.configLogoHtml}" height="40" width="250" /}}}{{{/center}}}</item>
+   <item id="footerLogo">{{{center}}}{{{img src="/images/${defaultLogo}" height="40" width="250" /}}}{{{/center}}}</item>
 
-   <item id="footerLogoName">${appState.configLogoHtml}</item>
+   <item id="footerLogoName">${defaultLogo}</item>
 
 
    <!-- PRESORT -->

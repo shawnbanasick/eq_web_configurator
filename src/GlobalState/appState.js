@@ -16,10 +16,10 @@ const appState = store({
   /*
   config.xml GENERAL settings */
   configTitle: "My_Q_project_v1",
-  configSetupTargetonlineActive: true,
-  configSetupTarget: "online",
-  configshuffleCardstrueActive: true,
-  configshuffleCards: true,
+  configSetupTargetfirebaseActive: true,
+  configSetupTarget: "firebase",
+  configShuffleCardstrueActive: true,
+  configShuffleCards: true,
   configAccessanonymousActive: true,
   configHeaderBarColor: "#337ab7",
 

@@ -116,16 +116,28 @@ const UploadXmlFileButton = () => {
         localStorage.setItem("configTitle", title);
         appState["configTitle"] = title;
 
+        // set 2. setup target
+        localStorage.setItem("configSetupTarget", inputObj.setupTarget);
+        appState["configSetupTarget"] = inputObj.setupTarget;
+        if (inputObj.setupTarget === "local") {
+          appState.configSetupTargetlocalActive = true;
+          appState.configSetupTargetfirebaseActive = false;
+        }
+        if (inputObj.setupTarget === "firebase") {
+          appState.configSetupTargetfirebaseActive = true;
+          appState.configSetupTargetlocalActive = false;
+        }
+
         // set  3. shuffle
-        localStorage.setItem("configshuffleCards", inputObj.shuffleCards);
-        appState["configshuffleCards"] = inputObj.shuffleCards;
-        appState.configshuffleCardstrueActive = false;
-        appState.configshuffleCardsfalseActive = false;
+        localStorage.setItem("configShuffleCards", inputObj.shuffleCards);
+        appState["configShuffleCards"] = inputObj.shuffleCards;
+        appState.configShuffleCardstrueActive = false;
+        appState.configShuffleCardsfalseActive = false;
         if (inputObj.shuffleCards === "true") {
-          appState.configshuffleCardstrueActive = true;
+          appState.configShuffleCardstrueActive = true;
         }
         if (inputObj.shuffleCards === "false") {
-          appState.configshuffleCardsfalseActive = true;
+          appState.configShuffleCardsfalseActive = true;
         }
 
         // set  4. title bar color
