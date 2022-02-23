@@ -40,20 +40,17 @@ const UploadXmlFileButton = () => {
         const parser = new XMLParser();
         const xml = parser.parseFromString(data, "text/xml");
 
-        console.log(JSON.stringify(xml));
-
         let xmlObjectArray = xml.getElementsByTagName("item");
 
-        if (xmlObjectArray.length > 0) {
-          console.log("if path");
-          console.log(JSON.stringify(xmlObjectArray));
-          xmlObjectArray = xml.getElementsByTagName("column");
-        }
+        //
 
-        // read file contents
-        let nameArray = xmlObjectArray[1]?.value.split(",");
-        let countArray = xmlObjectArray[2]?.value.split(",");
-        let colorsArray = xmlObjectArray[3]?.value.split(",");
+        let nameArray, countArray, colorsArray;
+        if (xmlObjectArray.length > 0) {
+          // read file contents
+          nameArray = xmlObjectArray[1]?.value.split(",");
+          countArray = xmlObjectArray[2]?.value.split(",");
+          colorsArray = xmlObjectArray[3]?.value.split(",");
+        }
 
         const clearArray = [
           "M6",
