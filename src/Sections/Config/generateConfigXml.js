@@ -21,10 +21,7 @@ const generateConfigXml = () => {
   }
 
   let defaultLogo = appState.configLogoHtml;
-  console.log(defaultLogo.length);
-
   defaultLogo = defaultLogo.replace(/\s/g, "");
-  console.log(defaultLogo.length);
 
   if (
     defaultLogo === null ||
@@ -34,7 +31,6 @@ const generateConfigXml = () => {
     defaultLogo = "EQ_default.svg";
     appState.configLogoHtml = "EQ_default.svg";
   }
-  console.log(defaultLogo);
 
   let studyTitle = appState.configTitle;
   if (studyTitle === null || studyTitle === undefined) {
@@ -122,7 +118,6 @@ const generateConfigXml = () => {
         limitedString = `true`;
         maxLengthNum = itemObject.maxlength;
       } else {
-        console.log(itemObject.surveyAnswerLenIsLimited);
         limitedString = `false`;
         maxLengthNum = 99999;
       }

@@ -44,7 +44,6 @@ const UploadXmlFileButton = () => {
           alert("file open error.");
           return;
         }
-        // console.log(JSON.stringify(data));
 
         const parser = new XMLParser();
         const xml = parser.parseFromString(data, "text/xml");
@@ -54,6 +53,10 @@ const UploadXmlFileButton = () => {
         const inputObj = {};
         xmlObjectArray.forEach((item, index) => {
           // standard items
+          if (xmlObjectArray[index].attributes.id === "textAlign") {
+            appState.triggerIncompatibleFileModal = true;
+            return;
+          }
           let key = xmlObjectArray[index].attributes.id;
           let value = xmlObjectArray[index].value;
           inputObj[key] = value;
@@ -72,7 +75,6 @@ const UploadXmlFileButton = () => {
               questObj.bg = inputObj[1]?.attributes?.bg;
             }
             if (questType === "text") {
-              console.log(JSON.stringify(inputObj[0], null, 2));
               questObj.limited = inputObj[0].attributes?.limited;
               questObj.maxlength = inputObj[0].attributes?.maxlength;
               questObj.restricted = inputObj[0].attributes?.restricted;
@@ -112,7 +114,6 @@ const UploadXmlFileButton = () => {
 
         // set  1. study title
         let title = inputObj.studyTitle;
-        console.log(inputObj);
         localStorage.setItem("configTitle", title);
         appState["configTitle"] = title;
 
@@ -320,9 +321,6 @@ const UploadXmlFileButton = () => {
             newItemArray.push(`<b>note:</b> ${decodeHTML(item.note)}`);
           }
           if (displayBoolean?.limited === true) {
-            console.log(JSON.stringify(item, null, 2));
-            console.log(item.maxlength);
-            console.log(displayBoolean.limited);
             newItemObj.maxlength = item.maxlength;
             newItemObj.limited = item.limited;
             newItemArray.push(`<b>length limit</b>:</b> ${item.limited}`);

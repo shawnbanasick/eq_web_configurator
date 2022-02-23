@@ -5,6 +5,7 @@ import appState from "../../GlobalState/appState";
 import UserTextInput from "../../Utils/UserTextInput";
 import RadioButtons from "../../Utils/RadioButtons";
 import ConfigColorPicker from "./ConfigColorPicker";
+import IncompatibleFileModal from "./IncompatibleFileModal";
 
 const GeneralOptions = () => {
   let displayMode = appState.displayMode;
@@ -17,6 +18,7 @@ const GeneralOptions = () => {
   return (
     <React.Fragment>
       <SubTitle>General Options</SubTitle>
+      <IncompatibleFileModal />
 
       {displayMode && (
         <DisplayModeText>
