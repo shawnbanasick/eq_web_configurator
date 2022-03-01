@@ -57,7 +57,7 @@ EQ Web Configurator simplifies the set-up and testing of an online Q sort projec
 #### EQ Web Configurator can be installed following the normal process for macOS.
 
 <p align="center">
-<img src="https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/configurator_mac_install.png" width="350" />
+<img src="https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/mac-install-screen.png" width="350" />
 </p>
 
 &nbsp;&nbsp;&nbsp;1. Double click the downloaded file.
@@ -67,7 +67,7 @@ EQ Web Configurator simplifies the set-up and testing of an online Q sort projec
 #### The app is code signed and notarized by Apple, so there will be only one warning on the first startup after installation.
 
 <p align="center">
-<img src="https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/mac-install-screen.png" width="350">
+<img src="https://github.com/shawnbanasick/kade/blob/master/gifs/macOS warning.png" width="350">
 <br/>
 </p>
 
