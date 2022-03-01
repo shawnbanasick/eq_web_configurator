@@ -19,13 +19,13 @@ EQ Web Configurator simplifies the set-up and testing of an online Q sort projec
 #### A Survey Question Generator
 
 <p align="center">
-<img src="https://github.com/shawnbanasick/eq_configurator/raw/main/readme_assets/configurator%20survey%20question%20Screenshot.png" width="500" />
+<img src="https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/configurator-survey-question-Screenshot.png" width="500" />
 </p>
 
 #### Complete Guides to Install a Database and Upload to a Web Host
 
 <p align="center">
-<img src="https://github.com/shawnbanasick/eq_configurator/raw/main/readme_assets/configurator%20firebase%20Screenshot.png" width="500" />
+<img src="https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/configurator-firebase-Screenshot.png" width="500" />
 </p>
 
 <br/>
@@ -33,7 +33,7 @@ EQ Web Configurator simplifies the set-up and testing of an online Q sort projec
 
 ## Installation Instructions - Microsoft Windows
 
-#### I haven't certified the application with Microsoft, so it will give a warning on first start-up.
+#### I haven't certified the application with Microsoft so it will give a warning on first start-up.
 
 &nbsp;&nbsp;&nbsp;1. Double click the downloaded file.
 
@@ -57,17 +57,17 @@ EQ Web Configurator simplifies the set-up and testing of an online Q sort projec
 #### EQ Web Configurator can be installed following the normal process for macOS.
 
 <p align="center">
-<img src="https://github.com/shawnbanasick/eq_configurator/raw/main/readme_assets/configurator_mac_install.png" width="350" />
+<img src="https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/configurator_mac_install.png" width="350" />
 </p>
 
 &nbsp;&nbsp;&nbsp;1. Double click the downloaded file.
 
-&nbsp;&nbsp;&nbsp;2. Click and drag the EQ-Configurator.app icon into the applications folder.
+&nbsp;&nbsp;&nbsp;2. Click and drag the eq-web-configurator.app icon into the applications folder.
 
 #### The app is code signed and notarized by Apple, so there will be only one warning on the first startup after installation.
 
 <p align="center">
-<img src="https://github.com/shawnbanasick/kade/blob/master/gifs/macOS warning.png" width="350">
+<img src="https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/mac-install-screen.png" width="350">
 <br/>
 </p>
 
