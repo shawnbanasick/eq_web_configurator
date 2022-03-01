@@ -25,6 +25,11 @@ const StatementTextArea = () => {
     <Container>
       {displayMode && (
         <DisplayModeText>
+          If you have statements from a previous EQ Web Sort project, you can
+          click on the orange "Load 'statements.xml' File Data" button to upload
+          the statements.xml file.
+          <br />
+          <br />
           Statements can include HTML paired tag formatting if desired:
           <ul>
             <li>
@@ -39,11 +44,11 @@ const StatementTextArea = () => {
               <i>italicized </i>
             </li>
             <li>
-              &lt;b&gt;&lt;u&gt;&lt;i&gt;&nbsp;nested tags
+              &lt;b&gt;&lt;u&gt;&lt;i&gt;&nbsp;all three nested tags
               &lt;/i&gt;&lt;/u&gt;&lt;/b&gt; produces{" "}
               <b>
                 <u>
-                  <i>all three</i>
+                  <i>all three nested tags</i>
                 </u>
               </b>
             </li>
@@ -52,14 +57,9 @@ const StatementTextArea = () => {
           Config section.
           <br />
           <br />
-          If you have statements from a previous EQ Web Sort project, you can
-          click on the orange "Load 'statements.xml' File Data" button to upload
-          the statements.xml file.
-          <br />
-          <br />
-          When you have finished adding your data, click the orange button at
-          the bottom of the page and save your information as 'statements.xml'
-          in the settings folder (replace the default file).
+          When you have finished adding your statements, click the orange button
+          at the bottom of the page and save your information as
+          'statements.xml' in the settings folder (replace the default file).
         </DisplayModeText>
       )}
       <UploadStatementsXmlButton />

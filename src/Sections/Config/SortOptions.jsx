@@ -19,7 +19,7 @@ const SortOptions = () => {
 
       {displayMode && (
         <DisplayModeText>
-          The default is to have forced sorts. When the participant puts too
+          The default is to have forced Q sorts. When the participant puts too
           many cards into a column the software will indicate an overload by
           changing the column background color to orange and the column border
           to a dashed line. Also, navigation to the next step is disabled if

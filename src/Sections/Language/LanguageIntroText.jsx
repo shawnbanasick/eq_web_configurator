@@ -14,10 +14,18 @@ const LocalLanguage = () => {
   return (
     <>
       <DisplayModeText>
-        <h4>Local Data Collection Mode</h4>
-        If you want to set up the language for a local, offline data collection
-        project, be sure to choose "local" for question 2 "Setup target" in the
-        Config section first.
+        The input options will change according to the setup target (firebase or
+        local). If you want to set up the language for a local, offline data
+        collection project, be sure to choose "local" for question 2 "Setup
+        target" in the Config section <b>before</b> you input the language data.
+        <br />
+        <br />
+        If you have a language.xml file from another EQ Web Sort project, you
+        can load it into the Configurator by clicking the orange "
+        <b>Load 'language.xml' File Data</b>" button below. If you don't have a
+        file from a previous project, you can load the default English settings
+        by clicking the section buttons, or you can create a new file by
+        inputting all of the data yourself.
         <br />
         <br />
         <h4>Section Buttons</h4>
@@ -34,7 +42,7 @@ const LocalLanguage = () => {
         {`A new line can be inserted using a single break tag <br/>, and an open line between text can be created by using two break tags <br/> <br/>.`}
         <br />
         <br />
-        {`A web link can be inserted by using this pattern:`}
+        {`A web page link can be inserted by using this pattern:`}
         <br />
         {`<a href="https://qmethod.org/" target="_blank" rel="noreferrer"> <u>qmethod.org</u> </a>.`}
         <br />
@@ -45,11 +53,11 @@ const LocalLanguage = () => {
         be used to modify the HTML elements.
         <br />
         <br />
-        {`Use `}
+        {`You can use `}
         <a href="https://codepen.io" rel="noopener noreferrer" target="_blank">
           CodePen
         </a>{" "}
-        {`to interactively develop complex layouts (click on the "Start Coding" button on the top left side of the page, then put your code in the "HTML" box on the left). When you are happy with the layout, copy and paste the HTML code from CodePen into the input boxes below.`}
+        {`to interactively develop complex layouts. In CodePen, click on the "Start Coding" button on the top left side of the page, then put your code in the "HTML" box on the left. When you are happy with the layout, copy and paste the HTML code from CodePen into the input boxes below.`}
         <br />
         <br />
         {`CodePen Examples: `}
@@ -121,7 +129,7 @@ const LocalLanguage = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Combined example - the default &quot;Welcome Message&quot;
+              Combined example - a complex &quot;Welcome Message&quot;
             </a>{" "}
           </li>
         </ListContainer>
@@ -129,9 +137,9 @@ const LocalLanguage = () => {
         <br />
         <br />
         <h4>Save Data</h4>
-        When you have finished adding your data, click the orange button at the
-        bottom of the page and save your information as 'language.xml' in the
-        settings folder (replace the default file).
+        When you have finished adding your language data, click the orange
+        button at the bottom of the page and save your information as
+        'language.xml' in the settings folder (replace the default file).
       </DisplayModeText>
     </>
   );

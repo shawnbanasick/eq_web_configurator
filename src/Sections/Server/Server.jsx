@@ -8,6 +8,8 @@ import { toast } from "react-toastify";
 import { ToastContainer, Slide } from "react-toastify";
 import eqDownloadImage from "../../assets/images/eq-web-sort-download-link3.png";
 import baseFilesImage from "../../assets/images/base-files3.png";
+import serverOkButton from "../../assets/images/server-ok-button.png";
+import serverFindIndexHtmlFile from "../../assets/images/server-find-index-html-file.png";
 import settingsFiles from "../../assets/images/settings-files.png";
 
 const electron = window.require("electron");
@@ -118,29 +120,39 @@ const Server = () => {
           <SpacerDiv />
 
           <StyledParagraph>Figure 2</StyledParagraph>
-          <img src={baseFilesImage} alt="a" />
+          <img
+            src={baseFilesImage}
+            width="73%"
+            style={{ maxWidth: "770px" }}
+            alt="a"
+          />
 
           <DisplayModeText>
             In the uncompressed folder (Figure 2) you will see the{" "}
             <b>index.html</b> file (#1) and a folder called "<b>settings</b>"
             (#2). Inside the settings folder are the four xml configuration
             files that will contain your project's information and the Firebase
-            configuration file (Figure 3). Firebase is the free online database
-            that will store the participants' Q sort data. In sections 2 - 6 of
-            the Configurator you will modify these files.
+            configuration file (Figure 3). In sections 2 - 6 of the Configurator
+            you will modify these files. Firebase is the free online database
+            that will store the participants' Q sort data.
           </DisplayModeText>
           <SpacerDiv />
 
           <StyledParagraph>Figure 3</StyledParagraph>
-          <img src={settingsFiles} alt="a" />
+          <img
+            src={settingsFiles}
+            width="73%"
+            style={{ maxWidth: "770px" }}
+            alt="a"
+          />
           <DisplayModeText>
-            To facilitate the editing of the settings files, start the local web
-            server built into this software so that you can immediately see the
-            changes that you make.
+            To get started with the editing of the settings files, start the
+            local web server built into this software so that you can
+            immediately see the changes that you make.
             <br />
             <br />
             Click the orange button below and navigate to the folder with the
-            index.html file (see Figure 2) to start the server. You don't need
+            index.html file (see Figure 4) to start the server. You don't need
             to select a specific file - you just need to find the folder.
           </DisplayModeText>
           <SpacerDiv />
@@ -151,10 +163,41 @@ const Server = () => {
         Navigate to the EQ Web Sort setup files folder where "index.html" is
         located.
       </FindServerButton>
+      {displayMode && (
+        <DisplayModeText>
+          When you find the folder, the file name will probably be dimmed so it
+          will be hard to see (Figure 4).{" "}
+          <b>You do not need to select the file. </b>
+          Instead, click the "OK" button on the bottom right side of the dialog
+          box (Figure 5).
+        </DisplayModeText>
+      )}
+      <SpacerDiv />
+      {displayMode && (
+        <>
+          <StyledParagraph>Figure 4</StyledParagraph>
+          <img
+            src={serverFindIndexHtmlFile}
+            width="73%"
+            style={{ maxWidth: "770px" }}
+            alt="a"
+          />
+          <SpacerDiv />
+          <StyledParagraph>Figure 5</StyledParagraph>
+          <img
+            src={serverOkButton}
+            width="73%"
+            style={{ maxWidth: "770px" }}
+            alt="a"
+          />
+        </>
+      )}
       <IntroText>
-        After opening the folder, the Configurator will automatically find the
-        "index.html" file and start the server. Copy the location below and
-        paste it into your web browser's address bar.
+        After you click "OK" and the dialog box will close and the Configurator
+        will send the location of the "index.html" file to the server. <br />
+        <br />
+        Next, copy the localhost address below and paste it into your web
+        browser's address bar.
       </IntroText>
       <ProjectLinkDiv>
         <LinkSpan>http://localhost:9990</LinkSpan>
@@ -163,20 +206,21 @@ const Server = () => {
       {displayMode && (
         <DisplayModeText>
           The default EQ Web Sort demo project should now load in your browser.
-          The project is not on the internet - it is being hosted from your
-          computer, and you're accessing it locally from the browser on your
-          machine.
+          The project is not on the internet yet - it is being hosted from your
+          computer to your browser. <br />
+          <br />
+          Now, after you save any of the settings files with your project
+          information, you can refresh your web browser and the updates will
+          appear.
           <br />
           <br />
-          However, after you set up your Firebase file you will be able to save
-          completed Q sort data to the Firebase online realtime database (if you
-          are connected to the Internet).
-          <br />
-          <br />
-          So, you can use this local server to test your complete setup -
-          including data upload (don't forget to delete any testing data from
-          your Firebase location before you begin your actual project - there
-          are instructions on how to do this in section 6).
+          After you set up your Firebase settings file you will be able to save
+          completed Q sort data to the Firebase online realtime database using
+          this localhost address (if you are connected to the Internet). This
+          will allow you to test your complete setup - including data upload.
+          Don't forget to delete any testing data from your database before you
+          begin your actual project (there are instructions on how to do this in
+          section "6. Firebase").
         </DisplayModeText>
       )}
       <SpacerDiv />

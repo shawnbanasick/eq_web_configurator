@@ -19,10 +19,10 @@ const PostsortOptions = () => {
       {displayMode && (
         <DisplayModeText>
           Optional step 3 gives the participant an opportunity to add additional
-          comments to the card(s) that were placed in the extreme columns. In
-          some research designs there might only be one statement in the extreme
-          columns, so in that case you may want to include the second most
-          extreme columns as well.
+          comments to the card(s) that were placed in the most extreme positive
+          and negative columns. In some research designs there might only be one
+          statement in the extreme columns, so in that case you may want to
+          include the second most extreme columns as well.
         </DisplayModeText>
       )}
 

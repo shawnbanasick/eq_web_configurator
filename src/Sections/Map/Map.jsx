@@ -41,20 +41,19 @@ const Map = () => {
       <h2>{numStatements} Statements Loaded</h2>
       {displayMode && (
         <DisplayModeText>
-          Input the statements first and then enter the number of cards in each
-          column of the Q-sort grid here. The background color of the "Q Sort
-          Pattern" text will change to green when all of the statements have
-          been allocated.
-          <br />
-          <br />
           If you have a "map.xml" from a previous EQ Web Sort project, you can
           click on the orange "Load 'map.xml' File Data" button to upload the
           file.
           <br />
           <br />
-          When you have finished adding your data, click the orange button at
-          the bottom of the page and save your information as 'map.xml' in the
-          settings folder (replace the default file).
+          Enter the number of cards in each column of the Q-sort grid. The
+          background color of the "Q Sort Pattern" text will change to green
+          when all of your statements have been allocated.
+          <br />
+          <br />
+          When you have finished setting up the columns, click the orange button
+          at the bottom of the page and save your information as 'map.xml' in
+          the settings folder (replace the default file).
         </DisplayModeText>
       )}
 

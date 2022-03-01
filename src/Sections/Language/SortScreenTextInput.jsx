@@ -9,18 +9,15 @@ import clearSection from "./clearSection";
 import showRefImage from "./showRefImage";
 
 const handleShowDefaults = (e) => {
-  console.log(e.target.id);
   showSectionDefaults(e.target.id);
 };
 
 const handleClearAll = (e) => {
-  console.log(e.target.id);
   clearSection(e.target.id);
 };
 
 const LocalLanguage = () => {
   const handleRefImage = (e) => {
-    console.log(e.target.id);
     showRefImage(e.target.id);
   };
 

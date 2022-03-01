@@ -34,7 +34,8 @@ const CustomLogo = () => {
           <br />
           Add your custom image to the
           <b>"images" folder</b> (see Figure 1 in the "Server" section) and
-          input the <b>exact name</b> (case sensitive) here.
+          input the <b>exact name</b>, including the file extension (.png or
+          .svg) here. The name is case sensitive.
         </DisplayModeText>
       )}
       <ImageContainer>

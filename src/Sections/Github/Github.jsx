@@ -60,7 +60,7 @@ const Server = () => {
         >
           Netlify
         </a>
-        .{" "}
+        , which will host your project for free.{" "}
       </DisplayModeText>
       <SpacerDiv50 />
 

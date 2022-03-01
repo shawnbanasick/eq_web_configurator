@@ -48,8 +48,8 @@ const ProjectAccessOptions = () => {
           ?usercode=
           <br />
           <br />
-          to the URL with a unique designation at the end, so that it looks
-          something like this:
+          to the URL with a unique designation (a single word or phrase - no
+          spaces allowed) at the end, so that it looks something like this:
           <br />
           <br />
           https://eq-web-demo.netlify.app/?usercode=participant17

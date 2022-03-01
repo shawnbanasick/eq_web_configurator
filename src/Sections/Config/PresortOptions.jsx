@@ -18,9 +18,9 @@ const PresortOptions = (props) => {
 
       {displayMode && (
         <DisplayModeText>
-          The same presort colors are also displayed on the statement cards in
-          the sort grid. To use without color, set all three color values to
-          "e0e0e0".
+          The same presort colors are also used for the statement cards in the
+          sort grid. If you want to use without color, you can set all three
+          color values to the same light gray color.
         </DisplayModeText>
       )}
       <ColorLabel>

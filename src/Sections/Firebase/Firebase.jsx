@@ -92,8 +92,9 @@ const FirebaseInfo = () => {
       <Title>Firebase Settings</Title>
       <DisplayModeText>
         <b>Firebase</b> is a database company owned by Google. It provides a
-        convenient way to store the participants' response data. If you don't
-        have a Google account, make one before you begin the setup process.
+        free and convenient way to store the participants' response data. If you
+        don't have a Google account, make one before you begin the setup
+        process.
         <br /> <br />
         Information on how to export the Firebase data for analysis and how to
         delete individual data entries is at the bottom of this page. <br />{" "}

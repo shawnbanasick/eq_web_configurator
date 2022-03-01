@@ -55,20 +55,21 @@ const SurveyOptions = (props) => {
               <i>italicized words</i>
             </li>
             <li>
-              &lt;b&gt;&lt;u&gt;&lt;i&gt;&nbsp;nested
-              tags&nbsp;&lt;/i&gt;&lt;/u&gt;/b&gt; can produce{" "}
+              &lt;b&gt;&lt;u&gt;&lt;i&gt;&nbsp;all three nested
+              tags&nbsp;&lt;/i&gt;&lt;/u&gt;/b&gt; will produce{" "}
               <b>
                 <u>
-                  <i>all three</i>
+                  <i>all three nested tags</i>
                 </u>
               </b>
             </li>
           </ul>
           Since the text is converted to html format, all &lt; (less than) and
           &gt; (greater than) characters will be interpreted as being part of
-          HTML pair tags. If you want to use them in different context, you will
-          need to use special codes to represent the character. These codes
-          begin with the "<b>&amp;</b>" character and end with a semi-colon.
+          HTML pair tags. If you want to use them as part of the question text,
+          you will need to use special codes to represent the character. These
+          codes begin with the "<b>&amp;</b>" character and end with a
+          semi-colon.
           <ul>
             <li>
               For the "less than" symbol "&lt;", use <b>&amp;lt;</b> in your
@@ -81,11 +82,11 @@ const SurveyOptions = (props) => {
               become "hamburgers &gt; pizza" on the web
             </li>
           </ul>
-          Because it is used for these types of special codes, the <b>&amp;</b>{" "}
-          character cannot be used by itself. It is an invalid character and{" "}
+          Because it is used for these types of special codes, the "<b>&amp;</b>
+          " character cannot be used by itself. It is an invalid character and{" "}
           <b>will cause an error</b>. So, if you use text like "hamburgers &amp;
-          pizza" in the input below it <b>prevent your web page from loading</b>
-          .
+          pizza" in the input below it will{" "}
+          <b>prevent your web page from loading</b>.
         </DisplayModeText>
         <RadioButtons
           label="14. Include survey (Step 4):"
