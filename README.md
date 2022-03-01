@@ -8,12 +8,12 @@
 
 # EQ Web Configurator
 
-EQ Web Configurator simplifies the set-up and testing of an online Q sort project. It includes a local web server to preview the project set-up on any installed web browser. It also has a guided editing process for the project settings files, and complete guides to attach a database and upload the project to a web host.
+EQ Web Configurator simplifies the set-up and testing of an online Q sort project. It includes a local web server to preview the project set-up on any installed web browser. It also has a guided editing process for the project settings files, and complete guides to attach a free Google database and upload the project to a free web host.
 
 #### A Built-in Local Web Server
 
 <p align="center">
-<img src="https://github.com/shawnbanasick/eq_configurator/blob/main/readme_assets/configurator%20Screenshot.png" width="500" />
+<img src="https://github.com/shawnbanasick/eq_web_configurator/blob/main/readme_assets/server-screen.png" width="500" />
 </p>
 
 #### A Survey Question Generator
