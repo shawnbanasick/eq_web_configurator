@@ -125,9 +125,9 @@ I have not integrated automatic updating functions into the application. To upda
 - In macOS, use Finder to go to the "applications" folder and delete the EQ Web Configurator application
 - In Linux, locate the AppImage file of the old version and delete it.
 
-## Contributions and Problems
+## Bugs and Problems
 
-If you discover a problem with the software or want to make a feature request, please describe it on the issue tracker - https://github.com/shawnbanasick/eq_configurator/issues or email to ken.q.tools@gmail.com. Contributions are welcome. Make a pull request.
+If you discover a problem with the software or want to make a feature request, send an email to ken.q.tools@gmail.com.
 
 ## License
 
