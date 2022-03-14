@@ -6,7 +6,9 @@
 [Windows-portable](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v1.0.0/eq-web-configurator.1.0.0.exe) &nbsp;||&nbsp;
 [Linux](https://github.com/shawnbanasick/eq_web_configurator/releases/tag/v1.0.0) <br/>
 
-# EQ Web Configurator
+<p align="center">
+<img src="https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/configurator_logo.png" width="1000" />
+</p>
 
 EQ Web Configurator simplifies the set-up and testing of an online Q sort project with <b> [EQ Web Sort](https://github.com/shawnbanasick/eq-web-sort)</b>. It includes a local web server to preview the project set-up on any installed web browser. It also has a guided editing process for the project settings files, and complete guides to attach a free Google database and upload the project to a free web host.
 
