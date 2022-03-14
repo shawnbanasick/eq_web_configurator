@@ -7,7 +7,7 @@
 [Linux](https://github.com/shawnbanasick/eq_web_configurator/releases/tag/v1.0.0) <br/>
 
 <p align="center">
-<img src="https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/configurator_logo.png" width="1000" />
+<img src="https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/configurator_logo.svg" width="1000" />
 </p>
 
 EQ Web Configurator simplifies the set-up and testing of an online Q sort project with <b> [EQ Web Sort](https://github.com/shawnbanasick/eq-web-sort)</b>. It includes a local web server to preview the project set-up on any installed web browser. It also has a guided editing process for the project settings files, and complete guides to attach a free Google database and upload the project to a free web host.
@@ -15,7 +15,7 @@ EQ Web Configurator simplifies the set-up and testing of an online Q sort projec
 #### A Built-in Local Web Server
 
 <p align="center">
-<img src="https://github.com/shawnbanasick/eq_web_configurator/blob/main/readme_assets/server-screen.png" width="500" />
+<img src="https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/server-screen.png" width="500" />
 </p>
 
 #### A Survey Question Generator
