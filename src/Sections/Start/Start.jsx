@@ -36,12 +36,12 @@ const Start = () => {
       <HeroContainer>
         <img src={Image} height="180" alt="s" />
         <Title>
-          EQ Web Configurator <br />
-          Version 1.0.0
+          EQ Web Sort Configurator <br />
+          Version 1.0.1
         </Title>
       </HeroContainer>
       <IntroText>
-        EQ Web Configurator simplifies the set-up and testing of an{" "}
+        EQ Web Sort Configurator simplifies the set-up and testing of an{" "}
         <a
           target="_blank"
           rel="noopener noreferrer"
