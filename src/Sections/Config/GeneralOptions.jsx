@@ -46,7 +46,7 @@ const GeneralOptions = () => {
       )}
 
       <UserTextInput
-        label="1. Project title:"
+        label="2-1. Project title:"
         stateId="configTitle"
         sectionName="config"
         width={30}
@@ -54,21 +54,21 @@ const GeneralOptions = () => {
       />
 
       <RadioButtons
-        label="2. Setup target:"
+        label="2-2. Setup target:"
         buttonIdArray={["firebase", "local"]}
         stateId="configSetupTarget"
         sectionName="config"
       />
 
       <RadioButtons
-        label="3. Shuffle statement cards:"
+        label="2-3. Shuffle statement cards:"
         buttonIdArray={["true", "false"]}
         stateId="configShuffleCards"
         sectionName="config"
       />
 
       <ColorLabel>
-        <div>4. Title bar color (for all pages):</div>
+        <div>2-4. Title bar color (for all pages):</div>
         <ConfigColorPicker
           stateDesig="configHeaderBarColor"
           default="#337ab7"

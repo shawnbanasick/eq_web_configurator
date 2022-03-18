@@ -178,8 +178,8 @@ const UploadXmlFileButton = () => {
 
         // set 6. Logo
 
-        localStorage.setItem("configLogoHtml", inputObj.footerLogoName);
-        appState["configLogoHtml"] = inputObj.footerLogoName;
+        // localStorage.setItem("configLogoHtml", inputObj.footerLogoName);
+        // appState["configLogoHtml"] = inputObj.footerLogoName;
 
         // set 7a. positive card color
         localStorage.setItem("greenCardColor", inputObj.greenCardColor);

@@ -2,8 +2,6 @@ import React from "react";
 import { view } from "@risingstack/react-easy-state";
 import styled from "styled-components";
 import appState from "../../GlobalState/appState";
-import UserTextInput from "../../Utils/UserTextInput";
-// import logoImage from "../../assets/images/EQ-logo.png";
 import logoImage from "../../assets/images/EQ_default.svg";
 import folderImage from "../../assets/images/images-folder-image.png";
 
@@ -16,8 +14,8 @@ const CustomLogo = () => {
   }
 
   return (
-    <React.Fragment>
-      <SubTitle>Custom Logo Footer Image</SubTitle>
+    <ContainerDiv>
+      <SubTitle>1. Custom Logo Footer Image (optional)</SubTitle>
       {displayMode && (
         <DisplayModeText>
           <a
@@ -54,15 +52,15 @@ const CustomLogo = () => {
 
       <LogoText>
         <span>
-          6. Custom Logo:&nbsp;&nbsp;If desired, you can create a custom logo in
-          png format with the name &nbsp;&nbsp;&nbsp; <b>logo.png</b>
+          <b>Custom Logo:</b>&nbsp;&nbsp;If desired, you can create a custom
+          logo in png format with the name &nbsp;&nbsp;&nbsp; <b>logo.png</b>
           &nbsp;&nbsp;&nbsp;and replace the default image in the <b>
             images
           </b>{" "}
           folder of your EQ Web Sort project.
         </span>
       </LogoText>
-    </React.Fragment>
+    </ContainerDiv>
   );
 };
 
@@ -102,4 +100,8 @@ const LogoText = styled.div`
   margin-top: 20px;
   margin-left: 70px;
   max-width: 900px;
+`;
+
+const ContainerDiv = styled.div`
+  width: clamp(500px, 78vw, 1300px);
 `;

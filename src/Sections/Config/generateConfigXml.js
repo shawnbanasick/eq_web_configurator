@@ -57,12 +57,6 @@ const generateConfigXml = () => {
    <item id="accessCode">${appState.configLogInPassword}</item>
 
 
-   <!-- FOOTER -->
-   <item id="footerLogo">{{{center}}}{{{img src="/images/${defaultLogo}" height="40" width="250" /}}}{{{/center}}}</item>
-
-   <item id="footerLogoName">${defaultLogo}</item>
-
-
    <!-- PRESORT -->
    <!-- default colors #ccffcc, #e0e0e0, #ffe0f0 -->
    <item id="greenCardColor">${appState.greenCardColor}</item>

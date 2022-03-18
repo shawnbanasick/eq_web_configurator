@@ -62,7 +62,7 @@ const ProjectAccessOptions = () => {
       )}
 
       <RadioButtons
-        label="5a. Project Access:"
+        label="2-5a. Project Access:"
         buttonIdArray={[
           "anonymous",
           "name only",
@@ -76,7 +76,7 @@ const ProjectAccessOptions = () => {
       {showAccessCodeInput && (
         <FadeIn delay={150} duration={1050}>
           <UserTextInput
-            label="5b. Project Access Code:"
+            label="2-5b. Project Access Code:"
             stateId="configLogInPassword"
             sectionName="config"
             width={30}

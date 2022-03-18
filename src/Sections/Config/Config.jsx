@@ -32,34 +32,41 @@ const Config = () => {
     <MainContent>
       <GlobalStyle />
       <Title>General Configuration</Title>
-      <DisplayModeText>
-        The <b>config.xml</b> file has two sections. The first section contains
-        the settings for the overall structure of your project. The second
-        section includes a question generator for an (optional) questionnaire
-        after the participant completes the Q sort.
-        <br />
-        <br />
-        If you have a config.xml file from another EQ Web Sort project, you can
-        load it into the Configurator by clicking the orange "
-        <b>Load 'config.xml' File Data</b>" button below. If you don't have a
-        file from a previous project, you can load the default config.xml file
-        from the settings folder, or you can create a new file by inputting all
-        of the data yourself.
-        <br />
-        <br />
-        When you have finished adding your data, click the orange button at the
-        bottom of the page and save your information as 'config.xml' in the
-        settings folder (replace the default file).
-      </DisplayModeText>
+      <CustomLogo />
+      <br />
+      <br />
+      <ContainerDiv>
+        <SubTitle>2. The "config.xml" Settings File (required)</SubTitle>
 
-      <UploadButtonContainer>
-        <UploadXmlConfigButton />
-      </UploadButtonContainer>
+        <DisplayModeText>
+          The <b>config.xml</b> file has two sections. The first section
+          contains the settings for the overall structure of your project. The
+          second section includes a question generator for an (optional)
+          questionnaire after the participant completes the Q sort.
+          <br />
+          <br />
+          If you have a config.xml file from another EQ Web Sort project{" "}
+          <b>made with this version of the configurator</b>, you can load its
+          data for editing by clicking the orange "
+          <b>Load 'config.xml' File Data</b>" button below. If you don't have a
+          file from a previous project, you can load the default config.xml file
+          from the settings folder, or you can create a new file by inputting
+          all of the data yourself.
+          <br />
+          <br />
+          When you have finished adding your data, click the orange button at
+          the bottom of the page and save your information as 'config.xml' in
+          the settings folder (replace the default file).
+        </DisplayModeText>
+
+        <UploadButtonContainer>
+          <UploadXmlConfigButton />
+        </UploadButtonContainer>
+      </ContainerDiv>
 
       <QuestionContainer>
         <GeneralOptions />
         <ProjectAccessOptions />
-        <CustomLogo />
         <PresortOptions />
         <SortOptions />
         <PostsortOptions />
@@ -102,7 +109,7 @@ const fadeOut = keyframes`
 const MainContent = styled.div`
   display: flex;
   flex-direction: column;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   background-color: white;
   visibility: ${(props) => (props.view ? "hidden" : "visible")};
@@ -145,7 +152,7 @@ const QuestionContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-items: center;
-  align-self: center;
+
   align-items: left;
   margin-bottom: 25px;
   width: clamp(500px, 78vw, 1300px);
@@ -179,4 +186,8 @@ const DisplayModeText = styled.div`
   border: 2px solid black;
   background: whitesmoke;
   border-radius: 5px;
+`;
+
+const ContainerDiv = styled.div`
+  width: clamp(500px, 78vw, 1300px);
 `;
