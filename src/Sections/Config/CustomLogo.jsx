@@ -5,6 +5,7 @@ import appState from "../../GlobalState/appState";
 import UserTextInput from "../../Utils/UserTextInput";
 // import logoImage from "../../assets/images/EQ-logo.png";
 import logoImage from "../../assets/images/EQ_default.svg";
+import folderImage from "../../assets/images/images-folder-image.png";
 
 const CustomLogo = () => {
   let displayMode = appState.displayMode;
@@ -27,29 +28,40 @@ const CustomLogo = () => {
             Figma
           </a>{" "}
           or similar software can be used to make a custom image (40 pixels
-          height by 250 pixels width in PNG or SVG format) that can be used as a
-          logo in the footer. The hex color code for the footer background color
-          is "#ececec".
+          height by 250 pixels width in png format) that can be used as a logo
+          in the footer. JPG, SVG, and other filetypes will not work. It must be
+          in PNG format. The hex color code for the footer background color is
+          "#ececec".
+          <br />
+          <br />
+          The name of your custom file must be: &nbsp;&nbsp;&nbsp;&nbsp;
+          logo.png
           <br />
           <br />
           Add your custom image to the
-          <b>"images" folder</b> (see Figure 1 in the "Server" section) and
-          input the <b>exact name</b>, including the file extension (.png or
-          .svg) here. The name is case sensitive.
+          <b>"images" folder</b> of your EQ Web Sort project and replace the
+          default file.
+          <br />
+          <ImageContainer>
+            <img src={folderImage} width="550" alt="s" />
+          </ImageContainer>
         </DisplayModeText>
       )}
       <ImageContainer>
-        <div>Default image: </div>
+        <div>Default logo image: </div>
         <img src={logoImage} width="250" alt="s" />
       </ImageContainer>
 
-      <UserTextInput
-        label="6. Custom Logo Image Name:"
-        stateId="configLogoHtml"
-        sectionName="config"
-        width={30}
-        left={0}
-      />
+      <LogoText>
+        <span>
+          6. Custom Logo:&nbsp;&nbsp;If desired, you can create a custom logo in
+          png format with the name &nbsp;&nbsp;&nbsp; <b>logo.png</b>
+          &nbsp;&nbsp;&nbsp;and replace the default image in the <b>
+            images
+          </b>{" "}
+          folder of your EQ Web Sort project.
+        </span>
+      </LogoText>
     </React.Fragment>
   );
 };
@@ -84,4 +96,10 @@ const ImageContainer = styled.div`
   margin-top: 30px;
   margin-bottom: 10px;
   gap: 30px;
+`;
+
+const LogoText = styled.div`
+  margin-top: 20px;
+  margin-left: 70px;
+  max-width: 900px;
 `;
