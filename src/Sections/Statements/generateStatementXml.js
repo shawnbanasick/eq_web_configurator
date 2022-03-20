@@ -15,9 +15,9 @@ const generateStatementXml = () => {
    <statements version="1.0" htmlParse="false">\n`;
 
   for (let i = 0; i < statementsArray.length; i += 1) {
-    let string = `     <statement id="${i + 1}">{{{div}}}${encodeHTML(
+    let string = `     <statement id="${i + 1}">${encodeHTML(
       statementsArray[i]
-    )}{{{/div}}}</statement>\n`;
+    )}</statement>\n`;
 
     data = data.concat(string);
     // }
