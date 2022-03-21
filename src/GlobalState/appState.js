@@ -179,7 +179,7 @@ const appState = store({
   /*
    ******** LANDING  ****************** */
   langLandingHead: `University Research Project`,
-  langWelcomeMessage: `<div><h2>EQ Web Sort Demo Project - iPad Use in the Classroom.</h2><br/><br><p>Thank you for helping with this research project</p></div>`,
+  langWelcomeMessage: `<h2>EQ Web Sort Demo Project - iPad Use in the Classroom.</h2><br/><br><p>Thank you for helping with this research project</p>`,
 
   langAccessCodeText: `Access Code`,
   langAccessInputText: "Please enter the access code for this survey.",
@@ -219,10 +219,10 @@ const appState = store({
   /*
    ******** PRESORT  ****************** */
   langTitleBarText: `Preliminary Sorting`,
-  langPresortAgreement: `Agree`,
+  langPresortAgreement: `Agree (3)`,
   langPresortStatements: `Statements`,
-  langPresortNeutral: `No Strong Feelings`,
-  langPresortDisagreement: `Disagree`,
+  langPresortNeutral: `No Strong Feelings (2)`,
+  langPresortDisagreement: `Disagree (1)`,
   langPresortModalHead: `Step 1 of 4`,
   langPresortModalText: `Read the following statements carefully and split them up into three piles: a pile for statements you tend to disagree with, a pile for cards you tend to agree with, and a pile for the rest. Changes can be made later.<br><br>If you want to read this instruction a second time, click the help-button at the bottom left corner.`,
   langPresortPreventNavModalHead: `Navigation Disabled`,

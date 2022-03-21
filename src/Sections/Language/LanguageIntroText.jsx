@@ -14,10 +14,11 @@ const LocalLanguage = () => {
   return (
     <>
       <DisplayModeText>
-        The input options will change according to the setup target (firebase or
-        local). If you want to set up the language for a local, offline data
-        collection project, be sure to choose "local" for question 2 "Setup
-        target" in the Config section <b>before</b> you input the language data.
+        <b>**Important**</b> The input options will change according to the
+        setup target (firebase or local). If you want to set up the language.xml
+        file for a local, offline data collection project, be sure to choose
+        "local" for Question 2-2 "Setup target" in the Config section{" "}
+        <b>before</b> you input the language data here.
         <br />
         <br />
         If you have a language.xml file from another EQ Web Sort project, you

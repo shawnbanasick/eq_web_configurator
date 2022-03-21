@@ -37,7 +37,7 @@ const Start = () => {
         <img src={Image} height="180" alt="s" />
         <Title>
           EQ Web Sort Configurator <br />
-          Version 1.0.1
+          Version 1.0.2
         </Title>
       </HeroContainer>
       <IntroText>
@@ -52,7 +52,7 @@ const Start = () => {
         project for online Q-sorting. It provides guided editing of the EQ Web
         Sort configuration files and offers increased control over the design of
         the Q sort. It also includes a built-in web server to immediately test
-        the Q sort setup on any locally installed web browser.
+        your Q sort setup on any locally installed web browser.
       </IntroText>
       <CustomH2>Select Configurator Display Mode:</CustomH2>
       <ButtonContainer>

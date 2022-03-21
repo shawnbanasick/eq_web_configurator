@@ -19,7 +19,7 @@ const Statements = () => {
             rel="noopener noreferrer"
             href="https://github.com/shawnbanasick/eq_web_configurator"
           >
-            EQ Web Configurator Home Page
+            EQ Web Sort Configurator Home Page
           </a>
         </p>
         <p>

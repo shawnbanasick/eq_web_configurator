@@ -23,7 +23,7 @@ const GeneralOptions = () => {
       {displayMode && (
         <DisplayModeText>
           If you are planning to do the usual online Q sort project, leave the
-          setup target set to "<b>online</b>". The "<b>local</b>" option
+          setup target set to "<b>firebase</b>". The "<b>local</b>" option
           transforms EQ Web Sort into a tool for in-person data collection using
           a notebook computer. For more information see the "Local Data
           Collection" user guide on the EQ Web Sort homepage.

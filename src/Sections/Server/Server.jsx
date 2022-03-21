@@ -90,9 +90,10 @@ const Server = () => {
         <>
           <DisplayModeText>
             In this section you will set up the default EQ Web Sort files on
-            your machine. Once everything is set up, you will be able to monitor
-            the changes as you replace the default files with your project's
-            information.
+            your machine for development. Once the default files are ready, you
+            can start the web server and view your changes as you make them.
+            <br />
+            <br />
             <br />
             <br />
             The first step is to download the base files for EQ Web Sort and
@@ -209,9 +210,9 @@ const Server = () => {
           The project is not on the internet yet - it is being hosted from your
           computer to your browser. <br />
           <br />
-          Now, after you save any of the settings files with your project
+          After you save any of the settings files with your project
           information, you can refresh your web browser and the updates will
-          appear.
+          appear in the EQ Web Sort page.
           <br />
           <br />
           After you set up your Firebase settings file you will be able to save
