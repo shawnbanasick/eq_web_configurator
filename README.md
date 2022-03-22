@@ -1,16 +1,18 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 <strong>Download Links:</strong> &nbsp;
-[macOS](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v1.0.0/eq-web-configurator-1.0.0.dmg) &nbsp;||&nbsp;
-[Windows-installer](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v1.0.0/eq-web-configurator.Setup.1.0.0.exe) &nbsp;||&nbsp;
-[Windows-portable](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v1.0.0/eq-web-configurator.1.0.0.exe) &nbsp;||&nbsp;
-[Linux](https://github.com/shawnbanasick/eq_web_configurator/releases/tag/v1.0.0) <br/>
+[macOS](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v1.0.2/eq-web-configurator-1.0.2.dmg) &nbsp;||&nbsp;
+[Windows-installer](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v1.0.2/eq-web-configurator_Setup_1.0.2.exe) &nbsp;||&nbsp;
+[Windows-portable](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v1.0.2/eq-web-configurator_1.0.2.exe) &nbsp;||&nbsp;
+[Linux](https://github.com/shawnbanasick/eq_web_configurator/releases/tag/v1.0.2) <br/>
 
 <p align="center">
 <img src="https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/configurator_logo.svg" width="1000" />
 </p>
 
-EQ Web Configurator simplifies the set-up and testing of an online Q sort project with <b> [EQ Web Sort](https://github.com/shawnbanasick/eq-web-sort)</b>. It includes a local web server to preview the project set-up on any installed web browser. It also has a guided editing process for the project settings files, and complete guides to attach a free Google database and upload the project to a free web host.
+# Use with <b> [EQ Web Sort](https://github.com/shawnbanasick/eq-web-sort) </b> Version 1.0.2
+
+EQ Web Configurator simplifies the set-up and testing of an online Q sort project with EQ Web Sort. It includes a local web server to preview the project set-up on any installed web browser. It also has a guided editing process for the project settings files, and complete guides to attach a free Google database and upload the project to a free web host.
 
 #### A Built-in Local Web Server
 
