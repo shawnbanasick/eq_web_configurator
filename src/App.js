@@ -126,7 +126,7 @@ const App = (props) => {
             active={viewFirebase}
             onClick={() => handleClick("viewFirebase")}
           >
-            <p className="title">{`6. ${t("Firebase")}`}</p>
+            <p className="title">{`6. ${t("Database")}`}</p>
           </FileButton>
           <FileButton
             buttonColor={rotationButtonColor}

@@ -221,7 +221,7 @@ const Server = () => {
           will allow you to test your complete setup - including data upload.
           Don't forget to delete any testing data from your database before you
           begin your actual project (there are instructions on how to do this in
-          section "6. Firebase").
+          section "6. Database").
         </DisplayModeText>
       )}
       <SpacerDiv />

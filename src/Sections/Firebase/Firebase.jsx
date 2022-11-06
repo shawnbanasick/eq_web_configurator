@@ -89,23 +89,58 @@ const FirebaseInfo = () => {
     <MainContent>
       <StyledToastContainer />
       <GlobalStyle />
-      <Title>Firebase Settings</Title>
+      <Title>Database Settings</Title>
       <DisplayModeText>
-        <b>Firebase</b> is a database company owned by Google. It provides a
-        free and convenient way to store the participants' response data. If you
-        don't have a Google account, make one before you begin the setup
-        process.
+        There are two options for storing the participant response data created
+        by EQ Web Sort. <b>Firebase</b> is a "database as a service" company
+        owned by Google. It provides a free and robust way to store the
+        participants' response data. The number of participants is not limited,
+        but the participant data is stored in JSON format.
+        <br />
+        <br />
+        <b>Google Sheets</b> uses the familiar spreadsheet format and is much
+        easier to setup, but requires the use of a 3rd party web application
+        called
+        <b>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://steinhq.com/"
+          >
+            "Stein"
+          </a>
+        </b>
+        . It is free for projects with less than 200 participant responses.
+        <br />
+        <br />
+        If you don't have a Google account, you'll have to make one before you
+        begin the setup process. If you decide to use Google Sheets, I recommend
+        that you make a new Google account to use with Stein.
         <br /> <br />
+      </DisplayModeText>
+      <SpacerDiv />
+      <Title>GOOGLE SHEETS + STEIN SETUP</Title>
+      <DisplayModeText>
+        There are three steps needed to setup a Google Sheet as the database.
+        <br /> &nbsp;&nbsp;&nbsp;1&#41; create and format a new Google Sheet;
+        <br /> &nbsp;&nbsp;&nbsp;2&#41; create a Stein API for your Google
+        Sheet;
+        <br /> &nbsp;&nbsp;&nbsp;3&#41; add the Stein API to the config.xml file
+        for your project.
+      </DisplayModeText>
+      <Title>FIREBASE SETUP</Title>
+
+      <DisplayModeText>
         Information on how to export the Firebase data for analysis and how to
         delete individual data entries is at the bottom of this page. <br />{" "}
         <br />
         There are four steps needed to provide a database for EQ Web Sort:
         <br /> &nbsp;&nbsp;&nbsp;1&#41; create a new Firebase project;
         <br /> &nbsp;&nbsp;&nbsp;2&#41; set up anonymous log-ins;
-        <br /> &nbsp;&nbsp;&nbsp;3&#41; initialize the database
+        <br /> &nbsp;&nbsp;&nbsp;3&#41; initialize the database;
         <br /> &nbsp;&nbsp;&nbsp;4&#41; set the database access rules.
       </DisplayModeText>
-      <SpacerDiv />
+
       <Title2>Step 1 of 4 - Create a New Project</Title2>
 
       <DisplayModeText>

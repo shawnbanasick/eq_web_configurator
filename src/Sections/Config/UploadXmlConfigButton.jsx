@@ -123,9 +123,16 @@ const UploadXmlFileButton = () => {
         if (inputObj.setupTarget === "local") {
           appState.configSetupTargetlocalActive = true;
           appState.configSetupTargetfirebaseActive = false;
+          appState.configSetupTargetgSheetsActive = false;
         }
         if (inputObj.setupTarget === "firebase") {
           appState.configSetupTargetfirebaseActive = true;
+          appState.configSetupTargetlocalActive = false;
+          appState.configSetupTargetgSheetsActive = false;
+        }
+        if (inputObj.setupTarget === "gSheets") {
+          appState.configSetupTargetgSheetsActive = true;
+          appState.configSetupTargetfirebaseActive = false;
           appState.configSetupTargetlocalActive = false;
         }
 

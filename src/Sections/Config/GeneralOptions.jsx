@@ -26,7 +26,11 @@ const GeneralOptions = () => {
           setup target set to "<b>firebase</b>". The "<b>local</b>" option
           transforms EQ Web Sort into a tool for in-person data collection using
           a notebook computer. For more information see the "Local Data
-          Collection" user guide on the EQ Web Sort homepage.
+          Collection" user guide on the EQ Web Sort homepage. The{" "}
+          <b>"gSheets"</b> option allows you to use one of your{" "}
+          <b>Google Sheets</b> as a database for the application (requires use
+          of 3rd party web application). Setup information is in the database
+          section.
           <br />
           <br />
           For option #4 - title bar color - you can set the color by moving the
@@ -55,7 +59,7 @@ const GeneralOptions = () => {
 
       <RadioButtons
         label="2-2. Setup target:"
-        buttonIdArray={["firebase", "local"]}
+        buttonIdArray={["firebase", "local", "gSheets"]}
         stateId="configSetupTarget"
         sectionName="config"
       />

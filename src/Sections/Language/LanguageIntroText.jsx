@@ -15,9 +15,9 @@ const LocalLanguage = () => {
     <>
       <DisplayModeText>
         <b>**Important**</b> The input options will change according to the
-        setup target (firebase or local). If you want to set up the language.xml
-        file for a local, offline data collection project, be sure to choose
-        "local" for Question 2-2 "Setup target" in the Config section{" "}
+        setup target (firebase, gSheets, or local). If you want to set up the
+        language.xml file for a local, offline data collection project, be sure
+        to choose "local" for Question 2-2 "Setup target" in the Config section{" "}
         <b>before</b> you input the language data here.
         <br />
         <br />
