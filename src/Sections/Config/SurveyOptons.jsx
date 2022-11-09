@@ -23,6 +23,8 @@ const SurveyOptions = (props) => {
   };
 
   let configShowStep4 = convertToFalse(appState.configShowStep4);
+
+  // set overall display modality
   let displayMode = appState.displayMode;
   if (displayMode === "beginner") {
     displayMode = true;

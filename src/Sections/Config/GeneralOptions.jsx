@@ -1,5 +1,5 @@
 import React from "react";
-import { view } from "@risingstack/react-easy-state";
+import { view, store } from "@risingstack/react-easy-state";
 import styled from "styled-components";
 import appState from "../../GlobalState/appState";
 import UserTextInput from "../../Utils/UserTextInput";
@@ -8,12 +8,27 @@ import ConfigColorPicker from "./ConfigColorPicker";
 import IncompatibleFileModal from "./IncompatibleFileModal";
 
 const GeneralOptions = () => {
+  const localState = store({ displayItem: true });
+
   let displayMode = appState.displayMode;
   if (displayMode === "beginner") {
     displayMode = true;
   } else {
     displayMode = false;
   }
+
+  const setSheetsDisplay = (value) => {
+    if (value === "Google Sheets") {
+      localState.displayItem = true;
+      return true;
+    } else {
+      localState.displayItem = false;
+      return false;
+    }
+  };
+
+  let showSheetsConfigMessage = setSheetsDisplay(appState.configSetupTarget);
+  console.log(showSheetsConfigMessage);
 
   return (
     <React.Fragment>
@@ -59,10 +74,16 @@ const GeneralOptions = () => {
 
       <RadioButtons
         label="2-2. Setup target:"
-        buttonIdArray={["firebase", "local", "gSheets"]}
+        buttonIdArray={["firebase", "local", "Google Sheets"]}
         stateId="configSetupTarget"
         sectionName="config"
       />
+
+      {showSheetsConfigMessage && (
+        <DisplayModeText>
+          Follow the steps in this GUIDE to get the Stein API URL
+        </DisplayModeText>
+      )}
 
       <RadioButtons
         label="2-3. Shuffle statement cards:"
