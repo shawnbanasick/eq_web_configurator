@@ -81,7 +81,15 @@ const GeneralOptions = () => {
 
       {showSheetsConfigMessage && (
         <DisplayModeText>
-          Follow the steps in this GUIDE to get the Stein API URL
+          Follow the steps in this{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://drive.google.com/file/d/1zlLf8WuHgQOhW4uKWamjkJ-ssMQMjYl-/view?usp=sharing"
+          >
+            GUIDE
+          </a>{" "}
+          to get the Stein API URL
         </DisplayModeText>
       )}
 
