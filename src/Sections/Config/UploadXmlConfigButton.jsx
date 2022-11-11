@@ -123,8 +123,6 @@ const UploadXmlFileButton = () => {
         appState["configSteinApiUrl"] = steinApiUrl;
 
         // set 2. setup target
-        console.log(inputObj.setupTarget);
-        console.log(inputObj.steinApiUrl);
         localStorage.setItem("configSetupTarget", inputObj.setupTarget);
         appState["configSetupTarget"] = inputObj.setupTarget;
         if (inputObj.setupTarget === "local") {

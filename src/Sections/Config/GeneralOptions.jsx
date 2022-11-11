@@ -19,7 +19,6 @@ const GeneralOptions = () => {
   }
 
   const setSheetsDisplay = (value) => {
-    console.log(value);
     if (value === "sheets") {
       localState.displayItem = true;
       return true;
