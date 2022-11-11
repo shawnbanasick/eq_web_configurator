@@ -95,7 +95,8 @@ const FirebaseInfo = () => {
         by EQ Web Sort. <b>Firebase</b> is a "database as a service" company
         owned by Google. It provides a free and robust way to store the
         participants' response data. The number of participants is not limited,
-        but the participant data is stored in JSON format.
+        but the participant data is stored in JSON format. Follow the guide
+        below to set up Firebase.
         <br />
         <br />
         <b>Google Sheets</b> uses the familiar spreadsheet format and is much
@@ -110,24 +111,18 @@ const FirebaseInfo = () => {
             "Stein"
           </a>
         </b>
-        . It is free for projects with less than 200 participant responses.
+        . It is free for projects with less than 200 participant responses. To
+        set up Google Sheets as the database for your project, go back to
+        Section "2. Config", select "Google Sheets", and follow the guide to get
+        the Stein API URL.
         <br />
         <br />
         If you don't have a Google account, you'll have to make one before you
-        begin the setup process. If you decide to use Google Sheets, I recommend
-        that you make a new Google account to use with Stein.
+        begin the setup process.
         <br /> <br />
       </DisplayModeText>
       <SpacerDiv />
-      <Title>GOOGLE SHEETS + STEIN SETUP</Title>
-      <DisplayModeText>
-        There are three steps needed to setup a Google Sheet as the database.
-        <br /> &nbsp;&nbsp;&nbsp;1&#41; create and format a new Google Sheet;
-        <br /> &nbsp;&nbsp;&nbsp;2&#41; create a Stein API for your Google
-        Sheet;
-        <br /> &nbsp;&nbsp;&nbsp;3&#41; add the Stein API to the config.xml file
-        for your project.
-      </DisplayModeText>
+
       <Title>FIREBASE SETUP</Title>
 
       <DisplayModeText>
