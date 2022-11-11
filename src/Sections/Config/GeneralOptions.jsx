@@ -19,7 +19,8 @@ const GeneralOptions = () => {
   }
 
   const setSheetsDisplay = (value) => {
-    if (value === "Google Sheets") {
+    console.log(value);
+    if (value === "sheets") {
       localState.displayItem = true;
       return true;
     } else {
@@ -107,7 +108,7 @@ const GeneralOptions = () => {
       />
       <RadioButtons
         label="2-2. Setup target:"
-        buttonIdArray={["Google Sheets", "firebase", "local"]}
+        buttonIdArray={["sheets", "firebase", "local"]}
         stateId="configSetupTarget"
         sectionName="config"
       />
@@ -116,7 +117,7 @@ const GeneralOptions = () => {
         <FadeIn delay={150} duration={1050}>
           <UserTextInput
             label="2-2b. Stein API URL:"
-            stateId="configSteinApiUrlString"
+            stateId="configSteinApiUrl"
             sectionName="config"
             width={30}
             left={0}

@@ -117,21 +117,28 @@ const UploadXmlFileButton = () => {
         localStorage.setItem("configTitle", title);
         appState["configTitle"] = title;
 
+        // set stein api input
+        let steinApiUrl = inputObj.steinApiUrl;
+        localStorage.setItem("configSteinApiUrl", steinApiUrl);
+        appState["configSteinApiUrl"] = steinApiUrl;
+
         // set 2. setup target
+        console.log(inputObj.setupTarget);
+        console.log(inputObj.steinApiUrl);
         localStorage.setItem("configSetupTarget", inputObj.setupTarget);
         appState["configSetupTarget"] = inputObj.setupTarget;
         if (inputObj.setupTarget === "local") {
           appState.configSetupTargetlocalActive = true;
           appState.configSetupTargetfirebaseActive = false;
-          appState.configSetupTargetgSheetsActive = false;
+          appState.configSetupTargetsheetsActive = false;
         }
         if (inputObj.setupTarget === "firebase") {
           appState.configSetupTargetfirebaseActive = true;
           appState.configSetupTargetlocalActive = false;
-          appState.configSetupTargetgSheetsActive = false;
+          appState.configSetupTargetsheetsActive = false;
         }
-        if (inputObj.setupTarget === "gSheets") {
-          appState.configSetupTargetgSheetsActive = true;
+        if (inputObj.setupTarget === "sheets") {
+          appState.configSetupTargetsheetsActive = true;
           appState.configSetupTargetfirebaseActive = false;
           appState.configSetupTargetlocalActive = false;
         }

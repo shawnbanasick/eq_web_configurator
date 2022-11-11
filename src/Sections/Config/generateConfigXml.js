@@ -32,11 +32,6 @@ const generateConfigXml = () => {
     appState.configLogoHtml = "EQ_default.svg";
   }
 
-  let setupTarget = appState.configSetupTarget;
-  if (setupTarget === "Google Sheets") {
-    setupTarget = "gSheets";
-  }
-
   let studyTitle = appState.configTitle;
   if (studyTitle === null || studyTitle === undefined) {
     appState.configTitle = "my Q study";
