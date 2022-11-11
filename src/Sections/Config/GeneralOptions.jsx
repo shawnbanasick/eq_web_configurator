@@ -85,7 +85,7 @@ const GeneralOptions = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/1zlLf8WuHgQOhW4uKWamjkJ-ssMQMjYl-/view?usp=sharing"
+            href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/shawnbanasick/eq_web_configurator/blob/main/readme_assets/Configurator%20Stein%20Integration.pdf"
           >
             GUIDE
           </a>{" "}
