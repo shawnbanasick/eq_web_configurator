@@ -22,6 +22,7 @@ const appState = store({
   configShuffleCards: true,
   configAccessanonymousActive: true,
   configHeaderBarColor: "#337ab7",
+  configSteinApiUrlString: "",
 
   /*
   config.xml ACCESS settings */

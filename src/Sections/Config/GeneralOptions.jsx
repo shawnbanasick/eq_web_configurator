@@ -116,7 +116,7 @@ const GeneralOptions = () => {
         <FadeIn delay={150} duration={1050}>
           <UserTextInput
             label="2-2b. Stein API URL:"
-            stateId="steinApiUrlString"
+            stateId="configSteinApiUrlString"
             sectionName="config"
             width={30}
             left={0}

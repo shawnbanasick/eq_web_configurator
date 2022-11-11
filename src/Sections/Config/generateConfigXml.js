@@ -32,6 +32,11 @@ const generateConfigXml = () => {
     appState.configLogoHtml = "EQ_default.svg";
   }
 
+  let setupTarget = appState.configSetupTarget;
+  if (setupTarget === "Google Sheets") {
+    setupTarget = "gSheets";
+  }
+
   let studyTitle = appState.configTitle;
   if (studyTitle === null || studyTitle === undefined) {
     appState.configTitle = "my Q study";
@@ -46,6 +51,9 @@ const generateConfigXml = () => {
    <item id="studyTitle">${appState.configTitle}</item> 
    <item id="setupTarget">${appState.configSetupTarget}</item>
    <item id="firebaseOrLocal">${appState.configSetupTarget}</item>
+   <item id="steinApi">${appState.configSteinApiUrlString}</item>
+
+
    <item id="shuffleCards">${appState.configShuffleCards}</item>
    <item id="headerBarColor">${appState.configHeaderBarColor}</item>
    <item id="devMode">false</item>
