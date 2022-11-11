@@ -111,26 +111,13 @@ const GeneralOptions = () => {
       <br />
       {showSheetsConfigMessage && (
         <FadeIn delay={150} duration={1050}>
-          <DisplayModeText>
-            Go to the Stein
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://steinhq.com/"
-            >
-              <b>website</b>
-            </a>{" "}
-            and follow the steps in this
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://docs.google.com/viewer?url=https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/Configurator_Stein_Integration.pdf"
-            >
-              <b>GUIDE</b>
-            </a>{" "}
-            to set up your Google Sheet and get the Stein API URL to paste
-            below.
-          </DisplayModeText>
+          <UserTextInput
+            label="2-2b. Stein API URL:"
+            stateId="steinApiUrlString"
+            sectionName="config"
+            width={30}
+            left={0}
+          />
         </FadeIn>
       )}
       <RadioButtons
