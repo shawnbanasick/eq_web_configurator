@@ -95,7 +95,7 @@ const showSectionDefaults = () => {
     langTransferTextAbove: `<h1>Ready to Submit</h1><br><br> <h2>Please click the "Submit Data" button to transmit your results.</h2>`,
     langTransferTextBelow: `If the submission confirmation message does not appear, <br>please wait a few minutes and click the submit button again.`,
     langTransferOkModalHeader: `Success - The data have been sent to the server.`,
-    langTransferOkModalText: `Thank you for using Easy HTMLQ!<br><br>You can now close your browser tab.`,
+    langTransferOkModalText: `Thank you for using EQ Web Sort!<br><br>You can now close your browser tab.`,
     langTransferFailModalHeader: `Connection to server failed`,
     langTransferFailModalText: `Please try again in a few moments.`,
     langFallbackMessage: `Data transmission has failed. Please download the results and email them as an attachment to ken.q.tools@gmail.com.  Thank you!`,

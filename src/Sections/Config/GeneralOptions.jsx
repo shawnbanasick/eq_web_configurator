@@ -6,6 +6,7 @@ import UserTextInput from "../../Utils/UserTextInput";
 import RadioButtons from "../../Utils/RadioButtons";
 import ConfigColorPicker from "./ConfigColorPicker";
 import IncompatibleFileModal from "./IncompatibleFileModal";
+import FadeIn from "./FadeIn";
 
 const GeneralOptions = () => {
   const localState = store({ displayItem: true });
@@ -28,27 +29,58 @@ const GeneralOptions = () => {
   };
 
   let showSheetsConfigMessage = setSheetsDisplay(appState.configSetupTarget);
-  console.log(showSheetsConfigMessage);
 
   return (
     <React.Fragment>
       <SubTitle>General Options</SubTitle>
       <IncompatibleFileModal />
-
       {displayMode && (
         <DisplayModeText>
-          If you are planning to do the usual online Q sort project, leave the
-          setup target set to "<b>firebase</b>". The "<b>local</b>" option
-          transforms EQ Web Sort into a tool for in-person data collection using
-          a notebook computer. For more information see the "Local Data
-          Collection" user guide on the EQ Web Sort homepage. The{" "}
-          <b>"gSheets"</b> option allows you to use one of your{" "}
-          <b>Google Sheets</b> as a database for the application (requires use
-          of 3rd party web application). Setup information is in the database
-          section.
+          If you are planning to do a standard online Q sort project, the "2.2
+          Setup Target" option should be set to either "<b>Google Sheets</b>" or
+          "<b>firebase</b>". <br />
+          <br />
+          The "Google Sheets" option allows you to use a <b>Google Sheet</b> as
+          a database for the application, but requires use of 3rd party web
+          application called "Stein". It is free for projects with less than 200
+          participant responses. To set up your Sheet, go to the Stein
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://steinhq.com/"
+          >
+            <b>website</b>
+          </a>{" "}
+          and follow the steps in this
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://docs.google.com/viewer?url=https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/Configurator_Stein_Integration.pdf"
+          >
+            <b>GUIDE</b>
+          </a>{" "}
+          to get the Stein API URL to paste in option 2-2b below.
           <br />
           <br />
-          For option #4 - title bar color - you can set the color by moving the
+          <b>Firebase</b> is a "database as a service" company owned by Google.
+          It is more robust than Google Sheets, but the setup process is more
+          complex. Step-by-step instructions on how to set up Firebase are in
+          Section 6.
+          <br />
+          <br />
+          The "<b>local</b>" option transforms EQ Web Sort into a tool for
+          in-person data collection using a notebook computer. For more
+          information see the{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://docs.google.com/viewer?url=https://github.com/shawnbanasick/eq-web-sort/raw/main/readme_assets/local_guide_A4.pdf"
+          >
+            <b>User Guide</b>
+          </a>
+          . <br />
+          <br />
+          For option 2-4 - title bar color - you can set the color by moving the
           selector in the color picker (click on the blue square below) or by
           using html hex codes (input the code at the bottom of the color picker
           box). To find an appropriate color, there are many websites that can
@@ -63,43 +95,50 @@ const GeneralOptions = () => {
           .{" "}
         </DisplayModeText>
       )}
-
       <UserTextInput
-        label="2-1. Project title:"
+        label="2-1. Project name:"
         stateId="configTitle"
         sectionName="config"
         width={30}
         left={0}
       />
-
       <RadioButtons
         label="2-2. Setup target:"
-        buttonIdArray={["firebase", "local", "Google Sheets"]}
+        buttonIdArray={["Google Sheets", "firebase", "local"]}
         stateId="configSetupTarget"
         sectionName="config"
       />
-
+      <br />
       {showSheetsConfigMessage && (
-        <DisplayModeText>
-          Follow the steps in this{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/shawnbanasick/eq_web_configurator/blob/main/readme_assets/Configurator%20Stein%20Integration.pdf"
-          >
-            GUIDE
-          </a>{" "}
-          to get the Stein API URL
-        </DisplayModeText>
+        <FadeIn delay={150} duration={1050}>
+          <DisplayModeText>
+            Go to the Stein
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://steinhq.com/"
+            >
+              <b>website</b>
+            </a>{" "}
+            and follow the steps in this
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://docs.google.com/viewer?url=https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/Configurator_Stein_Integration.pdf"
+            >
+              <b>GUIDE</b>
+            </a>{" "}
+            to set up your Google Sheet and get the Stein API URL to paste
+            below.
+          </DisplayModeText>
+        </FadeIn>
       )}
-
       <RadioButtons
         label="2-3. Shuffle statement cards:"
         buttonIdArray={["true", "false"]}
         stateId="configShuffleCards"
         sectionName="config"
       />
-
       <ColorLabel>
         <div>2-4. Title bar color (for all pages):</div>
         <ConfigColorPicker
