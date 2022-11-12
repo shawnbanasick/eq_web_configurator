@@ -243,6 +243,22 @@ const UploadXmlFileButton = () => {
           appState.configDisplayOverloadedColWarnfalseActive = true;
         }
 
+        // set 10a. set min card height
+        localStorage.setItem("configSetMinCardSize", inputObj.setMinCardSize);
+        appState["configSetMinCardSize"] = inputObj.setMinCardSize;
+        appState.configSetMinCardSizetrueActive = false;
+        appState.configSetMinCardSizefalseActive = false;
+        if (inputObj.setMinCardSize === "true") {
+          appState.configSetMinCardSizetrueActive = true;
+        }
+        if (inputObj.setMinCardSize === "false") {
+          appState.configSetMinCardSizefalseActive = true;
+        }
+
+        // set 10b. Condition of instruction font size
+        localStorage.setItem("configMinCardSize", inputObj.minCardSize);
+        appState["configMinCardSize"] = inputObj.minCardSize;
+
         // set 11. include individual card comments screen
         localStorage.setItem("configShowStep3", inputObj.showPostsort);
         appState["configShowStep3"] = inputObj.showPostsort;

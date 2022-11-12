@@ -47,7 +47,7 @@ const appState = store({
   configDisplayOverloadedColWarn: true,
   configDisplayOverloadedColWarntrueActive: true,
   configSetMinCardSizefalseActive: true,
-  configMinCardSize: 20,
+  configMinCardSize: 50,
 
   /*
   config.xml POSTSORT settings */

@@ -101,24 +101,14 @@ const FirebaseInfo = () => {
         <br />
         <b>Google Sheets</b> uses the familiar spreadsheet format and is much
         easier to setup, but requires the use of a third-party web application
-        called
-        <b>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://steinhq.com/"
-          >
-            "Stein"
-          </a>
-        </b>
-        . It is free for projects with less than 200 participant responses. To
-        set up Google Sheets as the database for your project, go back to
-        Section "2. Config", select "Google Sheets", and follow the guide to get
-        the Stein API URL.
+        called "Stein". It is free for projects with less than 200 participant
+        responses. To set up Google Sheets as the database for your project, go
+        back to Section "2. Config", select "sheets" as the setup target, and
+        follow the guide to get the Stein API URL.
         <br />
         <br />
         If you don't have a Google account, you'll have to make one before you
-        begin the setup process.
+        begin the setup process for Firebase.
         <br /> <br />
       </DisplayModeText>
       <SpacerDiv />
