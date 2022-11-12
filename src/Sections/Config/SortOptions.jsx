@@ -1,9 +1,10 @@
 import React from "react";
-import { view } from "@risingstack/react-easy-state";
+import { view, store } from "@risingstack/react-easy-state";
 import styled from "styled-components";
 import appState from "../../GlobalState/appState";
 import UserNumberInput from "../../Utils/UserNumberInput";
 import RadioButtons from "../../Utils/RadioButtons";
+import FadeIn from "./FadeIn";
 
 const SortOptions = () => {
   let displayMode = appState.displayMode;
@@ -12,6 +13,20 @@ const SortOptions = () => {
   } else {
     displayMode = false;
   }
+
+  const localState = store({ displayItem: true });
+
+  const setCardSizeDisplay = (value) => {
+    if (value === true || value === "true") {
+      localState.displayItem = true;
+      return true;
+    } else {
+      localState.displayItem = false;
+      return false;
+    }
+  };
+
+  let showMinCardSizeInput = setCardSizeDisplay(appState.configSetMinCardSize);
 
   return (
     <React.Fragment>
@@ -50,6 +65,25 @@ const SortOptions = () => {
         stateId="configDisplayOverloadedColWarn"
         sectionName="config"
       />
+      <RadioButtons
+        label="2-10. Set minimum statement card size:"
+        buttonIdArray={["true", "false"]}
+        stateId="configSetMinCardSize"
+        sectionName="config"
+      />
+      {showMinCardSizeInput && (
+        <FadeIn delay={150} duration={1050}>
+          <UserNumberInput
+            label="2-10b. Minimum card size:"
+            step={1}
+            value={20}
+            upperLimit={80}
+            lowerLimit={8}
+            stateId="configMinCardSize"
+            sectionName="config"
+          />
+        </FadeIn>
+      )}
     </React.Fragment>
   );
 };
