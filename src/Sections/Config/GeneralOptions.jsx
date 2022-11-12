@@ -41,7 +41,7 @@ const GeneralOptions = () => {
           "<b>firebase</b>". <br />
           <br />
           The "Google Sheets" option allows you to use a <b>Google Sheet</b> as
-          a database for the application, but requires use of 3rd party web
+          a database for the application, but requires use of third-party web
           application called "Stein". It is free for projects with less than 200
           participant responses. If you decide to use Stein with Google Sheets,
           I recommend that you make a new Google account because you'll need to

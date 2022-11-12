@@ -100,7 +100,7 @@ const FirebaseInfo = () => {
         <br />
         <br />
         <b>Google Sheets</b> uses the familiar spreadsheet format and is much
-        easier to setup, but requires the use of a 3rd party web application
+        easier to setup, but requires the use of a third-party web application
         called
         <b>
           <a
