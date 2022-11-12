@@ -37,7 +37,7 @@ const Start = () => {
         <img src={Image} height="180" alt="s" />
         <Title>
           EQ Web Sort Configurator <br />
-          Version 1.0.2
+          Version 2.0.0
         </Title>
       </HeroContainer>
       <IntroText>

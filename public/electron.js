@@ -90,6 +90,7 @@ function createWindow() {
     height: mainWindowStateKeeper.height,
     webPreferences: {
       nodeIntegration: true,
+      contextIsolation: false,
       enableRemoteModule: true,
     },
   };
@@ -178,7 +179,15 @@ function createWindow() {
   // Track window state
   mainWindowStateKeeper.track(mainWindow);
 
+  /*
   mainWindow.loadURL(
+    isDev
+      ? "http://localhost:3000"
+      : `file://${path.join(__dirname, "../build/index.html")}`
+  );
+*/
+
+  mainWindow.loadFile(
     isDev
       ? "http://localhost:3000"
       : `file://${path.join(__dirname, "../build/index.html")}`
