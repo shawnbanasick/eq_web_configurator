@@ -8,7 +8,6 @@ const handleChange = (event) => {
   let statementInput = event.target.value;
   appState.currentStatements = statementInput;
   localStorage.setItem("currentStatements", statementInput);
-  console.log("click");
 };
 
 const StatementTextArea = () => {

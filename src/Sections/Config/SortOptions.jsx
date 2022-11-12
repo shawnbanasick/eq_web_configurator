@@ -68,7 +68,7 @@ const SortOptions = () => {
         sectionName="config"
       />
       <RadioButtons
-        label="2-10. Set minimum statement card size:"
+        label="2-10. Set default statement card size:"
         buttonIdArray={["true", "false"]}
         stateId="configSetMinCardHeight"
         sectionName="config"
@@ -76,7 +76,7 @@ const SortOptions = () => {
       {showMinCardHeightInput && (
         <FadeIn delay={150} duration={1050}>
           <UserNumberInput
-            label="2-10b. Minimum card height:"
+            label="2-10b. Default card height:"
             step={1}
             value={20}
             upperLimit={800}
