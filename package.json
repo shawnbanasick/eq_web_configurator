@@ -80,6 +80,7 @@
     "about-window": "^1.15.2",
     "cross-env": "^7.0.3",
     "dotenv": "^8.2.0",
+    "electron-builder-sandbox-fix": "^1.0.10",
     "electron-context-menu": "^2.4.0",
     "electron-is-dev": "^1.2.0",
     "electron-settings": "^3.2.0",
