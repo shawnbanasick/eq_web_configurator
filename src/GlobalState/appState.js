@@ -22,7 +22,7 @@ const appState = store({
   configShuffleCards: true,
   configAccessanonymousActive: true,
   configHeaderBarColor: "#337ab7",
-  configSteinApiUrlString: "",
+  configSteinApiUrl: "",
 
   /*
   config.xml ACCESS settings */
@@ -46,8 +46,8 @@ const appState = store({
   configAllowUnforcedSortsfalseActive: true,
   configDisplayOverloadedColWarn: true,
   configDisplayOverloadedColWarntrueActive: true,
-  configSetMinCardSizefalseActive: true,
-  configMinCardSize: 50,
+  configSetMinCardHeightfalseActive: true,
+  configMinCardHeight: 50,
 
   /*
   config.xml POSTSORT settings */

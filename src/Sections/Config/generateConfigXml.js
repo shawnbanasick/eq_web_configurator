@@ -46,7 +46,7 @@ const generateConfigXml = () => {
    <item id="studyTitle">${appState.configTitle}</item> 
    <item id="setupTarget">${appState.configSetupTarget}</item>
    <item id="firebaseOrLocal">${appState.configSetupTarget}</item>
-   <item id="steinApi">${appState.configSteinApiUrlString}</item>
+   <item id="steinApiUrl">${appState.configSteinApiUrl}</item>
 
 
    <item id="shuffleCards">${appState.configShuffleCards}</item>
@@ -71,8 +71,8 @@ const generateConfigXml = () => {
    <item id="condOfInstFontSize">${appState.configCondOfInstFontSize}</item>
    <item id="allowUnforcedSorts">${appState.configAllowUnforcedSorts}</item>
    <item id="warnOverloadedColumn">${appState.configDisplayOverloadedColWarn}</item>
-   <item id="setMinCardHeight">${appState.configSetMinCardSize}</item>
-   <item id="minCardHeight">${appState.configMinCardSize}</item>
+   <item id="setMinCardHeight">${appState.configSetMinCardHeight}</item>
+   <item id="minCardHeight">${appState.configMinCardHeight}</item>
 
 
    <!-- POSTSORT -->

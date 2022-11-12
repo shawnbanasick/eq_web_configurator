@@ -16,7 +16,7 @@ const SortOptions = () => {
 
   const localState = store({ displayItem: true });
 
-  const setCardSizeDisplay = (value) => {
+  const setCardHeightDisplay = (value) => {
     if (value === true || value === "true") {
       localState.displayItem = true;
       return true;
@@ -26,7 +26,9 @@ const SortOptions = () => {
     }
   };
 
-  let showMinCardSizeInput = setCardSizeDisplay(appState.configSetMinCardSize);
+  let showMinCardHeightInput = setCardHeightDisplay(
+    appState.configSetMinCardHeight
+  );
 
   return (
     <React.Fragment>
@@ -68,18 +70,18 @@ const SortOptions = () => {
       <RadioButtons
         label="2-10. Set minimum statement card size:"
         buttonIdArray={["true", "false"]}
-        stateId="configSetMinCardSize"
+        stateId="configSetMinCardHeight"
         sectionName="config"
       />
-      {showMinCardSizeInput && (
+      {showMinCardHeightInput && (
         <FadeIn delay={150} duration={1050}>
           <UserNumberInput
-            label="2-10b. Minimum card size:"
+            label="2-10b. Minimum card height:"
             step={1}
             value={20}
-            upperLimit={80}
-            lowerLimit={8}
-            stateId="configMinCardSize"
+            upperLimit={800}
+            lowerLimit={50}
+            stateId="configMinCardHeight"
             sectionName="config"
           />
         </FadeIn>
