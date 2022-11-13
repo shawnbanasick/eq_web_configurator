@@ -188,6 +188,26 @@ const UploadXmlFileButton = () => {
         localStorage.setItem("configLogInPassword", inputObj.accessCode);
         appState["configLogInPassword"] = inputObj.accessCode;
 
+        // DEFAULT FONT SETTINGS
+
+        // set 2-6. font color
+        localStorage.setItem("defaultFontColor", inputObj.defaultFontColor);
+        appState["defaultFontColor"] = inputObj.defaultFontColor;
+
+        localStorage.setItem(
+          "configSetDefaultFontSize",
+          inputObj.setDefaultFontSize
+        );
+        appState["configSetDefaultFontSize"] = inputObj.setDefaultFontSize;
+        appState.configSetDefaultFontSizetrueActive = false;
+        appState.configSetDefaultFontSizefalseActive = false;
+        if (inputObj.setDefaultFontSize === "true") {
+          appState.configSetDefaultFontSizetrueActive = true;
+        }
+        if (inputObj.setDefaultFontSize === "false") {
+          appState.configSetDefaultFontSizefalseActive = true;
+        }
+
         // set 6. Logo
 
         // localStorage.setItem("configLogoHtml", inputObj.footerLogoName);

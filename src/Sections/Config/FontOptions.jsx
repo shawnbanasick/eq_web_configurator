@@ -57,7 +57,7 @@ const PresortOptions = (props) => {
             step={1}
             value={20}
             upperLimit={800}
-            lowerLimit={50}
+            lowerLimit={6}
             stateId="configDefaultFontSize"
             sectionName="config"
           />

@@ -60,6 +60,13 @@ const generateConfigXml = () => {
    <item id="accessCode">${appState.configLogInPassword}</item>
 
 
+   <!-- FONT OPTIONS -->
+   <!-- defaults false, 15, #2a2a2a -->
+   <item id="setDefaultFontSize">${appState.configSetDefaultFontSize}</item>
+   <item id="defaultFontSize">${appState.configDefaultFontSize}</item>
+   <item id="defaultFontColor">${appState.defaultFontColor}</item>
+
+
    <!-- PRESORT -->
    <!-- default colors #ccffcc, #e0e0e0, #ffe0f0 -->
    <item id="greenCardColor">${appState.greenCardColor}</item>
