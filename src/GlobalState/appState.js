@@ -34,6 +34,14 @@ const appState = store({
   configLogoHtml: "EQ_default.svg",
 
   /*
+  config.xml FONT settings */
+  defaultFontColor: "#2a2a2a",
+  configSetDefaultFontSize: false,
+  configSetDefaultFontSizefalseActive: true,
+
+  configDefaultFontSize: 15,
+
+  /*
   config.xml PRESORT settings */
   greenCardColor: "#ccffcc",
   yellowCardColor: "#e0e0e0",

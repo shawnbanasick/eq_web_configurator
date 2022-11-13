@@ -45,7 +45,7 @@ const SortOptions = () => {
       )}
 
       <UserNumberInput
-        label="2-7. Conditions of Instruction Font Size:"
+        label="2-9. Conditions of Instruction Font Size:"
         step={1}
         value={20}
         upperLimit={80}
@@ -55,20 +55,20 @@ const SortOptions = () => {
       />
 
       <RadioButtons
-        label="2-8. Allow unforced sorts:"
+        label="2-10. Allow unforced sorts:"
         buttonIdArray={["true", "false"]}
         stateId="configAllowUnforcedSorts"
         sectionName="config"
       />
 
       <RadioButtons
-        label="2-9. Display overloaded column warning:"
+        label="2-11. Display overloaded column warning:"
         buttonIdArray={["true", "false"]}
         stateId="configDisplayOverloadedColWarn"
         sectionName="config"
       />
       <RadioButtons
-        label="2-10. Set default statement card size:"
+        label="2-12a. Set default statement card size:"
         buttonIdArray={["true", "false"]}
         stateId="configSetMinCardHeight"
         sectionName="config"
@@ -76,7 +76,7 @@ const SortOptions = () => {
       {showMinCardHeightInput && (
         <FadeIn delay={150} duration={1050}>
           <UserNumberInput
-            label="2-10b. Default card height:"
+            label="2-12b. Default card height:"
             step={1}
             value={20}
             upperLimit={800}

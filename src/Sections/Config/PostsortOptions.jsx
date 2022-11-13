@@ -27,21 +27,21 @@ const PostsortOptions = () => {
       )}
 
       <RadioButtons
-        label="2-11. Include individual card comments screen (Step 3):"
+        label="2-13. Include individual card comments screen (Step 3):"
         buttonIdArray={["true", "false"]}
         stateId="configShowStep3"
         sectionName="config"
       />
 
       <RadioButtons
-        label="2-12. Display cards from second most positive column:"
+        label="2-14. Display cards from second most positive column:"
         buttonIdArray={["true", "false"]}
         stateId="configShowSecondPosColumn"
         sectionName="config"
       />
 
       <RadioButtons
-        label="2-13. Display cards from second most negative column:"
+        label="2-15. Display cards from second most negative column:"
         buttonIdArray={["true", "false"]}
         stateId="configShowSecondNegColumn"
         sectionName="config"
