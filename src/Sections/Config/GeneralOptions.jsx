@@ -37,11 +37,11 @@ const GeneralOptions = () => {
       {displayMode && (
         <DisplayModeText>
           If you are planning to do a standard online Q sort project, the "2.2
-          Setup Target" option should be set to either "<b>Google Sheets</b>" or
-          "<b>firebase</b>". <br />
+          Setup Target" option should be set to either "<b>sheets</b>" or "
+          <b>firebase</b>". <br />
           <br />
-          The "Google Sheets" option allows you to use a <b>Google Sheet</b> as
-          a database for the application, but requires use of third-party web
+          The "sheets" option allows you to use a <b>Google Sheet</b> as a
+          database for the application, but requires use of third-party web
           application called "Stein". It is free for projects with less than 200
           participant responses. If you decide to use Stein with Google Sheets,
           I recommend that you make a new Google account because you'll need to
@@ -72,7 +72,7 @@ const GeneralOptions = () => {
           <br />
           <br />
           The "<b>local</b>" option transforms EQ Web Sort into a tool for
-          in-person data collection using a notebook computer. For more
+          in-person, offline data collection using a notebook computer. For more
           information see the{" "}
           <a
             target="_blank"
