@@ -1,9 +1,9 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 <strong>Download Links:</strong> &nbsp;
-[macOS](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v.2.0.0/eq-web-configurator-2.0.0.dmg) &nbsp;||&nbsp;
-[Windows-installer](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v.2.0.0/eq-web-configurator.Setup.2.0.0.exe) &nbsp;||&nbsp;
-[Windows-portable](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v.2.0.0/eq-web-configurator.2.0.0.exe) &nbsp;||&nbsp;
+[macOS](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v2.0.0/eq-web-configurator-2.0.0.dmg) &nbsp;||&nbsp;
+[Windows-installer](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v2.0.0/eq-web-configurator.Setup.2.0.0.exe) &nbsp;||&nbsp;
+[Windows-portable](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v2.0.0/eq-web-configurator.2.0.0.exe) &nbsp;||&nbsp;
 [Linux](https://github.com/shawnbanasick/eq_web_configurator/releases) <br/>
 
 <p align="center">
