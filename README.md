@@ -1,9 +1,9 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 <strong>Download Links:</strong> &nbsp;
-[macOS](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v.1.0.2/eq-web-configurator-1.0.2.dmg) &nbsp;||&nbsp;
-[Windows-installer](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v.1.0.2/eq-web-configurator_Setup_1.0.2.exe) &nbsp;||&nbsp;
-[Windows-portable](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v.1.0.2/eq-web-configurator_1.0.2.exe) &nbsp;||&nbsp;
+[macOS](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v.2.0.0/eq-web-configurator-2.0.0.dmg) &nbsp;||&nbsp;
+[Windows-installer](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v.2.0.0/eq-web-configurator.Setup.2.0.0.exe) &nbsp;||&nbsp;
+[Windows-portable](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v.2.0.0/eq-web-configurator.2.0.0.exe) &nbsp;||&nbsp;
 [Linux](https://github.com/shawnbanasick/eq_web_configurator/releases) <br/>
 
 <p align="center">
@@ -37,7 +37,7 @@ EQ Web Configurator simplifies the set-up and testing of an online Q sort projec
 
 ## Installation Instructions - Microsoft Windows
 
-#### I haven't certified the application with Microsoft so it will give a warning on first start-up.
+#### I haven't certified the application with Microsoft so it will give a warning on first start-up
 
 &nbsp;&nbsp;&nbsp;1. Double click the downloaded file.
 
@@ -46,7 +46,7 @@ EQ Web Configurator simplifies the set-up and testing of an online Q sort projec
 
 <p align="center">
 <img src="https://github.com/shawnbanasick/kade/blob/master/gifs/winWarn.PNG" width="350" />
-</p> 
+</p>
 <br/>
 &nbsp;&nbsp;&nbsp;3. Click "Run Anyway"
 <br/>
@@ -58,7 +58,7 @@ EQ Web Configurator simplifies the set-up and testing of an online Q sort projec
 
 ## Installation Instructions - Apple macOS
 
-#### EQ Web Configurator can be installed following the normal process for macOS.
+#### EQ Web Configurator can be installed following the normal process for macOS
 
 <p align="center">
 <img src="https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/mac-install-screen.png" width="350" />
@@ -68,21 +68,21 @@ EQ Web Configurator simplifies the set-up and testing of an online Q sort projec
 
 &nbsp;&nbsp;&nbsp;2. Click and drag the eq-web-configurator.app icon into the applications folder.
 
-#### The app is code signed and notarized by Apple, so there will be only one warning on the first startup after installation.
+#### The app is code signed and notarized by Apple, so there will be only one warning on the first startup after installation
 
 <p align="center">
 <img src="https://github.com/shawnbanasick/kade/blob/master/gifs/macOS warning.png" width="350">
 <br/>
 </p>
 
-#### If you have changed your default settings, you may get this warning:
+#### If you have changed your default settings, you may get this warning
 
 <p align="center">
 <img src="https://github.com/shawnbanasick/kade/blob/master/gifs/macos-catalina-alert-not-app-store.jpg" width="350">
 <br/>
 </p>
 
-#### In this case, to open EQ Web Configurator you will need to reset your security settings to the defaults:
+#### In this case, to open EQ Web Configurator you will need to reset your security settings to the defaults
 
 &nbsp;&nbsp;&nbsp;1. Open "System Preferences"
 
@@ -106,11 +106,12 @@ EQ Web Configurator simplifies the set-up and testing of an online Q sort projec
 The application is packaged as an "AppImage" so it can be installed on most of the major distributions (Ubuntu, Mint, MXLinux, Debian, openSUSE, RHEL, CentOS, Fedora, etc.) On some distributions it will offer to install the software.
 <br/>
 
-#### After downloading, you will need to change the file permissions of the downloaded file.
+#### After downloading, you will need to change the file permissions of the downloaded file
 
 1. Right click on the downloaded file.
 2. Select "Properties".
 3. Select "Permissions". (Example image from debian-based "MXLinux")
+
 <p align="center">
 <img src="https://github.com/shawnbanasick/kade/blob/master/gifs/linuxPermissions.png" width="350" />
 </p>
