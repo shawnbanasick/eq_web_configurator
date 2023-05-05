@@ -1,10 +1,9 @@
 import React from "react";
-import { view, store } from "@risingstack/react-easy-state";
+import { view } from "@risingstack/react-easy-state";
 import ConfigColorPicker from "./ConfigColorPicker";
 import styled from "styled-components";
 import appState from "../../GlobalState/appState";
 import RadioButtons from "../../Utils/RadioButtons";
-import FadeIn from "./FadeIn";
 import UserNumberInput from "../../Utils/UserNumberInput";
 
 const PresortOptions = (props) => {
@@ -14,20 +13,6 @@ const PresortOptions = (props) => {
   } else {
     displayMode = false;
   }
-
-  const localState = store({ displayItem: true });
-
-  const setValue = (value) => {
-    if (value === true || value === "true") {
-      localState.displayItem = true;
-      return true;
-    } else {
-      localState.displayItem = false;
-      return false;
-    }
-  };
-
-  let showMinCardHeightInput = setValue(appState.configSetDefaultFontSize);
 
   return (
     <React.Fragment>
@@ -45,24 +30,38 @@ const PresortOptions = (props) => {
         (Default color is "2a2a2a")
       </ColorLabel>
       <RadioButtons
-        label="2-7a. Set default font size:"
+        label="2-7a. Set default font size - Presort Page:"
         buttonIdArray={["true", "false"]}
-        stateId="configSetDefaultFontSize"
+        stateId="configSetDefaultFontSizePresort"
         sectionName="config"
       />
-      {showMinCardHeightInput && (
-        <FadeIn delay={150} duration={1050}>
-          <UserNumberInput
-            label="2-7b. Default font size:"
-            step={1}
-            value={20}
-            upperLimit={800}
-            lowerLimit={6}
-            stateId="configDefaultFontSize"
-            sectionName="config"
-          />
-        </FadeIn>
-      )}
+
+      <UserNumberInput
+        label="2-7b. Default Presort font size:"
+        step={1}
+        value={20}
+        upperLimit={800}
+        lowerLimit={6}
+        stateId="configDefaultSortFontSizePresort"
+        sectionName="config"
+      />
+
+      <RadioButtons
+        label="2-7c. Set default font size - Sort Page:"
+        buttonIdArray={["true", "false"]}
+        stateId="configSetSortDefaultFontSizeSort"
+        sectionName="config"
+      />
+
+      <UserNumberInput
+        label="2-7d. Default Sort font size:"
+        step={1}
+        value={20}
+        upperLimit={800}
+        lowerLimit={6}
+        stateId="configDefaultSortFontSizeSort"
+        sectionName="config"
+      />
     </React.Fragment>
   );
 };

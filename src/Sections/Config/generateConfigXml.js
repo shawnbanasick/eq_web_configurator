@@ -73,6 +73,9 @@ const generateConfigXml = () => {
    <item id="yellowCardColor">${appState.yellowCardColor}</item>
    <item id="pinkCardColor">${appState.pinkCardColor}</item>
  
+   <item id="setSortDefaultFontSizePresort">${appState.configSetDefaultFontSizePresort}</item>
+   <item id="defaultFontSize">${appState.configDefaultSortFontSizePresort}</item>
+ 
 
    <!-- SORT -->
    <item id="condOfInstFontSize">${appState.configCondOfInstFontSize}</item>
@@ -80,6 +83,10 @@ const generateConfigXml = () => {
    <item id="warnOverloadedColumn">${appState.configDisplayOverloadedColWarn}</item>
    <item id="setMinCardHeight">${appState.configSetMinCardHeight}</item>
    <item id="minCardHeight">${appState.configMinCardHeight}</item>
+
+   <item id="setSortDefaultFontSizePresort">${appState.configSetSortDefaultFontSizeSort}</item>
+   <item id="defaultFontSize">${appState.configDefaultSortFontSizeSort}</item>
+ 
 
 
    <!-- POSTSORT -->

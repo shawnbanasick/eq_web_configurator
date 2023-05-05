@@ -36,10 +36,14 @@ const appState = store({
   /*
   config.xml FONT settings */
   defaultFontColor: "#2a2a2a",
-  configSetDefaultFontSize: false,
-  configSetDefaultFontSizefalseActive: true,
+  configSetDefaultFontSizePresort: false,
+  configSetDefaultFontSizePresortfalseActive: true,
 
-  configDefaultFontSize: 15,
+  configSetSortDefaultFontSizeSort: false,
+  configSetSortDefaultFontSizeSortfalseActive: true,
+
+  configDefaultSortFontSizePresort: 28,
+  configDefaultSortFontSizeSort: 18,
 
   /*
   config.xml PRESORT settings */
