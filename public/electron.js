@@ -16,6 +16,8 @@ const fs = require("fs");
 const { fork } = require("child_process");
 console.log(`${__dirname}`);
 
+if (process.platform === "linux") app.commandLine.appendSwitch("no-sandbox");
+
 // server reference
 let ps;
 
