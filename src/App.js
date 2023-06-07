@@ -80,7 +80,7 @@ const App = (props) => {
             active={viewServer}
             onClick={() => handleClick("viewServer")}
           >
-            <p className="title">{`1. ${t("Server")}`}</p>
+            <p className="title">{`1. ${t("Setup")}`}</p>
           </FileButton>
           <FileButton
             buttonColor={inputButtonColor}

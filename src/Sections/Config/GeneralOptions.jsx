@@ -9,7 +9,10 @@ import IncompatibleFileModal from "./IncompatibleFileModal";
 import FadeIn from "./FadeIn";
 
 const GeneralOptions = () => {
-  const localState = store({ displayItem: true });
+  const localState = store({
+    displayItem: true,
+    databaseOptionsArray: ["sheets", "firebase", "local", "email"],
+  });
 
   let displayMode = appState.displayMode;
   if (displayMode === "beginner") {
@@ -18,7 +21,7 @@ const GeneralOptions = () => {
     displayMode = false;
   }
 
-  const setSheetsDisplay = (value) => {
+  const setDisplay = (value) => {
     if (value === "sheets") {
       localState.displayItem = true;
       return true;
@@ -28,7 +31,23 @@ const GeneralOptions = () => {
     }
   };
 
-  let showSheetsConfigMessage = setSheetsDisplay(appState.configSetupTarget);
+  const getDatabaseOptions = (value) => {
+    if (value === "Google") {
+      localState.databaseOptionsArray = [
+        "sheets",
+        "firebase",
+        "local",
+        "email",
+      ];
+      return ["sheets", "firebase", "local", "email"];
+    } else {
+      localState.databaseOptionsArray = ["self_hosted", "email"];
+      return ["self_hosted", "email"];
+    }
+  };
+
+  let showSheetsConfigMessage = setDisplay(appState.configSetupTarget);
+  let databaseOptionsArray = getDatabaseOptions(appState.configDatabaseOptions);
 
   return (
     <React.Fragment>
@@ -105,12 +124,21 @@ const GeneralOptions = () => {
         width={30}
         left={0}
       />
+
       <RadioButtons
-        label="2-2. Setup target:"
-        buttonIdArray={["sheets", "firebase", "local"]}
+        label="2-2a. Database Option:"
+        buttonIdArray={["Google", "Google_Free"]}
+        stateId="configDatabaseOptions"
+        sectionName="config"
+      />
+
+      <RadioButtons
+        label="2-2b. Setup target:"
+        buttonIdArray={databaseOptionsArray}
         stateId="configSetupTarget"
         sectionName="config"
       />
+
       <br />
       {showSheetsConfigMessage && (
         <FadeIn delay={150} duration={1050}>

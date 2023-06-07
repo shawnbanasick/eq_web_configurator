@@ -85,20 +85,45 @@ const Server = () => {
     <MainContent>
       <StyledToastContainer />
       <GlobalStyle />
-      <Title>Testing Server Startup</Title>
+      <Title>Basic Setup - Files and Web Server</Title>
       {displayMode && (
         <>
           <DisplayModeText>
-            In this section you will set up the default EQ Web Sort files on
-            your machine for development. Once the default files are ready, you
-            can start the web server and view your changes as you make them.
+            A EQ Web Sort project is composed of the base template files and
+            four settings files (config.xml, statements.xml, map.xml, and
+            language.xml). The base template files are the same for every
+            project. The four settings files customize the project to meet your
+            needs.
             <br />
             <br />
+            This section shows you how to download the EQ Web Sort files and
+            then how to view the default configuration on your computer using
+            the mini web server build into this application. This will allow you
+            to preview your project and make desired changes without having to
+            upload the project files to an internet provider.
             <br />
             <br />
-            The first step is to download the base files for EQ Web Sort and
-            save them to an accessible place on your computer (for example, to
-            the "Desktop" folder). To download, go to the{" "}
+            The first step is to decide how you want to handle participant Q
+            sort data.
+            <br />
+            <br />
+            One option is to use <b>email</b> for participant Q sort data. When
+            a participant finishes their Q sort, they click a button that
+            automatically opens their default email client with an email address
+            that you specify and the Q sort data automatically added to the
+            email body. The participant then sends the email to you, and then
+            you have to copy and paste the data into a spreadsheet for analysis.
+            This is the easiest option to set up (no database is required), but
+            it is also the most labor intensive for you.
+            <br />
+            <br />
+            Another option is to use <b>Google Sheets</b> or{" "}
+            <b>Google Firebase</b> as a database for the participant Q sort
+            data. Google Sheets is easier to set up, but requires the use of 3rd
+            party web application called "Stein". Google Firebase is more
+            robust, but requires more setup. Both options allow you to download
+            all of the participant Q sort data for analysis. Download the
+            standard edition
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -106,10 +131,34 @@ const Server = () => {
             >
               EQ Web Sort
             </a>{" "}
-            home page and click the download link (Figure 1).
+            files for this option and save them to an accessible place on your
+            computer (for example, to the "Desktop" folder).
+            <br />
+            <br />
+            If you want to avoid Google for GDPR or other reasons, you can use
+            the{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/shawnbanasick/eq-web-sort"
+            >
+              EQ Web Sort - Developer Edition
+            </a>{" "}
+            to <b>self-host</b> your project. All Google code is stripped out of
+            this version. You will need to set up a database on a web server
+            that you control. This is the most complex option. I cannot provide
+            support for this option. If you don't have any web development
+            experience, you will need to find a web developer to help you with
+            this option.
+            <br />
+            <br />A fourth option is to use the EQ Web Sort software on a
+            notebook computer for in-person, offline, <b>local data</b>{" "}
+            collection using a notebook computer.
+            <br />
+            <br />
           </DisplayModeText>
           <SpacerDiv />
-          <StyledParagraph>Figure 1</StyledParagraph>
+          <StyledParagraph>Figure 1 - Download Link</StyledParagraph>
           <img src={eqDownloadImage} width="90%" alt="a" />
           <DisplayModeText>
             The files will be in a compressed format (*.zip), so don't forget to{" "}

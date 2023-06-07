@@ -44,6 +44,7 @@ const generateConfigXml = () => {
   const data2 = `
    <!-- GENERAL SETTINGS -->
    <item id="studyTitle">${appState.configTitle}</item> 
+   <item id="databaseOptions">${appState.configDatabaseOptions}</item>
    <item id="setupTarget">${appState.configSetupTarget}</item>
    <item id="firebaseOrLocal">${appState.configSetupTarget}</item>
    <item id="steinApiUrl">${appState.configSteinApiUrl}</item>

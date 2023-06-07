@@ -123,22 +123,52 @@ const UploadXmlFileButton = () => {
         appState["configSteinApiUrl"] = steinApiUrl;
 
         // set 2. setup target
+        localStorage.setItem("configDatabaseOptions", inputObj.databaseOptions);
+        appState["configDatabaseOptions"] = inputObj.databaseOptions;
+        if (inputObj.databaseOptions === "Google") {
+          appState.configDatabaseOptionsGoogleActive = true;
+          appState.configDatabaseOptionsGoolge_Free = false;
+        } else {
+          appState.configDatabaseOptionsGoogleActive = false;
+          appState.configDatabaseOptionsGoogle_FreeActive = true;
+        }
+
         localStorage.setItem("configSetupTarget", inputObj.setupTarget);
         appState["configSetupTarget"] = inputObj.setupTarget;
         if (inputObj.setupTarget === "local") {
           appState.configSetupTargetlocalActive = true;
           appState.configSetupTargetfirebaseActive = false;
           appState.configSetupTargetsheetsActive = false;
+          appState.configSetupTargetemailActive = false;
+          appState.configSetupTargetself_hostedActive = false;
         }
         if (inputObj.setupTarget === "firebase") {
           appState.configSetupTargetfirebaseActive = true;
           appState.configSetupTargetlocalActive = false;
           appState.configSetupTargetsheetsActive = false;
+          appState.configSetupTargetemailActive = false;
+          appState.configSetupTargetself_hostedActive = false;
         }
         if (inputObj.setupTarget === "sheets") {
           appState.configSetupTargetsheetsActive = true;
           appState.configSetupTargetfirebaseActive = false;
           appState.configSetupTargetlocalActive = false;
+          appState.configSetupTargetemailActive = false;
+          appState.configSetupTargetself_hostedActive = false;
+        }
+        if (inputObj.setupTarget === "email") {
+          appState.configSetupTargetemailActive = true;
+          appState.configSetupTargetsheetsActive = false;
+          appState.configSetupTargetfirebaseActive = false;
+          appState.configSetupTargetlocalActive = false;
+          appState.configSetupTargetself_hostedActive = false;
+        }
+        if (inputObj.setupTarget === "self_hosted") {
+          appState.configSetupTargetemailActive = false;
+          appState.configSetupTargetsheetsActive = false;
+          appState.configSetupTargetfirebaseActive = false;
+          appState.configSetupTargetlocalActive = false;
+          appState.configSetupTargetself_hostedActive = true;
         }
 
         // set  3. shuffle

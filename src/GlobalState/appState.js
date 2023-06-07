@@ -16,6 +16,8 @@ const appState = store({
   /*
   config.xml GENERAL settings */
   configTitle: "My_Q_project_v1",
+  configDatabaseOptionsGoogleActive: true,
+  configDatabaseOptions: "Google",
   configSetupTargetfirebaseActive: true,
   configSetupTarget: "firebase",
   configShuffleCardstrueActive: true,
