@@ -18,6 +18,7 @@ const handleClearAll = (e) => {
 
 const SecondProjectLinkTextInput = () => {
   const handleRefImage = (e) => {
+    console.log(e.target.id);
     showRefImage(e.target.id);
   };
 
@@ -39,21 +40,8 @@ const SecondProjectLinkTextInput = () => {
           <ClearAllButton id="linkingClear" onClick={handleClearAll}>
             Clear Section
           </ClearAllButton>
-          <RefImageButton id="linkingImage" onClick={handleRefImage}>
+          <RefImageButton id="linking1" onClick={handleRefImage}>
             View Ref. Image
-          </RefImageButton>
-          <RefImageButton id="linkingImage2" onClick={handleRefImage}>
-            View Ref. Image 2
-          </RefImageButton>
-          <RefImageButton id="linkingImage3" onClick={handleRefImage}>
-            View Ref. Image 3
-          </RefImageButton>
-          <RefImageButton
-            id="linkingImage4"
-            marginRight="35px"
-            onClick={handleRefImage}
-          >
-            View Ref. Image 4
           </RefImageButton>
         </div>
       </HeaderButtonBar>
@@ -91,7 +79,8 @@ const HeaderButtonBar = styled.div`
   flex-direction: row;
   align-items: baseline;
   justify-content: space-between;
-  width: 100%;
+  padding-right: 200px;
+  width: 620px;
 `;
 
 const DefaultsButton = styled.button`

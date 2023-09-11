@@ -28,6 +28,11 @@ import localPanel2 from "../../assets/images/localPanel2.png";
 import localPanel3 from "../../assets/images/localPanel3.png";
 import localSubmit from "../../assets/images/localSubmit.png";
 import localSubmit2 from "../../assets/images/localSubmit2.png";
+import email1 from "../../assets/images/email1.png";
+import email2 from "../../assets/images/email2.png";
+import email3 from "../../assets/images/email3.png";
+import email4 from "../../assets/images/email4.png";
+import linking1 from "../../assets/images/linking1.png";
 
 const ImageSelector = () => {
   const selector = appState.imageToShow;
@@ -115,6 +120,21 @@ const ImageSelector = () => {
   }
   if (selector === "submitImage4") {
     return <img src={submitImage4} alt="s"></img>;
+  }
+  if (selector === "email1") {
+    return <img src={email1} alt="s"></img>;
+  }
+  if (selector === "email2") {
+    return <img src={email2} alt="s"></img>;
+  }
+  if (selector === "email3") {
+    return <img src={email3} alt="s"></img>;
+  }
+  if (selector === "email4") {
+    return <img src={email4} alt="s"></img>;
+  }
+  if (selector === "linking1") {
+    return <img src={linking1} alt="s"></img>;
   }
 };
 

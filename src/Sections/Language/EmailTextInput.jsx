@@ -39,17 +39,17 @@ const EmailTextInput = () => {
           <ClearAllButton id="emailClear" onClick={handleClearAll}>
             Clear Section
           </ClearAllButton>
-          <RefImageButton id="emailImage" onClick={handleRefImage}>
+          <RefImageButton id="email1" onClick={handleRefImage}>
             View Ref. Image
           </RefImageButton>
-          <RefImageButton id="emailImage2" onClick={handleRefImage}>
+          <RefImageButton id="email2" onClick={handleRefImage}>
             View Ref. Image 2
           </RefImageButton>
-          <RefImageButton id="emailImage3" onClick={handleRefImage}>
+          <RefImageButton id="email3" onClick={handleRefImage}>
             View Ref. Image 3
           </RefImageButton>
           <RefImageButton
-            id="emalImage4"
+            id="email4"
             marginRight="35px"
             onClick={handleRefImage}
           >
