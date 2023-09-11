@@ -16,10 +16,13 @@ const appState = store({
   /*
   config.xml GENERAL settings */
   configTitle: "My_Q_project_v1",
-  configDatabaseOptionsGoogleActive: true,
-  configDatabaseOptions: "Google",
+  configDatabaseOptionsInclude_Google_OptionsActive: true,
+  configDatabaseOptionsGoogle_FreeActive: false,
+  configDatabaseOptions: "Include_Google_Options",
   configSetupTargetfirebaseActive: true,
   configSetupTarget: "firebase",
+  configEmailAddress: "",
+  configEmailSubject: "EQ Web Sort Results",
   configLinkToSecondQsort: false,
   configLinkToSecondQsortfalseActive: true,
   configLinkToSecondQsortUrl: "",

@@ -43,19 +43,25 @@ const generateConfigXml = () => {
 
   const data2 = `
    <!-- GENERAL SETTINGS -->
+   <!-- "setupTarget" options: firebase, local, email, or sheets -->
    <item id="studyTitle">${appState.configTitle}</item> 
    <item id="databaseOptions">${appState.configDatabaseOptions}</item>
-   <item id="setupTarget">${appState.configSetupTarget}</item>
-   <item id="firebaseOrLocal">${appState.configSetupTarget}</item>
-   <item id="steinApiUrl">${appState.configSteinApiUrl}</item>
-   <item id="linkToSecondProject">${appState.configLinkToSecondQsort}</item> 
-   <item id="secondProjectUrl">${appState.configLinkToSecondQsortUrl}</item> 
 
+   <item id="setupTarget">${appState.configSetupTarget}</item>
+   
+   <item id="steinApiUrl">${appState.configSteinApiUrl}</item>
 
    <item id="shuffleCards">${appState.configShuffleCards}</item>
    <item id="headerBarColor">${appState.configHeaderBarColor}</item>
    <item id="devMode">false</item>
    
+   <!-- EMAIL -->
+   <item id="emailAddress">${appState.configEmailAddress}</item>  
+   <item id="emailSubject">${appState.configEmailSubject}</item>  
+   
+   <!-- SECOND PROJECT LINK -->
+   <item id="linkToSecondProject">${appState.configLinkToSecondQsort}</item> 
+   <item id="secondProjectUrl">${appState.configLinkToSecondQsortUrl}</item> 
 
    <!-- ACCESS -->
    <!-- options: anonymous, partId-access, partId, access -->

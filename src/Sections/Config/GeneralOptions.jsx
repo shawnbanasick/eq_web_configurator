@@ -13,9 +13,12 @@ const GeneralOptions = () => {
   const localState = store({
     displayItem: true,
     databaseOptionsArray: ["sheets", "firebase", "local", "email"],
+    displaySecondQsortUrl: false,
+    displayEmail: false,
   });
 
   let displayMode = appState.displayMode;
+
   if (displayMode === "beginner") {
     displayMode = true;
   } else {
@@ -25,15 +28,20 @@ const GeneralOptions = () => {
   const setDisplay = (value) => {
     if (value === "sheets") {
       localState.displayItem = true;
+      localState.displayEmail = false;
       return true;
+    } else if (value === "email") {
+      localState.displayEmail = true;
+      return false;
     } else {
       localState.displayItem = false;
+      localState.displayEmail = false;
       return false;
     }
   };
 
   const getDatabaseOptions = (value) => {
-    if (value === "Google") {
+    if (value === "Include_Google_Options") {
       localState.databaseOptionsArray = [
         "sheets",
         "firebase",
@@ -42,13 +50,24 @@ const GeneralOptions = () => {
       ];
       return ["sheets", "firebase", "local", "email"];
     } else {
-      localState.databaseOptionsArray = ["self_hosted", "email"];
-      return ["self_hosted", "email"];
+      localState.databaseOptionsArray = ["self_hosted", "local", "email"];
+      return ["self_hosted", "local", "email"];
+    }
+  };
+
+  const setLinkingDisplay = (value) => {
+    if (value === "true") {
+      localState.displaySecondQsortUrl = true;
+      return true;
+    } else {
+      localState.displaySecondQsortUrl = false;
+      return false;
     }
   };
 
   let showSheetsConfigMessage = setDisplay(appState.configSetupTarget);
   let databaseOptionsArray = getDatabaseOptions(appState.configDatabaseOptions);
+  let showSecondQsortUrl = setLinkingDisplay(appState.configLinkToSecondQsort);
 
   return (
     <React.Fragment>
@@ -128,7 +147,7 @@ const GeneralOptions = () => {
 
       <RadioButtons
         label="2-2a. Database Option:"
-        buttonIdArray={["Google", "Google_Free"]}
+        buttonIdArray={["Include_Google_Options", "Google_Free"]}
         stateId="configDatabaseOptions"
         sectionName="config"
       />
@@ -152,6 +171,31 @@ const GeneralOptions = () => {
           />
         </FadeIn>
       )}
+
+      {localState.displayEmail && (
+        <FadeIn delay={150} duration={1050}>
+          <UserTextInput
+            label="2-2b. Email Address:"
+            stateId="configEmailAddress"
+            sectionName="config"
+            width={30}
+            left={0}
+          />
+        </FadeIn>
+      )}
+
+      {localState.displayEmail && (
+        <FadeIn delay={150} duration={1050}>
+          <UserTextInput
+            label="2-2b. Email Subject:"
+            stateId="configEmailSubject"
+            sectionName="config"
+            width={30}
+            left={0}
+          />
+        </FadeIn>
+      )}
+
       <RadioButtons
         label="2-2c. Link to Second Q sort:"
         buttonIdArray={["true", "false"]}
@@ -160,11 +204,11 @@ const GeneralOptions = () => {
       />
 
       <br />
-      {appState.configLinkToSecondQsort && (
+      {showSecondQsortUrl && (
         <FadeIn delay={150} duration={1050}>
           <UserTextInput
-            label="2-2d. Second Q Sort URL:"
-            stateId="configSecondQsortUrl"
+            label="2-2c. Second Q Sort URL:"
+            stateId="configLinkToSecondQsortUrl"
             sectionName="config"
             width={30}
             left={0}

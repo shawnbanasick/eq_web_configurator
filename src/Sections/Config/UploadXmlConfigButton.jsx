@@ -112,6 +112,8 @@ const UploadXmlFileButton = () => {
 
         // START MODIFY SETTINGS
 
+        console.log("inputObj", JSON.stringify(inputObj.setupTarget));
+
         // set  1. study title
         let title = inputObj.studyTitle;
         localStorage.setItem("configTitle", title);
@@ -125,11 +127,12 @@ const UploadXmlFileButton = () => {
         // set 2. setup target
         localStorage.setItem("configDatabaseOptions", inputObj.databaseOptions);
         appState["configDatabaseOptions"] = inputObj.databaseOptions;
-        if (inputObj.databaseOptions === "Google") {
-          appState.configDatabaseOptionsGoogleActive = true;
-          appState.configDatabaseOptionsGoolge_Free = false;
+
+        if (inputObj.databaseOptions === "Include_Google_Options") {
+          appState.configDatabaseOptionsInclude_Google_OptionsActive = true;
+          appState.configDatabaseOptionsGoogle_FreeActive = false;
         } else {
-          appState.configDatabaseOptionsGoogleActive = false;
+          appState.configDatabaseOptionsInclude_Google_OptionsActive = false;
           appState.configDatabaseOptionsGoogle_FreeActive = true;
         }
 
@@ -171,23 +174,30 @@ const UploadXmlFileButton = () => {
           appState.configSetupTargetself_hostedActive = true;
         }
 
+        // set email address and subject
+        localStorage.setItem("configEmailAddress", inputObj.emailAddress);
+        appState["configEmailAddress"] = inputObj.emailAddress;
+
+        localStorage.setItem("configEmailSubject", inputObj.emailSubject);
+        appState["configEmailSubject"] = inputObj.emailSubject;
+
         // 2nd Project Link
         localStorage.setItem(
           "configLinkToSecondQsort",
-          inputObj.linkToSecondProject
+          inputObj.linkToSecondQsort
         );
-        appState["configLinkToSecondQsort"] = inputObj.linkToSecondProject;
+        appState["configLinkToSecondQsort"] = inputObj.linkToSecondQsort;
         appState.configLinkToSecondQsorttrueActive = false;
         appState.configLinkToSecondQsortfalseActive = false;
-        if (inputObj.linkToSecondProject === "true") {
+        if (inputObj.linkToSecondQsort === "true") {
           appState.configLinkToSecondQsorttrueActive = true;
         }
-        if (inputObj.linkToSecondProject === "false") {
+        if (inputObj.linkToSecondQsort === "false") {
           appState.configLinkToSecondQsortfalseActive = true;
         }
 
         // set 2nd Project Link URL
-        let linkToSecondQsortUrl = inputObj.secondProjectUrl;
+        let linkToSecondQsortUrl = inputObj.linkToSecondQsortUrl;
         localStorage.setItem(
           "configLinkToSecondQsortUrl",
           linkToSecondQsortUrl

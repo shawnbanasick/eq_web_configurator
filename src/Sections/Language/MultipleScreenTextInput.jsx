@@ -49,35 +49,35 @@ const LocalLanguage = () => {
         </div>
       </HeaderButtonBar>
       <UserTextInput
-        label="1. Help me!"
+        label="1-1. Help me!"
         stateId="langBtnHelp"
         sectionName="lang"
         width={48.4}
         left={0}
       />
       <UserTextInput
-        label="2. Text Size"
+        label="1-2. Text Size"
         stateId="langFooterTextSize"
         sectionName="lang"
         width={48.4}
         left={0}
       />
       <UserTextInput
-        label="3. Card Height"
+        label="1-3. Card Height"
         stateId="langFooterCardHeight"
         sectionName="lang"
         width={46}
         left={0}
       />
       <UserTextInput
-        label="4. Continue"
+        label="1-4. Continue"
         stateId="langBtnNext"
         sectionName="lang"
         width={48.5}
         left={0}
       />
       <UserTextAreaInput
-        label="5. Step completed message"
+        label="1-5. Step completed message"
         stateId="langStepCompleted"
         sectionName="lang"
         width={34.5}
@@ -85,7 +85,7 @@ const LocalLanguage = () => {
         left={0}
       />
       <UserTextAreaInput
-        label="6. Log in first message"
+        label="1-6. Log in first message"
         stateId="langLoginFirst"
         sectionName="lang"
         width={39}
