@@ -171,6 +171,29 @@ const UploadXmlFileButton = () => {
           appState.configSetupTargetself_hostedActive = true;
         }
 
+        // 2nd Project Link
+        localStorage.setItem(
+          "configLinkToSecondQsort",
+          inputObj.linkToSecondProject
+        );
+        appState["configLinkToSecondQsort"] = inputObj.linkToSecondProject;
+        appState.configLinkToSecondQsorttrueActive = false;
+        appState.configLinkToSecondQsortfalseActive = false;
+        if (inputObj.linkToSecondProject === "true") {
+          appState.configLinkToSecondQsorttrueActive = true;
+        }
+        if (inputObj.linkToSecondProject === "false") {
+          appState.configLinkToSecondQsortfalseActive = true;
+        }
+
+        // set 2nd Project Link URL
+        let linkToSecondQsortUrl = inputObj.secondProjectUrl;
+        localStorage.setItem(
+          "configLinkToSecondQsortUrl",
+          linkToSecondQsortUrl
+        );
+        appState["configLinkToSecondQsortUrl"] = linkToSecondQsortUrl;
+
         // set  3. shuffle
         localStorage.setItem("configShuffleCards", inputObj.shuffleCards);
         appState["configShuffleCards"] = inputObj.shuffleCards;

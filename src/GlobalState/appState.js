@@ -20,6 +20,9 @@ const appState = store({
   configDatabaseOptions: "Google",
   configSetupTargetfirebaseActive: true,
   configSetupTarget: "firebase",
+  configLinkToSecondQsort: false,
+  configLinkToSecondQsortfalseActive: true,
+  configLinkToSecondQsortUrl: "",
   configShuffleCardstrueActive: true,
   configShuffleCards: true,
   configAccessanonymousActive: true,
@@ -290,6 +293,24 @@ const appState = store({
   langFallbackMessage: `Data transmission has failed. Please download the results and email them as an attachment to ken.q.tools@gmail.com.  Thank you!`,
   langBtnDownload: `Download`,
   langGoodbyeMessage: `<div>Thank You!</div> <br /><div>You can now close the browser tab</div>`,
+
+  /*
+   ******** EMAIL  ****************** */
+  langEmailSubmitBtn: "Open Email Client and Send Results",
+  langEmailCopyResultsBtn: "Copy Results to Clipboard",
+  langEmaiCopyAddressBtn: "Copy Email Address to Clipboard",
+  langCopySuccessMessage: "Copied!",
+  langCopyFailMessage: "Error: Please try again.",
+  langDefaultEmailFailModalText:
+    "Your default email client should have automatically opened with the results in the email body. If it didn't, please use the buttons below to copy and paste your information into an email.",
+  langEmailBodyMessage:
+    "You don't have to add anything to this email. Please just click the SEND button.",
+
+  /*
+   ******** LINKING  ****************** */
+  langLinkingFallbackMessage:
+    "Please click the button to begin the next Q sort",
+  langLinkingBtnText: "Begin Next Q sort",
 
   uploadService: "Netlify",
   uploadServiceNetlifyActive: true,

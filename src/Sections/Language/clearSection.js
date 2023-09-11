@@ -153,6 +153,24 @@ const showSectionDefaults = (section) => {
 
     clearSection(selectorArray);
   }
+  if (section === "emailClear") {
+    selectorArray = [
+      "langEmailSubmitBtn",
+      "langEmailCopyResultsBtn",
+      "langEmaiCopyAddressBtn",
+      "langCopySuccessMessage",
+      "langCopyFailMessage",
+      "langDefaultEmailFailModalText",
+      "langEmailBodyMessage",
+    ];
+
+    clearSection(selectorArray);
+  }
+  if (section === "linkingClear") {
+    selectorArray = ["langLinkingFallbackMessage", "langLinkingBtnText"];
+
+    clearSection(selectorArray);
+  }
 };
 
 export default showSectionDefaults;

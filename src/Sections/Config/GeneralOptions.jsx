@@ -9,6 +9,7 @@ import IncompatibleFileModal from "./IncompatibleFileModal";
 import FadeIn from "./FadeIn";
 
 const GeneralOptions = () => {
+  // local state for this component
   const localState = store({
     displayItem: true,
     databaseOptionsArray: ["sheets", "firebase", "local", "email"],
@@ -151,6 +152,26 @@ const GeneralOptions = () => {
           />
         </FadeIn>
       )}
+      <RadioButtons
+        label="2-2c. Link to Second Q sort:"
+        buttonIdArray={["true", "false"]}
+        stateId="configLinkToSecondQsort"
+        sectionName="config"
+      />
+
+      <br />
+      {appState.configLinkToSecondQsort && (
+        <FadeIn delay={150} duration={1050}>
+          <UserTextInput
+            label="2-2d. Second Q Sort URL:"
+            stateId="configSecondQsortUrl"
+            sectionName="config"
+            width={30}
+            left={0}
+          />
+        </FadeIn>
+      )}
+
       <RadioButtons
         label="2-3. Shuffle statement cards:"
         buttonIdArray={["true", "false"]}

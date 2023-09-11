@@ -48,6 +48,8 @@ const generateConfigXml = () => {
    <item id="setupTarget">${appState.configSetupTarget}</item>
    <item id="firebaseOrLocal">${appState.configSetupTarget}</item>
    <item id="steinApiUrl">${appState.configSteinApiUrl}</item>
+   <item id="linkToSecondProject">${appState.configLinkToSecondQsort}</item> 
+   <item id="secondProjectUrl">${appState.configLinkToSecondQsortUrl}</item> 
 
 
    <item id="shuffleCards">${appState.configShuffleCards}</item>

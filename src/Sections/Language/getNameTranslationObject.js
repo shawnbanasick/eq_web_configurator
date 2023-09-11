@@ -35,8 +35,8 @@ const showSectionDefaults = () => {
     localDeleteButtonText: "langLocalDeleteButtonText",
     localDownloadButtonText: "langLocalDownloadButtonText",
     storedQsortsHeaderText: "langStoredQsortsHeaderText",
-    localDeleteModalText: "langLocalDeleteModalHead",
-    localDeleteModalHead: "langLocalDeleteModalText",
+    localDeleteModalHead: "langLocalDeleteModalHead",
+    localDeleteModalText: "langLocalDeleteModalText",
     localParticipantsText: "langLocalParticipantsText",
     localSaveBeforeDeleteModalHeader: "langLocalSaveBeforeDeleteModalHeader",
     localSaveBeforeDeleteModalText: "langLocalSaveBeforeDeleteModalText",
@@ -104,6 +104,21 @@ const showSectionDefaults = () => {
     fallbackMessage: "langFallbackMessage",
     btnDownload: "langBtnDownload",
     goodbyeMessage: "langGoodbyeMessage",
+    /*
+     ******** EMAIL  ****************** */
+
+    btnTransferEmail: "langEmailSubmitBtn",
+    clipboardResults: "langEmailCopyResultsBtn",
+    clipboardEmail: "langEmaiCopyAddressBtn",
+    copiedText: "langCopySuccessMessage",
+    copyTextError: "langCopyFailMessage",
+    defaultEmailClientFail: "langDefaultEmailFailModalText",
+    emailMessage1: "langEmailBodyMessage",
+
+    /*
+     ******** SECOND PROJECT LINK  ****************** */
+    linkedProjectFallbackMessage: "langLinkingFallbackMessage",
+    linkedProjectBtnMessage: "langLinkingBtnText",
   };
   return obj;
 };

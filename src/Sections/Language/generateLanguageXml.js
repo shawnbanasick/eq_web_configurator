@@ -233,6 +233,38 @@ const generateLanguageXml = () => {
           appState.langGoodbyeMessage
         )}</item>   
 
+        <!-- EMAIL -->
+        <item id="btnTransferEmail">${encodeHTML(
+          appState.langEmailSubmitBtn
+        )}</item>
+        <item id="clipboardResults">${encodeHTML(
+          appState.langEmailCopyResultsBtn
+        )}</item>  
+        <item id="clipboardEmail">${encodeHTML(
+          appState.langEmaiCopyAddressBtn
+        )}</item>  
+        <item id="copiedText">${encodeHTML(
+          appState.langCopySuccessMessage
+        )}</item>  
+        <item id="copyTextError">${encodeHTML(
+          appState.langCopyFailMessage
+        )}</item>  
+        <item id="defaultEmailClientFail">${encodeHTML(
+          appState.langDefaultEmailFailModalText
+        )}</item>   
+        <item id="emailMessage1">${encodeHTML(
+          appState.langEmailBodyMessage
+        )}</item>
+
+        <!-- LINKING -->
+        <item id="linkedProjectFallbackMessage">${encodeHTML(
+          appState.langLinkingFallbackMessage
+        )}</item>   
+         <item id="linkedProjectBtnMessage">${encodeHTML(
+           appState.langLinkingBtnText
+         )}</item>   
+
+
    </language>`;
 
   return data;

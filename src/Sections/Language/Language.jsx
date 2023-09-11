@@ -19,6 +19,8 @@ import PostsortTextInput from "./PostsortTextInput";
 import SurveyTextInput from "./SurveyTextInput";
 import SubmitTextInput from "./SubmitTextInput";
 import LocalSubmitTextInput from "./LocalSubmitTextInput";
+import EmailTextInput from "./EmailTextInput";
+import SecondProjectLinkTextInput from "./SecondProjectLinkTextInput";
 
 const Language = () => {
   const handleClick = () => {
@@ -80,6 +82,10 @@ const Language = () => {
             <SurveyTextInput />
             <ColorContainer>
               <SubmitTextInput />
+            </ColorContainer>
+            <EmailTextInput />
+            <ColorContainer>
+              <SecondProjectLinkTextInput />
             </ColorContainer>
           </>
         )}
