@@ -146,7 +146,7 @@ const GeneralOptions = () => {
       />
 
       <RadioButtons
-        label="2-2a. Database Option:"
+        label="2-2a. Database:"
         buttonIdArray={["Include_Google_Options", "Google_Free"]}
         stateId="configDatabaseOptions"
         sectionName="config"
@@ -175,7 +175,7 @@ const GeneralOptions = () => {
       {localState.displayEmail && (
         <FadeIn delay={150} duration={1050}>
           <UserTextInput
-            label="2-2b. Email Address:"
+            label="2-2b. Email address:"
             stateId="configEmailAddress"
             sectionName="config"
             width={30}
@@ -187,7 +187,7 @@ const GeneralOptions = () => {
       {localState.displayEmail && (
         <FadeIn delay={150} duration={1050}>
           <UserTextInput
-            label="2-2b. Email Subject:"
+            label="2-2b. Email subject:"
             stateId="configEmailSubject"
             sectionName="config"
             width={30}
@@ -197,7 +197,7 @@ const GeneralOptions = () => {
       )}
 
       <RadioButtons
-        label="2-2c. Link to Second Q sort:"
+        label="2-2c. Link to second Q sort:"
         buttonIdArray={["true", "false"]}
         stateId="configLinkToSecondQsort"
         sectionName="config"
@@ -207,7 +207,7 @@ const GeneralOptions = () => {
       {showSecondQsortUrl && (
         <FadeIn delay={150} duration={1050}>
           <UserTextInput
-            label="2-2c. Second Q Sort URL:"
+            label="2-2c. Second Q sort URL:"
             stateId="configLinkToSecondQsortUrl"
             sectionName="config"
             width={30}

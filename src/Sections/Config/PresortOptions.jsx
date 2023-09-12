@@ -3,6 +3,7 @@ import { view } from "@risingstack/react-easy-state";
 import ConfigColorPicker from "./ConfigColorPicker";
 import styled from "styled-components";
 import appState from "../../GlobalState/appState";
+import UserNumberInput from "../../Utils/UserNumberInput";
 
 const PresortOptions = (props) => {
   let displayMode = appState.displayMode;
@@ -23,20 +24,37 @@ const PresortOptions = (props) => {
           color values to the same light gray color.
         </DisplayModeText>
       )}
+
       <ColorLabel>
-        <div>2-8a. Positive Card Color:</div>
+        <div>2-6. Statement font color:</div>
+        <ConfigColorPicker stateDesig="defaultFontColor" default="#2a2a2a" />
+        (Default color is "2a2a2a")
+      </ColorLabel>
+
+      <UserNumberInput
+        label="2-7. Presort statement font size:"
+        step={1}
+        value={20}
+        upperLimit={800}
+        lowerLimit={6}
+        stateId="configDefaultFontSizePresort"
+        sectionName="config"
+      />
+
+      <ColorLabel>
+        <div>2-8a. Positive card color:</div>
         <ConfigColorPicker stateDesig="greenCardColor" default="#ccffcc" />
         (Default color is "ccffcc")
       </ColorLabel>
 
       <ColorLabel>
-        <div>2-8b. Neutral Card Color:</div>
+        <div>2-8b. Neutral card color:</div>
         <ConfigColorPicker stateDesig="yellowCardColor" default="#e0e0e0" />
         (Default color is "e0e0e0")
       </ColorLabel>
 
       <ColorLabel>
-        <div>2-8c. Negative Card Color:</div>
+        <div>2-8c. Negative card color:</div>
         <ConfigColorPicker stateDesig="pinkCardColor" default="#ffe0f0" />
         (Default color is "ffe0f0")
       </ColorLabel>

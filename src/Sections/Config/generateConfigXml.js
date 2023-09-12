@@ -46,22 +46,24 @@ const generateConfigXml = () => {
    <!-- "setupTarget" options: firebase, local, email, or sheets -->
    <item id="studyTitle">${appState.configTitle}</item> 
    <item id="databaseOptions">${appState.configDatabaseOptions}</item>
-
    <item id="setupTarget">${appState.configSetupTarget}</item>
-   
-   <item id="steinApiUrl">${appState.configSteinApiUrl}</item>
 
-   <item id="shuffleCards">${appState.configShuffleCards}</item>
-   <item id="headerBarColor">${appState.configHeaderBarColor}</item>
-   <item id="devMode">false</item>
+   <!-- STEIN -->
+   <item id="steinApiUrl">${appState.configSteinApiUrl}</item>
    
    <!-- EMAIL -->
    <item id="emailAddress">${appState.configEmailAddress}</item>  
    <item id="emailSubject">${appState.configEmailSubject}</item>  
    
-   <!-- SECOND PROJECT LINK -->
+   <!-- SECOND PROJECT -->
    <item id="linkToSecondProject">${appState.configLinkToSecondQsort}</item> 
    <item id="secondProjectUrl">${appState.configLinkToSecondQsortUrl}</item> 
+   
+   <!-- OTHER OPTIONS -->
+   <item id="shuffleCards">${appState.configShuffleCards}</item>
+   <item id="headerBarColor">${appState.configHeaderBarColor}</item>
+   <item id="devMode">false</item>
+   
 
    <!-- ACCESS -->
    <!-- options: anonymous, partId-access, partId, access -->
@@ -69,41 +71,35 @@ const generateConfigXml = () => {
    <item id="accessCode">${appState.configLogInPassword}</item>
 
 
-   <!-- FONT OPTIONS -->
-   <!-- defaults false, 15, #2a2a2a -->
-   <item id="setDefaultFontSize">${appState.configSetDefaultFontSize}</item>
-   <item id="defaultFontSize">${appState.configDefaultFontSize}</item>
-   <item id="defaultFontColor">${appState.defaultFontColor}</item>
-
-
+   <!-- LEGACY DEFAULTS -->
+   <item id="setDefaultFontSize">true</item>
+   <item id="defaultFontSize">25</item>
+ 
+   
    <!-- PRESORT -->
-   <!-- default colors #ccffcc, #e0e0e0, #ffe0f0 -->
+   <!-- default colors #2a2a2a, #ccffcc, #e0e0e0, #ffe0f0 -->
+   <item id="defaultFontColor">${appState.defaultFontColor}</item>
+   <item id="setDefaultFontSizePresort">true</item>
+   <item id="defaultFontSizePresort">${appState.configDefaultFontSizePresort}</item>
    <item id="greenCardColor">${appState.greenCardColor}</item>
    <item id="yellowCardColor">${appState.yellowCardColor}</item>
    <item id="pinkCardColor">${appState.pinkCardColor}</item>
- 
-   <item id="setSortDefaultFontSizePresort">${appState.configSetDefaultFontSizePresort}</item>
-   <item id="defaultFontSize">${appState.configDefaultSortFontSizePresort}</item>
- 
+  
 
    <!-- SORT -->
+   <item id="setDefaultFontSizeSort">true</item>
+   <item id="defaultFontSizeSort">${appState.configDefaultFontSizeSort}</item>
    <item id="condOfInstFontSize">${appState.configCondOfInstFontSize}</item>
    <item id="allowUnforcedSorts">${appState.configAllowUnforcedSorts}</item>
    <item id="warnOverloadedColumn">${appState.configDisplayOverloadedColWarn}</item>
    <item id="setMinCardHeight">${appState.configSetMinCardHeight}</item>
    <item id="minCardHeight">${appState.configMinCardHeight}</item>
 
-   <item id="setSortDefaultFontSizePresort">${appState.configSetSortDefaultFontSizeSort}</item>
-   <item id="defaultFontSize">${appState.configDefaultSortFontSizeSort}</item>
- 
-
 
    <!-- POSTSORT -->
    <item id="showPostsort">${appState.configShowStep3}</item>
    <item id="showSecondPosColumn">${appState.configShowSecondPosColumn}</item>
    <item id="showSecondNegColumn">${appState.configShowSecondNegColumn}</item>
-   
-
    <item id="displayNeutralObjects">false</item>
 
 

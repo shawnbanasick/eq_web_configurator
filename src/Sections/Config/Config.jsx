@@ -14,7 +14,6 @@ import CustomLogo from "./CustomLogo";
 import PostsortOptions from "./PostsortOptions";
 import SurveyOptions from "./SurveyOptons";
 import UploadXmlConfigButton from "./UploadXmlConfigButton";
-import FontOptions from "./FontOptions";
 
 const Config = () => {
   const handleClick = () => {
@@ -68,7 +67,6 @@ const Config = () => {
       <QuestionContainer>
         <GeneralOptions />
         <ProjectAccessOptions />
-        <FontOptions />
         <PresortOptions />
         <SortOptions />
         <PostsortOptions />

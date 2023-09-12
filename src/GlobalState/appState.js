@@ -47,11 +47,11 @@ const appState = store({
   configSetDefaultFontSizePresort: false,
   configSetDefaultFontSizePresortfalseActive: true,
 
-  configSetSortDefaultFontSizeSort: false,
-  configSetSortDefaultFontSizeSortfalseActive: true,
+  configSetDefaultFontSizeSort: false,
+  configSetDefaultFontSizeSortfalseActive: true,
 
-  configDefaultSortFontSizePresort: 28,
-  configDefaultSortFontSizeSort: 18,
+  configDefaultFontSizePresort: 28,
+  configDefaultFontSizeSort: 18,
 
   /*
   config.xml PRESORT settings */

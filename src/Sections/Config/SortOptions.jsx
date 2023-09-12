@@ -45,7 +45,17 @@ const SortOptions = () => {
       )}
 
       <UserNumberInput
-        label="2-9. Conditions of Instruction Font Size:"
+        label="2-9. Sort statement font size:"
+        step={1}
+        value={20}
+        upperLimit={800}
+        lowerLimit={6}
+        stateId="configDefaultFontSizeSort"
+        sectionName="config"
+      />
+
+      <UserNumberInput
+        label="2-10. Conditions of Instruction font size:"
         step={1}
         value={20}
         upperLimit={80}
@@ -55,14 +65,14 @@ const SortOptions = () => {
       />
 
       <RadioButtons
-        label="2-10. Allow unforced sorts:"
+        label="2-11a. Allow unforced sorts:"
         buttonIdArray={["true", "false"]}
         stateId="configAllowUnforcedSorts"
         sectionName="config"
       />
 
       <RadioButtons
-        label="2-11. Display overloaded column warning:"
+        label="2-11b. Display overloaded column warning:"
         buttonIdArray={["true", "false"]}
         stateId="configDisplayOverloadedColWarn"
         sectionName="config"
