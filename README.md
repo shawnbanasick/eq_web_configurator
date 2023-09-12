@@ -134,6 +134,10 @@ I have not integrated automatic updating functions into the application. To upda
 
 If you discover a problem with the software or want to make a feature request, send an email to ken.q.tools@gmail.com.
 
+## Citation
+
+`Banasick, S. (2023). EQ Web Configurator (Version 3.0.0) [Computer software]. https://doi.org/10.5281/zenodo.8337126`
+
 ## License
 
 License: GPL-3
