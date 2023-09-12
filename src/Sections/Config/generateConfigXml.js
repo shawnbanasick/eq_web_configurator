@@ -59,7 +59,7 @@ const generateConfigXml = () => {
    <item id="linkToSecondProject">${appState.configLinkToSecondQsort}</item> 
    <item id="secondProjectUrl">${appState.configLinkToSecondQsortUrl}</item> 
    
-   <!-- OTHER OPTIONS -->
+   <!-- OTHER GENERAL OPTIONS -->
    <item id="shuffleCards">${appState.configShuffleCards}</item>
    <item id="headerBarColor">${appState.configHeaderBarColor}</item>
    <item id="devMode">false</item>
@@ -79,21 +79,21 @@ const generateConfigXml = () => {
    <!-- PRESORT -->
    <!-- default colors #2a2a2a, #ccffcc, #e0e0e0, #ffe0f0 -->
    <item id="defaultFontColor">${appState.defaultFontColor}</item>
-   <item id="setDefaultFontSizePresort">true</item>
    <item id="defaultFontSizePresort">${appState.configDefaultFontSizePresort}</item>
    <item id="greenCardColor">${appState.greenCardColor}</item>
    <item id="yellowCardColor">${appState.yellowCardColor}</item>
    <item id="pinkCardColor">${appState.pinkCardColor}</item>
+   <item id="setDefaultFontSizePresort">true</item>
   
 
    <!-- SORT -->
-   <item id="setDefaultFontSizeSort">true</item>
    <item id="defaultFontSizeSort">${appState.configDefaultFontSizeSort}</item>
    <item id="condOfInstFontSize">${appState.configCondOfInstFontSize}</item>
    <item id="allowUnforcedSorts">${appState.configAllowUnforcedSorts}</item>
    <item id="warnOverloadedColumn">${appState.configDisplayOverloadedColWarn}</item>
-   <item id="setMinCardHeight">${appState.configSetMinCardHeight}</item>
    <item id="minCardHeight">${appState.configMinCardHeight}</item>
+   <item id="setMinCardHeight">true</item>
+   <item id="setDefaultFontSizeSort">true</item>
 
 
    <!-- POSTSORT -->

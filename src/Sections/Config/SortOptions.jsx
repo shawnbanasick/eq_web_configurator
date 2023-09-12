@@ -77,25 +77,16 @@ const SortOptions = () => {
         stateId="configDisplayOverloadedColWarn"
         sectionName="config"
       />
-      <RadioButtons
-        label="2-12a. Set default statement card size:"
-        buttonIdArray={["true", "false"]}
-        stateId="configSetMinCardHeight"
+
+      <UserNumberInput
+        label="2-12. Default card height:"
+        step={1}
+        value={20}
+        upperLimit={800}
+        lowerLimit={50}
+        stateId="configMinCardHeight"
         sectionName="config"
       />
-      {showMinCardHeightInput && (
-        <FadeIn delay={150} duration={1050}>
-          <UserNumberInput
-            label="2-12b. Default card height:"
-            step={1}
-            value={20}
-            upperLimit={800}
-            lowerLimit={50}
-            stateId="configMinCardHeight"
-            sectionName="config"
-          />
-        </FadeIn>
-      )}
     </React.Fragment>
   );
 };

@@ -114,17 +114,15 @@ const UploadXmlFileButton = () => {
 
         console.log("inputObj", JSON.stringify(inputObj.setupTarget));
 
-        // set  1. study title
+        // ***
+        // *** GENERAL OPTIONS ***
+        // ***
+        // set  2-1. study title
         let title = inputObj.studyTitle;
         localStorage.setItem("configTitle", title);
         appState["configTitle"] = title;
 
-        // set stein api input
-        let steinApiUrl = inputObj.steinApiUrl;
-        localStorage.setItem("configSteinApiUrl", steinApiUrl);
-        appState["configSteinApiUrl"] = steinApiUrl;
-
-        // set 2. setup target
+        // set 2-2. Database Options
         localStorage.setItem("configDatabaseOptions", inputObj.databaseOptions);
         appState["configDatabaseOptions"] = inputObj.databaseOptions;
 
@@ -136,6 +134,7 @@ const UploadXmlFileButton = () => {
           appState.configDatabaseOptionsGoogle_FreeActive = true;
         }
 
+        // set 2-2b Setup Target
         localStorage.setItem("configSetupTarget", inputObj.setupTarget);
         appState["configSetupTarget"] = inputObj.setupTarget;
         if (inputObj.setupTarget === "local") {
@@ -174,14 +173,18 @@ const UploadXmlFileButton = () => {
           appState.configSetupTargetself_hostedActive = true;
         }
 
-        // set email address and subject
+        // set 2-2b Stein API URL input
+        let steinApiUrl = inputObj.steinApiUrl;
+        localStorage.setItem("configSteinApiUrl", steinApiUrl);
+        appState["configSteinApiUrl"] = steinApiUrl;
+
+        // set 2-2b Email address and Email subject
         localStorage.setItem("configEmailAddress", inputObj.emailAddress);
         appState["configEmailAddress"] = inputObj.emailAddress;
-
         localStorage.setItem("configEmailSubject", inputObj.emailSubject);
         appState["configEmailSubject"] = inputObj.emailSubject;
 
-        // 2nd Project Link
+        // set 2-2c Link to Second Q sort
         localStorage.setItem(
           "configLinkToSecondQsort",
           inputObj.linkToSecondQsort
@@ -196,7 +199,7 @@ const UploadXmlFileButton = () => {
           appState.configLinkToSecondQsortfalseActive = true;
         }
 
-        // set 2nd Project Link URL
+        // set 2-2c Link to Second Q sort URL
         let linkToSecondQsortUrl = inputObj.linkToSecondQsortUrl;
         localStorage.setItem(
           "configLinkToSecondQsortUrl",
@@ -204,7 +207,7 @@ const UploadXmlFileButton = () => {
         );
         appState["configLinkToSecondQsortUrl"] = linkToSecondQsortUrl;
 
-        // set  3. shuffle
+        // set 2-3 Shuffle cards
         localStorage.setItem("configShuffleCards", inputObj.shuffleCards);
         appState["configShuffleCards"] = inputObj.shuffleCards;
         appState.configShuffleCardstrueActive = false;
@@ -216,11 +219,14 @@ const UploadXmlFileButton = () => {
           appState.configShuffleCardsfalseActive = true;
         }
 
-        // set  4. title bar color
+        // set 2-4 Title bar color
         localStorage.setItem("configHeaderBarColor", inputObj.headerBarColor);
         appState["configHeaderBarColor"] = inputObj.headerBarColor;
 
-        // set  5a. project access
+        // ***
+        // *** PROJECT ACCESS ***
+        // ***
+        // set 2-5a. project access
         //  ["anonymous", "name only", "name + access code", "access code only"]
         appState["configAccessanonymousActive"] = false;
         appState["configAccessname onlyActive"] = false;
@@ -247,55 +253,55 @@ const UploadXmlFileButton = () => {
           appState["configAccess"] = "access code only";
         }
 
-        // set 5b. project access
+        // set 2-5b. Set project access password
         localStorage.setItem("configLogInPassword", inputObj.accessCode);
         appState["configLogInPassword"] = inputObj.accessCode;
 
-        // DEFAULT FONT SETTINGS
-
+        // ***
+        // *** PRESORT OPTIONS ***
+        // ***
         // set 2-6. font color
         localStorage.setItem("defaultFontColor", inputObj.defaultFontColor);
         appState["defaultFontColor"] = inputObj.defaultFontColor;
 
+        // set 2-7. Presort statement font size
+        appState["configDefaultFontSizePresort"] =
+          inputObj.defaultFontSizePresort;
         localStorage.setItem(
-          "configSetDefaultFontSize",
-          inputObj.setDefaultFontSize
+          "configDefaultFontSizePresort",
+          inputObj.defaultFontSizePresort
         );
-        appState["configSetDefaultFontSize"] = inputObj.setDefaultFontSize;
-        appState.configSetDefaultFontSizetrueActive = false;
-        appState.configSetDefaultFontSizefalseActive = false;
-        if (inputObj.setDefaultFontSize === "true") {
-          appState.configSetDefaultFontSizetrueActive = true;
-        }
-        if (inputObj.setDefaultFontSize === "false") {
-          appState.configSetDefaultFontSizefalseActive = true;
-        }
 
-        // set 6. Logo
-
-        // localStorage.setItem("configLogoHtml", inputObj.footerLogoName);
-        // appState["configLogoHtml"] = inputObj.footerLogoName;
-
-        // set 7a. positive card color
+        // set 2-8a. positive card color
         localStorage.setItem("greenCardColor", inputObj.greenCardColor);
         appState["greenCardColor"] = inputObj.greenCardColor;
 
-        // set 7b. positive card color
+        // set 2-8b. neutral card color
         localStorage.setItem("yellowCardColor", inputObj.yellowCardColor);
         appState["yellowCardColor"] = inputObj.yellowCardColor;
 
-        // set 7c. positive card color
+        // set 2-8c. negative card color
         localStorage.setItem("pinkCardColor", inputObj.pinkCardColor);
         appState["pinkCardColor"] = inputObj.pinkCardColor;
 
-        // set 8. Condition of instruction font size
+        // ***
+        // *** SORT OPTIONS ***
+        // ***
+        // set 2-9. Sort statement font size
+        localStorage.setItem(
+          "configDefaultFontSizeSort",
+          inputObj.defaultFontSizeSort
+        );
+        appState["configDefaultFontSizeSort"] = inputObj.defaultFontSizeSort;
+
+        // set 2-10. Condition of instruction font size
         localStorage.setItem(
           "configCondOfInstFontSize",
           inputObj.condOfInstFontSize
         );
         appState["configCondOfInstFontSize"] = inputObj.condOfInstFontSize;
 
-        // set 9. allow unforced sorts
+        // set 2-11a Allow unforced sorts
         localStorage.setItem(
           "configAllowUnforcedSorts",
           inputObj.allowUnforcedSorts
@@ -310,7 +316,7 @@ const UploadXmlFileButton = () => {
           appState.configAllowUnforcedSortsfalseActive = true;
         }
 
-        // set 10. display overloaded column warning
+        // set 2-11b Display overloaded column warning
         localStorage.setItem(
           "configDisplayOverloadedColWarn",
           inputObj.warnOverloadedColumn
@@ -326,26 +332,14 @@ const UploadXmlFileButton = () => {
           appState.configDisplayOverloadedColWarnfalseActive = true;
         }
 
-        // set 10a. set min card height
-        localStorage.setItem(
-          "configSetMinCardHeight",
-          inputObj.setMinCardHeight
-        );
-        appState["configSetMinCardHeight"] = inputObj.setMinCardHeight;
-        appState.configSetMinCardHeighttrueActive = false;
-        appState.configSetMinCardHeightfalseActive = false;
-        if (inputObj.setMinCardHeight === "true") {
-          appState.configSetMinCardHeighttrueActive = true;
-        }
-        if (inputObj.setMinCardHeight === "false") {
-          appState.configSetMinCardHeightfalseActive = true;
-        }
-
-        // set 10b. Condition of instruction font size
+        // set 2-12 Set min card height
         localStorage.setItem("configMinCardHeight", inputObj.minCardHeight);
         appState["configMinCardHeight"] = inputObj.minCardHeight;
 
-        // set 11. include individual card comments screen
+        // ***
+        // *** POSTSORT OPTIONS ***
+        // ***
+        // set 2-13 Include Postsort comments screen
         localStorage.setItem("configShowStep3", inputObj.showPostsort);
         appState["configShowStep3"] = inputObj.showPostsort;
         appState.configShowStep3trueActive = false;
@@ -357,7 +351,7 @@ const UploadXmlFileButton = () => {
           appState.configShowStep3falseActive = true;
         }
 
-        // set 12. display second positive column
+        // set 2-14. Display second positive column
         localStorage.setItem(
           "configShowSecondPosColumn",
           inputObj.showSecondPosColumn
@@ -372,7 +366,7 @@ const UploadXmlFileButton = () => {
           appState.configShowSecondPosColumnfalseActive = true;
         }
 
-        // set 13. display second negative column
+        // set 2-15 Display second negative column
         localStorage.setItem(
           "configShowSecondNegColumn",
           inputObj.showPostsort
@@ -387,7 +381,10 @@ const UploadXmlFileButton = () => {
           appState.configShowSecondNegColumnfalseActive = true;
         }
 
-        // set 14. show step 4
+        // ***
+        // *** SURVEY OPTIONS ***
+        // ***
+        // set 2-16 show step 4 - Survey
         localStorage.setItem("configShowStep4", inputObj.showPostsort);
         appState["configShowStep4"] = inputObj.showSurvey;
         appState.configShowStep4trueActive = false;
