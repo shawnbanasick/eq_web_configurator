@@ -47,34 +47,27 @@ const generateConfigXml = () => {
    <item id="studyTitle">${appState.configTitle}</item> 
    <item id="databaseOptions">${appState.configDatabaseOptions}</item>
    <item id="setupTarget">${appState.configSetupTarget}</item>
-
    <!-- STEIN -->
    <item id="steinApiUrl">${appState.configSteinApiUrl}</item>
-   
    <!-- EMAIL -->
    <item id="emailAddress">${appState.configEmailAddress}</item>  
    <item id="emailSubject">${appState.configEmailSubject}</item>  
-   
    <!-- SECOND PROJECT -->
    <item id="linkToSecondProject">${appState.configLinkToSecondQsort}</item> 
    <item id="secondProjectUrl">${appState.configLinkToSecondQsortUrl}</item> 
-   
    <!-- OTHER GENERAL OPTIONS -->
    <item id="shuffleCards">${appState.configShuffleCards}</item>
    <item id="headerBarColor">${appState.configHeaderBarColor}</item>
-   <item id="devMode">false</item>
-   
+   <item id="devMode">false</item> 
 
    <!-- ACCESS -->
    <!-- options: anonymous, partId-access, partId, access -->
    <item id="initialScreen">${loginTypeText}</item>
    <item id="accessCode">${appState.configLogInPassword}</item>
 
-
-   <!-- LEGACY DEFAULTS -->
+   <!-- LEGACY DEFAULTS (do not change these)-->
    <item id="setDefaultFontSize">true</item>
    <item id="defaultFontSize">25</item>
- 
    
    <!-- PRESORT -->
    <!-- default colors #2a2a2a, #ccffcc, #e0e0e0, #ffe0f0 -->
