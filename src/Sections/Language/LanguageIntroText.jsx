@@ -137,7 +137,9 @@ const LocalLanguage = () => {
         {`See the default text below for more HTML examples.`}
         <br />
         <br />
-        <h4>Save Data</h4>
+        <mark>Highlighted options must be customized for your project</mark>
+        <br />
+        <h4 style={{ marginBottom: "5px" }}>Save Data</h4>
         When you have finished adding your language data, click the orange
         button at the bottom of the page and save your information as
         'language.xml' in the settings folder (replace the default file).

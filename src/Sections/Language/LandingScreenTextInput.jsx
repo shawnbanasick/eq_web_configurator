@@ -54,6 +54,7 @@ const LocalLanguage = () => {
       <UserTextInput
         label="2-1. Landing Page Title Bar"
         stateId="langLandingHead"
+        highlight="true"
         sectionName="lang"
         width={34}
         left={0}
@@ -62,6 +63,7 @@ const LocalLanguage = () => {
         label="2-2. Welcome Message"
         stateId="langWelcomeMessage"
         sectionName="lang"
+        highlight="true"
         width={37}
         height={300}
         left={0}
@@ -70,6 +72,7 @@ const LocalLanguage = () => {
         label="2-3. Help modal header text"
         stateId="langLandingHelpModalHead"
         sectionName="lang"
+        highlight="true"
         width={32.5}
         left={0}
       />
@@ -77,6 +80,7 @@ const LocalLanguage = () => {
         label="2-4. Help modal main text"
         stateId="langLandingHelpModalText"
         sectionName="lang"
+        highlight="true"
         width={35.5}
         height={140}
         left={0}

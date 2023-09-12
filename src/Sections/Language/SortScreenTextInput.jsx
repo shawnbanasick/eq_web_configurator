@@ -86,9 +86,10 @@ const LocalLanguage = () => {
       />
 
       <UserTextAreaInput
-        label="5-4. Sort conditions of instruction"
+        label={`5-4. Sort conditions of instruction`}
         stateId="langCondOfInst"
         sectionName="lang"
+        highlight="true"
         width={29.4}
         height={80}
         left={0}

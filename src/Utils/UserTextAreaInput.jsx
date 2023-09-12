@@ -21,23 +21,43 @@ const UserTextInput = (props) => {
 
   appState[key] = localStorage.getItem(key);
 
-  return (
-    <InputContainerDiv>
-      <TitleSpan>{`${t(props.label)} `}</TitleSpan>
-      <UserText
-        tabindex="0"
-        type="text"
-        placeholder={props.placeholder}
-        width={props.width}
-        height={props.height}
-        left={props.left}
-        name={props.name}
-        value={appState[key] || ""}
-        onChange={handleChange}
-        className="optionsInput"
-      />
-    </InputContainerDiv>
-  );
+  if (props.highlight === "true") {
+    return (
+      <InputContainerDiv>
+        <TitleSpanHighlight>{`${t(props.label)} `}</TitleSpanHighlight>
+        <UserText
+          tabindex="0"
+          type="text"
+          placeholder={props.placeholder}
+          width={props.width}
+          height={props.height}
+          left={props.left}
+          name={props.name}
+          value={appState[key] || ""}
+          onChange={handleChange}
+          className="optionsInput"
+        />
+      </InputContainerDiv>
+    );
+  } else {
+    return (
+      <InputContainerDiv>
+        <TitleSpan>{`${t(props.label)} `}</TitleSpan>
+        <UserText
+          tabindex="0"
+          type="text"
+          placeholder={props.placeholder}
+          width={props.width}
+          height={props.height}
+          left={props.left}
+          name={props.name}
+          value={appState[key] || ""}
+          onChange={handleChange}
+          className="optionsInput"
+        />
+      </InputContainerDiv>
+    );
+  }
 };
 
 export default view(UserTextInput);
@@ -61,4 +81,9 @@ const InputContainerDiv = styled.div`
 
 const TitleSpan = styled.span`
   margin-right: 10px;
+`;
+
+const TitleSpanHighlight = styled.div`
+  margin-right: 10px;
+  background-color: #ffff00;
 `;
