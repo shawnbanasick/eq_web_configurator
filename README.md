@@ -10,7 +10,7 @@
 <img src="https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/configurator_logo.svg" width="1000" />
 </p>
 
-# Use with <b> [EQ Web Sort](https://github.com/shawnbanasick/eq-web-sort) </b> Version 2.0.0
+# Use with <b> [EQ Web Sort](https://github.com/shawnbanasick/eq-web-sort) </b> Version 3.0.0
 
 EQ Web Configurator simplifies the set-up and testing of an online Q sort project with EQ Web Sort. It includes a local web server to preview the project set-up on any installed web browser. It also has a guided editing process for the project settings files, and complete guides to attach a free Google database and upload the project to a free web host.
 

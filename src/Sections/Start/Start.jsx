@@ -54,6 +54,11 @@ const Start = () => {
         the Q sort. It also includes a built-in web server to immediately test
         your Q sort setup on any locally installed web browser.
       </IntroText>
+      <IntroText>
+        Citation:
+        <br /> Banasick, S. (2023). EQ Web Configurator (Version 3.0.0)
+        [Computer software]. https://doi.org/10.5281/zenodo.8337126
+      </IntroText>
       <CustomH2>Select Configurator Display Mode:</CustomH2>
       <ButtonContainer>
         <BeginnerButton
@@ -183,7 +188,7 @@ const ButtonContainer = styled.div`
 const IntroText = styled.span`
   /* font-size: 22px; */
   align-self: center;
-  padding: 30px;
+  padding: 10px;
   width: 70vw;
   font-size: 1.6vw;
 `;
