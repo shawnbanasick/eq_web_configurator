@@ -1,4 +1,4 @@
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![DOI](https://zenodo.org/badge/406236167.svg)](https://zenodo.org/badge/latestdoi/406236167)
 
 <strong>Download Links:</strong> &nbsp;
 [macOS](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v2.0.0/eq-web-configurator-2.0.0.dmg) &nbsp;||&nbsp;
