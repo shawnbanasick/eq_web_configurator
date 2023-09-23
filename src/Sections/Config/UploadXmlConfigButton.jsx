@@ -123,6 +123,10 @@ const UploadXmlFileButton = () => {
         appState["configTitle"] = title;
 
         // set 2-2. Database Options
+        if (inputObj.databaseOptions === undefined) {
+          inputObj.databaseOptions = "Include_Google_Options";
+        }
+        console.log("inputObj.databaseOptions", inputObj.databaseOptions);
         localStorage.setItem("configDatabaseOptions", inputObj.databaseOptions);
         appState["configDatabaseOptions"] = inputObj.databaseOptions;
 
@@ -179,12 +183,25 @@ const UploadXmlFileButton = () => {
         appState["configSteinApiUrl"] = steinApiUrl;
 
         // set 2-2b Email address and Email subject
+
+        if (inputObj.emailAddress === undefined) {
+          inputObj.emailAddress = "@email";
+        }
+        if (inputObj.emailSubject === undefined) {
+          inputObj.emailSubject = "EQ Web Sort Results";
+        }
+        console.log("inputObj.emailAddress", inputObj.emailAddress);
+        console.log("inputObj.emailSubject", inputObj.emailSubject);
         localStorage.setItem("configEmailAddress", inputObj.emailAddress);
         appState["configEmailAddress"] = inputObj.emailAddress;
         localStorage.setItem("configEmailSubject", inputObj.emailSubject);
         appState["configEmailSubject"] = inputObj.emailSubject;
 
         // set 2-2c Link to Second Q sort
+        if (inputObj.linkToSecondQsort === undefined) {
+          inputObj.linkToSecondQsort = "false";
+        }
+
         localStorage.setItem(
           "configLinkToSecondQsort",
           inputObj.linkToSecondQsort
@@ -200,7 +217,11 @@ const UploadXmlFileButton = () => {
         }
 
         // set 2-2c Link to Second Q sort URL
-        let linkToSecondQsortUrl = inputObj.linkToSecondQsortUrl;
+        let linkToSecondQsortUrl = inputObj?.linkToSecondQsortUrl;
+
+        if (linkToSecondQsortUrl === undefined) {
+          linkToSecondQsortUrl = "false";
+        }
         localStorage.setItem(
           "configLinkToSecondQsortUrl",
           linkToSecondQsortUrl
@@ -265,6 +286,9 @@ const UploadXmlFileButton = () => {
         appState["defaultFontColor"] = inputObj.defaultFontColor;
 
         // set 2-7. Presort statement font size
+        if (inputObj.defaultFontSizePresort === undefined) {
+          inputObj.defaultFontSizePresort = 26;
+        }
         appState["configDefaultFontSizePresort"] =
           inputObj.defaultFontSizePresort;
         localStorage.setItem(
@@ -288,11 +312,19 @@ const UploadXmlFileButton = () => {
         // *** SORT OPTIONS ***
         // ***
         // set 2-9. Sort statement font size
+
+        if (inputObj.defaultFontSizeSort === undefined) {
+          inputObj.defaultFontSizeSort = 16;
+        }
         localStorage.setItem(
           "configDefaultFontSizeSort",
           inputObj.defaultFontSizeSort
         );
         appState["configDefaultFontSizeSort"] = inputObj.defaultFontSizeSort;
+        console.log(
+          "inputObj.defaultFontSizeSort",
+          inputObj.defaultFontSizeSort
+        );
 
         // set 2-10. Condition of instruction font size
         localStorage.setItem(
@@ -335,6 +367,21 @@ const UploadXmlFileButton = () => {
         // set 2-12 Set min card height
         localStorage.setItem("configMinCardHeight", inputObj.minCardHeight);
         appState["configMinCardHeight"] = inputObj.minCardHeight;
+
+        // set 2-13 Set sort direction
+        if (inputObj.sortDirection === undefined) {
+          inputObj.sortDirection = "positive";
+        }
+        localStorage.setItem("configSortDirection", inputObj.sortDirection);
+        appState["configSortDirection"] = inputObj.sortDirection;
+        appState.configSortDirectionpositiveActive = false;
+        appState.configSortDirectionnegativeActive = false;
+        if (inputObj.sortDirection === "positive") {
+          appState.configSortDirectionpositiveActive = true;
+        }
+        if (inputObj.sortDirection === "negative") {
+          appState.configSortDirectionnegativeActive = true;
+        }
 
         // ***
         // *** POSTSORT OPTIONS ***

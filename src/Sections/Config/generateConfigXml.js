@@ -87,6 +87,7 @@ const generateConfigXml = () => {
    <item id="minCardHeight">${appState.configMinCardHeight}</item>
    <item id="setMinCardHeight">true</item>
    <item id="setDefaultFontSizeSort">true</item>
+   <item id="sortDirection">${appState.configSortDirection}</item> 
 
 
    <!-- POSTSORT -->

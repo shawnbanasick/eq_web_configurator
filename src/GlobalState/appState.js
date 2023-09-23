@@ -31,6 +31,7 @@ const appState = store({
   configAccessanonymousActive: true,
   configHeaderBarColor: "#337ab7",
   configSteinApiUrl: "",
+  configSortDirectionpositiveActive: true,
 
   /*
   config.xml ACCESS settings */
@@ -68,6 +69,7 @@ const appState = store({
   configDisplayOverloadedColWarntrueActive: true,
   configSetMinCardHeightfalseActive: true,
   configMinCardHeight: 50,
+  configSortDirection: "positive",
 
   /*
   config.xml POSTSORT settings */

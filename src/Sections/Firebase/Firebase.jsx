@@ -91,9 +91,9 @@ const FirebaseInfo = () => {
       <GlobalStyle />
       <Title>Database Settings</Title>
       <DisplayModeText>
-        There are two options for storing the participant response data created
-        by EQ Web Sort. <b>Firebase</b> is a "database as a service" company
-        owned by Google. It provides a free and robust way to store the
+        There are two database options for storing the participant response data
+        created by EQ Web Sort. <b>Firebase</b> is a "database as a service"
+        company owned by Google. It provides a free and robust way to store the
         participants' response data. The number of participants is not limited,
         but the participant data is stored in JSON format. Follow the guide
         below to set up Firebase.
@@ -103,12 +103,28 @@ const FirebaseInfo = () => {
         easier to setup, but requires the use of a third-party web application
         called "Stein". It is free for projects with less than 200 participant
         responses. To set up Google Sheets as the database for your project, go
-        back to Section "2. Config", select "sheets" as the setup target, and
-        follow the guide to get the Stein API URL.
+        back to Section "2. Config", select "sheets" as the setup target, then
+        go to the Stein
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://steinhq.com/"
+        >
+          <b>website</b>
+        </a>{" "}
+        and follow the steps in this
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://docs.google.com/viewer?url=https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/Configurator_Stein_Integration.pdf"
+        >
+          <b>GUIDE</b>
+        </a>{" "}
+        .
         <br />
         <br />
         If you don't have a Google account, you'll have to make one before you
-        begin the setup process for Firebase.
+        begin the setup process for Firebase or Sheets.
         <br /> <br />
       </DisplayModeText>
       <SpacerDiv />

@@ -41,6 +41,12 @@ const SortOptions = () => {
           changing the column background color to orange and the column border
           to a dashed line. Also, navigation to the next step is disabled if
           there is an overloaded column.
+          <br /> <br />"<b>Sort direction</b>" refers to the orientation of the
+          unsorted cards in the bottom horozontal row. If the sort direction is
+          set to "positive", the postive cards are shown first and the
+          horozontal row scrolls from right to left. If the sort direction is
+          set to "negative", the negative cards are shown first and the
+          horozontal row scrolls from left to right.
         </DisplayModeText>
       )}
 
@@ -85,6 +91,13 @@ const SortOptions = () => {
         upperLimit={800}
         lowerLimit={50}
         stateId="configMinCardHeight"
+        sectionName="config"
+      />
+
+      <RadioButtons
+        label="2-13. Sort Direction:"
+        buttonIdArray={["positive", "negative"]}
+        stateId="configSortDirection"
         sectionName="config"
       />
     </React.Fragment>

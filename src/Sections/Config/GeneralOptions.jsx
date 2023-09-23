@@ -48,7 +48,7 @@ const GeneralOptions = () => {
         "local",
         "email",
       ];
-      return ["sheets", "firebase", "local", "email"];
+      return ["sheets", "firebase", "email", "local"];
     } else {
       localState.databaseOptionsArray = ["self_hosted", "local", "email"];
       return ["self_hosted", "local", "email"];
@@ -75,11 +75,10 @@ const GeneralOptions = () => {
       <IncompatibleFileModal />
       {displayMode && (
         <DisplayModeText>
-          If you are planning to do a standard online Q sort project, the "2.2
-          Setup Target" option should be set to either "<b>sheets</b>" or "
-          <b>firebase</b>". <br />
+          First, you need to decide how to handle the participant data.
           <br />
-          The "sheets" option allows you to use a <b>Google Sheet</b> as a
+          <br />
+          The "<b>sheets</b>" option allows you to use a Google Sheet as a
           database for the application, but requires use of third-party web
           application called "Stein". It is free for projects with less than 200
           participant responses. If you decide to use Stein with Google Sheets,
@@ -103,11 +102,17 @@ const GeneralOptions = () => {
           </a>{" "}
           to get the Stein API URL to paste in option 2-2b below.
           <br />
+          <br />"<b>Firebase</b>" is a Google-owned company. Its database is
+          more robust than the Google Sheets option, but the setup process is
+          more complex. Step-by-step instructions on how to set up Firebase are
+          in Section 6.
           <br />
-          <b>Firebase</b> is a "database as a service" company owned by Google.
-          It is more robust than Google Sheets, but the setup process is more
-          complex. Step-by-step instructions on how to set up Firebase are in
-          Section 6.
+          <br />
+          The "<b>email</b>" option is the easiest to set up since it does not
+          require a database. When the participants click the "Submit" button,
+          it opens their default email application with the destination email
+          address, subject line, and their results automatically added to the
+          email.
           <br />
           <br />
           The "<b>local</b>" option transforms EQ Web Sort into a tool for
@@ -145,15 +150,16 @@ const GeneralOptions = () => {
         left={0}
       />
 
+      {/*
       <RadioButtons
         label="2-2a. Database:"
         buttonIdArray={["Include_Google_Options", "Google_Free"]}
         stateId="configDatabaseOptions"
         sectionName="config"
-      />
+          /> */}
 
       <RadioButtons
-        label="2-2b. Setup target:"
+        label="2-2. Setup target:"
         buttonIdArray={databaseOptionsArray}
         stateId="configSetupTarget"
         sectionName="config"
@@ -203,7 +209,6 @@ const GeneralOptions = () => {
         sectionName="config"
       />
 
-      <br />
       {showSecondQsortUrl && (
         <FadeIn delay={150} duration={1050}>
           <UserTextInput
@@ -222,6 +227,7 @@ const GeneralOptions = () => {
         stateId="configShuffleCards"
         sectionName="config"
       />
+
       <ColorLabel>
         <div>2-4. Title bar color (for all pages):</div>
         <ConfigColorPicker
