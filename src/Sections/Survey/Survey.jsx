@@ -29,10 +29,10 @@ import OptionsWarningModal from "../Language/OptionsWarningModal";
 const clone = require("rfdc/default");
 
 const defaultArray = [
-  "required (true/false): true",
-  "label text: Age",
-  "note: Please enter your year of birth (YYYY, eg. 1980).",
-  "maxlength: 4",
+  "answer required (not shown in image): true",
+  "label text: 'Age'",
+  "note: 'Please enter your year of birth (YYYY, eg. 1980).'",
+  "maxlength (not shown in image): 4",
   `restricted: "0-9"`,
 ];
 
@@ -266,13 +266,13 @@ const Survey = () => {
             )}
           </ImageContainer>
           <SettingsTextContainer>
-            <b>Settings:</b>
+            <b>Example Settings:</b>
             {detailsArray && (
-              <ul>
+              <ol>
                 {detailsArray.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
-              </ul>
+              </ol>
             )}
             {displayOptionsSemiWarn && (
               <SeparatorWarning>
@@ -454,11 +454,14 @@ const ColorLabel = styled.div`
   gap: 20px;
 `;
 
-const SettingsTextContainer = styled.div`
+const SettingsTextContainer = styled.h3`
   margin-top: 30px;
   margin-bottom: 0px;
+  margin-left: 30px;
 
-  ul {
+  ol {
+    font-family: arial;
+    font-weight: normal;
     margin-top: 3px;
   }
 `;

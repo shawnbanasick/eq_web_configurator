@@ -39,7 +39,7 @@ const generateConfigXml = () => {
 
   const data1 = `<?xml version="1.0" encoding="UTF-8"?>
 
-   <config version="1.0" htmlParse="false">\n`;
+   <config version="3.0" htmlParse="false">\n`;
 
   const data2 = `
    <!-- GENERAL SETTINGS -->
@@ -68,6 +68,8 @@ const generateConfigXml = () => {
    <!-- LEGACY DEFAULTS (do not change these)-->
    <item id="setDefaultFontSize">true</item>
    <item id="defaultFontSize">25</item>
+   <item id="displayNeutralObjects">false</item>
+
    
    <!-- PRESORT -->
    <!-- default colors #2a2a2a, #ccffcc, #e0e0e0, #ffe0f0 -->
@@ -94,7 +96,8 @@ const generateConfigXml = () => {
    <item id="showPostsort">${appState.configShowStep3}</item>
    <item id="showSecondPosColumn">${appState.configShowSecondPosColumn}</item>
    <item id="showSecondNegColumn">${appState.configShowSecondNegColumn}</item>
-   <item id="displayNeutralObjects">false</item>
+   <item id="showBackButton">${appState.showBackButton}</item>
+   <item id="postsortCommentsRequred">${appState.postsortCommentsRequired}</item>
 
 
    <!-- SURVEY - Survey Questions -->

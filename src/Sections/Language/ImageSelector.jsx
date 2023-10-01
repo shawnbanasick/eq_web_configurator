@@ -16,6 +16,8 @@ import sortImage4 from "../../assets/images/sortImage4.png";
 import sortImage5 from "../../assets/images/sortImage5.png";
 import postsortImage from "../../assets/images/postsortImage.png";
 import postsortImage2 from "../../assets/images/postsortImage2.png";
+import postsortImage3 from "../../assets/images/postsortImage3.png";
+import postsortImage4 from "../../assets/images/postsortImage4.png";
 import surveyImage from "../../assets/images/surveyImage.png";
 import surveyImage2 from "../../assets/images/surveyImage2.png";
 import surveyImage3 from "../../assets/images/surveyImage3.png";
@@ -99,6 +101,12 @@ const ImageSelector = () => {
   }
   if (selector === "postsortImage2") {
     return <img src={postsortImage2} alt="s"></img>;
+  }
+  if (selector === "postsortImage3") {
+    return <img src={postsortImage3} alt="s"></img>;
+  }
+  if (selector === "postsortImage4") {
+    return <img src={postsortImage4} alt="s"></img>;
   }
   if (selector === "surveyImage") {
     return <img src={surveyImage} alt="s"></img>;

@@ -44,14 +44,28 @@ const LocalLanguage = () => {
             Clear Section
           </ClearAllButton>
           <RefImageButton id="postsortImage" onClick={handleRefImage}>
-            View Reference Image
+            Ref. Img. 6-1 to 6-5
           </RefImageButton>
           <RefImageButton
             id="postsortImage2"
             marginRight="35px"
             onClick={handleRefImage}
           >
-            View Reference Image 2
+            Ref. Img. 6-6 & 6-7
+          </RefImageButton>
+          <RefImageButton
+            id="postsortImage3"
+            marginRight="35px"
+            onClick={handleRefImage}
+          >
+            Ref. Img. 6-8 & 6-9
+          </RefImageButton>
+          <RefImageButton
+            id="postsortImage4"
+            marginRight="35px"
+            onClick={handleRefImage}
+          >
+            Ref. Img. 6-10
           </RefImageButton>
         </div>
       </HeaderButtonBar>
@@ -104,6 +118,28 @@ const LocalLanguage = () => {
         sectionName="lang"
         width={34.2}
         height={80}
+        left={0}
+      />
+      <UserTextInput
+        label="6-8. Prevent naviation modal header"
+        stateId="langPostsortPreventNavModalHead"
+        sectionName="lang"
+        width={31.1}
+        left={0}
+      />
+      <UserTextAreaInput
+        label="6-9. Prevent navigation modal text"
+        stateId="langPostsortPreventNavModalText"
+        sectionName="lang"
+        width={34.2}
+        height={80}
+        left={0}
+      />
+      <UserTextInput
+        label="6-10. Go to previous page button text"
+        stateId="langPostsortBackButton"
+        sectionName="lang"
+        width={31.1}
         left={0}
       />
     </SectionContainer>
@@ -188,4 +224,5 @@ const RefImageButton = styled.button`
 
 const SectionTitle = styled.h3`
   margin-top: 20px;
+  width: 50%;
 `;

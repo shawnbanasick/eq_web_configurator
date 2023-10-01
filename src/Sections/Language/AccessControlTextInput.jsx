@@ -44,7 +44,7 @@ const LocalLanguage = () => {
             marginRight="35px"
             onClick={handleRefImage}
           >
-            View Reference Image
+            Ref. Image 3-1 to 3-7
           </RefImageButton>
         </div>
       </HeaderButtonBar>

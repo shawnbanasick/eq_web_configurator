@@ -15,12 +15,12 @@ const appState = store({
 
   /*
   config.xml GENERAL settings */
-  configTitle: "My_Q_project_v1",
+  configTitle: "My_Q_project",
   configDatabaseOptionsInclude_Google_OptionsActive: true,
   configDatabaseOptionsGoogle_FreeActive: false,
   configDatabaseOptions: "Include_Google_Options",
   configSetupTargetfirebaseActive: true,
-  configSetupTarget: "firebase",
+  configSetupTarget: "email",
   configEmailAddress: "",
   configEmailSubject: "EQ Web Sort Results",
   configLinkToSecondQsort: false,
@@ -79,6 +79,10 @@ const appState = store({
   configShowSecondNegColumnfalseActive: true,
   configShowStep3trueActive: true,
   configShowStep3: "true",
+  configShowBackButton: false,
+  configShowBackButtonfalseActive: true,
+  configPostsortCommentsRequired: false,
+  configPostsortCommentsRequiredfalseActive: true,
 
   /*
   config.xml SURVEY settings */
@@ -276,14 +280,16 @@ const appState = store({
   langPostsortDisagreement: `Placed on Disagree`,
   langPostsortModalHead: `Step 3 of 4`,
   langPostsortModalText: `You can use the buttons at the bottom of the page to change the font size or card height.`,
-
+  langPostsortPreventNavModalHead: `Navigation Disabled`,
+  langPostsortPreventNavModalText: `Please add comments to all of the cards before going to the next step.`,
+  langPostsortBackButton: `Go Back`,
   /*
    ******** SURVEY  ****************** */
   langSurveyHeader: `Post-Sort Questionnaire`,
   langSurveyModalHead: `Step 4 of 4`,
   langSurveyModalText: `Finally, please answer the following questions regarding your background. The questions marked with an "*" in their title are required.`,
   langSurveyPreventNavModalHead: `Navigation Disabled`,
-  langSurveyPreventNavModalText: `Please answer the required questions (outlined in red) before going to the next step.`,
+  langSurveyPreventNavModalText: `Please answer the required questions (outlined in yellow) before going to the next step.`,
 
   /*
    ******** SUBMIT  ****************** */

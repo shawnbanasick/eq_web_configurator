@@ -79,6 +79,9 @@ const showSectionDefaults = () => {
     langPostsortDisagreement: `Placed on Disagree`,
     langPostsortModalHead: `Step 3 of 4`,
     langPostsortModalText: `You can use the buttons at the bottom of the page to change the font size or card height.`,
+    langPostsortPreventNavModalHead: `Navigation Disabled`,
+    langPostsortPreventNavModalText: `Please add comments to all of the cards before going to the next step.`,
+    langPostsortBackButton: `Go Back`,
 
     /*
      ******** SURVEY  ****************** */
@@ -86,7 +89,7 @@ const showSectionDefaults = () => {
     langSurveyModalHead: `Step 4 of 4`,
     langSurveyModalText: `Finally, please answer the following questions regarding your background. The questions marked with an "*" in their title are required.`,
     langSurveyPreventNavModalHead: `Navigation Disabled`,
-    langSurveyPreventNavModalText: `Please answer the required questions (outlined in red) before going to the next step.`,
+    langSurveyPreventNavModalText: `Please answer the required questions (outlined in yellow) before going to the next step.`,
 
     /*
      ******** SUBMIT  ****************** */

@@ -40,23 +40,23 @@ const LocalLanguage = () => {
             Clear Section
           </ClearAllButton>
           <RefImageButton id="sortImage" onClick={handleRefImage}>
-            View Ref. Img.
+            Ref. Img. 5-1 & 5-2
           </RefImageButton>
           <RefImageButton id="sortImage2" onClick={handleRefImage}>
-            View Ref. Img. 2
+            Ref. Img. 5-3 to 5-5
           </RefImageButton>
           <RefImageButton id="sortImage3" onClick={handleRefImage}>
-            View Ref. Img. 3
+            Ref. Img. 5-6 & 5-7
           </RefImageButton>
           <RefImageButton id="sortImage4" onClick={handleRefImage}>
-            View Ref. Img. 4
+            Ref. Img. 5-8 & 5-9
           </RefImageButton>
           <RefImageButton
             id="sortImage5"
             marginRight="35px"
             onClick={handleRefImage}
           >
-            View Ref. Img. 5
+            Ref. Img. 5-10 & 5-11
           </RefImageButton>
         </div>
       </HeaderButtonBar>
@@ -234,4 +234,5 @@ const RefImageButton = styled.button`
 
 const SectionTitle = styled.h3`
   margin-top: 20px;
+  width: 20%;
 `;

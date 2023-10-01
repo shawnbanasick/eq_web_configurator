@@ -46,6 +46,20 @@ const PostsortOptions = () => {
         stateId="configShowSecondNegColumn"
         sectionName="config"
       />
+
+      <RadioButtons
+        label="2-17. Display previous page navigation button in footer:"
+        buttonIdArray={["true", "false"]}
+        stateId="configShowBackButton"
+        sectionName="config"
+      />
+
+      <RadioButtons
+        label="2-18. Force participant to add comments before navigation:"
+        buttonIdArray={["true", "false"]}
+        stateId="configPostsortCommentsRequired"
+        sectionName="config"
+      />
     </React.Fragment>
   );
 };

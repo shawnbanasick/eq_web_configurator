@@ -111,6 +111,9 @@ const showSectionDefaults = (section) => {
       "langPostsortDisagreement",
       "langPostsortModalHead",
       "langPostsortModalText",
+      "langPostsortPreventNavModalHead",
+      "langPostsortPreventNavModalText",
+      "langPostsortBackButton",
     ];
 
     clearSection(selectorArray);

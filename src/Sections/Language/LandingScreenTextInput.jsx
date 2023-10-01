@@ -40,14 +40,14 @@ const LocalLanguage = () => {
             Clear Section
           </ClearAllButton>
           <RefImageButton id="landingImage" onClick={handleRefImage}>
-            View Reference Image
+            Ref. Image 2-1 & 2-2
           </RefImageButton>
           <RefImageButton
             id="landingImage2"
             marginRight="35px"
             onClick={handleRefImage}
           >
-            View Reference Image 2
+            Ref. Image 2-3 & 2-4
           </RefImageButton>
         </div>
       </HeaderButtonBar>

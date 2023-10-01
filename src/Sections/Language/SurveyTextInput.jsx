@@ -32,9 +32,9 @@ const LocalLanguage = () => {
     <SectionContainer>
       <HeaderButtonBar>
         <SectionTitle>
-          Questionnaire Screen
+          Survey Screen
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Optional
-          sect.)
+          section)
         </SectionTitle>
         <div>
           <DefaultsButton id="surveyDef" onClick={handleShowDefaults}>
@@ -44,17 +44,17 @@ const LocalLanguage = () => {
             Clear Section
           </ClearAllButton>
           <RefImageButton id="surveyImage" onClick={handleRefImage}>
-            View Ref. Img.
+            Ref. Img. 7-1
           </RefImageButton>
           <RefImageButton id="surveyImage2" onClick={handleRefImage}>
-            View Ref. Img. 2
+            Ref. Img. 7-2 & 7-3
           </RefImageButton>
           <RefImageButton
             id="surveyImage3"
             marginRight="35px"
             onClick={handleRefImage}
           >
-            View Ref. Img. 3
+            Ref. Img. 7-4 & 7-5
           </RefImageButton>
         </div>
       </HeaderButtonBar>

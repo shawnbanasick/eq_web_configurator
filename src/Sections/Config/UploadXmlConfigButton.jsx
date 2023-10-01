@@ -118,6 +118,9 @@ const UploadXmlFileButton = () => {
         // *** GENERAL OPTIONS ***
         // ***
         // set  2-1. study title
+        if (inputObj.studyTitle === undefined) {
+          inputObj.studyTitle = "My_Q_project";
+        }
         let title = inputObj.studyTitle;
         localStorage.setItem("configTitle", title);
         appState["configTitle"] = title;
@@ -139,6 +142,9 @@ const UploadXmlFileButton = () => {
         }
 
         // set 2-2b Setup Target
+        if (inputObj.setupTarget === undefined) {
+          inputObj.setupTarget = "email";
+        }
         localStorage.setItem("configSetupTarget", inputObj.setupTarget);
         appState["configSetupTarget"] = inputObj.setupTarget;
         if (inputObj.setupTarget === "local") {
@@ -178,12 +184,14 @@ const UploadXmlFileButton = () => {
         }
 
         // set 2-2b Stein API URL input
+        if (inputObj.steinApiUrl === undefined) {
+          inputObj.steinApiUrl = "http://";
+        }
         let steinApiUrl = inputObj.steinApiUrl;
         localStorage.setItem("configSteinApiUrl", steinApiUrl);
         appState["configSteinApiUrl"] = steinApiUrl;
 
         // set 2-2b Email address and Email subject
-
         if (inputObj.emailAddress === undefined) {
           inputObj.emailAddress = "@email";
         }
@@ -201,7 +209,6 @@ const UploadXmlFileButton = () => {
         if (inputObj.linkToSecondQsort === undefined) {
           inputObj.linkToSecondQsort = "false";
         }
-
         localStorage.setItem(
           "configLinkToSecondQsort",
           inputObj.linkToSecondQsort
@@ -218,9 +225,8 @@ const UploadXmlFileButton = () => {
 
         // set 2-2c Link to Second Q sort URL
         let linkToSecondQsortUrl = inputObj?.linkToSecondQsortUrl;
-
         if (linkToSecondQsortUrl === undefined) {
-          linkToSecondQsortUrl = "false";
+          linkToSecondQsortUrl = "http://";
         }
         localStorage.setItem(
           "configLinkToSecondQsortUrl",
@@ -229,6 +235,9 @@ const UploadXmlFileButton = () => {
         appState["configLinkToSecondQsortUrl"] = linkToSecondQsortUrl;
 
         // set 2-3 Shuffle cards
+        if (inputObj.shuffleCards === undefined) {
+          inputObj.shuffleCards = "true";
+        }
         localStorage.setItem("configShuffleCards", inputObj.shuffleCards);
         appState["configShuffleCards"] = inputObj.shuffleCards;
         appState.configShuffleCardstrueActive = false;
@@ -241,6 +250,9 @@ const UploadXmlFileButton = () => {
         }
 
         // set 2-4 Title bar color
+        if (inputObj.headerBarColor === undefined) {
+          inputObj.headerBarColor = "#337ab7";
+        }
         localStorage.setItem("configHeaderBarColor", inputObj.headerBarColor);
         appState["configHeaderBarColor"] = inputObj.headerBarColor;
 
@@ -249,6 +261,9 @@ const UploadXmlFileButton = () => {
         // ***
         // set 2-5a. project access
         //  ["anonymous", "name only", "name + access code", "access code only"]
+        if (inputObj.initialScreen === undefined) {
+          inputObj.initialScreen = "anonymous";
+        }
         appState["configAccessanonymousActive"] = false;
         appState["configAccessname onlyActive"] = false;
         appState["configAccessname + access codeActive"] = false;
@@ -275,6 +290,9 @@ const UploadXmlFileButton = () => {
         }
 
         // set 2-5b. Set project access password
+        if (inputObj.accessCode === undefined) {
+          inputObj.accessCode = "demo";
+        }
         localStorage.setItem("configLogInPassword", inputObj.accessCode);
         appState["configLogInPassword"] = inputObj.accessCode;
 
@@ -282,6 +300,9 @@ const UploadXmlFileButton = () => {
         // *** PRESORT OPTIONS ***
         // ***
         // set 2-6. font color
+        if (inputObj.defaultFontColor === undefined) {
+          inputObj.defaultFontColor = "#2a2a2a";
+        }
         localStorage.setItem("defaultFontColor", inputObj.defaultFontColor);
         appState["defaultFontColor"] = inputObj.defaultFontColor;
 
@@ -297,22 +318,31 @@ const UploadXmlFileButton = () => {
         );
 
         // set 2-8a. positive card color
+        if (inputObj.greenCardColor === undefined) {
+          inputObj.greenCardColor = "#ccffcc";
+        }
         localStorage.setItem("greenCardColor", inputObj.greenCardColor);
         appState["greenCardColor"] = inputObj.greenCardColor;
 
         // set 2-8b. neutral card color
+        if (inputObj.yellowCardColor === undefined) {
+          inputObj.yellowCardColor = "#e0e0e0";
+        }
         localStorage.setItem("yellowCardColor", inputObj.yellowCardColor);
         appState["yellowCardColor"] = inputObj.yellowCardColor;
 
         // set 2-8c. negative card color
+        if (inputObj.pinkCardColor === undefined) {
+          inputObj.pinkCardColor = "#ffe0f0";
+        }
         localStorage.setItem("pinkCardColor", inputObj.pinkCardColor);
         appState["pinkCardColor"] = inputObj.pinkCardColor;
 
         // ***
         // *** SORT OPTIONS ***
         // ***
-        // set 2-9. Sort statement font size
 
+        // set 2-9. Sort statement font size
         if (inputObj.defaultFontSizeSort === undefined) {
           inputObj.defaultFontSizeSort = 16;
         }
@@ -327,6 +357,9 @@ const UploadXmlFileButton = () => {
         );
 
         // set 2-10. Condition of instruction font size
+        if (inputObj.condOfInstFontSize === undefined) {
+          inputObj.condOfInstFontSize = 20;
+        }
         localStorage.setItem(
           "configCondOfInstFontSize",
           inputObj.condOfInstFontSize
@@ -334,6 +367,9 @@ const UploadXmlFileButton = () => {
         appState["configCondOfInstFontSize"] = inputObj.condOfInstFontSize;
 
         // set 2-11a Allow unforced sorts
+        if (inputObj.allowUnforcedSorts === undefined) {
+          inputObj.allowUnforcedSorts = "false";
+        }
         localStorage.setItem(
           "configAllowUnforcedSorts",
           inputObj.allowUnforcedSorts
@@ -349,6 +385,9 @@ const UploadXmlFileButton = () => {
         }
 
         // set 2-11b Display overloaded column warning
+        if (inputObj.warnOverloadedColumn === undefined) {
+          inputObj.warnOverloadedColumn = "true";
+        }
         localStorage.setItem(
           "configDisplayOverloadedColWarn",
           inputObj.warnOverloadedColumn
@@ -365,6 +404,9 @@ const UploadXmlFileButton = () => {
         }
 
         // set 2-12 Set min card height
+        if (inputObj.minCardHeight === undefined) {
+          inputObj.minCardHeight = 120;
+        }
         localStorage.setItem("configMinCardHeight", inputObj.minCardHeight);
         appState["configMinCardHeight"] = inputObj.minCardHeight;
 
@@ -386,7 +428,10 @@ const UploadXmlFileButton = () => {
         // ***
         // *** POSTSORT OPTIONS ***
         // ***
-        // set 2-13 Include Postsort comments screen
+        // set 2-14 Include Postsort comments screen
+        if (inputObj.showPostsort === undefined) {
+          inputObj.showPostsort = "true";
+        }
         localStorage.setItem("configShowStep3", inputObj.showPostsort);
         appState["configShowStep3"] = inputObj.showPostsort;
         appState.configShowStep3trueActive = false;
@@ -398,7 +443,10 @@ const UploadXmlFileButton = () => {
           appState.configShowStep3falseActive = true;
         }
 
-        // set 2-14. Display second positive column
+        // set 2-15. Display second positive column
+        if (inputObj.showSecondPosColumn === undefined) {
+          inputObj.showSecondPosColumn = "false";
+        }
         localStorage.setItem(
           "configShowSecondPosColumn",
           inputObj.showSecondPosColumn
@@ -413,10 +461,13 @@ const UploadXmlFileButton = () => {
           appState.configShowSecondPosColumnfalseActive = true;
         }
 
-        // set 2-15 Display second negative column
+        // set 2-16 Display second negative column
+        if (inputObj.showSecondNegColumn === undefined) {
+          inputObj.showSecondNegColumn = "false";
+        }
         localStorage.setItem(
           "configShowSecondNegColumn",
-          inputObj.showPostsort
+          inputObj.showPSecondNegColumn
         );
         appState["configShowSecondNegColumn"] = inputObj.showSecondNegColumn;
         appState.configShowSecondNegColumntrueActive = false;
@@ -428,10 +479,47 @@ const UploadXmlFileButton = () => {
           appState.configShowSecondNegColumnfalseActive = true;
         }
 
+        // set 2-17 Display previous page navigation button in footer
+        if (inputObj.showBackButton === undefined) {
+          inputObj.showBackButton = "false";
+        }
+        localStorage.setItem("configShowBackButton", inputObj.showBackButton);
+        appState["configShowSecondNegColumn"] = inputObj.showBackButton;
+        appState.configShowBackButtontrueActive = false;
+        appState.configShowBackButtonfalseActive = false;
+        if (inputObj.showBackButton === "true") {
+          appState.configShowBackButtontrueActive = true;
+        }
+        if (inputObj.showBackButton === "false") {
+          appState.configShowBackButtonfalseActive = true;
+        }
+
+        // set 2-18 force participants to comment in postsort
+        if (inputObj.postsortCommentsRequired === undefined) {
+          inputObj.postsortCommentsRequired = "false";
+        }
+        localStorage.setItem(
+          "configPostsortCommentsRequired",
+          inputObj.postsortCommentsRequired
+        );
+        appState["configPostsortCommentsRequired"] =
+          inputObj.postsortCommentsRequired;
+        appState.configPostsortCommentsRequiredtrueActive = false;
+        appState.configPostsortCommentsRequiredfalseActive = false;
+        if (inputObj.postsortCommentsRequired === "true") {
+          appState.configPostsortCommentsRequiredtrueActive = true;
+        }
+        if (inputObj.postsortCommentsRequired === "false") {
+          appState.configPostsortCommentsRequiredfalseActive = true;
+        }
+
         // ***
         // *** SURVEY OPTIONS ***
         // ***
         // set 2-16 show step 4 - Survey
+        if (inputObj.showSurvey === undefined) {
+          inputObj.showSurvey = "true";
+        }
         localStorage.setItem("configShowStep4", inputObj.showPostsort);
         appState["configShowStep4"] = inputObj.showSurvey;
         appState.configShowStep4trueActive = false;

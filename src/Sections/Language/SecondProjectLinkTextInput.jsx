@@ -32,7 +32,7 @@ const SecondProjectLinkTextInput = () => {
   return (
     <SectionContainer>
       <HeaderButtonBar>
-        <SectionTitle>Second Q Sort Linking Text</SectionTitle>
+        <SectionTitle>Second Q Sort Submit Page Linking Text</SectionTitle>
         <div>
           <DefaultsButton id="linkingDef" onClick={handleShowDefaults}>
             Use Defaults
@@ -41,7 +41,7 @@ const SecondProjectLinkTextInput = () => {
             Clear Section
           </ClearAllButton>
           <RefImageButton id="linking1" onClick={handleRefImage}>
-            View Ref. Image
+            Ref. Img. 10-1 & 10-2
           </RefImageButton>
         </div>
       </HeaderButtonBar>

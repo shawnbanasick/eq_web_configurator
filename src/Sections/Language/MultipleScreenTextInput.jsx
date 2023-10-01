@@ -31,7 +31,7 @@ const LocalLanguage = () => {
   return (
     <SectionContainer>
       <HeaderButtonBar>
-        <SectionTitle>Multiple Screen Text</SectionTitle>
+        <SectionTitle>Multiple Screens</SectionTitle>
         <div>
           <DefaultsButton id="footerDef" onClick={handleShowDefaults}>
             Use Defaults
@@ -44,7 +44,7 @@ const LocalLanguage = () => {
             marginRight="35px"
             onClick={handleRefImage}
           >
-            View Reference Image
+            Reference Image
           </RefImageButton>
         </div>
       </HeaderButtonBar>

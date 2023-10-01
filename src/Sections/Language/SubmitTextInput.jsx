@@ -31,7 +31,7 @@ const LocalLanguage = () => {
   return (
     <SectionContainer>
       <HeaderButtonBar>
-        <SectionTitle>Submit Screen</SectionTitle>
+        <SectionTitle>Submit Screen (Firebase & Sheets)</SectionTitle>
         <div>
           <DefaultsButton id="submitDef" onClick={handleShowDefaults}>
             Use Defaults
@@ -40,20 +40,20 @@ const LocalLanguage = () => {
             Clear Section
           </ClearAllButton>
           <RefImageButton id="submitImage" onClick={handleRefImage}>
-            View Ref. Image
+            Ref. Img. 8-1 to 8-4
           </RefImageButton>
           <RefImageButton id="submitImage2" onClick={handleRefImage}>
-            View Ref. Image 2
+            Ref. Img. 8-5 & 8-6
           </RefImageButton>
           <RefImageButton id="submitImage3" onClick={handleRefImage}>
-            View Ref. Image 3
+            Ref. Img. 8-7 & 8-8
           </RefImageButton>
           <RefImageButton
             id="submitImage4"
             marginRight="35px"
             onClick={handleRefImage}
           >
-            View Ref. Image 4
+            Ref. Img. 8-9 & 8-10
           </RefImageButton>
         </div>
       </HeaderButtonBar>
@@ -223,4 +223,5 @@ const RefImageButton = styled.button`
 
 const SectionTitle = styled.h3`
   margin-top: 20px;
+  width: 40%;
 `;

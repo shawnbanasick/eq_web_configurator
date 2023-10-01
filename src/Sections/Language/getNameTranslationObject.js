@@ -82,6 +82,9 @@ const showSectionDefaults = () => {
     postsortDisagreement: "langPostsortDisagreement",
     postsortModalHead: "langPostsortModalHead",
     postsortModalText: "langPostsortModalText",
+    postsortPreventNavModalHead: "langPostsortPreventNavModalHead",
+    postsortPreventNavModalText: "langPostsortPreventNavModalText",
+    postsortBackButton: "langPostsortBackButton",
 
     /*
      ******** SURVEY  ****************** */

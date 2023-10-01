@@ -31,7 +31,7 @@ const EmailTextInput = () => {
   return (
     <SectionContainer>
       <HeaderButtonBar>
-        <SectionTitle>Email Submit Screen</SectionTitle>
+        <SectionTitle>Submit Screen (Email)</SectionTitle>
         <div>
           <DefaultsButton id="emailDef" onClick={handleShowDefaults}>
             Use Defaults
@@ -40,20 +40,20 @@ const EmailTextInput = () => {
             Clear Section
           </ClearAllButton>
           <RefImageButton id="email1" onClick={handleRefImage}>
-            View Ref. Image
+            Ref. Img. 9-1
           </RefImageButton>
           <RefImageButton id="email2" onClick={handleRefImage}>
-            View Ref. Image 2
+            Ref. Img 9-2 to 9-4
           </RefImageButton>
           <RefImageButton id="email3" onClick={handleRefImage}>
-            View Ref. Image 3
+            Ref. Image 9-5 & 9-6
           </RefImageButton>
           <RefImageButton
             id="email4"
             marginRight="35px"
             onClick={handleRefImage}
           >
-            View Ref. Image 4
+            Ref. Img. 9-7
           </RefImageButton>
         </div>
       </HeaderButtonBar>
@@ -65,13 +65,16 @@ const EmailTextInput = () => {
         width={26}
         left={0}
       />
-      <UserTextInput
-        label="9-2. Copy Results to Clipboard Button Text"
-        stateId="langEmailCopyResultsBtn"
+
+      <UserTextAreaInput
+        label="9-2. Default Email Client Fallback Message"
+        stateId="langDefaultEmailFailModalText"
         sectionName="lang"
-        width={26}
+        width={31.5}
+        height={75}
         left={0}
       />
+
       <UserTextInput
         label="9-3. Copy Email Address to Clipboard Button Text"
         stateId="langEmaiCopyAddressBtn"
@@ -79,28 +82,30 @@ const EmailTextInput = () => {
         width={20}
         left={0}
       />
+
       <UserTextInput
-        label="9-4. Copy Sucess Message"
+        label="9-4. Copy Results to Clipboard Button Text"
+        stateId="langEmailCopyResultsBtn"
+        sectionName="lang"
+        width={26}
+        left={0}
+      />
+
+      <UserTextInput
+        label="9-5. Copy Sucess Message"
         stateId="langCopySuccessMessage"
         sectionName="lang"
         width={20}
         left={0}
       />
       <UserTextInput
-        label="9-5. Copy Fail Message"
+        label="9-6. Copy Fail Message"
         stateId="langCopyFailMessage"
         sectionName="lang"
         width={20}
         left={0}
       />
-      <UserTextAreaInput
-        label="9-6. Default Email Client Fail Message"
-        stateId="langDefaultEmailFailModalText"
-        sectionName="lang"
-        width={31.5}
-        height={75}
-        left={0}
-      />
+
       <UserTextAreaInput
         label="9-7. Email Body Message"
         stateId="langEmailBodyMessage"

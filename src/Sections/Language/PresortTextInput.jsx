@@ -40,20 +40,20 @@ const LocalLanguage = () => {
             Clear Section
           </ClearAllButton>
           <RefImageButton id="presortImage" onClick={handleRefImage}>
-            View Ref. Image
+            Ref. Img. 4-1 to 4-5
           </RefImageButton>
           <RefImageButton id="presortImage2" onClick={handleRefImage}>
-            View Ref. Image 2
+            Ref. Img. 4-6 & 4-7
           </RefImageButton>
           <RefImageButton id="presortImage3" onClick={handleRefImage}>
-            View Ref. Image 3
+            Ref. Img. 4-7 & 4-8
           </RefImageButton>
           <RefImageButton
             id="presortImage4"
             marginRight="35px"
             onClick={handleRefImage}
           >
-            View Ref. Image 4
+            Ref. Img. 4-10 & 4-11
           </RefImageButton>
         </div>
       </HeaderButtonBar>

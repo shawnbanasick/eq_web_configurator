@@ -188,6 +188,15 @@ const generateLanguageXml = () => {
         <item id="postsortModalText">${encodeHTML(
           appState.langPostsortModalText
         )}</item>
+        <item id="postsortPreventNavModalHead">${encodeHTML(
+          appState.langPostsortPreventNavModalHead
+        )}</item>
+        <item id="postsortPreventNavModalText">${encodeHTML(
+          appState.langPostsortPreventNavModalText
+        )}</item>
+        <item id="postsortBackButtonText">${encodeHTML(
+          appState.langPostsortBackButton
+        )}</item>
 
         <!-- SURVEY: Additional questions, only displayed if showStep4 == true -->
         <item id="surveyHeader">${encodeHTML(appState.langSurveyHeader)}</item>
