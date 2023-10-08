@@ -548,51 +548,56 @@ const UploadXmlFileButton = () => {
           displayBoolean = displayBoolean2[item.type];
 
           newItemObj.surveyQuestionType = item.type;
-          const newItemArray = [`<b>item type:</b> ${item.type}`];
+          const newItemArray = [`<b>Item type:</b> ${item.type}`];
 
           if (displayBoolean?.required === true) {
             newItemObj.required = item.required;
-            newItemArray.push(
-              `<b>answer required (true/false):</b> ${item.required}`
-            );
+            newItemArray.push(`<b>1. Answer required:</b> ${item.required}`);
           }
 
           if (displayBoolean?.label === true) {
             newItemObj.label = item.label;
-            newItemArray.push(`<b>label text:</b> ${decodeHTML(item.label)}`);
+            newItemArray.push(`<b>2. Label:</b> ${decodeHTML(item.label)}`);
           }
 
           if (displayBoolean?.note === true) {
             newItemObj.note = item.note;
-            newItemArray.push(`<b>note:</b> ${decodeHTML(item.note)}`);
-          }
-          if (displayBoolean?.limited === true) {
-            newItemObj.maxlength = item.maxlength;
-            newItemObj.limited = item.limited;
-            newItemArray.push(`<b>length limit</b>:</b> ${item.limited}`);
-            if (item?.limited === true || item?.limited === "true") {
-              newItemArray.push(`<b>max length:</b> ${item.maxlength}`);
-            }
-          }
-          if (displayBoolean?.placeholder === true) {
-            newItemObj.placeholder = item.placeholder;
-            newItemArray.push(`<b>placeholder:</b> ${item.placeholder}`);
-          }
-          if (displayBoolean?.restricted === true) {
-            newItemObj.restricted = item.restricted;
             newItemArray.push(
-              `<b>answer restricted to numbers "0-9" (true/false):</b> ${item.restricted}`
+              `<b>3. Question note:</b> ${decodeHTML(item.note)}`
             );
+          }
+          if (displayBoolean?.options === true) {
+            newItemObj.options = item.options;
+            newItemArray.push(`<b>4. Options:</b> ${decodeHTML(item.options)}`);
           }
 
           if (displayBoolean?.scale === true) {
             newItemObj.scale = item.scale;
-            newItemArray.push(`<b>scale:</b> ${decodeHTML(item.scale)}`);
+            newItemArray.push(`<b>5. Scale:</b> ${decodeHTML(item.scale)}`);
           }
 
-          if (displayBoolean?.options === true) {
-            newItemObj.options = item.options;
-            newItemArray.push(`<b>options:</b> ${decodeHTML(item.options)}`);
+          if (displayBoolean?.placeholder === true) {
+            newItemObj.placeholder = item.placeholder;
+            newItemArray.push(`<b>7. Placeholder:</b> ${item.placeholder}`);
+          }
+
+          if (displayBoolean?.limited === true) {
+            newItemObj.maxlength = item.maxlength;
+            newItemObj.limited = item.limited;
+            newItemArray.push(`<b>8. Limit answer length:</b> ${item.limited}`);
+
+            if (item?.limited === true || item?.limited === "true") {
+              newItemArray.push(
+                `<b>9. Answer max length:</b> ${item.maxlength}`
+              );
+            }
+          }
+
+          if (displayBoolean?.restricted === true) {
+            newItemObj.restricted = item.restricted;
+            newItemArray.push(
+              `<b>10. Answer restricted to numbers "0-9":</b> ${item.restricted}`
+            );
           }
 
           if (displayBoolean?.bg === true) {

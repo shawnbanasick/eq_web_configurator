@@ -29,11 +29,11 @@ import OptionsWarningModal from "../Language/OptionsWarningModal";
 const clone = require("rfdc/default");
 
 const defaultArray = [
-  "answer required (not shown in image): true",
-  "label text: 'Age'",
-  "note: 'Please enter your year of birth (YYYY, eg. 1980).'",
-  "maxlength (not shown in image): 4",
-  `restricted: "0-9"`,
+  "Answer required (not shown in image): true",
+  "Label text: 'Age'",
+  "Question note: 'Please enter your year of birth (YYYY, eg. 1980).'",
+  "Maxlength (not shown in image): 4",
+  `Restricted: "0-9"`,
 ];
 
 const notifySuccess = () => {
@@ -268,11 +268,11 @@ const Survey = () => {
           <SettingsTextContainer>
             <b>Example Settings:</b>
             {detailsArray && (
-              <ol>
+              <ul>
                 {detailsArray.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
-              </ol>
+              </ul>
             )}
             {displayOptionsSemiWarn && (
               <SeparatorWarning>
@@ -287,7 +287,7 @@ const Survey = () => {
           <UserDropdown />
           {displayBoolean.required && (
             <RadioButtons
-              label="Answer required:"
+              label="1. Answer required:"
               buttonIdArray={["true", "false"]}
               stateId="surveyAnswerRequired"
               sectionName="survey"
@@ -295,7 +295,7 @@ const Survey = () => {
           )}
           {displayBoolean.label && (
             <UserTextInput
-              label="Label:"
+              label="2. Label:"
               stateId="surveyQuestionLabel"
               sectionName="survey"
               width={50}
@@ -304,54 +304,65 @@ const Survey = () => {
           )}
           {displayBoolean.note && (
             <UserTextInput
-              label="Question note:"
+              label="3. Question note:"
               stateId="surveyQuestionNote"
               sectionName="survey"
               width={40}
               left={0}
             />
           )}
-          {displayBoolean.maxlength && (
-            <RadioButtons
-              label="Limit answer length:"
-              buttonIdArray={["true", "false"]}
-              stateId="surveyAnswerLenIsLimited"
-              sectionName="survey"
-            />
-          )}
-          {displayBoolean.maxlength && (
+          {displayBoolean.options && (
             <UserTextInput
-              label="Answer maximum length:"
-              stateId="surveyAnswerLenMax"
+              label="4. Options:"
+              stateId="surveyQuestionOptions"
               sectionName="survey"
-              width={5}
+              width={55}
               left={0}
             />
           )}
+          {displayBoolean.scale && (
+            <UserTextInput
+              label="5. Scale:"
+              stateId="surveyQuestionScale"
+              sectionName="survey"
+              width={55}
+              left={0}
+            />
+          )}
+
           {displayBoolean.placeholder && (
             <UserTextInput
-              label="Placeholder:"
+              label="7. Placeholder:"
               stateId="surveyPlaceholder"
               sectionName="survey"
               width={35}
               left={0}
             />
           )}
-          {displayBoolean.restricted && (
+          {displayBoolean.limited && (
             <RadioButtons
-              label="Answer restricted to numbers (0-9):"
+              label="8. Limit answer length:"
               buttonIdArray={["true", "false"]}
-              stateId="surveyAnswerRestricted"
+              stateId="surveyAnswerLenIsLimited"
               sectionName="survey"
             />
           )}
-          {displayBoolean.scale && (
+          {displayBoolean.limited && (
             <UserTextInput
-              label="Scale:"
-              stateId="surveyQuestionScale"
+              label="9. Answer maximum length:"
+              stateId="surveyAnswerLenMax"
               sectionName="survey"
-              width={55}
+              width={-24}
               left={0}
+            />
+          )}
+
+          {displayBoolean.restricted && (
+            <RadioButtons
+              label="10. Answer restricted to numbers (0-9):"
+              buttonIdArray={["true", "false"]}
+              stateId="surveyAnswerRestricted"
+              sectionName="survey"
             />
           )}
           {displayBoolean.bg && (
@@ -363,15 +374,7 @@ const Survey = () => {
               />
             </ColorLabel>
           )}
-          {displayBoolean.options && (
-            <UserTextInput
-              label="Options:"
-              stateId="surveyQuestionOptions"
-              sectionName="survey"
-              width={55}
-              left={0}
-            />
-          )}
+
           <AddItemButton onClick={addItem}>Add Item</AddItemButton>
         </SettingsContainer>
         <SurveyItemDndList />
@@ -459,10 +462,11 @@ const SettingsTextContainer = styled.h3`
   margin-bottom: 0px;
   margin-left: 30px;
 
-  ol {
+  ul {
     font-family: arial;
     font-weight: normal;
     margin-top: 3px;
+    list-style-type: none;
   }
 `;
 

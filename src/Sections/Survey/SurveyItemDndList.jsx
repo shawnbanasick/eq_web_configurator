@@ -157,7 +157,7 @@ const UlDiv = styled.div`
   width: 660px;
 
   li {
-    list-style-type: square;
+    list-style-type: none;
   }
   div {
     display: inline-block;

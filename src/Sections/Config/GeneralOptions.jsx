@@ -83,24 +83,12 @@ const GeneralOptions = () => {
           application called "Stein". It is free for projects with less than 200
           participant responses. If you decide to use Stein with Google Sheets,
           I recommend that you make a new Google account because you'll need to
-          give Stein read and write access to your Sheets files. To set up your
-          Sheet, go to the Stein
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://steinhq.com/"
-          >
-            <b>website</b>
-          </a>{" "}
-          and follow the steps in this
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://docs.google.com/viewer?url=https://github.com/shawnbanasick/eq_web_configurator/raw/main/readme_assets/Configurator_Stein_Integration.pdf"
-          >
-            <b>GUIDE</b>
-          </a>{" "}
-          to get the Stein API URL to paste in option 2-2b below.
+          give Stein read and write access to your Sheets files.
+          <br />
+          <br />
+          To set up sheets, go to section "6. Database" of this configurator to
+          setup Stein and Google Sheets first. Then come back to this section
+          and finish creating the config.xml file.
           <br />
           <br />"<b>Firebase</b>" is a Google-owned company. Its database is
           more robust than the Google Sheets option, but the setup process is

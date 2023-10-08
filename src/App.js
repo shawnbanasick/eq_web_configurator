@@ -9,10 +9,12 @@ import Config from "./Sections/Config/Config";
 import Statements from "./Sections/Statements/Statements";
 import Map from "./Sections/Map/Map";
 import Language from "./Sections/Language/Language";
-import Firebase from "./Sections/Firebase/Firebase";
+import Firebase from "./Sections/Database/Firebase";
+import Database from "./Sections/Database/Database";
+
 import License from "./Sections/License/License";
-import Server from "./Sections/Server/Server";
-import Github from "./Sections/Github/Github";
+import Server from "./Sections/Setup/Server";
+import Github from "./Sections/Upload/Github";
 import Weblinks from "./Sections/Weblinks/Weblinks";
 import Styles from "./Sections/Styles/Styles";
 import appState from "./GlobalState/appState";
@@ -38,11 +40,11 @@ const App = (props) => {
     viewStatements,
     viewMap,
     viewLanguage,
-    viewFirebase,
+    viewDatabase,
     viewServer,
     viewWeblinks,
     viewStyles,
-    viewGithub,
+    viewUpload,
     viewLicense,
   } = appState;
 
@@ -123,15 +125,15 @@ const App = (props) => {
 
           <FileButton
             buttonColor={rotationButtonColor}
-            active={viewFirebase}
-            onClick={() => handleClick("viewFirebase")}
+            active={viewDatabase}
+            onClick={() => handleClick("viewDatabase")}
           >
             <p className="title">{`6. ${t("Database")}`}</p>
           </FileButton>
           <FileButton
             buttonColor={rotationButtonColor}
-            active={viewGithub}
-            onClick={() => handleClick("viewGithub")}
+            active={viewUpload}
+            onClick={() => handleClick("viewUpload")}
           >
             <p className="title">{`7. ${t("Upload")}`}</p>
           </FileButton>
@@ -161,9 +163,9 @@ const App = (props) => {
           {viewStatements && <Statements view={viewStatements} />}
           {viewMap && <Map view={viewMap} />}
           {viewLanguage && <Language view={viewLanguage} />}
-          {viewFirebase && <Firebase view={viewFirebase} />}
+          {viewDatabase && <Database view={viewDatabase} />}
           {viewStyles && <Styles view={viewStyles} />}
-          {viewGithub && <Github view={viewGithub} />}
+          {viewUpload && <Github view={viewUpload} />}
           {viewWeblinks && <Weblinks view={viewWeblinks} />}
           {viewLicense && <License view={viewLicense} />}
         </ActionWindow>

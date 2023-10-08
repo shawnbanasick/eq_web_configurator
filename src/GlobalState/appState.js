@@ -196,7 +196,15 @@ const appState = store({
   activeValue13: 0,
 
   /*
-  language.xml settings */
+  Database settings  */
+
+  showFirebase: false,
+  showSheets: false,
+  firebaseButtonColor: "#d6dbe0",
+  sheetsButtonColor: "#d6dbe0",
+
+  /*
+  language.xml settings 
   /*
    ******** MULTIPLE  ****************** */
   langBtnHelp: "Help me!",
