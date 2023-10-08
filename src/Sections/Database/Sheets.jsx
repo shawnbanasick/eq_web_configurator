@@ -2,38 +2,6 @@ import React from "react";
 import { view } from "@risingstack/react-easy-state";
 import styled, { keyframes } from "styled-components";
 import GlobalStyle from "../../Utils/GlobalStyle";
-import FirebaseTextArea from "./FirebaseTextArea";
-import exportToXml from "../../Utils/exportToXml";
-import GeneralButton from "../../Utils/GeneralButton";
-import generateHtmlWithFirebase from "./generateHtmlWithFirebase";
-import { toast } from "react-toastify";
-import { ToastContainer, Slide } from "react-toastify";
-import addProject from "../../assets/images/firebase_add_project.png";
-import realtimeDatabase from "../../assets/images/firebase-realtime-database.png";
-import authentication from "../../assets/images/firebase-authentication.png";
-import authentication1 from "../../assets/images/authentication1.png";
-import authentication4 from "../../assets/images/authentication4.png";
-import authentication3 from "../../assets/images/authentication3.png";
-import authentication2 from "../../assets/images/authentication2.png";
-import addProjectName from "../../assets/images/firebase-add-project-name.png";
-import createProject from "../../assets/images/firebase-create-project.png";
-import projectCreated from "../../assets/images/firebase-project-created.png";
-import getJavascriptApi from "../../assets/images/firebase-get-javascript-api.png";
-import addNickname from "../../assets/images/firebase-add-nickname.png";
-import newSetupFirebaseConfig from "../../assets/images/newSetupFirebaseConfig.png";
-import createDatabase from "../../assets/images/firebase-create-database.png";
-import databaseLocation from "../../assets/images/firebase-database-location.png";
-import defaultRules from "../../assets/images/firebase-default-rules.png";
-import initialDatabase from "../../assets/images/firebase-initial-database.png";
-import clickRules from "../../assets/images/firebase-click-rules.png";
-import editRules from "../../assets/images/firebase-edit-rules.png";
-import newRules from "../../assets/images/firebase-new-rules.png";
-import publishRules from "../../assets/images/firebase-publish-rules.png";
-import databaseData from "../../assets/images/firebase-database-data.png";
-import exportJson from "../../assets/images/firebase-export-json.png";
-import gotoConsole from "../../assets/images/firebase-goto-console.png";
-import firebaseDeleteParticipant from "../../assets/images/firebase-delete-participant.png";
-import firebaseDeleteConfirm from "../../assets/images/firebase-delete-confirm.png";
 import stein_1 from "../../assets/images/stein-1.png";
 import stein_2 from "../../assets/images/stein-2.png";
 import stein_3 from "../../assets/images/stein-3.png";
@@ -44,48 +12,14 @@ import stein_8 from "../../assets/images/stein-8.png";
 import stein_9 from "../../assets/images/stein-9.png";
 import stein_10 from "../../assets/images/stein-10.png";
 import stein_11 from "../../assets/images/stein-11.png";
-import stein_12 from "../../assets/images/stein-12.png";
-import stein_13 from "../../assets/images/stein-13.png";
 import stein_14 from "../../assets/images/stein-14.png";
 import stein_15 from "../../assets/images/stein-15.png";
 import stein_16 from "../../assets/images/stein-16.png";
 import stein_17 from "../../assets/images/stein-17.png";
 
-const text = `
-    {
-      "rules": {
-      ".read": false,
-      ".write": "auth.uid !== null"
-      }
-    }
-    `;
-
-const handleClick = () => {
-  const data = generateHtmlWithFirebase();
-  console.log(data);
-  if (data !== undefined) {
-    exportToXml("firebaseInfo.js", data, "js");
-  }
-};
-
-const notifySuccess = () => {
-  toast.success("Rules Copied", {
-    position: toast.POSITION.BOTTOM_CENTER,
-    transition: Slide,
-  });
-};
-
-const notifyError = () => {
-  toast.error("Error", {
-    position: toast.POSITION.BOTTOM_CENTER,
-    transition: Slide,
-  });
-};
-
-const FirebaseInfo = () => {
+const SheetsInfo = () => {
   return (
     <MainContent>
-      <StyledToastContainer />
       <GlobalStyle />
 
       <SpacerDiv />
@@ -212,7 +146,7 @@ const FirebaseInfo = () => {
   );
 };
 
-export default view(FirebaseInfo);
+export default view(SheetsInfo);
 
 const fadeIn = keyframes`
   from {
@@ -278,25 +212,6 @@ const Title = styled.h1`
   align-self: center;
 `;
 
-const FirebaseRulesLink = styled.div`
-  background-color: white;
-  width: 500px;
-  height: 230px;
-  margin-top: 80px;
-  margin-bottom: 0px;
-  border: 3px solid black;
-`;
-
-const StyledToastContainer = styled(ToastContainer).attrs({
-  // custom props
-})`
-  .Toastify__toast--success {
-    padding-left: 40px;
-    background-color: var(--main-theme-color);
-    width: 200px;
-  }
-`;
-
 const DisplayModeText = styled.div`
   align-self: left;
   margin-left: 10px;
@@ -310,19 +225,8 @@ const DisplayModeText = styled.div`
   border-radius: 5px;
 `;
 
-const Title2 = styled.h1`
-  margin-left: 10px;
-  font-size: 35px;
-  width: 70vw;
-`;
-
 const SpacerDiv = styled.div`
   height: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-`;
-
-const SaveFileButton = styled(GeneralButton)`
-  background-color: #eb8100;
-  width: 280px;
 `;

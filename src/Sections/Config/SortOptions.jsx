@@ -1,10 +1,9 @@
 import React from "react";
-import { view, store } from "@risingstack/react-easy-state";
+import { view } from "@risingstack/react-easy-state";
 import styled from "styled-components";
 import appState from "../../GlobalState/appState";
 import UserNumberInput from "../../Utils/UserNumberInput";
 import RadioButtons from "../../Utils/RadioButtons";
-import FadeIn from "./FadeIn";
 
 const SortOptions = () => {
   let displayMode = appState.displayMode;
@@ -13,22 +12,6 @@ const SortOptions = () => {
   } else {
     displayMode = false;
   }
-
-  const localState = store({ displayItem: true });
-
-  const setCardHeightDisplay = (value) => {
-    if (value === true || value === "true") {
-      localState.displayItem = true;
-      return true;
-    } else {
-      localState.displayItem = false;
-      return false;
-    }
-  };
-
-  let showMinCardHeightInput = setCardHeightDisplay(
-    appState.configSetMinCardHeight
-  );
 
   return (
     <React.Fragment>

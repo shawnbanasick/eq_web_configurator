@@ -9,7 +9,6 @@ import Config from "./Sections/Config/Config";
 import Statements from "./Sections/Statements/Statements";
 import Map from "./Sections/Map/Map";
 import Language from "./Sections/Language/Language";
-import Firebase from "./Sections/Database/Firebase";
 import Database from "./Sections/Database/Database";
 
 import License from "./Sections/License/License";
