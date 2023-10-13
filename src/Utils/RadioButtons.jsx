@@ -26,6 +26,7 @@ const SelectionButtons = (props) => {
     const key = `${props.stateId}`; //
     appState[buttonActiveState] = true;
     appState[key] = value;
+    localStorage.setItem(key, value);
   };
 
   return (

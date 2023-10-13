@@ -62,7 +62,7 @@ const ProjectAccessOptions = () => {
       )}
 
       <RadioButtons
-        label="2-5a. Project Access:"
+        label="2-5. Project Access:"
         buttonIdArray={[
           "anonymous",
           "name only",

@@ -12,7 +12,7 @@ const generateStatementXml = () => {
 
   let data = `<?xml version="1.0" encoding="UTF-8"?>
 
-   <statements version="1.0" htmlParse="false">\n`;
+   <statements version="3.0" htmlParse="false">\n`;
 
   for (let i = 0; i < statementsArray.length; i += 1) {
     let string = `     <statement id="${i + 1}">${encodeHTML(
