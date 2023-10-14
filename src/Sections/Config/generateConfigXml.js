@@ -97,7 +97,7 @@ const generateConfigXml = () => {
    <item id="showSecondPosColumn">${appState.configShowSecondPosColumn}</item>
    <item id="showSecondNegColumn">${appState.configShowSecondNegColumn}</item>
    <item id="showBackButton">${appState.configShowBackButton}</item>
-   <item id="postsortCommentsRequred">${appState.configPostsortCommentsRequired}</item>
+   <item id="postsortCommentsRequired">${appState.configPostsortCommentsRequired}</item>
 
 
    <!-- SURVEY - Survey Questions -->
