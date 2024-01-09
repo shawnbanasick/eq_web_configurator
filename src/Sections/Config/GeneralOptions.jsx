@@ -6,13 +6,14 @@ import UserTextInput from "../../Utils/UserTextInput";
 import RadioButtons from "../../Utils/RadioButtons";
 import ConfigColorPicker from "./ConfigColorPicker";
 import IncompatibleFileModal from "./IncompatibleFileModal";
+import UserNumberInput from "../../Utils/UserNumberInput";
 import FadeIn from "./FadeIn";
 
 const GeneralOptions = () => {
   // local state for this component
   const localState = store({
     displayItem: true,
-    databaseOptionsArray: ["sheets", "firebase", "local", "email"],
+    databaseOptionsArray: ["netlify", "firebase", "sheets", "email", "local"],
     displaySecondQsortUrl: false,
     displayEmail: false,
   });
@@ -43,12 +44,13 @@ const GeneralOptions = () => {
   const getDatabaseOptions = (value) => {
     if (value === "Include_Google_Options") {
       localState.databaseOptionsArray = [
-        "sheets",
+        "netlify",
         "firebase",
-        "local",
+        "sheets",
         "email",
+        "local",
       ];
-      return ["sheets", "firebase", "email", "local"];
+      return ["netlify", "firebase", "sheets", "email", "local"];
     } else {
       localState.databaseOptionsArray = ["self_hosted", "local", "email"];
       return ["self_hosted", "local", "email"];
@@ -65,9 +67,20 @@ const GeneralOptions = () => {
     }
   };
 
+  const setImagesDisplay = (value) => {
+    if (value === "true") {
+      localState.displayImageOptions = true;
+      return true;
+    } else {
+      localState.displayImageOptions = false;
+      return false;
+    }
+  };
+
   let showSheetsConfigMessage = setDisplay(appState.configSetupTarget);
   let databaseOptionsArray = getDatabaseOptions(appState.configDatabaseOptions);
   let showSecondQsortUrl = setLinkingDisplay(appState.configLinkToSecondQsort);
+  let showImageOptions = setImagesDisplay(appState.configUseImages);
 
   return (
     <React.Fragment>
@@ -76,6 +89,13 @@ const GeneralOptions = () => {
       {displayMode && (
         <DisplayModeText>
           First, you need to decide how to handle the participant data.
+          <br />
+          <br />
+          The current recommendation is to use the "<b>netlify</b>" option. It
+          is free and easy to set up. It also allows you to download the data as
+          a CSV file. It is limited to 100 submissions per month, but if you
+          need more submissions you can use two identical websites and split
+          your participants between them, or upgrade to a paid plan.
           <br />
           <br />
           The "<b>sheets</b>" option allows you to use a Google Sheet as a
@@ -191,7 +211,7 @@ const GeneralOptions = () => {
       )}
 
       <RadioButtons
-        label="2-2c. Link to second Q sort:"
+        label="2-3. Link to second Q sort:"
         buttonIdArray={["true", "false"]}
         stateId="configLinkToSecondQsort"
         sectionName="config"
@@ -200,7 +220,7 @@ const GeneralOptions = () => {
       {showSecondQsortUrl && (
         <FadeIn delay={150} duration={1050}>
           <UserTextInput
-            label="2-2c. Second Q sort URL:"
+            label="2-3a. Second Q sort URL:"
             stateId="configLinkToSecondQsortUrl"
             sectionName="config"
             width={30}
@@ -210,7 +230,38 @@ const GeneralOptions = () => {
       )}
 
       <RadioButtons
-        label="2-3. Shuffle statement cards:"
+        label="2-4. Use images / pictures instead of text"
+        buttonIdArray={["true", "false"]}
+        stateId="configUseImages"
+        sectionName="config"
+      />
+
+      <UserNumberInput
+        label="2-4a. Number of images to sort"
+        step={1}
+        value={0}
+        upperLimit={200}
+        lowerLimit={0}
+        stateId="configNumImages"
+        sectionName="config"
+      />
+
+      <RadioButtons
+        label="2-4b. Image type (all images must be the same type)"
+        buttonIdArray={["jpg", "png"]}
+        stateId="configImageType"
+        sectionName="config"
+      />
+
+      <RadioButtons
+        label="2-4c. Image format"
+        buttonIdArray={["16x9", "4x3"]}
+        stateId="configImageFormat"
+        sectionName="config"
+      />
+
+      <RadioButtons
+        label="2-3. Randomize presentation order of statements / images"
         buttonIdArray={["true", "false"]}
         stateId="configShuffleCards"
         sectionName="config"
