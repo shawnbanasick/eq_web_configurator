@@ -32,7 +32,7 @@ const PresortOptions = (props) => {
       </ColorLabel>
 
       <UserNumberInput
-        label="2-7. Presort statement font size:"
+        label="2-7. Default presort statement font size:"
         step={1}
         value={20}
         upperLimit={800}

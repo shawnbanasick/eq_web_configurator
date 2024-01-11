@@ -80,7 +80,7 @@ const GeneralOptions = () => {
   let showSheetsConfigMessage = setDisplay(appState.configSetupTarget);
   let databaseOptionsArray = getDatabaseOptions(appState.configDatabaseOptions);
   let showSecondQsortUrl = setLinkingDisplay(appState.configLinkToSecondQsort);
-  let showImageOptions = setImagesDisplay(appState.configUseImages);
+  let displayImageOptions = setImagesDisplay(appState.configUseImages);
 
   return (
     <React.Fragment>
@@ -236,29 +236,33 @@ const GeneralOptions = () => {
         sectionName="config"
       />
 
-      <UserNumberInput
-        label="2-4a. Number of images to sort"
-        step={1}
-        value={0}
-        upperLimit={200}
-        lowerLimit={0}
-        stateId="configNumImages"
-        sectionName="config"
-      />
+      {displayImageOptions && (
+        <FadeIn delay={150} duration={1050}>
+          <UserNumberInput
+            label="2-4a. Number of images to sort"
+            step={1}
+            value={0}
+            upperLimit={200}
+            lowerLimit={0}
+            stateId="configNumImages"
+            sectionName="config"
+          />
 
-      <RadioButtons
-        label="2-4b. Image type (all images must be the same type)"
-        buttonIdArray={["jpg", "png"]}
-        stateId="configImageType"
-        sectionName="config"
-      />
+          <RadioButtons
+            label="2-4b. Image type (all images must be the same type)"
+            buttonIdArray={["jpg", "png"]}
+            stateId="configImageType"
+            sectionName="config"
+          />
 
-      <RadioButtons
-        label="2-4c. Image format"
-        buttonIdArray={["16x9", "4x3"]}
-        stateId="configImageFormat"
-        sectionName="config"
-      />
+          <RadioButtons
+            label="2-4c. Image format"
+            buttonIdArray={["16x9", "4x3"]}
+            stateId="configImageFormat"
+            sectionName="config"
+          />
+        </FadeIn>
+      )}
 
       <RadioButtons
         label="2-3. Randomize presentation order of statements / images"

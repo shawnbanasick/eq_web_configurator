@@ -53,19 +53,10 @@ const appState = store({
   configLogoHtml: "EQ_default.svg",
 
   /*
-  config.xml FONT settings */
-  defaultFontColor: "#2a2a2a",
-  configSetDefaultFontSizePresort: false,
-  configSetDefaultFontSizePresortfalseActive: true,
-
-  configSetDefaultFontSizeSort: false,
-  configSetDefaultFontSizeSortfalseActive: true,
-
-  configDefaultFontSizePresort: 28,
-  configDefaultFontSizeSort: 18,
-
-  /*
   config.xml PRESORT settings */
+  defaultFontColor: "#2a2a2a",
+  configDefaultFontSizePresort: 22,
+
   greenCardColor: "#ccffcc",
   yellowCardColor: "#e0e0e0",
   pinkCardColor: "#ffe0e0",
@@ -73,24 +64,27 @@ const appState = store({
   /*
   config.xml SORT settings */
   configCondOfInstFontSize: 20,
+  configDefaultFontSizeSort: 16,
+  configMinCardHeightSort: 120,
   configAllowUnforcedSorts: false,
   configAllowUnforcedSortsfalseActive: true,
   configDisplayOverloadedColWarn: true,
   configDisplayOverloadedColWarntrueActive: true,
   configSetMinCardHeightfalseActive: true,
-  configMinCardHeight: 50,
   configSortDirection: "positive",
 
   /*
   config.xml POSTSORT settings */
+  configDefaultFontSizePostsort: 16,
+  configMinCardHeightPostsort: 120,
   configShowSecondPosColumn: false,
   configShowSecondPosColumnfalseActive: true,
   configShowSecondNegColumn: false,
   configShowSecondNegColumnfalseActive: true,
   configShowStep3trueActive: true,
   configShowStep3: "true",
-  configShowBackButton: false,
-  configShowBackButtonfalseActive: true,
+  configShowBackButton: true,
+  configShowBackButtontrueActive: true,
   configPostsortCommentsRequired: false,
   configPostsortCommentsRequiredfalseActive: true,
 
