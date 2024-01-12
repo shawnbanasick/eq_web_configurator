@@ -14,6 +14,7 @@ import Scale5Image from "./scale5Question";
 import Scale10Image from "./scale10Question";
 import CheckboxImage from "./checkboxQuestion";
 import SelectImage from "./selectQuestion";
+import LikertImage from "./likertQuestion";
 import InformationImage from "./informationQuestion";
 import shouldDisplayObject from "./shouldDisplayObject";
 import GeneralButton from "../../Utils/GeneralButton";
@@ -25,6 +26,7 @@ import clearAddItemForm from "./clearAddItemForm";
 import ConfigColorPicker from "../Config/ConfigColorPicker";
 import decodeHTML from "../../Utils/decodeHtml";
 import OptionsWarningModal from "../Language/OptionsWarningModal";
+import HtmlParser from "react-html-parser";
 
 const clone = require("rfdc/default");
 
@@ -73,6 +75,7 @@ const Survey = () => {
   let showSurveyrating5Image = appState.showSurveyrating5Image;
   let showSurveyrating10Image = appState.showSurveyrating10Image;
   let showSurveyinformationImage = appState.showSurveyinformationImage;
+  let showSurveylikertImage = appState.showSurveylikertImage;
 
   const surveyQuestionType = appState.surveyQuestionType;
   const displayBoolean2 = shouldDisplayObject();
@@ -85,7 +88,8 @@ const Survey = () => {
     showSurveyrating2Image === true ||
     showSurveyradioImage === true ||
     showSurveyselectImage === true ||
-    showSurveycheckboxImage === true
+    showSurveycheckboxImage === true ||
+    showSurveylikertImage === true
   ) {
     displayOptionsSemiWarn = true;
   }
@@ -264,13 +268,18 @@ const Survey = () => {
                 <InformationImage />
               </FadeIn>
             )}
+            {showSurveylikertImage && (
+              <FadeIn delay={150} duration={450}>
+                <LikertImage />
+              </FadeIn>
+            )}
           </ImageContainer>
           <SettingsTextContainer>
             <b>Example Settings:</b>
             {detailsArray && (
               <ul>
                 {detailsArray.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item}>{HtmlParser(item)}</li>
                 ))}
               </ul>
             )}
@@ -287,7 +296,7 @@ const Survey = () => {
           <UserDropdown />
           {displayBoolean.required && (
             <RadioButtons
-              label="1. Answer required:"
+              label="Answer required:"
               buttonIdArray={["true", "false"]}
               stateId="surveyAnswerRequired"
               sectionName="survey"
@@ -295,7 +304,7 @@ const Survey = () => {
           )}
           {displayBoolean.label && (
             <UserTextInput
-              label="2. Label:"
+              label="Label:"
               stateId="surveyQuestionLabel"
               sectionName="survey"
               width={50}
@@ -304,44 +313,44 @@ const Survey = () => {
           )}
           {displayBoolean.note && (
             <UserTextInput
-              label="3. Question note:"
+              label="Question note:"
               stateId="surveyQuestionNote"
               sectionName="survey"
-              width={40}
+              width={44}
               left={0}
             />
           )}
           {displayBoolean.options && (
             <UserTextInput
-              label="4. Options:"
+              label="Options:"
               stateId="surveyQuestionOptions"
               sectionName="survey"
-              width={55}
+              width={48}
               left={0}
             />
           )}
           {displayBoolean.scale && (
             <UserTextInput
-              label="5. Scale:"
+              label="Scale:"
               stateId="surveyQuestionScale"
               sectionName="survey"
-              width={55}
+              width={50}
               left={0}
             />
           )}
 
           {displayBoolean.placeholder && (
             <UserTextInput
-              label="7. Placeholder:"
+              label="Placeholder:"
               stateId="surveyPlaceholder"
               sectionName="survey"
-              width={35}
+              width={45.5}
               left={0}
             />
           )}
           {displayBoolean.limited && (
             <RadioButtons
-              label="8. Limit answer length:"
+              label="Limit answer length:"
               buttonIdArray={["true", "false"]}
               stateId="surveyAnswerLenIsLimited"
               sectionName="survey"
@@ -349,7 +358,7 @@ const Survey = () => {
           )}
           {displayBoolean.limited && (
             <UserTextInput
-              label="9. Answer maximum length:"
+              label="Answer maximum length:"
               stateId="surveyAnswerLenMax"
               sectionName="survey"
               width={-24}
@@ -359,7 +368,7 @@ const Survey = () => {
 
           {displayBoolean.restricted && (
             <RadioButtons
-              label="10. Answer restricted to numbers (0-9):"
+              label="Answer restricted to numbers (0-9):"
               buttonIdArray={["true", "false"]}
               stateId="surveyAnswerRestricted"
               sectionName="survey"
@@ -370,7 +379,7 @@ const Survey = () => {
               <div> Information bar background color:</div>
               <ConfigColorPicker
                 stateDesig="configSurveyInfoBarColor"
-                default="goldenrod"
+                default="#fde047"
               />
             </ColorLabel>
           )}

@@ -92,7 +92,7 @@ const appState = store({
   config.xml SURVEY settings */
   configShowStep4trueActive: true,
   configShowStep4: "true",
-  configSurveyInfoBarColor: "goldenrod",
+  configSurveyInfoBarColor: "#fde047",
 
   configStep2CardHeight: 150,
   configStep2ConstantWidth: false,

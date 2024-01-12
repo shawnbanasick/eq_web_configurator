@@ -10,15 +10,7 @@ const ImageModal = () => {
   const triggerImageModal = appState["triggerImageModal"];
 
   const loginHelpModalHead = "Reference Image";
-  /*  const loginHelpModalText = ReactHtmlParser(
-    decodeHTML(langObj.landingHelpModalText)
-  ); */
-  /* 
-  const loginHelpModalText = "text here";
 
-  const imageName = `testImage`; */
-
-  // const onOpenModal = () => setOpen(true);
   const onCloseModal = () => {
     appState["triggerImageModal"] = false;
   };

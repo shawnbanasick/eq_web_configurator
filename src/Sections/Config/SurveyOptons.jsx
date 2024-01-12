@@ -37,9 +37,9 @@ const SurveyOptions = (props) => {
       <QuestionContainer>
         <SubTitle>Survey Options (Optional Step 4)</SubTitle>
         <DisplayModeText>
-          Eight types of survey questions are available. If a question is
+          Nine types of survey questions are available. If a question is
           required and the participant fails to answer, navigation to the next
-          step is blocked and the question is outlined in pink.
+          step is blocked and the question is outlined in yellow.
           <br />
           <br />
           Questions can include HTML paired tag formatting:
