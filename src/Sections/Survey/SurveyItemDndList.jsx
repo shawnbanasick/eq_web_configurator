@@ -5,6 +5,8 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import GeneralButton from "../../Utils/GeneralButton";
 import appState from "../../GlobalState/appState";
 import ReactHtmlParser from "react-html-parser";
+import generateSurveyQuestionsGuide from "./generateSurveyQuestionsGuide";
+import exportToXml from "../../Utils/exportToXml";
 
 // const clone = require("rfdc/default");
 
@@ -78,12 +80,35 @@ const SurveyItemDndList = () => {
     }
   }
 
+  const handleClick = () => {
+    const items = JSON.parse(localStorage.getItem("surveyQuestionsArray"));
+    const text = generateSurveyQuestionsGuide(items);
+
+    // let blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+    exportToXml(
+      "EQ_Web_Sort_Survey_Results_Interpretation_Guide.txt",
+      text,
+      "txt"
+    );
+    /*
+    const link = document.createElement("a");
+    link.href = "/assets/QuestionResultsGuide.pdf";
+    link.download = "QuestionResultsGuide.pdf";
+    link.click();
+    */
+  };
+
   return (
     <DragAndDropContainer>
-      <h2 style={{ marginBottom: 5, marginTop: 25 }}>
-        Question List &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Drag to
-        change question order)
-      </h2>
+      <HeaderDiv style={{ marginBottom: 5, marginTop: 25 }}>
+        <h1>Question List</h1>
+        <GeneralButton onClick={handleClick}>
+          Generate Survey Results Interpretation Guide
+        </GeneralButton>
+      </HeaderDiv>
+      <p>
+        <b>Drag gray blocks to change question order</b>
+      </p>
       <DragDropContext style={{ display: "flex" }} onDragEnd={onDragEnd}>
         <Droppable droppableId="droppable">
           {(provided, snapshot) => (
@@ -168,4 +193,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   width: 715px;
+`;
+
+const HeaderDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `;

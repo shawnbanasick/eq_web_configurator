@@ -81,11 +81,17 @@ const UploadXmlFileButton = () => {
               questObj.note = inputObj[2]?.value;
             }
             if (questType === "textarea") {
-              questObj.placeholder = inputObj[2]?.value;
+              questObj.note = inputObj[2]?.value;
+              questObj.placeholder = inputObj[3]?.value;
             }
             if (questType === "radio") {
               questObj[inputObj[2].name] = inputObj[2]?.value;
               questObj.options = inputObj[0]?.value;
+            }
+            if (questType === "likert") {
+              questObj.required = inputObj[0].attributes?.required;
+              questObj.scale = inputObj[0].attributes?.scale;
+              questObj.label = inputObj[1]?.value;
             }
             if (
               questType === "select" ||
@@ -94,8 +100,8 @@ const UploadXmlFileButton = () => {
               questType === "rating5" ||
               questType === "rating10"
             ) {
-              // questObj[inputObj[2].name] = inputObj[2]?.value;
               questObj.options = inputObj[0]?.value;
+              questObj.note = inputObj[2]?.value;
             }
             if (
               questType === "rating2" ||
@@ -129,7 +135,6 @@ const UploadXmlFileButton = () => {
         if (inputObj.databaseOptions === undefined) {
           inputObj.databaseOptions = "Include_Google_Options";
         }
-        console.log("inputObj.databaseOptions", inputObj.databaseOptions);
         localStorage.setItem("configDatabaseOptions", inputObj.databaseOptions);
         appState["configDatabaseOptions"] = inputObj.databaseOptions;
 
@@ -198,8 +203,6 @@ const UploadXmlFileButton = () => {
         if (inputObj.emailSubject === undefined) {
           inputObj.emailSubject = "EQ Web Sort Results";
         }
-        console.log("inputObj.emailAddress", inputObj.emailAddress);
-        console.log("inputObj.emailSubject", inputObj.emailSubject);
         localStorage.setItem("configEmailAddress", inputObj.emailAddress);
         appState["configEmailAddress"] = inputObj.emailAddress;
         localStorage.setItem("configEmailSubject", inputObj.emailSubject);
@@ -351,10 +354,6 @@ const UploadXmlFileButton = () => {
           inputObj.defaultFontSizeSort
         );
         appState["configDefaultFontSizeSort"] = inputObj.defaultFontSizeSort;
-        console.log(
-          "inputObj.defaultFontSizeSort",
-          inputObj.defaultFontSizeSort
-        );
 
         // set 2-10. Condition of instruction font size
         if (inputObj.condOfInstFontSize === undefined) {
@@ -552,51 +551,47 @@ const UploadXmlFileButton = () => {
 
           if (displayBoolean?.required === true) {
             newItemObj.required = item.required;
-            newItemArray.push(`<b>1. Answer required:</b> ${item.required}`);
+            newItemArray.push(`<b>Answer required:</b> ${item.required}`);
           }
 
           if (displayBoolean?.label === true) {
             newItemObj.label = item.label;
-            newItemArray.push(`<b>2. Label:</b> ${decodeHTML(item.label)}`);
+            newItemArray.push(`<b>Label:</b> ${decodeHTML(item.label)}`);
           }
 
           if (displayBoolean?.note === true) {
             newItemObj.note = item.note;
-            newItemArray.push(
-              `<b>3. Question note:</b> ${decodeHTML(item.note)}`
-            );
+            newItemArray.push(`<b>Question note:</b> ${decodeHTML(item.note)}`);
           }
           if (displayBoolean?.options === true) {
             newItemObj.options = item.options;
-            newItemArray.push(`<b>4. Options:</b> ${decodeHTML(item.options)}`);
+            newItemArray.push(`<b>Options:</b> ${decodeHTML(item.options)}`);
           }
 
           if (displayBoolean?.scale === true) {
             newItemObj.scale = item.scale;
-            newItemArray.push(`<b>5. Scale:</b> ${decodeHTML(item.scale)}`);
+            newItemArray.push(`<b>Scale:</b> ${decodeHTML(item.scale)}`);
           }
 
           if (displayBoolean?.placeholder === true) {
             newItemObj.placeholder = item.placeholder;
-            newItemArray.push(`<b>7. Placeholder:</b> ${item.placeholder}`);
+            newItemArray.push(`<b>Placeholder:</b> ${item.placeholder}`);
           }
 
           if (displayBoolean?.limited === true) {
             newItemObj.maxlength = item.maxlength;
             newItemObj.limited = item.limited;
-            newItemArray.push(`<b>8. Limit answer length:</b> ${item.limited}`);
+            newItemArray.push(`<b>Limit answer length:</b> ${item.limited}`);
 
             if (item?.limited === true || item?.limited === "true") {
-              newItemArray.push(
-                `<b>9. Answer max length:</b> ${item.maxlength}`
-              );
+              newItemArray.push(`<b>Answer max length:</b> ${item.maxlength}`);
             }
           }
 
           if (displayBoolean?.restricted === true) {
             newItemObj.restricted = item.restricted;
             newItemArray.push(
-              `<b>10. Answer restricted to numbers "0-9":</b> ${item.restricted}`
+              `<b>Answer restricted to numbers "0-9":</b> ${item.restricted}`
             );
           }
 

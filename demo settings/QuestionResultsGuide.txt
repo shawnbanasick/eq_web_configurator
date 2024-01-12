@@ -1,0 +1,104 @@
+EQ Web Sort Survey Results Interpretation Guide
+
+Survey item number: 1
+Item type: information
+Item information text: All fields marked with an * are required.
+
+Survey item number: 2
+Item type: text input
+Item: 1. Have you had classes with me before?
+   response: participant input
+
+Survey item number: 3
+Item type: text area input
+Item: 2. Describe your experience using the iPads in this class
+   response: participant input
+
+Survey item number: 4
+Item type: radio / vertical likert
+Item: 3. When is your expected graduation date?
+   response 1: Fall 2028
+   response 2: Spring 2029
+   response 3: Fall 2029
+   response 4: After Fall 2029
+
+Survey item number: 5
+Item type: select
+Item: 4. What is your program focus?
+   response 1: Global Studies
+   response 2: Linguistics
+   response 3: English Literature
+
+Survey item number: 6
+Item type: checkbox
+Item: 5. What kind of class do you prefer?
+   response 1: Lecture
+   response 2: Group Discussion
+   response 3: Active Learning
+
+Survey item number: 7
+Item type: likert
+Item: 6. The iPads helped to create an effective learning environment.
+   response 1: Strongly Disagree
+   response 2: Disagree
+   response 3: Neutral
+   response 4: Agree
+   response 5: Strongly Agree
+   response 6: Agree
+   response 7: Strongly Agree
+
+Survey item number: 8
+Item type: likert
+Item: 7. How important is it to have an iPad for each class session?
+   response 1: Very Unimportant
+   response 2: Unimportant
+   response 3: Neutral
+   response 4: Important
+   response 5: Very Important
+
+Survey item number: 9
+Item type: likert
+Item: 8. How concerned are you about the amount of time that you spend looking at screens? (TV, smartphone, computer, iPad, etc.)
+   response 1: Very Unconcerned
+   response 2: Unconcerned
+   response 3: Neutral
+   response 4: Concerned
+   response 5: Very Concerned
+
+Survey item number: 10
+Item type: likert
+Item: 9. How often do you use an iPad in your daily life?
+   response 1: Never
+   response 2: Rarely
+   response 3: Occasionally
+   response 4: Frequently
+   response 5: Very Frequently
+
+Survey item number: 11
+Item type: rating 2
+Item: 10. Please respond to the following statements about the technology used in the class
+   response 1: Yes
+   response 2: No
+   question item 1: I have used an iPad in class before.
+   question item 2: I have used a notebook computer in class before.
+   question item 3: I have used Moodle before.
+   question item 4: I have used Quizlet before
+
+Survey item number: 12
+Item type: rating 5
+Item: 11. Please rate the following statements about iPad use in this class
+   response: participant input values 1-5
+   question item 1: How would you rate the use of iPads in this class?
+   question item 2: How would you rate this class overall?
+   question item 3: How was your interaction with other students?
+   question item 4: How was access to the computer lab?
+
+Survey item number: 13
+Item type: rating 5
+Item: 12. Please rate the following statements
+   response: participant input values 1-10
+   question item 1: How would you rate the use of the Socrative website in this class?
+   question item 2: How would you rate the use of the Quizlet website in this class?
+   question item 3: How would you rate the use of Moodle in this class?
+   question item 4: How would you rate the use of Edmodo in this class?
+
