@@ -54,9 +54,9 @@
    <item id="condOfInstFontSize">20</item>
    
    <item id="setMinCardHeightSort">false</item>
-   <item id="minCardHeightSort">260</item>
+   <item id="minCardHeightSort">160</item>
    <item id="setDefaultFontSizeSort">false</item>
-   <item id="defaultFontSizeSort">8</item>
+   <item id="defaultFontSizeSort">18</item>
    
    <item id="sortDirection">positive</item> 
 

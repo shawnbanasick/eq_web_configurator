@@ -1,3 +1,4 @@
+import { app } from "electron";
 import appState from "../../GlobalState/appState";
 import encodeHTML from "../../Utils/encodeHTML";
 
@@ -36,14 +37,20 @@ const generateConfigXml = () => {
   if (studyTitle === null || studyTitle === undefined) {
     appState.configTitle = "my Q study";
   }
+  let imageFormatType = appState.configImageFormat;
+  if (imageFormatType === "16x9") {
+    imageFormatType = "postSortImageModal169";
+  } else {
+    imageFormatType = "postSortImageModal43";
+  }
 
   const data1 = `<?xml version="1.0" encoding="UTF-8"?>
 
-   <config version="3.0" htmlParse="false">\n`;
+   <config version="5.0" htmlParse="false">\n`;
 
   const data2 = `
    <!-- GENERAL SETTINGS -->
-   <!-- "setupTarget" options: firebase, local, email, or sheets -->
+   <!-- "setupTarget" options: Netlify, firebase, local, email, or sheets -->
    <item id="studyTitle">${appState.configTitle}</item> 
    <item id="databaseOptions">${appState.configDatabaseOptions}</item>
    <item id="setupTarget">${appState.configSetupTarget}</item>
@@ -55,6 +62,12 @@ const generateConfigXml = () => {
    <!-- SECOND PROJECT -->
    <item id="linkToSecondProject">${appState.configLinkToSecondQsort}</item> 
    <item id="secondProjectUrl">${appState.configLinkToSecondQsortUrl}</item> 
+   <!-- IMAGE OPTIONS  (imageType: 169 or 43)-->
+   <item id="useImages">${appState.configUseImages}</item>
+   <item id="numImages">${appState.configNumImages}</item>
+   <item id="imageFileType">${appState.configImageType}</item>
+   <item id="imageType">${imageFormatType}</item>
+   <item id="shuffleImages">${appState.configShuffleCards}</item>
    <!-- OTHER GENERAL OPTIONS -->
    <item id="shuffleCards">${appState.configShuffleCards}</item>
    <item id="headerBarColor">${appState.configHeaderBarColor}</item>
@@ -73,24 +86,26 @@ const generateConfigXml = () => {
    
    <!-- PRESORT -->
    <!-- default colors #2a2a2a, #ccffcc, #e0e0e0, #ffe0f0 -->
-   <item id="defaultFontColor">${appState.defaultFontColor}</item>
-   <item id="defaultFontSizePresort">${appState.configDefaultFontSizePresort}</item>
    <item id="greenCardColor">${appState.greenCardColor}</item>
    <item id="yellowCardColor">${appState.yellowCardColor}</item>
    <item id="pinkCardColor">${appState.pinkCardColor}</item>
+   <item id="defaultFontColor">${appState.defaultFontColor}</item>
+
    <item id="setDefaultFontSizePresort">true</item>
+   <item id="defaultFontSizePresort">${appState.configDefaultFontSizePresort}</item>
   
 
    <!-- SORT -->
-   <item id="defaultFontSizeSort">${appState.configDefaultFontSizeSort}</item>
-   <item id="condOfInstFontSize">${appState.configCondOfInstFontSize}</item>
    <item id="allowUnforcedSorts">${appState.configAllowUnforcedSorts}</item>
    <item id="warnOverloadedColumn">${appState.configDisplayOverloadedColWarn}</item>
-   <item id="minCardHeight">${appState.configMinCardHeight}</item>
-   <item id="setMinCardHeight">true</item>
-   <item id="setDefaultFontSizeSort">true</item>
-   <item id="sortDirection">${appState.configSortDirection}</item> 
+   <item id="condOfInstFontSize">${appState.configCondOfInstFontSize}</item>
 
+   <item id="setMinCardHeightSort">true</item>
+   <item id="minCardHeight">${appState.configMinCardHeightSort}</item>
+   <item id="setDefaultFontSizeSort">true</item>
+   <item id="defaultFontSizeSort">${appState.configDefaultFontSizeSort}</item>
+   
+   <item id="sortDirection">${appState.configSortDirection}</item> 
 
    <!-- POSTSORT -->
    <item id="showPostsort">${appState.configShowStep3}</item>
@@ -99,17 +114,21 @@ const generateConfigXml = () => {
    <item id="showBackButton">${appState.configShowBackButton}</item>
    <item id="postsortCommentsRequired">${appState.configPostsortCommentsRequired}</item>
 
+   <item id="setDefaultFontSizePostsort">true</item>
+   <item id="defaultFontSizePostsort">${appState.configDefaultFontSizePostsort}</item>
+   <item id="setMinCardHeightPostsort">true</item>
+   <item id="minCardHeightPostsort">${appState.configMinCardHeightPostsort}</item>
+
 
    <!-- SURVEY - Survey Questions -->
    <item id="showSurvey">${appState.configShowStep4}</item>\n\n`;
 
   let data = data1.concat(data2);
-  /* 
-  appState.surveyQuestionsArray = JSON.parse(
-    localStorage.getItem("surveyQuestionsArray")
-  );
- */
+
   const surveyQuestionsArray = appState.surveyQuestionsArray;
+
+  console.log("surveyQuestionsArray", surveyQuestionsArray);
+
   const open = `   <item id="survey">\n`;
   const close = `   </item>\n\n`;
 
@@ -139,8 +158,16 @@ const generateConfigXml = () => {
       label = `        <label>${encodeHTML(itemObject.label)}</label>\n`;
       const note = `        <note>${encodeHTML(itemObject.note)}</note>\n`;
       const input = `        <input type="text" required="${itemObject.required}" limited="${limitedString}" maxlength="${maxLengthNum}" ${restrictedString}></input>\n`;
+      const placeholder = `        <placeholder>${itemObject.placeholder}</placeholder>\n`;
 
-      item = accumulatorString.concat(open, input, label, note, close);
+      item = accumulatorString.concat(
+        open,
+        input,
+        label,
+        note,
+        placeholder,
+        close
+      );
     }
 
     // for TEXT-RESTRICTED items
@@ -154,16 +181,31 @@ const generateConfigXml = () => {
       const input = `        <input type="text" required="${itemObject.required}" maxlength="${itemObject.maxlength}" ${restrictedString}></input>\n`;
       label = `        <label>${encodeHTML(itemObject.label)}</label>\n`;
       const note = `        <note>${encodeHTML(itemObject.note)}</note>\n`;
-
-      item = accumulatorString.concat(open, input, label, note, close);
+      const placeholder = `        <placeholder>${itemObject.placeholder}</placeholder>\n`;
+      item = accumulatorString.concat(
+        open,
+        input,
+        label,
+        note,
+        placeholder,
+        close
+      );
     }
 
     // for TEXTAREA items
     if (itemObject.surveyQuestionType === "textarea") {
       const input = `        <input type="textarea" required="${itemObject.required}"></input>\n`;
       label = `        <label>${encodeHTML(itemObject.label)}</label>\n`;
+      const note = `        <note>${encodeHTML(itemObject.note)}</note>\n`;
       const placeholder = `        <placeholder>${itemObject.placeholder}</placeholder>\n`;
-      item = accumulatorString.concat(open, input, label, placeholder, close);
+      item = accumulatorString.concat(
+        open,
+        input,
+        label,
+        note,
+        placeholder,
+        close
+      );
     }
 
     // for RADIO items
@@ -180,12 +222,21 @@ const generateConfigXml = () => {
       label = `        <label>${encodeHTML(
         encodeHTML(itemObject.label)
       )}</label>\n`;
-      item = accumulatorString.concat(open, input, label, close);
+      const note = `        <note>${encodeHTML(itemObject.note)}</note>\n`;
+      item = accumulatorString.concat(open, input, label, note, close);
     }
 
     // for CHECKBOX items
     if (itemObject.surveyQuestionType === "checkbox") {
       const input = `        <input type="checkbox" required="${itemObject.required}">${itemObject.options}</input>\n`;
+      label = `        <label>${encodeHTML(itemObject.label)}</label>\n`;
+      const note = `        <note>${encodeHTML(itemObject.note)}</note>\n`;
+      item = accumulatorString.concat(open, input, label, note, close);
+    }
+
+    // for LIKERT items
+    if (itemObject.surveyQuestionType === "likert") {
+      const input = `        <input type="likert" required="${itemObject.required}" scale="${itemObject.scale}">.</input>\n`;
       label = `        <label>${encodeHTML(itemObject.label)}</label>\n`;
       item = accumulatorString.concat(open, input, label, close);
     }
@@ -198,19 +249,21 @@ const generateConfigXml = () => {
         itemObject.options
       )}</input>\n`;
       label = `        <label>${encodeHTML(itemObject.label)}</label>\n`;
-      item = accumulatorString.concat(open, input, label, close);
+      const note = `        <note>${encodeHTML(itemObject.note)}</note>\n`;
+      item = accumulatorString.concat(open, input, label, note, close);
     }
 
-    // for RATING5 items
+    // for RATING 5 items
     if (itemObject.surveyQuestionType === "rating5") {
       const input = `        <input type="rating5" required="${
         itemObject.required
       }" scale="1;;;2;;;3;;;4;;;5">${encodeHTML(itemObject.options)}</input>\n`;
       label = `        <label>${encodeHTML(itemObject.label)}</label>\n`;
-      item = accumulatorString.concat(open, input, label, close);
+      const note = `        <note>${encodeHTML(itemObject.note)}</note>\n`;
+      item = accumulatorString.concat(open, input, label, note, close);
     }
 
-    // for RATING10 items
+    // for RATING 10 items
     if (itemObject.surveyQuestionType === "rating10") {
       const input = `        <input type="rating10" required="${
         itemObject.required
@@ -218,7 +271,8 @@ const generateConfigXml = () => {
         itemObject.options
       )}</input>\n`;
       label = `        <label>${encodeHTML(itemObject.label)}</label>\n`;
-      item = accumulatorString.concat(open, input, label, close);
+      const note = `        <note>${encodeHTML(itemObject.note)}</note>\n`;
+      item = accumulatorString.concat(open, input, label, note, close);
     }
 
     // for INFORMATION items

@@ -6,7 +6,7 @@ const shouldDisplayObject = () => {
       note: true,
       limited: true,
       restricted: true,
-      placeholder: false,
+      placeholder: true,
       scale: false,
       options: false,
       bg: false,

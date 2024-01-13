@@ -79,6 +79,7 @@ const UploadXmlFileButton = () => {
               questObj.maxlength = inputObj[0].attributes?.maxlength;
               questObj.restricted = inputObj[0].attributes?.restricted;
               questObj.note = inputObj[2]?.value;
+              questObj.placeholder = inputObj[3]?.value;
             }
             if (questType === "textarea") {
               questObj.note = inputObj[2]?.value;

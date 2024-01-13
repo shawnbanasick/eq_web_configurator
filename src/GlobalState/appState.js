@@ -75,18 +75,19 @@ const appState = store({
 
   /*
   config.xml POSTSORT settings */
-  configDefaultFontSizePostsort: 16,
-  configMinCardHeightPostsort: 120,
+  configShowStep3: "true",
+  configShowStep3trueActive: true,
   configShowSecondPosColumn: false,
   configShowSecondPosColumnfalseActive: true,
   configShowSecondNegColumn: false,
   configShowSecondNegColumnfalseActive: true,
-  configShowStep3trueActive: true,
-  configShowStep3: "true",
   configShowBackButton: true,
   configShowBackButtontrueActive: true,
   configPostsortCommentsRequired: false,
   configPostsortCommentsRequiredfalseActive: true,
+
+  configDefaultFontSizePostsort: 16,
+  configMinCardHeightPostsort: 120,
 
   /*
   config.xml SURVEY settings */

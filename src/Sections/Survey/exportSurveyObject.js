@@ -7,6 +7,7 @@ const exportSurveyObject = () => {
       `<b>Limit answer length: </b>true`,
       `<b>Answer maximum length: </b>4`,
       `<b>Answer restricted to numbers "0-9": </b>true`,
+      `<b>Placeholder: </b>input comment here (** caution - no HTML pair tag formatting allowed for placeholders**)`,
     ],
     textarea: [
       `<b>Answer Required (not shown in image): </b>false`,
