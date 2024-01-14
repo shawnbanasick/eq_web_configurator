@@ -124,14 +124,14 @@ const LocalLanguage = () => {
         label="6-8. Prevent naviation modal header"
         stateId="langPostsortPreventNavModalHead"
         sectionName="lang"
-        width={31.1}
+        width={28}
         left={0}
       />
       <UserTextAreaInput
         label="6-9. Prevent navigation modal text"
         stateId="langPostsortPreventNavModalText"
         sectionName="lang"
-        width={34.2}
+        width={30.2}
         height={80}
         left={0}
       />
@@ -139,7 +139,7 @@ const LocalLanguage = () => {
         label="6-10. Go to previous page button text"
         stateId="langPostsortBackButton"
         sectionName="lang"
-        width={31.1}
+        width={28.1}
         left={0}
       />
     </SectionContainer>

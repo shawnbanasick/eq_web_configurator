@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+   <language version="5.0" htmlParse="true">
+;
+
+        <!-- MULTI-PURPOSE MODALS -->
+        <item id="stepCompleteMessage">test</item>
+        <item id="logInFirst">test</item>
+
+        <!-- FOOTER -->
+        <item id="fontSizeText">test</item>
+        <item id="cardHeightText">test</item>
+        <item id="btnHelp">test</item>
+        <item id="btnNext">test</item>
+
+        <!-- LANDING SCREEN -->
+        <item id="landingHead">test</item>
+        <item id="welcomeText">test</item>
+
+        <!-- LANDING -> ACCESS CONTROL - only displayed if access is restricted -->
+        <item id="accessCodeText">Access Code</item>
+        <item id="accessInputText">test</item>
+        <item id="loginSubmitButtonText">test</item>
+        <item id="loginPartIdText">test</item>
+        <item id="accessCodeWarning">test</item>
+        <item id="partIdWarning">test</item>
+        <item id="loginHeaderText">test</item>
+        <item id="loginWelcomeText">test</item>
+        <item id="landingHelpModalHead">test</item>
+        <item id="landingHelpModalText">test</item>
+
+        <!-- LOCAL DATA COLLECTION -->  
+        <item id="localHeader">Offline Q-sort Control Panel</item>
+        <item id="partIdText">Participant Name</item>
+        <item id="usercodeText">Usercode</item>
+        <item id="localStartButtonText">Start Q-sort</item>
+        <item id="localDeleteButtonText">Delete</item>
+        <item id="localDownloadButtonText">Save Q-sort Data to Disk</item>
+        <item id="storedQsortsHeaderText">Stored Q-sorts</item>
+        <item id="localDeleteModalHead">Delete Data Stored in Browser?</item>
+        <item id="localDeleteModalText">This will delete the particpant Q-sort data that is currently stored in the browser. You would usually only do this when you are starting a new project.{{{br}}}{{{br}}}{{{b}}}CAUTION - Deleted data cannot be recovered.{{{/b}}} {{{br}}}{{{br}}} {{{center}}}{{{/center}}}</item>
+        <item id="localParticipantsText">Participants</item>
+        <item id="localSaveBeforeDeleteModalHeader">Delete Disabled</item>
+        <item id="localSaveBeforeDeleteModalText">Save Q sort Data to Disk before deleting.</item>
+        <item id="localSaveDataButton">Save Participant Data to Browser Memory</item>
+        <item id="localSubmitSuccessModalHeader">Success</item>
+        <item id="localSubmitSuccessModalText">Participant Q sort data have been succesfully saved to browser memory</item>
+        <item id="returnToLocalPanelButtonText">Return to Control Panel</item>
+
+        <!-- PRESORT: rough sorting into three piles (leave blank to skip popup)-->
+        <item id="titleBarText">test</item>
+        <item id="presortAgreement">test</item>
+        <item id="presortStatements">test</item>
+        <item id="presortNeutral">test</item>
+        <item id="presortDisagreement">test</item>
+        <item id="presortModalHead">test</item>
+          <item id="presortModalText">test</item>
+        <item id="presortPreventNavModalHead">test</item>
+        <item id="presortPreventNavModalText">test</item>
+        <item id="presortFinishedModalHead">test</item>
+        <item id="presortFinishedModalText">test</item>
+        <item id="presortOnPageInstructions">test</item>
+        <item id="presortImageSortInstructions">test</item>
+
+        <!-- SORT: sorting (leave blank to skip popup) -->
+        <item id="sortHelpModalHead">test</item>
+        <item id="sortHelpModalText">test</item>
+        <item id="sortAgreement">test</item>
+        <item id="sortDisagreement">test</item>
+        <item id="condOfInst">test</item>
+        <item id="sortingCompleteModalHead">test</item>
+        <item id="sortingCompleteModalText">test</item>
+        <item id="sortPreventNavModalHead">test</item>
+        <item id="sortPreventNavModalText">test</item>
+        <item id="sortOverloadedColumnModalHead">test</item>
+        <item id="sortOverloadedColumnModalText">test</item>
+
+        <!-- POSTSORT: comments - only displayed if showStep3 = true -->
+        <item id="postsortHeader">test</item>
+        <item id="postsortInstructions">test</item>
+        <item id="placeholder">test</item>
+        <item id="postsortAgreement">test</item>
+        <item id="postsortDisagreement">test</item>
+        <item id="postsortModalHead">test</item>
+        <item id="postsortModalText">test</item>
+        <item id="postsortPreventNavModalHead">test</item>
+        <item id="postsortPreventNavModalText">test</item>
+        <item id="postsortBackButtonText">test</item>
+
+        <!-- SURVEY: Additional questions, only displayed if showStep4 == true -->
+        <item id="surveyHeader">test</item>
+        <item id="surveyModalHead">test</item>
+        <item id="surveyModalText">test</item>
+        <item id="surveyPreventNavModalHead">test</item>
+        <item id="surveyPreventNavModalText">test</item>
+       
+        <!-- SUBMIT -->
+        <item id="btnTransfer">test</item>
+        <item id="transferHead">test</item>
+        <item id="transferTextAbove">test</item>
+        <item id="transferTextBelow">test</item>
+        <item id="transferOkModalHeader">test</item>   
+        <item id="transferOkModalText">test</item>
+        <item id="transferFailModalHeader">test</item>   
+        <item id="transferFailModalText">test</item>   
+        <item id="fallbackMessage">test</item>   
+        <item id="btnDownload">test</item>   
+        <item id="goodbyeMessage">test</item>   
+
+        <!-- EMAIL -->
+        <item id="btnTransferEmail">test</item>
+        <item id="clipboardResults">test</item>  
+        <item id="clipboardEmail">test</item>  
+        <item id="copiedText">test</item>  
+        <item id="copyTextError">test</item>  
+        <item id="defaultEmailClientFail">test</item>   
+        <item id="emailMessage1">test</item>
+
+        <!-- LINKING -->
+        <item id="linkedProjectFallbackMessage">test</item>   
+         <item id="linkedProjectBtnMessage">test</item>   
+
+
+   </language>

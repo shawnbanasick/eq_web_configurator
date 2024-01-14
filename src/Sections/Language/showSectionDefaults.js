@@ -76,12 +76,14 @@ const showSectionDefaults = (section) => {
       "langPresortAgreement",
       "langPresortNeutral",
       "langPresortDisagreement",
+      "langPresortImageSortInstructions",
       "langPresortModalHead",
       "langPresortModalText",
       "langPresortPreventNavModalHead",
       "langPresortPreventNavModalText",
       "langPresortFinishedModalHead",
       "langPresortFinishedModalText",
+      "langPresortOnPageInstructions",
     ];
 
     setDefaults(selectorArray);

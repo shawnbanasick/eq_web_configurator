@@ -265,12 +265,14 @@ const appState = store({
   langPresortStatements: `Statements`,
   langPresortNeutral: `No Strong Feelings (2)`,
   langPresortDisagreement: `Disagree (1)`,
+  langPresortImageSortInstructions: `To enlarge an image, hover your mouse pointer over it and double-click. {{{br/}}}{{{br/}}} To compare images, {{{u}}}press and hold{{{/u}}} the {{{b}}}{{{i}}}Shift{{{/i}}}{{{/b}}} key on your keyboard and then double-click on TWO images with your mouse.`,
   langPresortModalHead: `Step 1 of 4`,
   langPresortModalText: `Read the following statements carefully and split them up into three piles: a pile for statements you tend to disagree with, a pile for cards you tend to agree with, and a pile for the rest. Changes can be made later.<br><br>If you want to read this instruction a second time, click the help-button at the bottom left corner.`,
   langPresortPreventNavModalHead: `Navigation Disabled`,
   langPresortPreventNavModalText: `Please finish the preliminary sorting before going to the next step.`,
   langPresortFinishedModalHead: `Preliminary Sorting Complete`,
   langPresortFinishedModalText: `You have completed this step. Please click the "Continue" button in the bottom right side of the page to go to the next step.`,
+  langPresortOnPageInstructions: `<div style="font-size: 24px">Click and drag on the cards  or press the "1", "2", or "3" keys to sort the statements.</div>`,
   /*
    ******** SORT  ****************** */
   langSortHelpModalHead: `Step 2 of 4`,

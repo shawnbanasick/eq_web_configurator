@@ -62,7 +62,7 @@ const LocalLanguage = () => {
         label="8-1. Final Step"
         stateId="langTransferHead"
         sectionName="lang"
-        width={39}
+        width={45}
         left={0}
       />
       <UserTextAreaInput
@@ -77,7 +77,7 @@ const LocalLanguage = () => {
         label="8-3. Submit Data"
         stateId="langBtnTransfer"
         sectionName="lang"
-        width={38}
+        width={43.5}
         left={0}
       />
       <UserTextAreaInput
@@ -92,7 +92,7 @@ const LocalLanguage = () => {
         label="8-5. Submit data success modal header"
         stateId="langTransferOkModalHeader"
         sectionName="lang"
-        width={27}
+        width={24}
         left={0}
       />
       <UserTextAreaInput
@@ -107,7 +107,7 @@ const LocalLanguage = () => {
         label="8-7. Submit data fail modal header"
         stateId="langTransferFailModalHeader"
         sectionName="lang"
-        width={29.6}
+        width={28.6}
         left={0}
       />
       <UserTextAreaInput
@@ -130,7 +130,7 @@ const LocalLanguage = () => {
         label="8-10. Download button label"
         stateId="langBtnDownload"
         sectionName="lang"
-        width={32.6}
+        width={34}
         left={0}
       />
       <UserTextAreaInput

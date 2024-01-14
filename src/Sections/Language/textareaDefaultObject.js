@@ -32,13 +32,13 @@ const showSectionDefaults = () => {
     langLocalDownloadButtonText: "Save Q-sort Data to Disk",
     langStoredQsortsHeaderText: "Stored Q-sorts",
     langLocalDeleteModalText:
-      "This will delete the particpant Q-sort data that is currently stored in the browser. You would usually only do this when you are starting a new project.<br><br><b>CAUTION - Deleted data cannot be recovered.</b> <br><br> <center></center>",
+      "This will delete the participant Q-sort data that is currently stored in the browser. You would usually only do this when you are starting a new project.<br><br><b>CAUTION - Deleted data cannot be recovered.</b> <br><br> <center></center>",
     langLocalDeleteModalHead: "Delete Data Stored in Browser?",
     langLocalParticipantsText: "Participants",
     langLocalSaveDataButton: "Save Participant Data to Browser Memory",
     langLocalSubmitSuccessModalHeader: "Success",
     langLocalSubmitSuccessModalText:
-      "Participant Q sort data have been succesfully saved to browser memory",
+      "Participant Q sort data have been successfully saved to browser memory",
     langReturnToLocalPanelButtonText: "Return to Control Panel",
     langLocalSaveBeforeDeleteModalHeader: "Delete Disabled",
     langLocalSaveBeforeDeleteModalText:
@@ -51,12 +51,14 @@ const showSectionDefaults = () => {
     langPresortStatements: `Statements`,
     langPresortNeutral: `No Strong Feelings (2)`,
     langPresortDisagreement: `Disagree (1)`,
+    langPresortImageSortInstructions: `To enlarge an image, hover your mouse pointer over it and double-click. <br/><br/> To compare images, <u>press and hold</u> the <b><i>Shift</i></b> key on your keyboard and then double-click on TWO images with your mouse.`,
     langPresortModalHead: `Step 1 of 4`,
     langPresortModalText: `Read the following statements carefully and split them up into three piles: a pile for statements you tend to disagree with, a pile for cards you tend to agree with, and a pile for the rest. Changes can be made later.<br><br>If you want to read this instruction a second time, click the help-button at the bottom left corner.`,
     langPresortPreventNavModalHead: `Navigation Disabled`,
     langPresortPreventNavModalText: `Please finish the preliminary sorting before going to the next step.`,
     langPresortFinishedModalHead: `Preliminary Sorting Complete`,
     langPresortFinishedModalText: `You have completed this step. Please click the "Continue" button in the bottom right side of the page to go to the next step.`,
+    langPresortOnPageInstructions: `<div style="font-size: 24px">Click and drag on the cards  or press the "1", "2", or "3" keys to sort the statements.</div>`,
     /*
      ******** SORT  ****************** */
     langSortHelpModalHead: `Step 2 of 4`,
@@ -103,7 +105,7 @@ const showSectionDefaults = () => {
     langTransferFailModalText: `Please try again in a few moments.`,
     langFallbackMessage: `Data transmission has failed. Please download the results and email them as an attachment to ken.q.tools@gmail.com.  Thank you!`,
     langBtnDownload: `Download`,
-    langGoodbyeMessage: `<div>Thank You!</div> <br /><div>You can now close the browser tab</div>`,
+    langGoodbyeMessage: `<div>Thank You!</div> <br><div>You can now close the browser tab</div>`,
     /*
      ******** EMAIL  ****************** */
     langEmailSubmitBtn: "Open Email Client and Send Results",

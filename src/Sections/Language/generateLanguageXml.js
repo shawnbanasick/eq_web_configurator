@@ -4,7 +4,7 @@ import encodeHTML from "../../Utils/encodeHTML";
 const generateLanguageXml = () => {
   let data = `<?xml version="1.0" encoding="UTF-8"?>
 
-   <language version="3.0" htmlParse="true">\n;
+   <language version="5.0" htmlParse="true">\n;
 
         <!-- MULTI-PURPOSE MODALS -->
         <item id="stepCompleteMessage">${encodeHTML(
@@ -119,9 +119,9 @@ const generateLanguageXml = () => {
         <item id="presortModalHead">${encodeHTML(
           appState.langPresortModalHead
         )}</item>
-        <item id="presortModalText">${encodeHTML(
-          appState.langPresortModalText
-        )}</item>
+          <item id="presortModalText">${encodeHTML(
+            appState.langPresortModalText
+          )}</item>
         <item id="presortPreventNavModalHead">${encodeHTML(
           appState.langPresortPreventNavModalHead
         )}</item>
@@ -133,6 +133,12 @@ const generateLanguageXml = () => {
         )}</item>
         <item id="presortFinishedModalText">${encodeHTML(
           appState.langPresortFinishedModalText
+        )}</item>
+        <item id="presortOnPageInstructions">${encodeHTML(
+          appState.langPresortOnPageInstructions
+        )}</item>
+        <item id="presortImageSortInstructions">${encodeHTML(
+          appState.langPresortImageSortInstructions
         )}</item>
 
         <!-- SORT: sorting (leave blank to skip popup) -->

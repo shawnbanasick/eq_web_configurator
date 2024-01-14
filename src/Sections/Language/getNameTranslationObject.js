@@ -52,12 +52,14 @@ const showSectionDefaults = () => {
     presortAgreement: "langPresortAgreement",
     presortNeutral: "langPresortNeutral",
     presortDisagreement: "langPresortDisagreement",
+    presortImageSortInstructions: "langPresortImageSortInstructions",
     presortModalHead: "langPresortModalHead",
     presortModalText: "langPresortModalText",
     presortPreventNavModalHead: "langPresortPreventNavModalHead",
     presortPreventNavModalText: "langPresortPreventNavModalText",
     presortFinishedModalHead: "langPresortFinishedModalHead",
     presortFinishedModalText: "langPresortFinishedModalText",
+    presortOnPageInstructions: "langPresortOnPageInstructions",
 
     /*
      ******** SORT  ****************** */
@@ -84,7 +86,7 @@ const showSectionDefaults = () => {
     postsortModalText: "langPostsortModalText",
     postsortPreventNavModalHead: "langPostsortPreventNavModalHead",
     postsortPreventNavModalText: "langPostsortPreventNavModalText",
-    postsortBackButton: "langPostsortBackButton",
+    postsortBackButtonText: "langPostsortBackButton",
 
     /*
      ******** SURVEY  ****************** */

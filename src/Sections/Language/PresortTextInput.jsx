@@ -92,15 +92,31 @@ const LocalLanguage = () => {
         width={45.2}
         left={0}
       />
+      <UserTextAreaInput
+        label="4-6a. Presort instructions (for statement sorts)"
+        stateId="langPresortOnPageInstructions"
+        sectionName="lang"
+        width={19}
+        height={140}
+        left={0}
+      />
+      <UserTextAreaInput
+        label="4-6b. Presort instructions (for image sorts)"
+        stateId="langPresortImageSortInstructions"
+        sectionName="lang"
+        width={22.2}
+        height={140}
+        left={0}
+      />
       <UserTextInput
-        label="4-6. Presort modal header text"
+        label="4-7. Presort modal header text"
         stateId="langPresortModalHead"
         sectionName="lang"
         width={31.8}
         left={0}
       />
       <UserTextAreaInput
-        label="4-7. Presort modal main text"
+        label="4-8. Presort modal main text"
         stateId="langPresortModalText"
         sectionName="lang"
         width={33.8}
@@ -108,14 +124,14 @@ const LocalLanguage = () => {
         left={0}
       />
       <UserTextInput
-        label="4-8. Prevent navigation modal header"
+        label="4-9. Prevent navigation modal header"
         stateId="langPresortPreventNavModalHead"
         sectionName="lang"
         width={25.6}
         left={0}
       />
       <UserTextAreaInput
-        label="4-9. Prevent navigation modal main text"
+        label="4-10. Prevent navigation modal main text"
         stateId="langPresortPreventNavModalText"
         sectionName="lang"
         width={23.8}
@@ -123,14 +139,14 @@ const LocalLanguage = () => {
         left={0}
       />
       <UserTextInput
-        label="4-10. Presort complete modal header"
+        label="4-11. Presort complete modal header"
         stateId="langPresortFinishedModalHead"
         sectionName="lang"
         width={26}
         left={0}
       />
       <UserTextAreaInput
-        label="4-11. Presort complete modal main text"
+        label="4-12. Presort complete modal main text"
         stateId="langPresortFinishedModalText"
         sectionName="lang"
         width={24.2}

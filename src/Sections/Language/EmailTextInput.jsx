@@ -62,7 +62,7 @@ const EmailTextInput = () => {
         label="9-1. Email Submit Button Text"
         stateId="langEmailSubmitBtn"
         sectionName="lang"
-        width={26}
+        width={33}
         left={0}
       />
 
@@ -70,7 +70,7 @@ const EmailTextInput = () => {
         label="9-2. Default Email Client Fallback Message"
         stateId="langDefaultEmailFailModalText"
         sectionName="lang"
-        width={31.5}
+        width={22}
         height={75}
         left={0}
       />
@@ -79,7 +79,7 @@ const EmailTextInput = () => {
         label="9-3. Copy Email Address to Clipboard Button Text"
         stateId="langEmaiCopyAddressBtn"
         sectionName="lang"
-        width={20}
+        width={16.5}
         left={0}
       />
 
@@ -87,7 +87,7 @@ const EmailTextInput = () => {
         label="9-4. Copy Results to Clipboard Button Text"
         stateId="langEmailCopyResultsBtn"
         sectionName="lang"
-        width={26}
+        width={23}
         left={0}
       />
 
@@ -95,14 +95,14 @@ const EmailTextInput = () => {
         label="9-5. Copy Sucess Message"
         stateId="langCopySuccessMessage"
         sectionName="lang"
-        width={20}
+        width={36}
         left={0}
       />
       <UserTextInput
         label="9-6. Copy Fail Message"
         stateId="langCopyFailMessage"
         sectionName="lang"
-        width={20}
+        width={39.5}
         left={0}
       />
 
@@ -110,7 +110,7 @@ const EmailTextInput = () => {
         label="9-7. Email Body Message"
         stateId="langEmailBodyMessage"
         sectionName="lang"
-        width={39}
+        width={38}
         height={75}
         left={0}
       />

@@ -59,7 +59,7 @@ const SecondProjectLinkTextInput = () => {
         label="10-2. Linking Button Text"
         stateId="langLinkingBtnText"
         sectionName="lang"
-        width={26}
+        width={36}
         left={0}
       />
     </SectionContainer>
@@ -80,7 +80,7 @@ const HeaderButtonBar = styled.div`
   align-items: baseline;
   justify-content: space-between;
   padding-right: 200px;
-  width: 620px;
+  width: 820px;
 `;
 
 const DefaultsButton = styled.button`
