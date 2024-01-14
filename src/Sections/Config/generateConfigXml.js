@@ -1,9 +1,5 @@
-import { app } from "electron";
 import appState from "../../GlobalState/appState";
 import encodeHTML from "../../Utils/encodeHTML";
-
-//    ${encodeHTML(appState.langBtnHelp)}
-// ${appState.}
 
 const generateConfigXml = () => {
   let loginTypeText;

@@ -8,6 +8,7 @@ import ConfigColorPicker from "./ConfigColorPicker";
 import IncompatibleFileModal from "./IncompatibleFileModal";
 import UserNumberInput from "../../Utils/UserNumberInput";
 import FadeIn from "./FadeIn";
+import imagesFolder from "../../assets/images/imagesFolder.png";
 
 const GeneralOptions = () => {
   // local state for this component
@@ -158,14 +159,6 @@ const GeneralOptions = () => {
         left={0}
       />
 
-      {/*
-      <RadioButtons
-        label="2-2a. Database:"
-        buttonIdArray={["Include_Google_Options", "Google_Free"]}
-        stateId="configDatabaseOptions"
-        sectionName="config"
-          /> */}
-
       <RadioButtons
         label="2-2. Setup target:"
         buttonIdArray={databaseOptionsArray}
@@ -238,6 +231,36 @@ const GeneralOptions = () => {
 
       {displayImageOptions && (
         <FadeIn delay={150} duration={1050}>
+          <br />
+          <DisplayModeText>
+            <b>Important - Image setup information:</b> <br />
+            <br />
+            The images must be named in the following format: image1, image2,
+            image3, etc. Also, all of the images must be the same type (jpg or
+            png). <br />
+            <br />
+            So, the naming should be like this: image1.png, image2.png,
+            image3.png..., or image1.jpg, image2.jpg, image3.jpg... The images
+            must be put into the "<b>images</b>" folder located inside the "
+            <b>settings</b>" folder (where this config.xml file is saved).
+            <br />
+            <br />
+            <center>
+              <img src={imagesFolder} width="50%" alt="s" />
+            </center>
+            <br />
+            It is important to reduce the size of the images before adding them
+            to the project. You can use an online tool like{" "}
+            <a
+              href=" https://jpeg-optimizer.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              JPEG Optimizer
+            </a>{" "}
+            to reduce the file size. The images should be no larger than 250kb
+            each.
+          </DisplayModeText>
           <UserNumberInput
             label="2-4a. Number of images to sort"
             step={1}

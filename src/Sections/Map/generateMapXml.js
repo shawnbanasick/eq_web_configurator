@@ -81,7 +81,7 @@ const generateConfigXml = () => {
 
   let data = `<?xml version="1.0" encoding="UTF-8"?>
 
-   <map version="3.0" htmlParse="false">\n`;
+   <map version="5.0" htmlParse="false">\n`;
 
   // CALC COL ARRAYS
   let filteredQSortPatternObject = Object.keys(qSortPatternObject).reduce(

@@ -37,7 +37,7 @@ const LocalLanguage = () => {
         <br />
         <br />
         <h4>Simple HTML Formatting</h4>
-        {`Simple text formatting is available here by using tags before and after the text to be modified. Simple formatting options include bold <b> </b>, italics <i> </i>, and underline <u> </u>.`}{" "}
+        {`Simple text formatting is available here by using tags before and after the text to be modified. Simple formatting options include bold <b> </b>, italics <i> </i>, yellow highlighting <mark> </mark>, and underline <u> </u>.`}{" "}
         <br />
         <br />
         {`A new line can be inserted using a single break tag <br/>, and an open line between text can be created by using two break tags <br/> <br/>.`}
@@ -46,6 +46,11 @@ const LocalLanguage = () => {
         {`A web page link can be inserted by using this pattern:`}
         <br />
         {`<a href="https://qmethod.org/" target="_blank" rel="noreferrer"> <u>qmethod.org</u> </a>.`}
+        <br />
+        <br />
+        {`Font size can be adjusted by using this pattern:`}
+        <br />
+        {`<div style="font-size: 20px"> </div>`}
         <br />
         <br />
         <h4>Complex HTML Layouts</h4>
@@ -136,7 +141,7 @@ const LocalLanguage = () => {
         </ListContainer>
         {`See the default text below for more HTML examples.`}
         <br />
-        <br />
+        <h4 style={{ marginBottom: "5px" }}>Customizations</h4>
         <mark>Highlighted options must be customized for your project</mark>
         <br />
         <h4 style={{ marginBottom: "5px" }}>Save Data</h4>

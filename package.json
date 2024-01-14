@@ -1,7 +1,7 @@
 {
   "name": "EQ-Web-Configurator",
-  "description": "Configurator for EQ Web Sort",
-  "version": "3.0.0",
+  "description": "Configuration software for EQ Web Sort",
+  "version": "5.0.0",
   "private": true,
   "license": "GPL-3",
   "author": {

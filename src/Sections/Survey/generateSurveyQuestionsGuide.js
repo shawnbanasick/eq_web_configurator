@@ -15,7 +15,6 @@ const stripHtml = (text) => {
 };
 
 const generateSurveyQuestionsGuide = (surveyQuestions) => {
-  const surveyQuestionsGuide = {};
   let returnText = "EQ Web Sort Survey Results Interpretation Guide\n\n";
   surveyQuestions.forEach((question, index) => {
     console.log(question);

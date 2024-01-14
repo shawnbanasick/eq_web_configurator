@@ -17,9 +17,21 @@ import UploadXmlConfigButton from "./UploadXmlConfigButton";
 
 const Config = () => {
   const handleClick = () => {
-    const data = generateConfigXml();
+    console.log(appState.configUseImages, appState.configNumImages);
+    if (
+      appState.configUseImages === true ||
+      (appState.configUseImages === "true" && appState.configNumImages === 0)
+    ) {
+      console.log("here");
+      alert(
+        "You must select a number of images greater than 0 (see Option 2-4a)."
+      );
+      return;
+    } else {
+      const data = generateConfigXml();
 
-    exportToXml("config.xml", data, "xml");
+      exportToXml("config.xml", data, "xml");
+    }
   };
 
   let displayMode = appState.displayMode;

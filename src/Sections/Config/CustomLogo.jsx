@@ -3,7 +3,7 @@ import { view } from "@risingstack/react-easy-state";
 import styled from "styled-components";
 import appState from "../../GlobalState/appState";
 import logoImage from "../../assets/images/EQ_default.svg";
-import folderImage from "../../assets/images/images-folder-image.png";
+import folderImage from "../../assets/images/logoImage.png";
 
 const CustomLogo = () => {
   let displayMode = appState.displayMode;
@@ -37,7 +37,7 @@ const CustomLogo = () => {
           <br />
           <br />
           Add your custom image to the
-          <b>"images" folder</b> of your EQ Web Sort project and replace the
+          <b>"logo" folder</b> of your EQ Web Sort project and replace the
           default file.
           <br />
           <ImageContainer>
@@ -55,7 +55,7 @@ const CustomLogo = () => {
           <b>Custom Logo:</b>&nbsp;&nbsp;If desired, you can create a custom
           logo in png format with the name &nbsp;&nbsp;&nbsp; <b>logo.png</b>
           &nbsp;&nbsp;&nbsp;and replace the default image in the <b>
-            images
+            logo
           </b>{" "}
           folder of your EQ Web Sort project.
         </span>
