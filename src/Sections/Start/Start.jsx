@@ -37,7 +37,7 @@ const Start = () => {
         <img src={Image} height="180" alt="s" />
         <Title>
           EQ Web Sort Configurator <br />
-          Version 3.0.0
+          Version 5.0.0
         </Title>
       </HeroContainer>
       <IntroText>
@@ -56,7 +56,7 @@ const Start = () => {
       </IntroText>
       <IntroText>
         Citation:
-        <br /> Banasick, S. (2023). EQ Web Configurator (Version 3.0.0)
+        <br /> Banasick, S. (2023). EQ Web Sort Configurator (Version 5.0.0)
         [Computer software]. https://doi.org/10.5281/zenodo.8337126
       </IntroText>
       <CustomH2>Select Configurator Display Mode:</CustomH2>

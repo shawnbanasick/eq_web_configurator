@@ -65,35 +65,28 @@ const LocalLanguage = () => {
         left={0}
       />
       <UserTextInput
-        label="4-2. Statements"
-        stateId="langPresortStatements"
-        sectionName="lang"
-        width={44.4}
-        left={0}
-      />
-      <UserTextInput
-        label={`4-3. "Agree"`}
+        label={`4-2. "Agree"`}
         stateId="langPresortAgreement"
         sectionName="lang"
         width={47.7}
         left={0}
       />
       <UserTextInput
-        label={`4-4. "Neutral"`}
+        label={`4-3. "Neutral"`}
         stateId="langPresortNeutral"
         sectionName="lang"
         width={46.6}
         left={0}
       />
       <UserTextInput
-        label={`4-5. "Disagree"`}
+        label={`4-4. "Disagree"`}
         stateId="langPresortDisagreement"
         sectionName="lang"
         width={45.2}
         left={0}
       />
       <UserTextAreaInput
-        label="4-6a. Presort instructions (for statement sorts)"
+        label="4-5a. Presort instructions (for statement sorts)"
         stateId="langPresortOnPageInstructions"
         sectionName="lang"
         width={19}
@@ -101,7 +94,7 @@ const LocalLanguage = () => {
         left={0}
       />
       <UserTextAreaInput
-        label="4-6b. Presort instructions (for image sorts)"
+        label="4-5b. Presort instructions (for image sorts)"
         stateId="langPresortImageSortInstructions"
         sectionName="lang"
         width={22.2}

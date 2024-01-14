@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
    <language version="5.0" htmlParse="true">
-;
 
         <!-- MULTI-PURPOSE MODALS -->
         <item id="stepCompleteMessage">You have completed this step. Please click on the {{{strong}}} blue &quot;Continue&quot; button {{{/strong}}} at the bottom right-side of your screen to go to the next step.</item>

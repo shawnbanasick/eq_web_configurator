@@ -66,7 +66,14 @@ const SheetsInfo = () => {
         <br />
         Go to your Google account and create a new sheet.{" "}
         <b>Do not change the name of the worksheet.</b> Click on the "Sheet1"
-        tab to begin formatting.
+        tab to begin formatting. <br />
+        <br />
+        <b>**IMPORTANT**</b> If you are working with a non-English language
+        version of Google Sheets, you{" "}
+        <b>
+          <u>must change the name of the first sheet to "Sheet1" in English</u>
+        </b>
+        .
       </DisplayModeText>
       <img src={stein_6} width="700px" alt="database" />
       <DisplayModeText>

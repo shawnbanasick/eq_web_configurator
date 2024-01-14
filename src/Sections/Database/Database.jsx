@@ -6,20 +6,30 @@ import Firebase from "./Firebase";
 import GeneralButton from "../../Utils/GeneralButton";
 import Sheets from "./Sheets";
 import appState from "../../GlobalState/appState";
+import Netlify from "./Netlify";
 
 const Database = () => {
   const handleClick = (e) => {
     console.log(e.target.id);
-    if (e.target.id === "firebase") {
+    if (e.target.id === "netlify") {
+      appState.showFirebase = false;
+      appState.showSheets = false;
+      appState.showNetlify = true;
+      appState.firebaseButtonColor = "#d6dbe0";
+      appState.sheetsButtonColor = "#d6dbe0";
+      appState.netlifyButtonColor = "#a5d6a7";
+    } else if (e.target.id === "firebase") {
       appState.showFirebase = true;
       appState.showSheets = false;
       appState.firebaseButtonColor = "#a5d6a7";
       appState.sheetsButtonColor = "#d6dbe0";
+      appState.netlifyButtonColor = "#d6dbe0";
     } else {
       appState.showFirebase = false;
       appState.showSheets = true;
       appState.firebaseButtonColor = "#d6dbe0";
       appState.sheetsButtonColor = "#a5d6a7";
+      appState.netlifyButtonColor = "#d6dbe0";
     }
   };
 
@@ -28,8 +38,13 @@ const Database = () => {
       <GlobalStyle />
       <Title>Database Settings</Title>
       <DisplayModeText>
-        There are two database options for storing the participant response data
-        created by EQ Web Sort. <b>Firebase</b> is a "database as a service"
+        Currently, the recommended data storage option is <b>Netlify</b>. It is
+        very easy to setup and use. It is free for projects with less than 100
+        participant responses. To set up Netlify as the database for your
+        project, click the "Netlify" button below to display the guide.
+        <br /> <br />
+        If anticipate having more than 100 participants, then you might want to
+        use Firebase or Sheets. <b>Firebase</b> is a "database as a service"
         company owned by Google. It provides a free and robust way to store the
         participants' response data. The number of participants is not limited.
         The participant data is stored in JSON format and can be imported into
@@ -37,11 +52,11 @@ const Database = () => {
         the guide for setting up Firebase for your project.
         <br />
         <br />
-        <b>Google Sheets</b> uses the familiar spreadsheet format and is much
-        easier to setup, but requires the use of a third-party web application
-        called "Stein". It is free for projects with less than 200 participant
-        responses. To set up Google Sheets as the database for your project,
-        click the "Sheets" button below to display the guide.
+        <b>Google Sheets</b> uses the familiar spreadsheet format and is easier
+        to setup than Firebase, but it requires the use of a third-party web
+        application called "Stein". It is free for projects with less than 200
+        participant responses. To set up Google Sheets as the database for your
+        project, click the "Sheets" button below to display the guide.
         <br />
         <br />
         If you don't have a Google account, you'll have to make one before you
@@ -51,6 +66,13 @@ const Database = () => {
       <SpacerDiv />
       <ButtonDiv>
         <p>Display Database Type:</p>
+        <SelectFirebaseButton
+          id="netlify"
+          onClick={handleClick}
+          color={appState.netlifyButtonColor}
+        >
+          Netlify
+        </SelectFirebaseButton>
         <SelectFirebaseButton
           id="firebase"
           onClick={handleClick}
@@ -68,6 +90,7 @@ const Database = () => {
       </ButtonDiv>
       {appState.showFirebase && <Firebase />}
       {appState.showSheets && <Sheets />}
+      {appState.showNetlify && <Netlify />}
     </MainContent>
   );
 };
@@ -181,5 +204,5 @@ const ButtonDiv = styled.div`
   flex-direction: row;
   justify-content: space-between;
   font-size: 20px;
-  width: 600px;
+  width: 800px;
 `;

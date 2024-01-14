@@ -17,15 +17,25 @@ import githubPagesUrl from "../../assets/images/github-pages-url.png";
 import github404 from "../../assets/images/github-404.png";
 import githubDeleteSection from "../../assets/images/github-delete-section.png";
 import githubDeleteSection2 from "../../assets/images/github-delete-section2.png";
-import netMain from "../../assets/images/net-main.png";
-import netDropFiles from "../../assets/images/net-drop-files.png";
-import netSiteSettings from "../../assets/images/net-site-settings.png";
-import netChangeName from "../../assets/images/net-change-name.png";
-import netInputName from "../../assets/images/net-input-name.png";
-import netFinished from "../../assets/images/net-finished.png";
-import netDeleteSite from "../../assets/images/net-delete-site.png";
-import netDeleteName from "../../assets/images/net-delete-name.png";
-// import RadioButtons from "../../Utils/RadioButtons";
+import netlify1 from "../../assets/images/netlify1.png";
+import netlify2 from "../../assets/images/netlify2.png";
+import netlify3 from "../../assets/images/netlify3.png";
+import netlify4 from "../../assets/images/netlify4.png";
+import netlify5 from "../../assets/images/netlify5.png";
+import netlify6 from "../../assets/images/netlify6.png";
+import netlify7 from "../../assets/images/netlify7.png";
+import netlify8 from "../../assets/images/netlify8.png";
+import netlify9 from "../../assets/images/netlify9.png";
+import netlify10 from "../../assets/images/netlify10.png";
+import netlify11 from "../../assets/images/netlify11.png";
+import netlify12 from "../../assets/images/netlify12.png";
+import netlify13 from "../../assets/images/netlify13.png";
+import netlify14 from "../../assets/images/netlify14.png";
+import excel1 from "../../assets/images/excel1.png";
+import excel2 from "../../assets/images/excel2.png";
+import excel3 from "../../assets/images/excel3.png";
+import excel4 from "../../assets/images/excel4.png";
+import excel5 from "../../assets/images/excel5.png";
 
 const Server = () => {
   let displayMode = appState.displayMode;
@@ -60,13 +70,22 @@ const Server = () => {
         >
           Netlify
         </a>
-        , which will host your project for free.{" "}
+        , which will host your project for free. Also, you can now{" "}
+        <b>store the participant data directly on your Netlify web site</b>, so{" "}
+        <b>
+          <mark>you don't need to add a database to your project.</mark>
+        </b>{" "}
+        The number of responses that can be stored is limited to 100 per site
+        per month, so if you expect to have more than 100 participants, you can
+        create another identical web site and split your participants between
+        the two sites (or you can use Google Firebase / Google Sheets to store
+        your data).
       </DisplayModeText>
       <SpacerDiv50 />
 
       {displayNetlify && (
         <>
-          <Title2>Upload to Netlify</Title2>
+          <Title2>Upload Project to Netlify and set up Data Storage</Title2>
           <DisplayModeText>
             <b>1a.</b>
             <br />
@@ -78,73 +97,182 @@ const Server = () => {
             >
               Netlify
             </a>{" "}
-            and make one first. Once you are in the main Netlify page, click on
-            "Sites"
+            and make one first. Once you are in the main "<b>Team Overview</b>"
+            Netlify page, click on "<b>Add a new site</b>".
           </DisplayModeText>
           <SpacerDiv20 />
-          <img src={netMain} width="90%" alt="a" />
+          <img src={netlify1} width="90%" alt="a" />
           <SpacerDiv20 />
 
           <DisplayModeText>
             <b>1b.</b>
             <br />
-            Drag the EQ Web Sort <b>FOLDER</b> to the Netlify page and drop it
-            into the box.
+            In the dropdown selection, click on "<b>Deploy manually</b>".
           </DisplayModeText>
           <SpacerDiv20 />
-          <img src={netDropFiles} width="90%" alt="a" />
+          <img src={netlify2} width="90%" alt="a" />
           <SpacerDiv20 />
           <DisplayModeText>
             <b>1c.</b>
             <br />
-            Netlify will upload your files to the web and generate a random name
-            for your site. To change the name, click on "Site settings".
+            Drag and drop your EQ Web Sort <b>FOLDER</b> and drop it on the
+            target.
           </DisplayModeText>
           <SpacerDiv20 />
-          <img src={netSiteSettings} width="90%" alt="a" />
+          <img src={netlify3} width="90%" alt="a" />
           <SpacerDiv20 />
           <DisplayModeText>
             <b>1d.</b>
             <br />
-            Click on "Change site name"
+            Click "<b>Upload"</b> to confirm the folder upload.
           </DisplayModeText>
           <SpacerDiv20 />
-          <img src={netChangeName} width="90%" alt="a" />
+          <img src={netlify4} width="90%" alt="a" />
           <SpacerDiv20 />
           <DisplayModeText>
             <b>1e.</b>
             <br />
-            Input your new site name. Then click "Save".
+            If you are using Google Firebase or Google Sheets for data storage,
+            skip ahead to step 1i. If you are going to use Netlify to store the
+            participant data (recommended), click on "<b>Forms</b>".
           </DisplayModeText>
           <SpacerDiv20 />
-          <img src={netInputName} alt="a" />
+          <img src={netlify5} alt="a" />
           <SpacerDiv20 />
           <DisplayModeText>
             <b>1f.</b>
             <br />
-            Your project site is now ready. The link is listed at the top of the
-            Settings page.
+            Click on "<b>Enable form detection</b>".
           </DisplayModeText>
           <SpacerDiv20 />
-          <img src={netFinished} alt="a" />
+          <img src={netlify6} alt="a" />
           <SpacerDiv20 />
+          <DisplayModeText>
+            <b>1g.</b>
+            <br />
+            Confirm that the the page indicates "Form detection is enabled". To
+            get the form submissions working, however, you will need to
+            re-deploy the website. Click on "<b>Deploys</b>".
+          </DisplayModeText>
+          <SpacerDiv20 />
+          <img src={netlify7} alt="a" />
+          <SpacerDiv20 />
+          <DisplayModeText>
+            <b>1h.</b>
+            <br />
+            Scroll down and once again drop the EQ Web Sort <b>folder</b> on the
+            target.
+          </DisplayModeText>
+          <SpacerDiv20 />
+          <img src={netlify8} alt="a" />
+          <SpacerDiv20 />
+          <DisplayModeText>
+            <b>1i.</b>
+            <br />
+            Now it is time to change the website name. Click on "
+            <b>Site configuration</b>".
+          </DisplayModeText>
+          <SpacerDiv20 />
+          <img src={netlify9} alt="a" />
+          <SpacerDiv20 />
+          <DisplayModeText>
+            <b>1j.</b>
+            <br />
+            Scroll down and click on "<b>Change site name</b>". After changing
+            the name, your site is ready for participants to use.
+          </DisplayModeText>
+          <SpacerDiv20 />
+          <img src={netlify10} alt="a" />
+          <SpacerDiv20 />
+          <DisplayModeText>
+            <b>How to Retrieve Participant Data - 1</b>
+            <br />
+            <br />
+            If you are using Netlify to store the participant data and you are
+            ready to retrieve the data, log into your Netlify account, and click
+            on "<b>Forms</b>". Then, click on "<b>contact</b>".
+          </DisplayModeText>
+          <SpacerDiv20 />
+          <img src={netlify11} alt="a" />
+          <SpacerDiv20 />
+          <DisplayModeText>
+            <b>How to Retrieve Participant Data - 1</b>
+            <br />
+            <br />
+            Click on "<b>Download as CSV</b>"
+          </DisplayModeText>
+          <SpacerDiv20 />
+          <img src={netlify12} alt="a" />
+          <DisplayModeText>
+            <b>How to Retrieve Participant Data - 2</b>
+            <br />
+            <br />
+            Open your spreadsheet software (LibreOffice Numbers, MS Excel, etc.)
+            and open the CSV file. Delete the information in columns B to E.
+          </DisplayModeText>
+          <SpacerDiv20 />
+          <img src={excel1} alt="a" />
+          <DisplayModeText>
+            <b>How to Retrieve Participant Data - 3</b>
+            <br />
+            <br />
+            Next, select all of the data in column A
+          </DisplayModeText>
+          <SpacerDiv20 />
+          <img src={excel2} alt="a" />
+          <DisplayModeText>
+            <b>How to Retrieve Participant Data - 4</b>
+            <br />
+            <br />
+            In your spreadsheet software, find the "<b>Text to Columns</b>"
+            function. In Excel, click on "Data", then "Text to Columns"
+          </DisplayModeText>
+          <SpacerDiv20 />
+          <img src={excel3} alt="a" />
+          <DisplayModeText>
+            <b>How to Retrieve Participant Data - 5</b>
+            <br />
+            <br />
+            Select "<b>Delimited</b>", then click "Next".
+          </DisplayModeText>
+          <SpacerDiv20 />
+          <img src={excel4} alt="a" />
+          <DisplayModeText>
+            <b>How to Retrieve Participant Data - 6</b>
+            <br />
+            <br />
+            Un-check "Tab" and check "<b>Other</b>". Then, input a{" "}
+            <b>vertical bar "|"</b> in the text box. Click "<b>Finish</b>" and
+            your data variables will now be in individual columns. To analyze
+            your data, use{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/shawnbanasick/kade"
+            >
+              <b>KADE</b>
+            </a>{" "}
+          </DisplayModeText>
+          <SpacerDiv20 />
+          <img src={excel5} alt="a" />
+
           <DisplayModeText>
             <b>How to Delete a Netlify Site - 1</b>
             <br />
-            To delete a Netlify site, got to the Netlify Settings page for the
-            site. Scroll to the bottom of the page, and click "Delete this
-            site".
+            To delete a Netlify site, click on "<b>Site configuration</b>".
+            Then, scroll to the bottom of the page, and click "
+            <b>Delete this site</b>".
           </DisplayModeText>
           <SpacerDiv20 />
-          <img src={netDeleteSite} alt="a" />
+          <img src={netlify13} alt="a" />
           <SpacerDiv20 />
           <DisplayModeText>
             <b>How to Delete a Netlify Site - 2</b>
             <br />
-            Type in the name of the site, and click "Delete".
+            Type in the name of the site, and click "<b>Delete</b>".
           </DisplayModeText>
           <SpacerDiv20 />
-          <img src={netDeleteName} alt="a" />
+          <img src={netlify14} alt="a" />
           <SpacerDiv20 />
         </>
       )}
