@@ -6,14 +6,28 @@ import StatementTextArea from "./StatementTextArea";
 import exportToXml from "../../Utils/exportToXml";
 import generateStatementsXml from "./generateStatementXml";
 import GeneralButton from "../../Utils/GeneralButton";
+import ImagesBypass from "./ImagesBypass";
+import appState from "../../GlobalState/appState";
 
 const handleClick = () => {
   const data = generateStatementsXml();
-
   exportToXml("statements.xml", data, "xml");
 };
 
 const Statements = () => {
+  if (
+    appState.configUseImages === "true" ||
+    appState.configUseImages === true
+  ) {
+    return (
+      <MainContent>
+        <GlobalStyle />
+        <Title>Statements Settings</Title>
+        <ImagesBypass />
+      </MainContent>
+    );
+  }
+
   return (
     <MainContent>
       <GlobalStyle />
