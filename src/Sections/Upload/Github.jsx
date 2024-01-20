@@ -87,7 +87,7 @@ const Server = () => {
         <>
           <Title2>Upload Project to Netlify and set up Data Storage</Title2>
           <DisplayModeText>
-            <b>1a.</b>
+            <b>1-A.</b>
             <br />
             You will need a user account, so go to{" "}
             <a
@@ -105,7 +105,7 @@ const Server = () => {
           <SpacerDiv20 />
 
           <DisplayModeText>
-            <b>1b.</b>
+            <b>1-B.</b>
             <br />
             In the dropdown selection, click on "<b>Deploy manually</b>".
           </DisplayModeText>
@@ -113,7 +113,7 @@ const Server = () => {
           <img src={netlify2} width="90%" alt="a" />
           <SpacerDiv20 />
           <DisplayModeText>
-            <b>1c.</b>
+            <b>1-C.</b>
             <br />
             Drag and drop your EQ Web Sort <b>FOLDER</b> and drop it on the
             target.
@@ -122,7 +122,7 @@ const Server = () => {
           <img src={netlify3} width="90%" alt="a" />
           <SpacerDiv20 />
           <DisplayModeText>
-            <b>1d.</b>
+            <b>1-D.</b>
             <br />
             Click "<b>Upload"</b> to confirm the folder upload.
           </DisplayModeText>
@@ -130,17 +130,17 @@ const Server = () => {
           <img src={netlify4} width="90%" alt="a" />
           <SpacerDiv20 />
           <DisplayModeText>
-            <b>1e.</b>
+            <b>1-E.</b>
             <br />
             If you are using Google Firebase or Google Sheets for data storage,
-            skip ahead to step 1i. If you are going to use Netlify to store the
+            skip ahead to step 1-I. If you are going to use Netlify to store the
             participant data (recommended), click on "<b>Forms</b>".
           </DisplayModeText>
           <SpacerDiv20 />
           <img src={netlify5} alt="a" />
           <SpacerDiv20 />
           <DisplayModeText>
-            <b>1f.</b>
+            <b>1-F.</b>
             <br />
             Click on "<b>Enable form detection</b>".
           </DisplayModeText>
@@ -148,7 +148,7 @@ const Server = () => {
           <img src={netlify6} alt="a" />
           <SpacerDiv20 />
           <DisplayModeText>
-            <b>1g.</b>
+            <b>1-G.</b>
             <br />
             Confirm that the the page indicates "Form detection is enabled". To
             get the form submissions working, however, you will need to
@@ -158,7 +158,7 @@ const Server = () => {
           <img src={netlify7} alt="a" />
           <SpacerDiv20 />
           <DisplayModeText>
-            <b>1h.</b>
+            <b>1-H.</b>
             <br />
             Scroll down and once again drop the EQ Web Sort <b>folder</b> on the
             target.
@@ -167,7 +167,7 @@ const Server = () => {
           <img src={netlify8} alt="a" />
           <SpacerDiv20 />
           <DisplayModeText>
-            <b>1i.</b>
+            <b>1-I.</b>
             <br />
             Now it is time to change the website name. Click on "
             <b>Site configuration</b>".
@@ -176,7 +176,7 @@ const Server = () => {
           <img src={netlify9} alt="a" />
           <SpacerDiv20 />
           <DisplayModeText>
-            <b>1j.</b>
+            <b>1-J.</b>
             <br />
             Scroll down and click on "<b>Change site name</b>". After changing
             the name, your site is ready for participants to use.

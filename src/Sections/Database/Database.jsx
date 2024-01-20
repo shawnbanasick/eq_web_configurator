@@ -38,18 +38,18 @@ const Database = () => {
       <GlobalStyle />
       <Title>Database Settings</Title>
       <DisplayModeText>
-        Currently, the recommended data storage option is <b>Netlify</b>. It is
-        very easy to setup and use. It is free for projects with less than 100
-        participant responses. To set up Netlify as the database for your
-        project, click the "Netlify" button below to display the guide.
+        Currently, the recommended data storage option is to use <b>Netlify</b>{" "}
+        forms. It is very easy to setup. It is free for projects with less than
+        100 participant responses per month. To set up Netlify as the database
+        for your project, click the "Netlify" button below.
         <br /> <br />
-        If anticipate having more than 100 participants, then you might want to
-        use Firebase or Sheets. <b>Firebase</b> is a "database as a service"
-        company owned by Google. It provides a free and robust way to store the
-        participants' response data. The number of participants is not limited.
-        The participant data is stored in JSON format and can be imported into
-        KADE or other software. Click on the "Firebase" button below to display
-        the guide for setting up Firebase for your project.
+        If anticipate having more than 100 participants in your project, then
+        you might want to use Firebase or Sheets. <b>Firebase</b> is a "database
+        as a service" company owned by Google. It provides a free and robust way
+        to store the participants' response data. The number of participants is
+        not limited. The participant data is stored in JSON format and can be
+        imported into KADE or other software. Click on the "Firebase" button
+        below to display the guide for setting up Firebase for your project.
         <br />
         <br />
         <b>Google Sheets</b> uses the familiar spreadsheet format and is easier
