@@ -27,6 +27,17 @@ const GeneralOptions = () => {
     displayMode = false;
   }
 
+  if (
+    appState.configSetupTarget === "email" ||
+    appState.configSetupTarget === "local"
+  ) {
+    appState.configLinkToSecondQsorttrueDisabled = true;
+    appState.configLinkToSecondQsortfalseDisabled = true;
+  } else {
+    appState.configLinkToSecondQsorttrueDisabled = false;
+    appState.configLinkToSecondQsortfalseDisabled = false;
+  }
+
   const setDisplay = (value) => {
     if (value === "sheets") {
       localState.displayItem = true;
@@ -202,7 +213,15 @@ const GeneralOptions = () => {
           />
         </FadeIn>
       )}
-
+      <br />
+      <DisplayModeText>
+        Q sort linking is now available. When the participant finishes the first
+        Q sort project, the web page for the second Q sort project automatically
+        opens. Link participant data between the two Q sorts using a URL
+        usercode for the first Q sort project. See the "Project Access" section
+        below for more information on usercodes. Q sort linking is not available
+        for email or local setup targets.
+      </DisplayModeText>
       <RadioButtons
         label="2-3. Link to second Q sort:"
         buttonIdArray={["true", "false"]}
@@ -223,7 +242,7 @@ const GeneralOptions = () => {
       )}
 
       <RadioButtons
-        label="2-4. Use images / pictures instead of text"
+        label="2-4. Sort images / pictures instead of text statements"
         buttonIdArray={["true", "false"]}
         stateId="configUseImages"
         sectionName="config"
@@ -233,7 +252,7 @@ const GeneralOptions = () => {
         <FadeIn delay={150} duration={1050}>
           <br />
           <DisplayModeText>
-            <b>Important - Image setup information:</b> <br />
+            <b>Important - Image / Photo setup information:</b> <br />
             <br />
             The images must be named in the following format: image1, image2,
             image3, etc. Also, all of the images must be the same type (jpg or
@@ -288,14 +307,14 @@ const GeneralOptions = () => {
       )}
 
       <RadioButtons
-        label="2-3. Randomize presentation order of statements / images"
+        label="2-5. Randomize presentation order of statements / images"
         buttonIdArray={["true", "false"]}
         stateId="configShuffleCards"
         sectionName="config"
       />
 
       <ColorLabel>
-        <div>2-4. Title bar color (for all pages):</div>
+        <div>2-6. Title bar color (for all pages):</div>
         <ConfigColorPicker
           stateDesig="configHeaderBarColor"
           default="#337ab7"
@@ -338,11 +357,10 @@ const DisplayModeText = styled.div`
   margin-bottom: 10px;
 `;
 
-/* 
-const DisplayModeText = styled.div`
+/*
+const AdditionalInfo = styled.div`
   align-self: left;
   margin-left: 10px;
-  margin-top: 20px;
   width: 75vw;
   max-width: 1000px;
   font-size: 20px;
@@ -350,4 +368,6 @@ const DisplayModeText = styled.div`
   border: 2px solid black;
   background: whitesmoke;
   border-radius: 5px;
-`; */
+  margin-bottom: 10px;
+`;
+*/

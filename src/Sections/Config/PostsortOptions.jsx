@@ -28,14 +28,14 @@ const PostsortOptions = () => {
       )}
 
       <RadioButtons
-        label="2-14. Include individual card comments screen (Step 3):"
+        label="2-16. Include individual card comments screen (Step 3):"
         buttonIdArray={["true", "false"]}
         stateId="configShowStep3"
         sectionName="config"
       />
 
       <UserNumberInput
-        label="2-15. Default sort statement font size:"
+        label="2-17. Default sort statement font size:"
         step={1}
         value={20}
         upperLimit={800}
@@ -45,7 +45,7 @@ const PostsortOptions = () => {
       />
 
       <UserNumberInput
-        label="2-16. Default card height:"
+        label="2-19. Default card height:"
         step={1}
         value={20}
         upperLimit={800}
@@ -55,28 +55,28 @@ const PostsortOptions = () => {
       />
 
       <RadioButtons
-        label="2-17. Display cards from second most positive column:"
+        label="2-20. Display cards from second most positive column:"
         buttonIdArray={["true", "false"]}
         stateId="configShowSecondPosColumn"
         sectionName="config"
       />
 
       <RadioButtons
-        label="2-18. Display cards from second most negative column:"
+        label="2-21. Display cards from second most negative column:"
         buttonIdArray={["true", "false"]}
         stateId="configShowSecondNegColumn"
         sectionName="config"
       />
 
       <RadioButtons
-        label="2-19. Display previous page navigation button in footer:"
+        label="2-22. Display previous page navigation button in footer:"
         buttonIdArray={["true", "false"]}
         stateId="configShowBackButton"
         sectionName="config"
       />
 
       <RadioButtons
-        label="2-20. Force participant to add comments before navigation:"
+        label="2-23. Force participant to add comments before navigation:"
         buttonIdArray={["true", "false"]}
         stateId="configPostsortCommentsRequired"
         sectionName="config"

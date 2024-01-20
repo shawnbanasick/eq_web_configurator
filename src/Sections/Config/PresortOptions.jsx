@@ -26,13 +26,13 @@ const PresortOptions = (props) => {
       )}
 
       <ColorLabel>
-        <div>2-6. Statement font color:</div>
+        <div>2-8. Statement font color:</div>
         <ConfigColorPicker stateDesig="defaultFontColor" default="#2a2a2a" />
         (Default color is "2a2a2a")
       </ColorLabel>
 
       <UserNumberInput
-        label="2-7. Default presort statement font size:"
+        label="2-9. Default presort statement font size:"
         step={1}
         value={20}
         upperLimit={800}
@@ -42,19 +42,19 @@ const PresortOptions = (props) => {
       />
 
       <ColorLabel>
-        <div>2-8a. Positive card color:</div>
+        <div>2-10a. Positive card color:</div>
         <ConfigColorPicker stateDesig="greenCardColor" default="#ccffcc" />
         (Default color is "ccffcc")
       </ColorLabel>
 
       <ColorLabel>
-        <div>2-8b. Neutral card color:</div>
+        <div>2-10b. Neutral card color:</div>
         <ConfigColorPicker stateDesig="yellowCardColor" default="#e0e0e0" />
         (Default color is "e0e0e0")
       </ColorLabel>
 
       <ColorLabel>
-        <div>2-8c. Negative card color:</div>
+        <div>2-10c. Negative card color:</div>
         <ConfigColorPicker stateDesig="pinkCardColor" default="#ffe0f0" />
         (Default color is "ffe0f0")
       </ColorLabel>

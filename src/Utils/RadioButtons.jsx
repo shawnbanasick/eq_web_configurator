@@ -38,7 +38,7 @@ const SelectionButtons = (props) => {
           key={`buttonSelect${item}`}
           id={item}
           isActive={appState[`${props.stateId}${item}Active`]}
-          // disabled={isRadioSelectDisabled}
+          disabled={appState[`${props.stateId}${item}Disabled`]}
           onClick={handleOnclick}
           data-value={`${props.stateId}${item}Active`}
         >

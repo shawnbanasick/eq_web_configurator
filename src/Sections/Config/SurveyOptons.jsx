@@ -91,7 +91,7 @@ const SurveyOptions = (props) => {
           <b>prevent your web page from loading</b>.
         </DisplayModeText>
         <RadioButtons
-          label="2-19. Include survey (Step 4):"
+          label="2-24. Include survey (Step 4):"
           buttonIdArray={["true", "false"]}
           stateId="configShowStep4"
           sectionName="config"

@@ -15,6 +15,10 @@ const stripHtml = (text) => {
 };
 
 const generateSurveyQuestionsGuide = (surveyQuestions) => {
+  if (surveyQuestions === undefined || surveyQuestions === null) {
+    return "no survey questions found";
+  }
+
   let returnText = "EQ Web Sort Survey Results Interpretation Guide\n\n";
   surveyQuestions.forEach((question, index) => {
     console.log(question);
