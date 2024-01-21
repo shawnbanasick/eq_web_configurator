@@ -106,17 +106,17 @@ const LocalLanguage = () => {
         left={0}
       />
       <UserTextInput
-        label="6-6. Postsort help modal header"
+        label="6-6. Postsort greeting / help modal header"
         stateId="langPostsortModalHead"
         sectionName="lang"
-        width={31.1}
+        width={22.5}
         left={0}
       />
       <UserTextAreaInput
-        label="6-7. Postsort help modal text"
+        label="6-7. Postsort greeting / help modal text"
         stateId="langPostsortModalText"
         sectionName="lang"
-        width={34.2}
+        width={26}
         height={80}
         left={0}
       />

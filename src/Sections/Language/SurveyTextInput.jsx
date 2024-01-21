@@ -62,22 +62,22 @@ const LocalLanguage = () => {
         label="7-1. Post-Sort Questionnaire Header"
         stateId="langSurveyHeader"
         sectionName="lang"
-        width={26.7}
+        width={28.7}
         left={0}
       />
       <UserTextInput
-        label="7-2. Questionnaire help modal header"
+        label="7-2. Questionnaire greeting / help modal header"
         stateId="langSurveyModalHead"
         sectionName="lang"
-        width={25.7}
+        width={18.7}
         left={0}
       />
 
       <UserTextAreaInput
-        label="7-3. Questionnaire help modal text"
+        label="7-3. Questionnaire greeting / help modal text"
         stateId="langSurveyModalText"
         sectionName="lang"
-        width={28.9}
+        width={21.9}
         height={100}
         left={0}
       />
@@ -85,7 +85,7 @@ const LocalLanguage = () => {
         label="7-4. Prevent navigation modal header"
         stateId="langSurveyPreventNavModalHead"
         sectionName="lang"
-        width={26}
+        width={28}
         left={0}
       />
 
@@ -93,7 +93,7 @@ const LocalLanguage = () => {
         label="7-5. Prevent navigation modal text"
         stateId="langSurveyPreventNavModalText"
         sectionName="lang"
-        width={29}
+        width={31}
         height={100}
         left={0}
       />

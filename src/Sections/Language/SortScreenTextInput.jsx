@@ -61,18 +61,18 @@ const LocalLanguage = () => {
         </div>
       </HeaderButtonBar>
       <UserTextInput
-        label="5-1. Sort help modal header"
+        label="5-1. Sort greeting / help modal header"
         stateId="langSortHelpModalHead"
         sectionName="lang"
-        width={33.5}
+        width={24.5}
         left={0}
       />
 
       <UserTextAreaInput
-        label="5-2. Sort help modal main text"
+        label="5-2. Sort greeting / help modal main text"
         stateId="langSortHelpModalText"
         sectionName="lang"
-        width={31.8}
+        width={23}
         height={100}
         left={0}
       />

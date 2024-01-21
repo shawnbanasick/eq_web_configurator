@@ -31,7 +31,9 @@ const LocalLanguage = () => {
   return (
     <SectionContainer>
       <HeaderButtonBar>
-        <SectionTitle>Submit Screen (Firebase & Sheets)</SectionTitle>
+        <SectionTitle>
+          Submit Screen (Netlify, Firebase and Sheets)
+        </SectionTitle>
         <div>
           <DefaultsButton id="submitDef" onClick={handleShowDefaults}>
             Use Defaults
