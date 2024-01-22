@@ -53,7 +53,7 @@ const SortOptions = () => {
       />
 
       <UserNumberInput
-        label="2-13. Default card height:"
+        label="2-13. Default sort card height:"
         step={1}
         value={20}
         upperLimit={800}

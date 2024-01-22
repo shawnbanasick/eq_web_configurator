@@ -57,7 +57,7 @@ const showSectionDefaults = () => {
     langPresortPreventNavModalText: `Please finish the preliminary sorting before going to the next step.`,
     langPresortFinishedModalHead: `Preliminary Sorting Complete`,
     langPresortFinishedModalText: `You have completed this step. Please click the "Continue" button in the bottom right side of the page to go to the next step.`,
-    langPresortOnPageInstructions: `<div style="font-size: 24px">Click and drag on the cards  or press the "1", "2", or "3" keys to sort the statements.</div><br/><br/><center><iframe width="560" height="315" src="https://www.youtube.com/embed/vtnLuKzpcKQ?si=f28TDpM6I4pidzMu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>`,
+    langPresortOnPageInstructions: `<div style="font-size: 24px">Click and drag on the cards  or press the "1", "2", or "3" keys to sort the statements.</div>`,
     /*
      ******** SORT  ****************** */
     langSortHelpModalHead: `Step 2 of 4`,

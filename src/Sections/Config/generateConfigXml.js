@@ -33,11 +33,11 @@ const generateConfigXml = () => {
   if (studyTitle === null || studyTitle === undefined) {
     appState.configTitle = "my Q study";
   }
-  let imageFormatType = appState.configImageFormat;
-  if (imageFormatType === "16x9") {
-    imageFormatType = "postSortImageModal169";
+  let imageFormatSize = appState.configImageFormat;
+  if (imageFormatSize === "16x9") {
+    imageFormatSize = "postSortImageModal169";
   } else {
-    imageFormatType = "postSortImageModal43";
+    imageFormatSize = "postSortImageModal43";
   }
 
   const data1 = `<?xml version="1.0" encoding="UTF-8"?>
@@ -58,12 +58,12 @@ const generateConfigXml = () => {
    <!-- SECOND PROJECT -->
    <item id="linkToSecondProject">${appState.configLinkToSecondQsort}</item> 
    <item id="secondProjectUrl">${appState.configLinkToSecondQsortUrl}</item> 
-   <!-- IMAGE OPTIONS  (imageType: 169 or 43)-->
+   <!-- IMAGE OPTIONS  (imageFormat: 169 or 43)-->
    <item id="useImages">${appState.configUseImages}</item>
    <item id="numImages">${appState.configNumImages}</item>
-   <item id="imageFileType">${appState.configImageType}</item>
-   <item id="imageType">${imageFormatType}</item>
-   <item id="shuffleImages">${appState.configShuffleCards}</item>
+   <item id="imageFileType">${appState.configImageFileType}</item>
+   <item id="imageFormat">${imageFormatSize}</item>
+
    <!-- OTHER GENERAL OPTIONS -->
    <item id="shuffleCards">${appState.configShuffleCards}</item>
    <item id="headerBarColor">${appState.configHeaderBarColor}</item>
@@ -97,7 +97,7 @@ const generateConfigXml = () => {
    <item id="condOfInstFontSize">${appState.configCondOfInstFontSize}</item>
 
    <item id="setMinCardHeightSort">true</item>
-   <item id="minCardHeight">${appState.configMinCardHeightSort}</item>
+   <item id="minCardHeightSort">${appState.configMinCardHeightSort}</item>
    <item id="setDefaultFontSizeSort">true</item>
    <item id="defaultFontSizeSort">${appState.configDefaultFontSizeSort}</item>
    

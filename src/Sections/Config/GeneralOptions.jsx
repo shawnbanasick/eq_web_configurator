@@ -293,7 +293,7 @@ const GeneralOptions = () => {
           <RadioButtons
             label="2-4b. Image type (all images must be the same type)"
             buttonIdArray={["jpg", "png"]}
-            stateId="configImageType"
+            stateId="configImageFileType"
             sectionName="config"
           />
 

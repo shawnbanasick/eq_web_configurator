@@ -14,7 +14,7 @@ const clone = require("rfdc/default");
 
 const { dialog } = require("electron").remote;
 const fs = require("fs");
-const { remote } = require("electron");
+const { remote, app } = require("electron");
 const mainWindow = remote.getCurrentWindow();
 
 const UploadXmlFileButton = () => {
@@ -51,6 +51,7 @@ const UploadXmlFileButton = () => {
         const xmlObjectArray = xml.getElementsByTagName("item");
 
         const inputObj = {};
+        console.log("xmlObjectArray", xmlObjectArray);
         xmlObjectArray.forEach((item, index) => {
           // standard items
           if (xmlObjectArray[index].attributes.id === "textAlign") {
@@ -119,7 +120,7 @@ const UploadXmlFileButton = () => {
 
         // START MODIFY SETTINGS
 
-        console.log("inputObj", JSON.stringify(inputObj.setupTarget));
+        console.log("inputObj", JSON.stringify(inputObj, null, 2));
 
         // ***
         // *** GENERAL OPTIONS ***
@@ -149,18 +150,28 @@ const UploadXmlFileButton = () => {
 
         // set 2-2b Setup Target
         if (inputObj.setupTarget === undefined) {
-          inputObj.setupTarget = "email";
+          inputObj.setupTarget = "netlify";
         }
         localStorage.setItem("configSetupTarget", inputObj.setupTarget);
         appState["configSetupTarget"] = inputObj.setupTarget;
         if (inputObj.setupTarget === "local") {
           appState.configSetupTargetlocalActive = true;
           appState.configSetupTargetfirebaseActive = false;
+          appState.configSetupTargetnetlifyActive = false;
+          appState.configSetupTargetsheetsActive = false;
+          appState.configSetupTargetemailActive = false;
+          appState.configSetupTargetself_hostedActive = false;
+        }
+        if (inputObj.setupTarget === "netlify") {
+          appState.configSetupTargetlocalActive = false;
+          appState.configSetupTargetfirebaseActive = false;
+          appState.configSetupTargetnetlifyActive = true;
           appState.configSetupTargetsheetsActive = false;
           appState.configSetupTargetemailActive = false;
           appState.configSetupTargetself_hostedActive = false;
         }
         if (inputObj.setupTarget === "firebase") {
+          appState.configSetupTargetnetlifyActive = false;
           appState.configSetupTargetfirebaseActive = true;
           appState.configSetupTargetlocalActive = false;
           appState.configSetupTargetsheetsActive = false;
@@ -169,6 +180,7 @@ const UploadXmlFileButton = () => {
         }
         if (inputObj.setupTarget === "sheets") {
           appState.configSetupTargetsheetsActive = true;
+          appState.configSetupTargetnetlifyActive = false;
           appState.configSetupTargetfirebaseActive = false;
           appState.configSetupTargetlocalActive = false;
           appState.configSetupTargetemailActive = false;
@@ -177,6 +189,7 @@ const UploadXmlFileButton = () => {
         if (inputObj.setupTarget === "email") {
           appState.configSetupTargetemailActive = true;
           appState.configSetupTargetsheetsActive = false;
+          appState.configSetupTargetnetlifyActive = false;
           appState.configSetupTargetfirebaseActive = false;
           appState.configSetupTargetlocalActive = false;
           appState.configSetupTargetself_hostedActive = false;
@@ -184,6 +197,7 @@ const UploadXmlFileButton = () => {
         if (inputObj.setupTarget === "self_hosted") {
           appState.configSetupTargetemailActive = false;
           appState.configSetupTargetsheetsActive = false;
+          appState.configSetupTargetnetlifyActive = false;
           appState.configSetupTargetfirebaseActive = false;
           appState.configSetupTargetlocalActive = false;
           appState.configSetupTargetself_hostedActive = true;
@@ -210,20 +224,20 @@ const UploadXmlFileButton = () => {
         appState["configEmailSubject"] = inputObj.emailSubject;
 
         // set 2-2c Link to Second Q sort
-        if (inputObj.linkToSecondQsort === undefined) {
-          inputObj.linkToSecondQsort = "false";
+        if (inputObj.linkToSecondProject === undefined) {
+          inputObj.linkToSecondProject = "false";
         }
         localStorage.setItem(
           "configLinkToSecondQsort",
-          inputObj.linkToSecondQsort
+          inputObj.linkToSecondProject
         );
-        appState["configLinkToSecondQsort"] = inputObj.linkToSecondQsort;
+        appState["configLinkToSecondQsort"] = inputObj.linkToSecondProject;
         appState.configLinkToSecondQsorttrueActive = false;
         appState.configLinkToSecondQsortfalseActive = false;
-        if (inputObj.linkToSecondQsort === "true") {
+        if (inputObj.linkToSecondProject === "true") {
           appState.configLinkToSecondQsorttrueActive = true;
         }
-        if (inputObj.linkToSecondQsort === "false") {
+        if (inputObj.linkToSecondProject === "false") {
           appState.configLinkToSecondQsortfalseActive = true;
         }
 
@@ -237,6 +251,61 @@ const UploadXmlFileButton = () => {
           linkToSecondQsortUrl
         );
         appState["configLinkToSecondQsortUrl"] = linkToSecondQsortUrl;
+
+        // *** set 2-4 Use images
+        let useImages = inputObj?.useImages;
+        if (useImages === undefined) {
+          useImages = "false";
+          appState.configUseImagesfalseActive = true;
+        }
+        if (useImages === "true") {
+          appState.configUseImagestrueActive = true;
+          appState.configUseImagesfalseActive = false;
+        } else {
+          appState.configUseImagesfalseActive = true;
+          appState.configUseImagestrueActive = false;
+        }
+        localStorage.setItem("configUseImages", useImages);
+        appState["configUseImages"] = useImages;
+
+        // set 2-4a Number of images
+        if (inputObj.numImages === undefined) {
+          inputObj.numImages = 0;
+        }
+        localStorage.setItem("configNumImages", inputObj.numImages);
+        appState["configNumImages"] = inputObj.numImages;
+
+        // set 2-4b Image file types
+        if (inputObj.imageFileType === undefined) {
+          inputObj.imageFileType = "jpg";
+        }
+        localStorage.setItem("configImageFileType", inputObj.imageFileType);
+        appState["configImageFileType"] = inputObj.imageFileType;
+        if (inputObj.imageFileType === "jpg") {
+          appState.configImageFileTypejpgActive = true;
+          appState.configImageFileTypepngActive = false;
+        } else {
+          console.log("png");
+          appState.configImageFileTypejpgActive = false;
+          appState.configImageFileTypepngActive = true;
+        }
+        // set 2-4c Image format (set up export to fix wording)
+        if (inputObj.imageFormat === undefined) {
+          inputObj.imageFormat = "16x9";
+        }
+        if (inputObj.imageFormat === "postSortImageModal169") {
+          inputObj.imageFormat = "16x9";
+          localStorage.setItem("configImageFormat", inputObj.imageFormat);
+          appState["configImageFormat"] = inputObj.imageFormat;
+          appState.configImageFormat16x9Active = true;
+          appState.configImageFormat4x3Active = false;
+        } else {
+          inputObj.imageFormat = "4x3";
+          localStorage.setItem("configImageFormat", inputObj.imageFormat);
+          appState["configImageFormat"] = inputObj.imageFormat;
+          appState.configImageFormat16x9Active = false;
+          appState.configImageFormat4x3Active = true;
+        }
 
         // set 2-3 Shuffle cards
         if (inputObj.shuffleCards === undefined) {
@@ -356,6 +425,16 @@ const UploadXmlFileButton = () => {
         );
         appState["configDefaultFontSizeSort"] = inputObj.defaultFontSizeSort;
 
+        // set 2-9. Sort card height size
+        if (inputObj.minCardHeightSort === undefined) {
+          inputObj.minCardHeightSort = 120;
+        }
+        localStorage.setItem(
+          "configMinCardHeightSort",
+          inputObj.minCardHeightSort
+        );
+        appState["configMinCardHeightSort"] = inputObj.minCardHeightSort;
+
         // set 2-10. Condition of instruction font size
         if (inputObj.condOfInstFontSize === undefined) {
           inputObj.condOfInstFontSize = 20;
@@ -403,13 +482,6 @@ const UploadXmlFileButton = () => {
           appState.configDisplayOverloadedColWarnfalseActive = true;
         }
 
-        // set 2-12 Set min card height
-        if (inputObj.minCardHeight === undefined) {
-          inputObj.minCardHeight = 120;
-        }
-        localStorage.setItem("configMinCardHeight", inputObj.minCardHeight);
-        appState["configMinCardHeight"] = inputObj.minCardHeight;
-
         // set 2-13 Set sort direction
         if (inputObj.sortDirection === undefined) {
           inputObj.sortDirection = "positive";
@@ -442,6 +514,28 @@ const UploadXmlFileButton = () => {
         if (inputObj.showPostsort === "false") {
           appState.configShowStep3falseActive = true;
         }
+
+        // set 2-17. Sort statement font size
+        if (inputObj.defaultFontSizePostsort === undefined) {
+          inputObj.defaultFontSizePostsort = 16;
+        }
+        localStorage.setItem(
+          "configDefaultFontSizePostsort",
+          inputObj.defaultFontSizePostsort
+        );
+        appState["configDefaultFontSizePostsort"] =
+          inputObj.defaultFontSizePostsort;
+
+        // set 2-12 Set min card height
+        if (inputObj.minCardHeightPostsort === undefined) {
+          inputObj.minCardHeightPostsort = 120;
+        }
+        localStorage.setItem(
+          "configMinCardHeightPostsort",
+          inputObj.minCardHeightPostsort
+        );
+        appState["configMinCardHeightPostsort"] =
+          inputObj.minCardHeightPostsort;
 
         // set 2-15. Display second positive column
         if (inputObj.showSecondPosColumn === undefined) {
