@@ -17,12 +17,10 @@ import UploadXmlConfigButton from "./UploadXmlConfigButton";
 
 const Config = () => {
   const handleClick = () => {
-    console.log(appState.configUseImages, appState.configNumImages);
     if (
       appState.configUseImages === true ||
       (appState.configUseImages === "true" && +appState.configNumImages === 0)
     ) {
-      console.log("here");
       alert("You must input the number of images first (Option 2-4a).");
       return;
     } else {

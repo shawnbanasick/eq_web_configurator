@@ -53,7 +53,6 @@ const notifyError = () => {
 };
 
 const getOptionsArray = (options) => {
-  console.log(options);
   let array = options.split(";;;");
   array = array.filter(function (e) {
     return e;
@@ -95,8 +94,6 @@ const Survey = () => {
   }
 
   const addItem = () => {
-    console.log(JSON.stringify(displayBoolean));
-
     try {
       displayOptionsSemiWarn = false;
       const newItemObj = {};
@@ -151,7 +148,6 @@ const Survey = () => {
         let currentScale = decodeHTML(appState.surveyQuestionScale);
 
         let testArray = getOptionsArray(currentScale);
-        console.log(testArray);
         if (testArray.length < 2) {
           console.log("there is an issue");
           appState.triggerOptionsWarningModal = true;
@@ -162,10 +158,8 @@ const Survey = () => {
       }
       if (displayBoolean.options === true) {
         let currentOptions = decodeHTML(appState.surveyQuestionOptions);
-        console.log(currentOptions);
 
         let testArray = getOptionsArray(currentOptions);
-        console.log(testArray);
         if (testArray.length < 2) {
           if (surveyQuestionType !== "information") {
             console.log("there is an issue");
@@ -175,7 +169,6 @@ const Survey = () => {
         }
 
         displayOptionsSemiWarn = true;
-        console.log(appState.surveyQuestionOptions);
         newItemObj.options = appState.surveyQuestionOptions;
         newItemArray.push(
           `options: ${decodeHTML(appState.surveyQuestionOptions)}`
@@ -194,8 +187,6 @@ const Survey = () => {
 
       // ADD new question to ARRAY and save to STATE
 
-      console.log(JSON.stringify(newItemObj));
-
       surveyQuestionsArray.push(newItemObj);
       appState.surveyQuestionsArray = surveyQuestionsArray;
 
@@ -205,7 +196,6 @@ const Survey = () => {
 
       notifySuccess();
       clearAddItemForm();
-      // console.log(JSON.stringify(appState, null, 2));
     } catch (error) {
       notifyError();
       console.log(error);

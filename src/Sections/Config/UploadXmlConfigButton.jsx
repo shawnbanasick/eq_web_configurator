@@ -51,7 +51,6 @@ const UploadXmlFileButton = () => {
         const xmlObjectArray = xml.getElementsByTagName("item");
 
         const inputObj = {};
-        console.log("xmlObjectArray", xmlObjectArray);
         xmlObjectArray.forEach((item, index) => {
           // standard items
           if (xmlObjectArray[index].attributes.id === "textAlign") {
@@ -285,7 +284,6 @@ const UploadXmlFileButton = () => {
           appState.configImageFileTypejpgActive = true;
           appState.configImageFileTypepngActive = false;
         } else {
-          console.log("png");
           appState.configImageFileTypejpgActive = false;
           appState.configImageFileTypepngActive = true;
         }

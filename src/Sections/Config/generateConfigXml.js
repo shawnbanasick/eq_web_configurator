@@ -46,7 +46,7 @@ const generateConfigXml = () => {
 
   const data2 = `
    <!-- GENERAL SETTINGS -->
-   <!-- "setupTarget" options: Netlify, firebase, local, email, or sheets -->
+   <!-- "setupTarget" options: netlify, firebase, local, email, or sheets -->
    <item id="studyTitle">${appState.configTitle}</item> 
    <item id="databaseOptions">${appState.configDatabaseOptions}</item>
    <item id="setupTarget">${appState.configSetupTarget}</item>
@@ -55,7 +55,7 @@ const generateConfigXml = () => {
    <!-- EMAIL -->
    <item id="emailAddress">${appState.configEmailAddress}</item>  
    <item id="emailSubject">${appState.configEmailSubject}</item>  
-   <!-- SECOND PROJECT -->
+   <!-- SECOND PROJECT LINKING -->
    <item id="linkToSecondProject">${appState.configLinkToSecondQsort}</item> 
    <item id="secondProjectUrl">${appState.configLinkToSecondQsortUrl}</item> 
    <!-- IMAGE OPTIONS  (imageFormat: 169 or 43)-->
@@ -122,8 +122,6 @@ const generateConfigXml = () => {
   let data = data1.concat(data2);
 
   const surveyQuestionsArray = appState.surveyQuestionsArray;
-
-  console.log("surveyQuestionsArray", surveyQuestionsArray);
 
   const open = `   <item id="survey">\n`;
   const close = `   </item>\n\n`;
