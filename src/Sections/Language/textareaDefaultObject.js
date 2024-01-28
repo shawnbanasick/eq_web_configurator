@@ -8,7 +8,7 @@ const showSectionDefaults = () => {
     langBtnNext: "Continue",
     langLandingHead: `University Research Project`,
     langWelcomeMessage: `<h2>EQ Web Sort Demo Project - iPad Use in the Classroom.</h2><br/><br/><p>Thank you for helping with this research project</p><br/><br/><br/>
-    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/lMy4ARVEcCI?si=XjvibwpSzMi8OF0Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>`,
+    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/lMy4ARVEcCI?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>`,
 
     langLoginWelcomeText: `<center><h3>Welcome!</h3></center><br/> Thank you for participating in this Q methodology research project. <br/>Please <b>sign in</b> using the form below to begin the process. `,
     langLoginHeaderText: `Sign In`,
@@ -52,7 +52,7 @@ const showSectionDefaults = () => {
     langPresortDisagreement: `Disagree (1)`,
     langPresortImageSortInstructions: `To enlarge an image, hover your mouse pointer over it and double-click. <br/><br/> To compare images, <u>press and hold</u> the <b><i>Shift</i></b> key on your keyboard and then double-click on TWO images with your mouse.`,
     langPresortModalHead: `Step 1 of 4`,
-    langPresortModalText: `Read the following statements carefully and split them up into three piles: a pile for statements you tend to disagree with, a pile for cards you tend to agree with, and a pile for the rest. Changes can be made later.<br/><br/>If you want to read this instruction a second time, click the help-button at the bottom left corner.<br/><br/><center><iframe width="560" height="315" src="https://www.youtube.com/embed/vtnLuKzpcKQ?si=f28TDpM6I4pidzMu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>`,
+    langPresortModalText: `Read the following statements carefully and split them up into three piles: a pile for statements you tend to disagree with, a pile for cards you tend to agree with, and a pile for the rest. Changes can be made later.<br/><br/>If you want to read this instruction a second time, click the help-button at the bottom left corner.<br/><br/><center><iframe width="560" height="315" src="https://www.youtube.com/embed/vtnLuKzpcKQ?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>`,
     langPresortPreventNavModalHead: `Navigation Disabled`,
     langPresortPreventNavModalText: `Please finish the preliminary sorting before going to the next step.`,
     langPresortFinishedModalHead: `Preliminary Sorting Complete`,
@@ -61,7 +61,7 @@ const showSectionDefaults = () => {
     /*
      ******** SORT  ****************** */
     langSortHelpModalHead: `Step 2 of 4`,
-    langSortHelpModalText: `In this step, please click and drag the statement cards to the appropriate column based on your perspective and the researcher's instructions at the top of the page. <br/><br/><center><iframe width="560" height="315" src="https://www.youtube.com/embed/iRxC9Vv3dLo?si=BotGanF_gUVcVVoN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>`,
+    langSortHelpModalText: `In this step, please click and drag the statement cards to the appropriate column based on your perspective and the researcher's instructions at the top of the page. <br/><br/><center><iframe width="560" height="315" src="https://www.youtube.com/embed/iRxC9Vv3dLo?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>`,
     langSortAgreement: `Agree`,
     langSortDisagreement: `Disagree`,
     langCondOfInst: `Sort the cards according to your experience with the iPads this semester`,
@@ -79,7 +79,7 @@ const showSectionDefaults = () => {
     langPostsortAgreement: `Placed on Agree`,
     langPostsortDisagreement: `Placed on Disagree`,
     langPostsortModalHead: `Step 3 of 4`,
-    langPostsortModalText: `You can use the buttons at the bottom of the page to change the font size or card height.<br/><br/><center><iframe width="560" height="315" src="https://www.youtube.com/embed/EFNlSiaEVVg?si=OZq46d8kUTiiZCWp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></h3></center>`,
+    langPostsortModalText: `You can use the buttons at the bottom of the page to change the font size or card height.<br/><br/><center><iframe width="560" height="315" src="https://www.youtube.com/embed/EFNlSiaEVVg?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></h3></center>`,
     langPostsortPreventNavModalHead: `Navigation Disabled`,
     langPostsortPreventNavModalText: `Please add comments to all of the cards before going to the next step.`,
     langPostsortBackButton: `Go Back`,
@@ -88,7 +88,7 @@ const showSectionDefaults = () => {
      ******** SURVEY  ****************** */
     langSurveyHeader: `Post-Sort Questionnaire`,
     langSurveyModalHead: `Step 4 of 4`,
-    langSurveyModalText: `Finally, please answer the following questions regarding your background. The questions marked with an "*" in their title are required.<br/><br/><center><iframe width="560" height="315" src="https://www.youtube.com/embed/68MHzgLn1zg?si=Nn9di8Z2I4zVXLyi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>`,
+    langSurveyModalText: `Finally, please answer the following questions regarding your background. The questions marked with an "*" in their title are required.<br/><br/><center><iframe width="560" height="315" src="https://www.youtube.com/embed/68MHzgLn1zg?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>`,
     langSurveyPreventNavModalHead: `Navigation Disabled`,
     langSurveyPreventNavModalText: `Please answer the required questions (outlined in yellow) before going to the next step.`,
 
