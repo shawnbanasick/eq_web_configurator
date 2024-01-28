@@ -137,6 +137,7 @@ const generateConfigXml = () => {
       let restrictedString;
       let limitedString;
       let maxLengthNum;
+      console.log(itemObject);
       if (itemObject.restricted === true || itemObject.restricted === "true") {
         restrictedString = `restricted="true"`;
       } else {
@@ -144,14 +145,17 @@ const generateConfigXml = () => {
       }
       if (itemObject.limited === true || itemObject.limited === "true") {
         limitedString = `true`;
-        maxLengthNum = itemObject.maxlength;
+        maxLengthNum = itemObject.length;
       } else {
         limitedString = `false`;
         maxLengthNum = 99999;
       }
+
+      console.log("maxLengthNum", maxLengthNum);
+
       label = `        <label>${encodeHTML(itemObject.label)}</label>\n`;
       const note = `        <note>${encodeHTML(itemObject.note)}</note>\n`;
-      const input = `        <input type="text" required="${itemObject.required}" limited="${limitedString}" maxlength="${maxLengthNum}" ${restrictedString}></input>\n`;
+      const input = `        <input type="text" required="${itemObject.required}" limited="${limitedString}" limitLength="${maxLengthNum}" ${restrictedString}></input>\n`;
       const placeholder = `        <placeholder>${itemObject.placeholder}</placeholder>\n`;
 
       item = accumulatorString.concat(
