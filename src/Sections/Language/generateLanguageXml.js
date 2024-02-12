@@ -4,7 +4,7 @@ import encodeHTML from "../../Utils/encodeHTML";
 const generateLanguageXml = () => {
   let data = `<?xml version="1.0" encoding="UTF-8"?>
 
-   <language version="5.0" htmlParse="true">\n;
+   <language version="${appState.releaseVersion}" htmlParse="true">\n;
 
         <!-- MULTI-PURPOSE MODALS -->
         <item id="stepCompleteMessage">${encodeHTML(

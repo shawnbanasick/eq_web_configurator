@@ -1,3 +1,4 @@
+import { app } from "electron";
 import appState from "../../GlobalState/appState";
 import encodeHTML from "../../Utils/encodeHTML";
 
@@ -42,7 +43,7 @@ const generateConfigXml = () => {
 
   const data1 = `<?xml version="1.0" encoding="UTF-8"?>
 
-   <config version="5.0" htmlParse="false">\n`;
+   <config version="${appState.releaseVersion}" htmlParse="false">\n`;
 
   const data2 = `
    <!-- GENERAL SETTINGS -->

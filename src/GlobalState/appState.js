@@ -7,6 +7,10 @@ const appState = store({
   displayMode: "beginner",
 
   /*
+  Version setting */
+  releaseVersion: "6.0.0",
+
+  /*
   DEFAULT page opening */
   // viewConfig: true,
   viewStart: true,

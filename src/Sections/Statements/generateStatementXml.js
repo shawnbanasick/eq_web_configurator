@@ -1,4 +1,4 @@
-// import appState from "../../GlobalState/appState";
+import appState from "../../GlobalState/appState";
 import encodeHTML from "../../Utils/encodeHTML";
 
 const generateStatementXml = () => {
@@ -12,7 +12,7 @@ const generateStatementXml = () => {
 
   let data = `<?xml version="1.0" encoding="UTF-8"?>
 
-   <statements version="5.0" htmlParse="false">\n`;
+   <statements version="${appState.releaseVersion}" htmlParse="false">\n`;
 
   for (let i = 0; i < statementsArray.length; i += 1) {
     let string = `     <statement id="${i + 1}">${encodeHTML(

@@ -15,6 +15,7 @@ const setMode = (event) => {
 };
 
 const Start = () => {
+  let releaseVersion = `Version ${appState.releaseVersion}`;
   let showDescriptionPro;
   let showDescriptionBeginner;
   const displayMode = appState.displayMode;
@@ -37,7 +38,7 @@ const Start = () => {
         <img src={Image} height="180" alt="s" />
         <Title>
           EQ Web Sort Configurator <br />
-          Version 6.0.0
+          {releaseVersion}
         </Title>
       </HeroContainer>
       <IntroText>
