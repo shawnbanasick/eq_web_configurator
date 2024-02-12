@@ -89,6 +89,7 @@ const generateConfigXml = () => {
 
    <item id="setDefaultFontSizePresort">true</item>
    <item id="defaultFontSizePresort">${appState.configDefaultFontSizePresort}</item>
+   <item id="traceSorts">${appState.configPresortTrace}</item>
   
 
    <!-- SORT -->
@@ -137,7 +138,6 @@ const generateConfigXml = () => {
       let restrictedString;
       let limitedString;
       let maxLengthNum;
-      console.log(itemObject);
       if (itemObject.restricted === true || itemObject.restricted === "true") {
         restrictedString = `restricted="true"`;
       } else {
@@ -145,13 +145,17 @@ const generateConfigXml = () => {
       }
       if (itemObject.limited === true || itemObject.limited === "true") {
         limitedString = `true`;
-        maxLengthNum = itemObject.length;
+        maxLengthNum = +itemObject.limitLength;
+        if (
+          maxLengthNum === undefined ||
+          maxLengthNum === null ||
+          isNaN(maxLengthNum)
+        )
+          maxLengthNum = itemObject.maxlength;
       } else {
         limitedString = `false`;
         maxLengthNum = 99999;
       }
-
-      console.log("maxLengthNum", maxLengthNum);
 
       label = `        <label>${encodeHTML(itemObject.label)}</label>\n`;
       const note = `        <note>${encodeHTML(itemObject.note)}</note>\n`;

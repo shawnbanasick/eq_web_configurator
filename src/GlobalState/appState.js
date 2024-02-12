@@ -60,6 +60,8 @@ const appState = store({
   greenCardColor: "#ccffcc",
   yellowCardColor: "#e0e0e0",
   pinkCardColor: "#ffe0e0",
+  configPresortTrace: false,
+  configPresortTracefalseActive: true,
 
   /*
   config.xml SORT settings */

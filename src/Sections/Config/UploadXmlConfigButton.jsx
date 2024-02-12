@@ -76,7 +76,16 @@ const UploadXmlFileButton = () => {
             }
             if (questType === "text") {
               questObj.limited = inputObj[0].attributes?.limited;
-              questObj.maxlength = inputObj[0].attributes?.maxlength;
+              let inputLenVal = inputObj[0].attributes?.maxlength;
+              if (
+                inputLenVal === null ||
+                inputLenVal === undefined ||
+                isNaN(inputLenVal)
+              ) {
+                questObj.maxlength = inputObj[0].attributes?.limitLength;
+              } else {
+                questObj.maxlength = inputObj[0].attributes?.maxlength;
+              }
               questObj.restricted = inputObj[0].attributes?.restricted;
               questObj.note = inputObj[2]?.value;
               questObj.placeholder = inputObj[3]?.value;
@@ -409,6 +418,20 @@ const UploadXmlFileButton = () => {
         localStorage.setItem("pinkCardColor", inputObj.pinkCardColor);
         appState["pinkCardColor"] = inputObj.pinkCardColor;
 
+        // set 2-11 link presort values
+        if (inputObj.traceSorts === undefined) {
+          inputObj.traceSorts = false;
+        }
+        if (inputObj.traceSorts === "true" || inputObj.traceSorts === true) {
+          appState.configPresortTracetrueActive = true;
+          appState.configPresortTracefalseActive = false;
+        } else {
+          appState.configPresortTracetrueActive = false;
+          appState.configPresortTracefalseActive = true;
+        }
+        localStorage.setItem("configPresortTrace", inputObj.traceSorts);
+        appState["configPresortTrace"] = inputObj.traceSorts;
+
         // ***
         // *** SORT OPTIONS ***
         // ***
@@ -576,7 +599,7 @@ const UploadXmlFileButton = () => {
           inputObj.showBackButton = "false";
         }
         localStorage.setItem("configShowBackButton", inputObj.showBackButton);
-        appState["configShowSecondNegColumn"] = inputObj.showBackButton;
+        appState["configShowBackButton"] = inputObj.showBackButton;
         appState.configShowBackButtontrueActive = false;
         appState.configShowBackButtonfalseActive = false;
         if (inputObj.showBackButton === "true") {
@@ -672,12 +695,25 @@ const UploadXmlFileButton = () => {
           }
 
           if (displayBoolean?.limited === true) {
-            newItemObj.maxlength = item.maxlength;
+            console.log(item.maxlength);
+            console.log(item.limitLength);
+            let lengthValue = 999;
+            if (
+              item.maxlength === null ||
+              item.maxlength === undefined ||
+              isNaN(item.maxlength)
+            ) {
+              newItemObj.maxlength = item.limitLength;
+              lengthValue = item.limitLength;
+            } else {
+              newItemObj.maxlength = item.maxlength;
+              lengthValue = item.maxlength;
+            }
             newItemObj.limited = item.limited;
             newItemArray.push(`<b>Limit answer length:</b> ${item.limited}`);
-
+            console.log(lengthValue);
             if (item?.limited === true || item?.limited === "true") {
-              newItemArray.push(`<b>Answer max length:</b> ${item.maxlength}`);
+              newItemArray.push(`<b>Answer max length:</b> ${lengthValue}`);
             }
           }
 

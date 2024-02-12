@@ -107,23 +107,19 @@ const Server = () => {
             sort data.
             <br />
             <br />
-            One option is to use <b>email</b> for participant Q sort data. When
-            a participant finishes their Q sort, they click a button that
-            automatically opens their default email client with an email address
-            that you specify and the Q sort data automatically added to the
-            email body. The participant then sends the email to you, and then
-            you have to copy and paste the data into a spreadsheet for analysis.
-            This is the easiest option to set up (no database is required), but
-            it is also the most labor intensive for you.
+            The recommended option at this time is to use <b>Netlify</b> as both
+            a web host for your project and as a database for the participant Q
+            sort data. Netlify is free for projects with less than 100
+            participants and very easy to set up.
             <br />
             <br />
-            Another option is to use <b>Google Sheets</b> or{" "}
-            <b>Google Firebase</b> as a database for the participant Q sort
-            data. Google Sheets is easier to set up, but requires the use of 3rd
-            party web application called "Stein". Google Firebase is more
-            robust, but requires more setup. Both options allow you to download
-            all of the participant Q sort data for analysis. Download the
-            standard edition
+            Other options include using Netlify as the web host and{" "}
+            <b>Google Sheets</b> or <b>Google Firebase</b> to store the
+            participant Q sort data. Google Sheets is easier to set up, but
+            requires the use of 3rd party web application called "Stein". Google
+            Firebase is more robust, but requires more setup steps. Both options
+            allow you to download all of the participant Q sort data for
+            analysis. Download the "with-Google" version of the{" "}
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -136,20 +132,9 @@ const Server = () => {
             <br />
             <br />
             If you want to avoid Google for GDPR or other reasons, you can use
-            the{" "}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/shawnbanasick/eq-web-sort"
-            >
-              EQ Web Sort - Developer Edition
-            </a>{" "}
-            to <b>self-host</b> your project. All Google code is stripped out of
-            this version. You will need to set up a database on a web server
-            that you control. This is the most complex option. I cannot provide
-            support for this option. If you don't have any web development
-            experience, you will need to find a web developer to help you with
-            this option.
+            the "NO-Google" version of EQ Web Sort. All Google code is stripped
+            out of this version so you can only use it with Netlify to store the
+            participant data.
             <br />
             <br />A fourth option is to use the EQ Web Sort software on a
             notebook computer for in-person, offline, <b>local data</b>{" "}
@@ -215,9 +200,10 @@ const Server = () => {
       </FindServerButton>
       {displayMode && (
         <DisplayModeText>
-          When you find the folder, the file name will probably be dimmed so it
-          will be hard to see (Figure 4).{" "}
-          <b>You do not need to select the file. </b>
+          When you find the folder, the file name will be dimmed so it will be
+          hard to see or it may not even be listed (Figure 4). If you can see
+          the "settings" folder, you are in the right place.{" "}
+          <b>You do not need to select the "index.html" file. </b>
           Instead, click the "OK" button on the bottom right side of the dialog
           box (Figure 5).
         </DisplayModeText>

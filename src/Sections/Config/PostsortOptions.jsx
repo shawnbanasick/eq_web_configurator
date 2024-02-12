@@ -28,14 +28,14 @@ const PostsortOptions = () => {
       )}
 
       <RadioButtons
-        label="2-16. Include individual card comments screen (Step 3):"
+        label="2-17. Include individual card comments screen (Step 3):"
         buttonIdArray={["true", "false"]}
         stateId="configShowStep3"
         sectionName="config"
       />
 
       <UserNumberInput
-        label="2-17. Default sort statement font size:"
+        label="2-18. Default sort statement font size:"
         step={1}
         value={20}
         upperLimit={800}

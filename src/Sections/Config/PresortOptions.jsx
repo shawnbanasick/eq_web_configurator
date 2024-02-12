@@ -4,6 +4,7 @@ import ConfigColorPicker from "./ConfigColorPicker";
 import styled from "styled-components";
 import appState from "../../GlobalState/appState";
 import UserNumberInput from "../../Utils/UserNumberInput";
+import RadioButtons from "../../Utils/RadioButtons";
 
 const PresortOptions = (props) => {
   let displayMode = appState.displayMode;
@@ -22,6 +23,28 @@ const PresortOptions = (props) => {
           The same presort colors are also used for the statement cards in the
           sort grid. If you want to use without color, you can set all three
           color values to the same light gray color.
+          <br />
+          <br />
+          If <b>"Link presort values to sort values in output file"</b> is set
+          to "true", then additional information will be added to the output
+          file in the following format for all statements/images:
+          <br />
+          <br />
+          "1*u*2", <br /> <br />
+          where: <br />
+          <br />
+          "1" is the statement/image number <br />
+          <br />
+          "*" is a separator <br />
+          <br />
+          "u" indicates that the statement/image was placed in the uncertain or
+          middle column of the presort. If this value is "p", it indicates that
+          the statement/image was placed in the postive or right-side column. If
+          this value is "n", it indicates that the statement/image was placed in
+          the negative or left-side column of the presort.
+          <br />
+          <br />
+          "2" is the sort value for the statement/image
         </DisplayModeText>
       )}
 
@@ -58,6 +81,13 @@ const PresortOptions = (props) => {
         <ConfigColorPicker stateDesig="pinkCardColor" default="#ffe0f0" />
         (Default color is "ffe0f0")
       </ColorLabel>
+
+      <RadioButtons
+        label="2-11. Link presort values to sort values in output file"
+        buttonIdArray={["true", "false"]}
+        stateId="configPresortTrace"
+        sectionName="config"
+      />
     </React.Fragment>
   );
 };

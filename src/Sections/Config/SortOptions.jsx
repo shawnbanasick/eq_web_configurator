@@ -34,7 +34,7 @@ const SortOptions = () => {
       )}
 
       <UserNumberInput
-        label="2-11. Conditions of Instruction font size:"
+        label="2-12. Conditions of Instruction font size:"
         step={1}
         value={20}
         upperLimit={80}
@@ -43,7 +43,7 @@ const SortOptions = () => {
         sectionName="config"
       />
       <UserNumberInput
-        label="2-12. Default sort statement font size:"
+        label="2-13. Default sort statement font size:"
         step={1}
         value={20}
         upperLimit={800}
@@ -53,7 +53,7 @@ const SortOptions = () => {
       />
 
       <UserNumberInput
-        label="2-13. Default sort card height:"
+        label="2-14. Default sort card height:"
         step={1}
         value={20}
         upperLimit={800}
@@ -63,21 +63,21 @@ const SortOptions = () => {
       />
 
       <RadioButtons
-        label="2-14a. Allow unforced sorts:"
+        label="2-15a. Allow unforced sorts:"
         buttonIdArray={["true", "false"]}
         stateId="configAllowUnforcedSorts"
         sectionName="config"
       />
 
       <RadioButtons
-        label="2-14b. Display overloaded column warning:"
+        label="2-15b. Display overloaded column warning:"
         buttonIdArray={["true", "false"]}
         stateId="configDisplayOverloadedColWarn"
         sectionName="config"
       />
 
       <RadioButtons
-        label="2-15. Sort Direction:"
+        label="2-16. Sort Direction:"
         buttonIdArray={["positive", "negative"]}
         stateId="configSortDirection"
         sectionName="config"
