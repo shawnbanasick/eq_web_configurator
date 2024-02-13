@@ -1,4 +1,6 @@
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![DOI](https://zenodo.org/badge/406236167.svg)](https://zenodo.org/badge/latestdoi/406236167)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) <a href="https://doi.org/10.5281/zenodo.8337125"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.8337125.svg" alt="DOI"></a>
+
+https://zenodo.org/doi/10.5281/zenodo.8337125
 
 <strong>Download Links:</strong> &nbsp;
 [macOS](https://github.com/shawnbanasick/eq_web_configurator/releases/download/v6.0.0/eq-web-configurator-6.0.0.dmg) &nbsp;||&nbsp;
@@ -136,7 +138,7 @@ If you discover a problem with the software or want to make a feature request, s
 
 ## Citation
 
-`Banasick, S. (2024). EQ Web Configurator (Version 6.0.0) [Computer software]. https://doi.org/10.5281/zenodo.10649074`
+`Banasick, S. (2024). EQ Web Configurator (Version 6.0.0) [Computer software]. https://doi.org/10.5281/zenodo.8337125`
 
 ## License
 
