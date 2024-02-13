@@ -136,7 +136,7 @@ If you discover a problem with the software or want to make a feature request, s
 
 ## Citation
 
-`Banasick, S. (2023). EQ Web Configurator (Version 5.0.0) [Computer software]. https://doi.org/10.5281/zenodo.10559820`
+`Banasick, S. (2024). EQ Web Configurator (Version 6.0.0) [Computer software]. https://doi.org/10.5281/zenodo.10649074`
 
 ## License
 
