@@ -84,6 +84,35 @@ const ProjectAccessOptions = () => {
           />
         </FadeIn>
       )}
+      <SubTitle>Informed Consent</SubTitle>
+      {displayMode && (
+        <DisplayModeText>
+          If you need a separate research consent page to appear as the first
+          page of your project, set 2.8 to true.
+          <br />
+          <br />
+          <a
+            href="https://consent-page-demo.netlify.app/#/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Sample project with consent page
+          </a>
+        </DisplayModeText>
+      )}
+
+      <RadioButtons
+        label="2-8. Add Consent Page to Project:"
+        buttonIdArray={["true", "false"]}
+        stateId="configShowConsentPage"
+        sectionName="config"
+      />
+      <RadioButtons
+        label="2-9. Include Consent Page information modal:"
+        buttonIdArray={["true", "false"]}
+        stateId="configShowConsentPageHelpModal"
+        sectionName="config"
+      />
     </React.Fragment>
   );
 };

@@ -31,37 +31,37 @@ const LocalLanguage = () => {
   return (
     <SectionContainer>
       <HeaderButtonBar>
-        <SectionTitle>Landing Screen</SectionTitle>
+        <SectionTitle>Consent Page (optional)</SectionTitle>
         <div>
-          <DefaultsButton id="landingDef" onClick={handleShowDefaults}>
+          <DefaultsButton id="consentDef" onClick={handleShowDefaults}>
             Use Defaults
           </DefaultsButton>
-          <ClearAllButton id="landingClear" onClick={handleClearAll}>
+          <ClearAllButton id="consentClear" onClick={handleClearAll}>
             Clear Section
           </ClearAllButton>
-          <RefImageButton id="landingImage" onClick={handleRefImage}>
-            Ref. Image 2-1 & 2-2
+          <RefImageButton id="consent_screen" onClick={handleRefImage}>
+            Ref. Image 0-1
           </RefImageButton>
           <RefImageButton
-            id="landingImage2"
+            id="consent_screen_modal"
             marginRight="35px"
             onClick={handleRefImage}
           >
-            Ref. Image 2-3 & 2-4
+            Ref. Image 0-2
           </RefImageButton>
         </div>
       </HeaderButtonBar>
       <UserTextInput
-        label="2-1. Landing Page Title Bar"
-        stateId="langLandingHead"
+        label="0-1. Consent Page Title Bar"
+        stateId="langConsentTitleBarText"
         highlight="true"
         sectionName="lang"
         width={34}
         left={0}
       />
       <UserTextAreaInput
-        label="2-2. Welcome Message"
-        stateId="langWelcomeMessage"
+        label="0-2. Consent Message"
+        stateId="langConsentText"
         sectionName="lang"
         highlight="true"
         width={37}
@@ -69,16 +69,16 @@ const LocalLanguage = () => {
         left={0}
       />
       <UserTextInput
-        label="2-3. Help modal header text"
-        stateId="langLandingHelpModalHead"
+        label="0-3. Help modal header text"
+        stateId="langConsentHelpModalHead"
         sectionName="lang"
         highlight="true"
         width={32.5}
         left={0}
       />
       <UserTextAreaInput
-        label="2-4. Help modal main text"
-        stateId="langLandingHelpModalText"
+        label="0-4. Help modal main text"
+        stateId="langConsentHelpModalText"
         sectionName="lang"
         highlight="true"
         width={35.5}
@@ -86,8 +86,8 @@ const LocalLanguage = () => {
         left={0}
       />
       <UserTextInput
-        label="2-5. Start button text"
-        stateId="langBtnNextLanding"
+        label="0-5. Accept button text"
+        stateId="langBtnNextConsent"
         sectionName="lang"
         width={39}
         left={0}

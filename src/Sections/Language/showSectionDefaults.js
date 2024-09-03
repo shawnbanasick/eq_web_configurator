@@ -25,12 +25,25 @@ const showSectionDefaults = (section) => {
     setDefaults(selectorArray);
   }
 
+  if (section === "consentDef") {
+    selectorArray = [
+      "langConsentTitleBarText",
+      "langConsentText",
+      "langConsentHelpModalHead",
+      "langConsentHelpModalText",
+      "langBtnNextConsent",
+    ];
+
+    setDefaults(selectorArray);
+  }
+
   if (section === "landingDef") {
     selectorArray = [
       "langLandingHead",
       "langWelcomeMessage",
       "langLandingHelpModalHead",
       "langLandingHelpModalText",
+      "langBtnNextLanding",
     ];
 
     setDefaults(selectorArray);

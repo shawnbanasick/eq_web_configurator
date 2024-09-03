@@ -369,12 +369,50 @@ const UploadXmlFileButton = () => {
           appState["configAccess"] = "access code only";
         }
 
-        // set 2-5b. Set project access password
+        // set 2-7b. Set project access password
         if (inputObj.accessCode === undefined) {
           inputObj.accessCode = "demo";
         }
         localStorage.setItem("configLogInPassword", inputObj.accessCode);
         appState["configLogInPassword"] = inputObj.accessCode;
+
+        // set 2-8. Add consent page to project
+        if (inputObj.showConsentPage === undefined) {
+          inputObj.showConsentPage = "false";
+        }
+        if (
+          inputObj.showConsentPage === "true" ||
+          inputObj.showConsentPage === true
+        ) {
+          appState.configShowConsentPagetrueActive = true;
+          appState.configShowConsentPagefalseActive = false;
+        } else {
+          appState.configShowConsentPagetrueActive = false;
+          appState.configShowConsentPagefalseActive = true;
+        }
+        localStorage.setItem("configShowConsentPage", inputObj.showConsentPage);
+        appState["configShowConsentPage"] = inputObj.showConsentPage;
+
+        // set 2-8. Add consent page to project
+        if (inputObj.showConsentPageHelpModal === undefined) {
+          inputObj.showConsentPageHelpModal = "true";
+        }
+        if (
+          inputObj.showConsentPageHelpModal === "true" ||
+          inputObj.showConsentPageHelpModal === true
+        ) {
+          appState.configShowConsentPageHelpModaltrueActive = true;
+          appState.configShowConsentPageHelpModalfalseActive = false;
+        } else {
+          appState.configShowConsentPageHelpModaltrueActive = false;
+          appState.configShowConsentPageHelpModalfalseActive = true;
+        }
+        localStorage.setItem(
+          "configShowConsentPageHelpModal",
+          inputObj.showConsentPageHelpModal
+        );
+        appState["configShowConsentPageHelpModal"] =
+          inputObj.showConsentPageHelpModal;
 
         // ***
         // *** PRESORT OPTIONS ***

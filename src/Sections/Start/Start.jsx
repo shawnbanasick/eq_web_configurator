@@ -57,7 +57,7 @@ const Start = () => {
       </IntroText>
       <IntroText>
         Citation:
-        <br /> Banasick, S. (2023). EQ Web Sort Configurator (Version 6.0.0)
+        <br /> Banasick, S. (2023). EQ Web Sort Configurator (Version 7.0.0)
         [Computer software]. https://doi.org/10.5281/zenodo.8337125
       </IntroText>
       <CustomH2>Select Configurator Display Mode:</CustomH2>

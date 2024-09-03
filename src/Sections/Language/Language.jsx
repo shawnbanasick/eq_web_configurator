@@ -21,6 +21,7 @@ import SubmitTextInput from "./SubmitTextInput";
 import LocalSubmitTextInput from "./LocalSubmitTextInput";
 import EmailTextInput from "./EmailTextInput";
 import SecondProjectLinkTextInput from "./SecondProjectLinkTextInput";
+import ConsentPageTextInput from "./ConsentPageTextInput";
 
 const Language = () => {
   const handleClick = () => {
@@ -67,6 +68,9 @@ const Language = () => {
           </>
         ) : (
           <>
+            <ColorContainer>
+              <ConsentPageTextInput />
+            </ColorContainer>
             <MultipleScreenTextInput />
             <ColorContainer>
               <LandingScreenTextInput />

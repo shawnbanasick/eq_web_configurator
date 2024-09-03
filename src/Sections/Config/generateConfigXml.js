@@ -69,6 +69,8 @@ const generateConfigXml = () => {
    <item id="shuffleCards">${appState.configShuffleCards}</item>
    <item id="headerBarColor">${appState.configHeaderBarColor}</item>
    <item id="devMode">false</item> 
+   <item id="showConsentPage">${appState.configShowConsentPage}</item>
+   <item id="showConsentPageHelpModal">${appState.configShowConsentPageHelpModal}</item>
 
    <!-- ACCESS -->
    <!-- options: anonymous, partId-access, partId, access -->

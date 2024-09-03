@@ -29,6 +29,7 @@ const showSectionDefaults = (section) => {
       "langWelcomeMessage",
       "langLandingHelpModalHead",
       "langLandingHelpModalText",
+      "langBtnNextLanding",
     ];
 
     clearSection(selectorArray);
@@ -120,6 +121,19 @@ const showSectionDefaults = (section) => {
 
     clearSection(selectorArray);
   }
+
+  if (section === "consentClear") {
+    selectorArray = [
+      "langConsentTitleBarText",
+      "langConsentText",
+      "langConsentHelpModalHead",
+      "langConsentHelpModalText",
+      "langBtnNextConsent",
+    ];
+
+    clearSection(selectorArray);
+  }
+
   if (section === "surveyClear") {
     selectorArray = [
       "langSurveyHeader",

@@ -21,6 +21,12 @@ const generateLanguageXml = () => {
         )}</item>
         <item id="btnHelp">${encodeHTML(appState.langBtnHelp)}</item>
         <item id="btnNext">${encodeHTML(appState.langBtnNext)}</item>
+        <item id="btnNextLanding">${encodeHTML(
+          appState.langBtnNextLanding
+        )}</item>
+        <item id="btnNextConsent">${encodeHTML(
+          appState.langBtnNextConsent
+        )}</item>
 
         <!-- LANDING SCREEN -->
         <item id="landingHead">${encodeHTML(appState.langLandingHead)}</item>
@@ -102,7 +108,20 @@ const generateLanguageXml = () => {
           appState.langReturnToLocalPanelButtonText
         )}</item>
 
-        <!-- PRESORT: rough sorting into three piles (leave blank to skip popup)-->
+        <!-- CONSENT: get permission from participants -->
+        <item id="consentTitleBarText">${encodeHTML(
+          appState.langConsentTitleBarText
+        )}</item>
+        <item id="consentText">${encodeHTML(appState.langConsentText)}</item>
+        <item id="consentHelpModalHead">${encodeHTML(
+          appState.langConsentHelpModalHead
+        )}</item>
+        <item id="consentHelpModalText">${encodeHTML(
+          appState.langConsentHelpModalText
+        )}</item>
+
+
+        <!-- PRESORT: rough sorting into three piles -->
         <item id="titleBarText">${encodeHTML(appState.langTitleBarText)}</item>
         <item id="presortAgreement">${encodeHTML(
           appState.langPresortAgreement

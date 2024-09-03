@@ -35,9 +35,18 @@ import email2 from "../../assets/images/email2.png";
 import email3 from "../../assets/images/email3.png";
 import email4 from "../../assets/images/email4.png";
 import linking1 from "../../assets/images/linking1.png";
+import consent_screen from "../../assets/images/consent_screen.png";
+import consent_screen_modal from "../../assets/images/consent_screen_modal.png";
 
 const ImageSelector = () => {
   const selector = appState.imageToShow;
+
+  if (selector === "consent_screen") {
+    return <img src={consent_screen} alt="s"></img>;
+  }
+  if (selector === "consent_screen_modal") {
+    return <img src={consent_screen_modal} alt="s"></img>;
+  }
 
   if (selector === "footerImage") {
     return <img src={footerImage} alt="s"></img>;

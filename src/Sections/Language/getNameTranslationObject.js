@@ -15,6 +15,15 @@ const showSectionDefaults = () => {
     welcomeText: "langWelcomeMessage",
     landingHelpModalHead: "langLandingHelpModalHead",
     landingHelpModalText: "langLandingHelpModalText",
+    btnNextLanding: "langBtnNextLanding",
+
+    /*
+     ******** Consent Screen **** */
+    consentTitleBarText: "langConsentTitleBarText",
+    consentText: "langConsentText",
+    consentHelpModalHead: "langConsentHelpModalHead",
+    consentHelpModalText: "langConsentHelpModalText",
+    btnNextConsent: "langBtnNextConsent",
 
     /*
      ******** Access Control **** */

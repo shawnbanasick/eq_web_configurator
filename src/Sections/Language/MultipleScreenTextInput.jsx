@@ -49,7 +49,7 @@ const LocalLanguage = () => {
         </div>
       </HeaderButtonBar>
       <UserTextInput
-        label="1-1. Help me!"
+        label="1-1. Help"
         stateId="langBtnHelp"
         sectionName="lang"
         width={48.4}
@@ -70,10 +70,10 @@ const LocalLanguage = () => {
         left={0}
       />
       <UserTextInput
-        label="1-4. Continue"
+        label="1-4. Continue button text"
         stateId="langBtnNext"
         sectionName="lang"
-        width={48.5}
+        width={39}
         left={0}
       />
       <UserTextAreaInput
