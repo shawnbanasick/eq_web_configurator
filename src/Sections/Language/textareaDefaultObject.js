@@ -21,6 +21,7 @@ const showSectionDefaults = () => {
     langLandingHelpModalHead: `Welcome!`,
     langLandingHelpModalText: `Thank you for participating in this University Research Project. Please click the "<b>Continue</b>" button at the bottom right side of the screen to go to the next step.`,
     langBtnNextLanding: `Start`,
+    langBtnHelpLanding: `Help`,
 
     /*
      ******** CONSENT PAGE  ****************** */
@@ -29,6 +30,7 @@ const showSectionDefaults = () => {
     langConsentHelpModalHead: `Contact Information`,
     langConsentHelpModalText: `Thank you for participating in this University Research Project. You can contact the research team by phone (1-555-867-5309) or by email at researchTeam@myMail.com`,
     langBtnNextConsent: `Agree`,
+    langBtnHelpConsent: `Contact Information`,
 
     /*
      ******** LOCAL DATA COLLECTION  ****************** */

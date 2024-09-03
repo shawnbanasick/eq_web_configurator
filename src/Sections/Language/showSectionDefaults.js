@@ -32,6 +32,7 @@ const showSectionDefaults = (section) => {
       "langConsentHelpModalHead",
       "langConsentHelpModalText",
       "langBtnNextConsent",
+      "langBtnHelpConsent",
     ];
 
     setDefaults(selectorArray);
@@ -44,6 +45,7 @@ const showSectionDefaults = (section) => {
       "langLandingHelpModalHead",
       "langLandingHelpModalText",
       "langBtnNextLanding",
+      "langBtnHelpLanding",
     ];
 
     setDefaults(selectorArray);

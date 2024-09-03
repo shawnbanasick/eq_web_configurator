@@ -92,6 +92,13 @@ const LocalLanguage = () => {
         width={39}
         left={0}
       />
+      <UserTextInput
+        label="2-6. Landing page Help button text"
+        stateId="langBtnHelpLanding"
+        sectionName="lang"
+        width={39}
+        left={0}
+      />
     </SectionContainer>
   );
 };

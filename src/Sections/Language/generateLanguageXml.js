@@ -20,6 +20,14 @@ const generateLanguageXml = () => {
           appState.langFooterCardHeight
         )}</item>
         <item id="btnHelp">${encodeHTML(appState.langBtnHelp)}</item>
+        <item id="btnHelpLanding">${encodeHTML(
+          appState.langBtnHelpLanding
+        )}</item>
+        <item id="btnHelpConsent">${encodeHTML(
+          appState.langBtnHelpConsent
+        )}</item>
+
+
         <item id="btnNext">${encodeHTML(appState.langBtnNext)}</item>
         <item id="btnNextLanding">${encodeHTML(
           appState.langBtnNextLanding

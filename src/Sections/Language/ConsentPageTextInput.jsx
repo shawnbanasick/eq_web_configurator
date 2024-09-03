@@ -92,6 +92,13 @@ const LocalLanguage = () => {
         width={39}
         left={0}
       />
+      <UserTextInput
+        label="0-6. Consent page Help button text"
+        stateId="langBtnHelpConsent"
+        sectionName="lang"
+        width={39}
+        left={0}
+      />
     </SectionContainer>
   );
 };

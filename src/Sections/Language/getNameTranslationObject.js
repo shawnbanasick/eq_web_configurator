@@ -16,6 +16,7 @@ const showSectionDefaults = () => {
     landingHelpModalHead: "langLandingHelpModalHead",
     landingHelpModalText: "langLandingHelpModalText",
     btnNextLanding: "langBtnNextLanding",
+    btnHelpLanding: "langBtnHelpLanding",
 
     /*
      ******** Consent Screen **** */
@@ -24,6 +25,7 @@ const showSectionDefaults = () => {
     consentHelpModalHead: "langConsentHelpModalHead",
     consentHelpModalText: "langConsentHelpModalText",
     btnNextConsent: "langBtnNextConsent",
+    btnHelpConsent: "langBtnHelpConsent",
 
     /*
      ******** Access Control **** */

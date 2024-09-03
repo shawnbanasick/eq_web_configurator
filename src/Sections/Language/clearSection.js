@@ -30,6 +30,7 @@ const showSectionDefaults = (section) => {
       "langLandingHelpModalHead",
       "langLandingHelpModalText",
       "langBtnNextLanding",
+      "langBtnHelpLanding",
     ];
 
     clearSection(selectorArray);
@@ -129,6 +130,7 @@ const showSectionDefaults = (section) => {
       "langConsentHelpModalHead",
       "langConsentHelpModalText",
       "langBtnNextConsent",
+      "langBtnHelpConsent",
     ];
 
     clearSection(selectorArray);
